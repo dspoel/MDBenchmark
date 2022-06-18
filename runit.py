@@ -36,7 +36,7 @@ def write_input(compound, phase, top, temp, moldb):
             for sim in [ "NVT", "NPT" ]:
                 mdp = sim + ".mdp"
                 tpr = sim + ".tpr"
-                fetch_mdp(("../../../../%s%s.mdp" % ( sim, phase )), mdp, temp)
+                fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp)
                 outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
                 outf.write("mpirun -np 12 gmx_mpi mdrun -dd 3 2 2 -s %s -deffnm %s  \n" % ( tpr, sim))
                 confin = sim + ".gro"
@@ -46,7 +46,7 @@ def write_input(compound, phase, top, temp, moldb):
             sim = "NVT"
             mdp = sim + ".mdp"
             tpr = sim + ".tpr"
-            fetch_mdp(("../../../../%s%s.mdp" % ( sim, phase )), mdp, temp)
+            fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp)
             outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
             outf.write("gmx mdrun -s %s -deffnm %s  \n" % (tpr, sim))
         write_top(compound, nmol)
