@@ -1,0 +1,16 @@
+TITLE     GRoups of Organic Molecules in ACtion for Science
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.964   42.528   42.848  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  H2          1       1.136   1.467   2.394  1.00  0.00           H
+ATOM      2  C1          1       1.622   1.102   1.698  1.00  0.00           C
+ATOM      3  O2          1       2.833   1.213   1.577  1.00  0.00           O
+ATOM      4  O1          1       0.854   0.504   0.823  1.00  0.00           O
+ATOM      5  H1          1       1.363   0.190   0.202  1.00  0.00           H
+ATOM      6  H2          1       9.105   2.077   5.072  1.00  0.00           H
+ATOM      7  C1          1       8.619   2.442   4.376  1.00  0.00           C
+ATOM      8  O2          1       7.408   2.331   4.255  1.00  0.00           O
+ATOM      9  O1          1       9.387   3.040   3.501  1.00  0.00           O
+ATOM     10  H1          1       8.878   3.354   2.880  1.00  0.00           H
+TER
+ENDMDL

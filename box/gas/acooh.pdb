@@ -1,0 +1,14 @@
+TITLE     Good ROcking Metal Altar for Chronical Sinners
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   53.240   49.080   46.152  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  C2          1       1.190   1.539   2.173  1.00  0.00           C
+ATOM      2  O2          1       3.366   1.515   1.186  1.00  0.00           O
+ATOM      3  O1          1       1.713   0.440   0.165  1.00  0.00           O
+ATOM      4  H2          1       1.704   2.086   2.998  1.00  0.00           H
+ATOM      5  C1          1       2.197   1.169   1.151  1.00  0.00           C
+ATOM      6  H3          1       0.439   2.209   1.775  1.00  0.00           H
+ATOM      7  H4          1       0.705   0.687   2.594  1.00  0.00           H
+ATOM      8  H1          1       2.422   0.209  -0.504  1.00  0.00           H
+TER
+ENDMDL

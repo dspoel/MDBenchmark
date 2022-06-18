@@ -1,0 +1,12 @@
+TITLE     GROtesk MACabre and Sinister
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   41.634   46.340   36.603  90.00  94.39  90.00 P 1           1
+MODEL        1
+ATOM      1  C1          1       0.552   2.011   0.849  1.00  0.00           C
+ATOM      2  H1          1       0.178   2.779   1.495  1.00  0.00           H
+ATOM      3  H2          1       0.039   1.845  -0.076  1.00  0.00           H
+ATOM      4  C1B         1       1.606   1.299   1.179  1.00  0.00           C
+ATOM      5  H1B         1       1.980   0.531   0.533  1.00  0.00           H
+ATOM      6  H2B         1       2.119   1.465   2.104  1.00  0.00           H
+TER
+ENDMDL

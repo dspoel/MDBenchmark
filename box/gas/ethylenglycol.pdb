@@ -1,0 +1,20 @@
+TITLE     Good gRace! Old Maple Actually Chews Slate
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   45.117   48.405   46.355  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  O1          1       3.642   3.463  -1.319  1.00  2.12           O
+ANISOU    1  O1          1      261    225    321      8    -78    -55
+ATOM      2  H1          1       3.305   4.255  -1.144  1.00  1.74           H
+ATOM      3  C1          1       5.058   3.459  -1.136  1.00  1.88           C
+ANISOU    3  C1          1      223    268    223     -7     -2    -30
+ATOM      4  H1A         1       5.445   4.318  -1.492  1.00  2.29           H
+ATOM      5  H1B         1       5.402   2.686  -1.596  1.00  2.13           H
+ATOM      6  C2          1       5.442   3.312   0.321  1.00  1.78           C
+ANISOU    6  C2          1      218    210    251     40    -23    -11
+ATOM      7  H2A         1       6.331   3.229   0.366  1.00  1.58           H
+ATOM      8  H2B         1       5.040   2.554   0.704  1.00  1.66           H
+ATOM      9  O2          1       4.987   4.453   1.055  1.00  1.75           O
+ANISOU    9  O2          1      246    194    226     -9     28     -8
+ATOM     10  H2          1       4.688   4.145   1.770  1.00  2.45           H
+TER
+ENDMDL

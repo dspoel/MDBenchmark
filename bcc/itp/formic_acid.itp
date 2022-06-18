@@ -1,0 +1,58 @@
+; Topology generated from /home/ghahremanpour/Liquids/MOLECULES/OEP/formic-acid/formic-acid-3-oep.log.gz
+; Charge method used bcc
+; MOL_GMX.top created by acpype (Rev: 0) on Wed Feb 14 22:50:42 2018
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333
+
+[ atomtypes ]
+;name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
+ h5       h5          0.00000  0.00000   A     2.42146e-01   6.27600e-02 ; 1.36  0.0150
+ c        c           0.00000  0.00000   A     3.39967e-01   3.59824e-01 ; 1.91  0.0860
+ o        o           0.00000  0.00000   A     2.95992e-01   8.78640e-01 ; 1.66  0.2100
+ oh       oh          0.00000  0.00000   A     3.06647e-01   8.80314e-01 ; 1.72  0.2104
+ ho       ho          0.00000  0.00000   A     0.00000e+00   0.00000e+00 ; 0.00  0.0000
+
+[ moleculetype ]
+;name            nrexcl
+ MOL              3
+
+[ atoms ]
+;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
+     1   h5     1   MOL    H1    1     0.086200      1.00800 ; qtot 0.086
+     2    c     1   MOL    C1    2     0.631901     12.01000 ; qtot 0.718
+     3    o     1   MOL    O1    3    -0.546001     16.00000 ; qtot 0.172
+     4   oh     1   MOL    O2    4    -0.615101     16.00000 ; qtot -0.443
+     5   ho     1   MOL    H2    5     0.443000      1.00800 ; qtot -0.000
+
+[ bonds ]
+;   ai     aj funct   r             k
+     1      2   1    1.1051e-01    2.6752e+05 ;     H1 - C1    
+     2      3   1    1.2183e-01    5.3363e+05 ;     C1 - O1    
+     2      4   1    1.3513e-01    3.3480e+05 ;     C1 - O2    
+     4      5   1    9.7300e-02    3.1079e+05 ;     O2 - H2    
+
+[ pairs ]
+;   ai     aj    funct
+     1      5      1 ;     H1 - H2    
+     3      5      1 ;     O1 - H2    
+
+[ angles ]
+;   ai     aj     ak    funct   theta         cth
+     1      2      3      1    1.2365e+02    4.4936e+02 ;     H1 - C1     - O1    
+     1      2      4      1    1.0949e+02    4.4476e+02 ;     H1 - C1     - O2    
+     2      4      5      1    1.0655e+02    4.1740e+02 ;     C1 - O2     - H2    
+     3      2      4      1    1.2210e+02    6.3530e+02 ;     O1 - C1     - O2    
+
+[ dihedrals ] ; propers
+; treated as RBs in GROMACS to use combine multiple AMBER torsions per quartet
+;    i      j      k      l   func    C0         C1         C2         C3         C4         C5
+     1      2      4      5      3   19.24640    0.00000  -19.24640    0.00000    0.00000    0.00000 ;     H1-    C1-    O2-    H2
+     3      2      4      5      3   27.19600   -7.94960  -19.24640    0.00000    0.00000    0.00000 ;     O1-    C1-    O2-    H2
+
+[ dihedrals ] ; impropers
+; treated as propers in GROMACS to use correct AMBER analytical function
+;    i      j      k      l   func   phase     kd      pn
+     1      3      2      4      1   180.00  43.93200   2 ;     H1-    O1-    C1-    O2
+

@@ -1,0 +1,43 @@
+; Topology generated from /home/ghahremanpour/Liquids/MOLECULES/OEP/formaldehyde/formaldehyde-3-oep.log.gz
+; Charge method used esp
+; MOL_GMX.top created by acpype (Rev: 0) on Wed Feb 14 17:46:08 2018
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333
+
+[ atomtypes ]
+;name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
+ o        o           0.00000  0.00000   A     2.95992e-01   8.78640e-01 ; 1.66  0.2100
+ c        c           0.00000  0.00000   A     3.39967e-01   3.59824e-01 ; 1.91  0.0860
+ h4       h4          0.00000  0.00000   A     2.51055e-01   6.27600e-02 ; 1.41  0.0150
+
+[ moleculetype ]
+;name            nrexcl
+ MOL              3
+
+[ atoms ]
+;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
+     1    o     1   MOL    O1    1    -0.415050     16.00000 ; qtot -0.415
+     2    c     1   MOL    C1    2     0.416718     12.01000 ; qtot 0.002
+     3   h4     1   MOL    H1    3    -0.000882      1.00800 ; qtot 0.001
+     4   h4     1   MOL    H2    4    -0.000786      1.00800 ; qtot 0.000
+
+[ bonds ]
+;   ai     aj funct   r             k
+     1      2   1    1.2183e-01    5.3363e+05 ;     O1 - C1    
+     2      3   1    1.1121e-01    2.5999e+05 ;     C1 - H1    
+     2      4   1    1.1121e-01    2.5999e+05 ;     C1 - H2    
+
+[ angles ]
+;   ai     aj     ak    funct   theta         cth
+     1      2      3      1    1.2070e+02    4.5371e+02 ;     O1 - C1     - H1    
+     1      2      4      1    1.2070e+02    4.5371e+02 ;     O1 - C1     - H2    
+     3      2      4      1    1.1792e+02    3.1782e+02 ;     H1 - C1     - H2    
+
+[ dihedrals ] ; impropers
+; treated as propers in GROMACS to use correct AMBER analytical function
+;    i      j      k      l   func   phase     kd      pn
+     1      2      4      3      1   180.00  43.93200   2 ;     O1-    C1-    H2-    H1
+
+
