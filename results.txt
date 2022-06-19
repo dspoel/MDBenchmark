@@ -1,261 +1,260 @@
 cyclopropane solid bcc solid density 912.527
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
+75             1632.71     859.818     31.9455
 85             2012.67     847.017     32.9979
+95             2613.44     836.556     34.0557
+105            3425.62     826.079     35.1875
+108            3622.09     780.908     37.6411
 115            4236.14     763.019      38.653
-165            7331.05     678.855     44.7884
-155            6855.43     695.262     43.6275
+117            4303.48     758.426     38.9141
 125             4883.4     736.308     40.2275
 135            5718.34     722.454     41.3743
-105            3425.62     826.079     35.1875
-117            4303.48     758.426     38.9141
 145            6323.97     708.032      42.522
-108            3622.09     780.908     37.6411
-75             1632.71     859.818     31.9455
+155            6855.43     695.262     43.6275
+165            7331.05     678.855     44.7884
 175            7749.54     662.395     45.9462
-95             2613.44     836.556     34.0557
 ethyne solid bcc solid density 764.157
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-152           -5464.95     830.568    -14.6227
-227           -4837.62     830.421    -11.5007
-172           -4880.33     830.538    -13.7889
-209           -4914.31     830.495    -12.2493
-182           -4787.97     830.383    -13.3728
-192           -4750.75     829.306    -12.9554
-162           -5081.56     830.545    -14.2034
 142           -5213.48     830.536    -15.0337
+152           -5464.95     830.568    -14.6227
+162           -5081.56     830.545    -14.2034
+172           -4880.33     830.538    -13.7889
+182           -4787.97     830.383    -13.3728
 188           -4724.16     830.444    -13.1222
+192           -4750.75     829.306    -12.9554
+209           -4914.31     830.495    -12.2493
+227           -4837.62     830.421    -11.5007
 furan solid bcc solid density 1171.63
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-152            679.877     1148.32      17.159
-225            3434.97      1050.6     27.3672
-138            76.7471     1166.96     15.1006
-244            4041.76     1025.47     29.9129
-148            524.442     1154.77     16.5272
-128           -380.593     1181.95     13.5306
-178            1709.41     1113.33     20.8848
 98            -1478.94     1208.15     9.85985
-153            728.008
-118           -728.073     1194.84     12.0651
+108           -1732.79     1226.82     8.93075
 113           -952.202
+118           -728.073     1194.84     12.0651
+128           -380.593     1181.95     13.5306
+133           -80.2399
+138            76.7471     1166.96     15.1006
+148            524.442     1154.77     16.5272
+152            679.877     1148.32      17.159
+153            728.008
 158            912.854     1139.75     18.0472
 168            1328.56     1127.41     19.4369
+178            1709.41     1113.33     20.8848
 180            1788.11     1110.24     21.1842
-108           -1732.79     1226.82     8.93075
 188            2064.09     1100.31     22.2787
-133           -80.2399
+225            3434.97      1050.6     27.3672
+244            4041.76     1025.47     29.9129
 formaldehyde solid bcc solid density 1166.84
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-121            3645.33     1072.68    -31.6639
-111            3167.05     1080.36    -32.1695
 81             1494.39        1130    -33.9542
+91             2049.68      1097.3    -33.1915
 101            2567.71     1088.77    -32.6769
-196            7852.27     933.022    -24.6414
-181            6969.02     963.377    -25.8977
+111            3167.05     1080.36    -32.1695
+121            3645.33     1072.68    -31.6639
+131            4291.98     1065.02    -31.1642
+141            4794.73     1056.59    -30.6421
 151            5413.67     1047.81     -30.114
 161            5906.05     1038.48     -29.561
 171            6476.16     1030.47    -29.0255
+181            6969.02     963.377    -25.8977
+196            7852.27     933.022    -24.6414
 213            8770.07     909.603    -23.5186
-141            4794.73     1056.59    -30.6421
-131            4291.98     1065.02    -31.1642
-91             2049.68      1097.3    -33.1915
 urea solid bcc solid density 1363.53
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-403       
-393       
-343       
-570       
-313       
-406       
-303       
-295       
-526       
-363       
-353       
 293       
-333       
+295       
+303       
+313       
 323       
-383       
+333       
+343       
+353       
+363       
 373       
+383       
+393       
+403       
+406       
+526       
+570       
 123-benzenetriol solid bcc solid density 1544.22
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-403       
-482       
 277       
-445       
 295       
-0         
+403       
+445       
+482       
 12-benzenediol solid bcc solid density 1419.56
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-506       
-377       
 0         
-300       
 293       
+300       
+377       
 467       
+506       
 14-benzoquinone solid bcc solid density 1365.64
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-481       
-280       
-521       
 0         
+280       
 293       
 388       
+481       
+521       
 acetamide solid bcc solid density 1148.5
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-374       
-354       
-405       
 0         
 300       
+354       
+374       
+405       
 acooh solid bcc solid density 1270.07
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-356       
-289       
 0         
-329       
 239       
+289       
 290       
+329       
+356       
 benzene solid bcc solid density 1055.12
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-270            1838.87     1005.62     10.5386
-279            2067.78     998.706     11.9673
 0         
-293            2453.58     987.208     14.2439
+270            1838.87     1005.62     10.5386
 271            1857.17     1005.96     10.6404
+279            2067.78     998.706     11.9673
+293            2453.58     987.208     14.2439
 cyclohexane solid bcc solid density 995.829
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-260            6169.11     819.439     23.6306
-280            6711.16     807.391     27.6282
-266            6327.93     816.045     24.8328
-93             1638.59
-288            6897.82     802.588     29.2176
 0         
+93             1638.59     984.392    -16.3162
+260            6169.11     819.439     23.6306
+266            6327.93     816.045     24.8328
+280            6711.16     807.391     27.6282
+288            6897.82     802.588     29.2176
 ethane solid bcc solid density 718.976
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-111            1459.83     644.976    -6.89375
-100            603.878     662.141    -8.12356
-90            -589.941     710.682    -10.7691
 0         
+90            -589.941     710.682    -10.7691
+100            603.878     662.141    -8.12356
+111            1459.83     644.976    -6.89375
 120            1905.53     633.621    -6.01083
 ethanol solid bcc solid density 1024.84
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-159            2508.15     992.523    -53.2301
 0         
-216            4308.39     920.818    -44.7817
+159            2508.15     992.523    -53.2301
 200            3761.66     954.533    -48.1379
+216            4308.39     920.818    -44.7817
 12-ethanediamine solid bcc solid density 0
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-284       
-298       
 0         
 263       
 275       
+284       
+298       
 ethylene solid bcc solid density 750.203
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-138            4522.93     584.178     14.8306
-128            3624.02     599.887     14.0758
-90             178.474     733.075     8.78252
 0         
+90             178.474     733.075     8.78252
 104            947.678     648.032     12.0776
+128            3624.02     599.887     14.0758
+138            4522.93     584.178     14.8306
 ethyleneglycol solid bcc solid density 0
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-260       
 0         
-283       
+260       
 261       
+283       
 formamide solid bcc solid density 1437.87
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-270            5568.16     1318.76    -185.892
-223            2734.01     1351.62    -190.338
-391            11940.9     1221.25    -174.837
-298            7812.57     1297.89    -183.415
 0         
+223            2734.01     1351.62    -190.338
+270            5568.16     1318.76    -185.892
+298            7812.57     1297.89    -183.415
 361            11003.3     1247.75     -177.72
+391            11940.9     1221.25    -174.837
 formic_acid solid bcc solid density 1572.66
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-270               9018     1443.41    -145.351
-298            10643.1     1425.65     -143.63
 0         
+270               9018     1443.41    -145.351
 282              10005     1440.16    -144.845
+298            10643.1     1425.65     -143.63
 323            11527.3     1396.07    -141.384
 imidazole solid bcc solid density 1336.19
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-374            3871.77     1224.23    -50.3171
-364             3657.1     1231.34    -51.6746
-349            3350.95     1242.18    -53.7181
 0         
 300            2183.85     1270.16    -59.5235
+349            3350.95     1242.18    -53.7181
+364             3657.1     1231.34    -51.6746
+374            3871.77     1224.23    -50.3171
 378            4001.27     1221.13    -49.7849
 menh2 solid bcc solid density 882.178
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-313            3164.69     702.627     13.4554
-179           -3302.49     938.235    -11.4564
-289            2532.03     740.841     10.4365
 0         
+179           -3302.49     938.235    -11.4564
 180           -3281.95     938.044    -11.3809
+289            2532.03     740.841     10.4365
+313            3164.69     702.627     13.4554
 methanol solid bcc solid density 1027.82
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-163       
-226       
 0         
-176       
+163       
 175       
+176       
+226       
 245       
 naphthalene solid bcc solid density 1268.07
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-456            10490.1     1045.79     51.5514
-421            9727.86      1089.2      41.464
-295            6982.25     1173.24     11.8773
 0         
+295            6982.25     1173.24     11.8773
 353            8288.58     1142.04     24.7615
+421            9727.86      1089.2      41.464
+456            10490.1     1045.79     51.5514
 octanoic_acid solid bcc solid density 1083.25
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-372       
+0         
 289       
 344       
-0         
+372       
 pentane solid bcc solid density 866.519
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 0         
-222            3856.79     680.259      12.012
-205            3383.92     814.988    -3.50292
 143            1660.14     850.455    -15.1713
+205            3383.92     814.988    -3.50292
+222            3856.79     680.259      12.012
 phenol solid bcc solid density 1189.99
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-314            2397.14     1138.82     -79.566
-350            3111.14     1056.71    -66.4449
 0         
-323             2575.5      1131.9    -77.7799
 290            1951.69     1148.66    -83.4983
+314            2397.14     1138.82     -79.566
+323             2575.5      1131.9    -77.7799
+350            3111.14     1056.71    -66.4449
 propane solid bcc solid density 802.636
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
+0         
 85             1147.71     787.497    -16.9026
 86             1157.27     787.114    -16.7942
-117            2247.79     768.443     -13.288
-0         
 108            1969.45     775.499    -14.4018
+117            2247.79     768.443     -13.288
 pyridine solid bcc solid density 1192.8
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
+0         
+231             2840.3     1142.05    -81.5994
 232            2842.34     1141.67    -81.4681
 292            4481.78     1104.32    -73.0922
 317             5133.2     956.852     -58.981
-231             2840.3     1142.05    -81.5994
-0         
 succinic_acid solid bcc solid density 1565.92
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-470       
-298       
-295       
 0         
-509       
+295       
+298       
+470       
 495       
+509       
 uracil solid bcc solid density 1635.64
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-425       
-907       
-298       
-611       
 0         
+298       
+425       
+611       
+907       
 983       
 cyclopropane gas bcc
 Temperature   Epot(NVT)
@@ -507,521 +506,6 @@ Temperature   Epot(NVT)
 509       
 495       
 uracil gas bcc
-Temperature   Epot(NVT)
-425       
-907       
-298       
-611       
-0         
-983       
-cyclopropane solid resp solid density 912.527
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-85             2872.48     852.237     71.3282
-115             4705.8     823.207     74.5881
-165            6915.48     680.547     83.6441
-155            6634.69     696.355     82.4824
-125            5203.17     754.999     78.4363
-135            5826.32     724.002     80.2011
-105            3879.91     835.167     73.3859
-117            4630.49     805.736     75.7474
-145            6258.15     709.924     81.3522
-108            3991.12     831.099     73.7415
-75             2374.94     861.198     70.3337
-175            7437.97     665.199     84.7864
-95              3474.9     844.598     72.3259
-ethyne solid resp solid density 764.157
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-152           -6843.58     844.385    -6.83666
-227           -6082.13     780.957    -2.47503
-172              -6811     840.749    -5.97632
-209           -6569.34     813.835    -4.05778
-182           -6359.91     824.635    -5.37056
-192           -6414.25     817.624    -4.84128
-162            -6467.7     836.701    -6.35793
-142           -7078.38     852.082    -7.29356
-188           -6241.48     817.575    -5.00614
-furan solid resp solid density 1171.63
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-152            658.202     1145.75     14.7528
-225            3375.29      1048.9     24.8614
-138            225.482     1167.55     12.5462
-244            4070.79     1023.33      27.397
-148            537.213        1151     14.1833
-128           -680.306     1198.12     9.29588
-178            1678.58      1111.6     18.4142
-98            -2007.27     1226.64     5.40083
-153            710.382
-118           -1198.23     1211.05     7.75514
-113           -1231.99
-158            916.817     1138.38     15.5892
-168            1259.45     1124.73     17.0204
-180            1776.33     1109.02     18.6947
-108           -910.801     1200.88     8.53558
-188            2092.59      1098.3     19.8072
-133            53.6859
-formaldehyde solid resp solid density 1166.84
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-121            5947.64     1041.03    -24.6572
-111            5337.05     1050.23    -25.1803
-81             3715.32     1098.33     -27.083
-101            4800.55     1059.72    -25.6893
-196            10199.4     879.998    -17.9219
-181            9383.17     905.601    -18.9144
-151            7649.69     953.207    -20.8999
-161            8205.79     937.992    -20.2449
-171            8767.75     920.054    -19.5522
-213            11261.3     851.376    -16.8133
-141            7042.64     1030.16    -23.6993
-131            6463.97     1031.02    -24.1106
-91             4224.46     1069.29    -26.1967
-urea solid resp solid density 1363.53
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-403       
-393       
-343       
-570       
-313       
-406       
-303       
-295       
-526       
-363       
-353       
-293       
-333       
-323       
-383       
-373       
-123-benzenetriol solid resp solid density 1544.22
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-403       
-482       
-277       
-445       
-295       
-0         
-12-benzenediol solid resp solid density 1419.56
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-506       
-377       
-0         
-300       
-293       
-467       
-14-benzoquinone solid resp solid density 1365.64
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-481       
-280       
-521       
-0         
-293       
-388       
-acetamide solid resp solid density 1148.5
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-374       
-354       
-405       
-0         
-300       
-acooh solid resp solid density 1270.07
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-356       
-289       
-0         
-329       
-239       
-290       
-benzene solid resp solid density 1055.12
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-270            2541.31      982.21     11.0755
-279             2789.1     973.311     12.5917
-0         
-293            3150.94     839.172     22.4897
-271            2600.78     981.402     11.2361
-cyclohexane solid resp solid density 995.829
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-260            6221.87
-280            6765.25     806.986     25.1707
-266            6393.71
-93             1677.57
-288            6981.11     802.041     26.7741
-0         
-ethane solid resp solid density 718.976
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-111            1393.15     642.491    -10.6796
-100            524.409     656.285    -11.7776
-90            -17.8347     709.628    -14.6121
-0         
-120            1925.61     633.793    -9.90338
-ethanol solid resp solid density 1024.84
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-159            2504.59     988.393    -114.697
-0         
-216            4301.18     871.155    -103.479
-200            3801.91     927.461    -108.115
-12-ethanediamine solid resp solid density 0
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-284       
-298       
-0         
-263       
-275       
-ethylene solid resp solid density 750.203
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-138       
-128       
-90        
-0         
-104       
-ethyleneglycol solid resp solid density 0
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-260       
-0         
-283       
-261       
-formamide solid resp solid density 1437.87
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-270            6623.51     1339.06    -215.984
-223            3534.17     1351.07     -218.41
-391            11993.7     1209.97    -202.349
-298            8651.45     1289.01    -210.951
-0         
-361            10991.8     1236.89    -205.218
-formic_acid solid resp solid density 1572.66
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-270            11900.9     1401.26    -130.977
-298            12940.1     1243.77    -121.224
-0         
-282            12381.4     1385.47    -129.893
-323            13406.2     1207.61    -119.135
-imidazole solid resp solid density 1336.19
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-374            5182.52     1068.66    -24.4205
-364            4939.84     1078.38    -25.7682
-349            4539.71     1225.46    -37.8894
-0         
-300            3359.28      1261.7    -44.5082
-378            5220.76     1064.72    -23.8733
-menh2 solid resp solid density 882.178
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-313       
-179       
-289       
-0         
-180       
-methanol solid resp solid density 1027.82
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-163       
-226       
-0         
-176       
-175       
-245       
-naphthalene solid resp solid density 1268.07
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-456       
-421       
-295       
-0         
-353       
-octanoic_acid solid resp solid density 1083.25
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-372             7155.6
-289            5468.66
-344            6529.29
-0         
-pentane solid resp solid density 866.519
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-0         
-222       
-205       
-143       
-phenol solid resp solid density 1189.99
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-314            2733.28     1122.03    -153.643
-350            3450.45     1100.18    -146.643
-0         
-323            2921.16     1116.96    -152.084
-290            2257.73     1134.55     -157.81
-propane solid resp solid density 802.636
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-85              1066.9      788.59    -62.3336
-86             1084.31     788.075    -62.2201
-117            2182.01     766.515    -58.4958
-0         
-108            1886.14     773.909    -59.6504
-pyridine solid resp solid density 1192.8
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-232            2647.45        1141    -363.428
-292            4269.62     973.117     -344.63
-317            5073.46     942.131    -340.554
-231            2649.52     1141.34    -363.556
-0         
-succinic_acid solid resp solid density 1565.92
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-470       
-298       
-295       
-0         
-509       
-495       
-uracil solid resp solid density 1635.64
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-425       
-907       
-298       
-611       
-0         
-983       
-cyclopropane gas resp
-Temperature   Epot(NVT)
-85             95.0285
-115            96.8519
-165       
-155       
-125            97.5262
-135             98.173
-105            96.2987
-117            97.0066
-145            98.7817
-108            96.5474
-75             94.4095
-175       
-95             95.6376
-ethyne gas resp
-Temperature   Epot(NVT)
-152            29.5474
-227       
-172            30.1298
-209       
-182       
-192       
-162            29.8352
-142            29.2589
-188       
-furan gas resp
-Temperature   Epot(NVT)
-152             49.717
-225            54.9466
-138            48.7082
-244             56.257
-148            49.4044
-128            48.0069
-178            51.6492
-98             45.8228
-118            47.2745
-158            50.2084
-168            50.8623
-180            51.8084
-108            46.5569
-188            52.4653
-formaldehyde gas resp
-Temperature   Epot(NVT)
-121       
-111       
-81        
-101       
-196       
-181       
-151       
-161       
-171       
-213       
-141       
-131       
-91        
-urea gas resp
-Temperature   Epot(NVT)
-403       
-393       
-343       
-570       
-313       
-406       
-303       
-295       
-526       
-363       
-353       
-293       
-333       
-323       
-383       
-373       
-123-benzenetriol gas resp
-Temperature   Epot(NVT)
-403            11.7654
-482       
-277           -6.18855
-445       
-295           -3.57338
-0         
-12-benzenediol gas resp
-Temperature   Epot(NVT)
-506       
-377            84.9151
-0         
-300            74.7885
-293            74.0664
-467       
-14-benzoquinone gas resp
-Temperature   Epot(NVT)
-481       
-280       
-521       
-0         
-293       
-388       
-acetamide gas resp
-Temperature   Epot(NVT)
-374       
-354       
-405       
-0         
-300       
-acooh gas resp
-Temperature   Epot(NVT)
-356       
-289       
-0         
-329       
-239       
-290       
-benzene gas resp
-Temperature   Epot(NVT)
-270            47.3963
-279             48.156
-0         
-293             49.642
-271            47.4524
-cyclohexane gas resp
-Temperature   Epot(NVT)
-260       
-280       
-266       
-93        
-288       
-0         
-ethane gas resp
-Temperature   Epot(NVT)
-111            6.30178
-100            5.74397
-90             5.21342
-0         
-120            6.76741
-ethanol gas resp
-Temperature   Epot(NVT)
-159       
-0         
-216       
-200       
-12-ethanediamine gas resp
-Temperature   Epot(NVT)
-284       
-298       
-0         
-263       
-275       
-ethylene gas resp
-Temperature   Epot(NVT)
-138       
-128       
-90        
-0         
-104       
-ethyleneglycol gas resp
-Temperature   Epot(NVT)
-260       
-0         
-283       
-261       
-formamide gas resp
-Temperature   Epot(NVT)
-270       
-223       
-391       
-298       
-0         
-361       
-formic_acid gas resp
-Temperature   Epot(NVT)
-270       
-298       
-0         
-282       
-323       
-imidazole gas resp
-Temperature   Epot(NVT)
-374       
-364       
-349            23.5966
-0         
-300            20.2445
-378       
-menh2 gas resp
-Temperature   Epot(NVT)
-313       
-179       
-289       
-0         
-180       
-methanol gas resp
-Temperature   Epot(NVT)
-163       
-226       
-0         
-176       
-175       
-245       
-naphthalene gas resp
-Temperature   Epot(NVT)
-456       
-421       
-295            145.828
-0         
-353       
-octanoic_acid gas resp
-Temperature   Epot(NVT)
-372           -78.9662
-289            -100.04
-344           -86.3262
-0         
-pentane gas resp
-Temperature   Epot(NVT)
-0         
-222       
-205       
-143       
-phenol gas resp
-Temperature   Epot(NVT)
-314           -94.5597
-350           -90.0577
-0         
-323           -93.1933
-290           -97.4226
-propane gas resp
-Temperature   Epot(NVT)
-85            -33.6851
-86            -33.6228
-117           -31.1263
-0         
-108           -31.8594
-pyridine gas resp
-Temperature   Epot(NVT)
-232           -313.916
-292       
-317       
-231           -314.073
-0         
-succinic_acid gas resp
-Temperature   Epot(NVT)
-470       
-298       
-295       
-0         
-509       
-495       
-uracil gas resp
 Temperature   Epot(NVT)
 425       
 907       

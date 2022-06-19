@@ -46,7 +46,15 @@ def analyse_solid(outf, moldb):
                 sdens = moldb[compound][soliddens]
             outf.write("%s %s %s solid density %g\n" % ( compound, phase, top, sdens ))
             outf.write("%-10s  %10s  %10s  %10s\n" % ( "Temperature", "P(NVT)", "Rho(NPT)", "Epot(NPT)" ) )
+            mytemps = []
             for temp in glob.glob("*"):
+                if os.path.isdir(str(temp)):
+                    try:
+                        mytemps.append(int(temp))
+                    except ValueError:
+                        print("%s is not a directory with an integer name" % temp)
+            for mytemp in sorted(mytemps):
+                temp = str(mytemp)
                 if os.path.isdir(str(temp)):
                     os.chdir(str(temp))
                     outf.write("%-10s" % temp)
