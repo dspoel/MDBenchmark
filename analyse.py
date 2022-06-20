@@ -53,6 +53,7 @@ def analyse_solid(outf, moldb):
                         mytemps.append(int(temp))
                     except ValueError:
                         print("%s is not a directory with an integer name" % temp)
+            print(mytemps)
             for mytemp in sorted(mytemps):
                 temp = str(mytemp)
                 if os.path.isdir(str(temp)):

@@ -37,9 +37,11 @@ def write_input(compound, phase, top, temp, moldb):
                 mdp = sim + ".mdp"
                 tpr = sim + ".tpr"
                 fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp)
-                outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
-                outf.write("mpirun -np 12 gmx_mpi mdrun -dd 3 2 2 -s %s -deffnm %s  \n" % ( tpr, sim))
-                confin = sim + ".gro"
+                outgro = sim + ".gro"
+                if not os.path.exists(outgro):
+                    outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
+                    outf.write("mpirun -np 12 gmx_mpi mdrun -dd 3 2 2 -s %s -deffnm %s -c %s\n" % ( tpr, sim, outgro))
+                confin = outgro
         else:
             nmol   = 1
             outf.write("#SBATCH -n 1\n")
