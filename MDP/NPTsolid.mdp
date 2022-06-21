@@ -72,7 +72,7 @@ pbc                      = xyz
 periodic-molecules       = no
 ; Allowed energy error due to the Verlet buffer in kJ/mol/ps per atom,
 ; a value of -1 means: use rlist
-verlet-buffer-tolerance  = -1; 0.005
+verlet-buffer-tolerance  = 0.005
 ; nblist cut-off        
 rlist                    = 1.1
 ; long-range cut-off for switched potentials
