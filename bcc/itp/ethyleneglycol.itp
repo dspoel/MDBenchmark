@@ -19,7 +19,7 @@
 
 [ atoms ]
 ;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
-     1   oh     1   MOL    O1    1    -0.603801     16.00000 ; qtot -0.604
+     1   oh     1   MOL    O1    1    -0.603800     16.00000 ; qtot -0.604
      2   ho     1   MOL    H1    2     0.405000      1.00800 ; qtot -0.199
      3   c3     1   MOL    C1    3     0.127400     12.01000 ; qtot -0.071
      4   h1     1   MOL    H2    4     0.035700      1.00800 ; qtot -0.036
@@ -27,7 +27,7 @@
      6   c3     1   MOL    C2    6     0.127400     12.01000 ; qtot 0.127
      7   h1     1   MOL    H4    7     0.035700      1.00800 ; qtot 0.163
      8   h1     1   MOL    H5    8     0.035700      1.00800 ; qtot 0.199
-     9   oh     1   MOL    O2    9    -0.603801     16.00000 ; qtot -0.405
+     9   oh     1   MOL    O2    9    -0.603800     16.00000 ; qtot -0.405
     10   ho     1   MOL    H6   10     0.405000      1.00800 ; qtot 0.000
 
 [ bonds ]
