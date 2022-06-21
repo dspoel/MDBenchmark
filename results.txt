@@ -28,10 +28,8 @@ furan solid bcc solid density 1171.63
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 98            -1478.94     1208.15     9.85985
 108           -1732.79     1226.82     8.93075
-113           -952.202
 118           -728.073     1194.84     12.0651
 128           -380.593     1181.95     13.5306
-133           -80.2399
 138            76.7471     1166.96     15.1006
 148            524.442     1154.77     16.5272
 152            679.877     1148.32      17.159
@@ -143,7 +141,7 @@ Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 159            2508.15     992.523    -53.2301
 200            3761.66     954.533    -48.1379
 216            4308.39     920.818    -44.7817
-12-ethanediamine solid bcc solid density 0
+12-ethanediamine solid bcc solid density 1136.86
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 0         
 263       
@@ -157,12 +155,6 @@ Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 104            947.678     648.032     12.0776
 128            3624.02     599.887     14.0758
 138            4522.93     584.178     14.8306
-ethyleneglycol solid bcc solid density 0
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-0         
-260       
-261       
-283       
 formamide solid bcc solid density 1437.87
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 0         
@@ -193,14 +185,6 @@ Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 180           -3281.95     938.044    -11.3809
 289            2532.03     740.841     10.4365
 313            3164.69     702.627     13.4554
-methanol solid bcc solid density 1027.82
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-0         
-163             2962.9     1002.63    -21.8715
-175            3296.21     995.476    -21.0364
-176             3429.6      995.12    -20.9709
-226            4030.64     963.986    -17.4165
-245            4762.61     845.344    -10.2892
 naphthalene solid bcc solid density 1268.07
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 0         
@@ -304,8 +288,8 @@ formaldehyde gas bcc
 Temperature   Epot(NVT)
 121       
 111       
-81        
-101       
+81             1.37468
+101            1.71178
 196       
 181       
 151       
@@ -314,7 +298,7 @@ Temperature   Epot(NVT)
 213       
 141       
 131       
-91        
+91             1.54646
 urea gas bcc
 Temperature   Epot(NVT)
 403       
@@ -352,7 +336,7 @@ Temperature   Epot(NVT)
 14-benzoquinone gas bcc
 Temperature   Epot(NVT)
 481       
-280       
+280            35.1401
 521       
 0         
 293       
@@ -381,11 +365,11 @@ Temperature   Epot(NVT)
 271            50.8196
 cyclohexane gas bcc
 Temperature   Epot(NVT)
-260       
-280       
-266       
-93        
-288       
+260            62.0732
+280            65.1302
+266            63.0287
+93             36.8236
+288            66.5079
 0         
 ethane gas bcc
 Temperature   Epot(NVT)
@@ -414,12 +398,6 @@ Temperature   Epot(NVT)
 90             23.3326
 0         
 104             23.789
-ethyleneglycol gas bcc
-Temperature   Epot(NVT)
-260       
-0         
-283       
-261       
 formamide gas bcc
 Temperature   Epot(NVT)
 270       
@@ -445,23 +423,15 @@ Temperature   Epot(NVT)
 378       
 menh2 gas bcc
 Temperature   Epot(NVT)
-313       
-179       
-289       
+313            37.8386
+179            31.8676
+289            36.6882
 0         
-180       
-methanol gas bcc
-Temperature   Epot(NVT)
-163       
-226       
-0         
-176       
-175       
-245       
+180            31.9432
 naphthalene gas bcc
 Temperature   Epot(NVT)
-456       
-421       
+456            107.727
+421            102.062
 295            80.8019
 0         
 353            90.5227
@@ -501,17 +471,17 @@ Temperature   Epot(NVT)
 succinic_acid gas bcc
 Temperature   Epot(NVT)
 470       
-298       
-295       
+298           -308.181
+295           -308.303
 0         
 509       
 495       
 uracil gas bcc
 Temperature   Epot(NVT)
-425       
+425           -638.011
 907       
-298       
-611       
+298           -652.089
+611            -617.21
 0         
 983       
 cyclopropane solid resp solid density 912.527
@@ -544,10 +514,8 @@ furan solid resp solid density 1171.63
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 98            -2007.27     1226.64     5.40083
 108           -910.801     1200.88     8.53558
-113           -1231.99
 118           -1198.23     1211.05     7.75514
 128           -680.306     1198.12     9.29588
-133            53.6859
 138            225.482     1167.55     12.5462
 148            537.213        1151     14.1833
 152            658.202     1145.75     14.7528
@@ -659,7 +627,7 @@ Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 159            2504.59     988.393    -114.697
 200            3801.91     927.461    -108.115
 216            4301.18     871.155    -103.479
-12-ethanediamine solid resp solid density 0
+12-ethanediamine solid resp solid density 1136.86
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 0         
 263       
@@ -673,12 +641,6 @@ Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 104       
 128       
 138       
-ethyleneglycol solid resp solid density 0
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-0         
-260       
-261       
-283       
 formamide solid resp solid density 1437.87
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 0         
@@ -705,18 +667,10 @@ Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 menh2 solid resp solid density 882.178
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 0         
-179       
-180       
-289       
-313       
-methanol solid resp solid density 1027.82
-Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
-0         
-163       
-175       
-176       
-226       
-245       
+179            -3709.8     930.326    -67.3349
+180           -3717.59     930.122    -67.2788
+289             2848.1     724.245    -47.8079
+313            3564.38     682.911    -44.8417
 naphthalene solid resp solid density 1268.07
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 0         
@@ -817,10 +771,10 @@ Temperature   Epot(NVT)
 188            52.4653
 formaldehyde gas resp
 Temperature   Epot(NVT)
-121       
-111       
-81        
-101       
+121            2.04786
+111            1.85857
+81              1.3741
+101            1.70383
 196       
 181       
 151       
@@ -828,8 +782,8 @@ Temperature   Epot(NVT)
 171       
 213       
 141       
-131       
-91        
+131            2.20855
+91             1.53961
 urea gas resp
 Temperature   Epot(NVT)
 403       
@@ -896,11 +850,11 @@ Temperature   Epot(NVT)
 271            47.4524
 cyclohexane gas resp
 Temperature   Epot(NVT)
-260       
-280       
-266       
-93        
-288       
+260            59.6542
+280            62.8293
+266            60.4577
+93             34.2242
+288            64.0286
 0         
 ethane gas resp
 Temperature   Epot(NVT)
@@ -929,12 +883,6 @@ Temperature   Epot(NVT)
 90        
 0         
 104       
-ethyleneglycol gas resp
-Temperature   Epot(NVT)
-260       
-0         
-283       
-261       
 formamide gas resp
 Temperature   Epot(NVT)
 270       
@@ -965,21 +913,13 @@ Temperature   Epot(NVT)
 289       
 0         
 180       
-methanol gas resp
-Temperature   Epot(NVT)
-163       
-226       
-0         
-176       
-175       
-245       
 naphthalene gas resp
 Temperature   Epot(NVT)
-456       
-421       
+456            173.222
+421            167.494
 295            145.828
 0         
-353       
+353            155.824
 octanoic_acid gas resp
 Temperature   Epot(NVT)
 372           -78.9662
@@ -1016,16 +956,16 @@ Temperature   Epot(NVT)
 succinic_acid gas resp
 Temperature   Epot(NVT)
 470       
-298       
-295       
+298           -276.061
+295           -276.532
 0         
 509       
 495       
 uracil gas resp
 Temperature   Epot(NVT)
-425       
+425           -687.461
 907       
-298       
-611       
+298           -701.545
+611           -666.908
 0         
 983       

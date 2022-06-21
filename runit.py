@@ -77,6 +77,7 @@ for top in [ "bcc", "resp" ]:
                     print("Generated script %s" % job)
                     for slurmfile in glob.glob("slurm*"):
                         os.unlink(slurmfile)
+                    print("Submitting %s" % job)
                     os.system("sbatch %s" % job)
 #                    sys.exit(0)
                 os.chdir("..")
