@@ -33,7 +33,7 @@ def write_input(compound, phase, top, temp, moldb):
         if "solid" == phase:
             nmol = moldb[compound]["nsolid"]
             outf.write("#SBATCH -n 14\n")
-            for sim in [ "NVT", "NPT" ]:
+            for sim in [ "EM", "NVT", "NPT" ]:
                 mdp = sim + ".mdp"
                 tpr = sim + ".tpr"
                 fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp)
@@ -68,6 +68,8 @@ for top in [ "bcc", "resp" ]:
                 if not et in mytemps:
                     mytemps.append(et)
             for temp in mytemps:
+                if temp == 0:
+                    continue
                 os.makedirs(str(temp), exist_ok=True)
                 os.chdir(str(temp))
                 job = write_input(compound, phase, top, temp, moldb)
