@@ -236,6 +236,7 @@ Temperature   Epot(NVT)
 ethyne gas bcc
 Temperature   Epot(NVT)
 152            13.3505
+227       
 172            13.9192
 209            14.9942
 182            14.2141
@@ -248,6 +249,7 @@ Temperature   Epot(NVT)
 152             53.011
 225            58.3088
 138            52.0116
+244       
 148            52.6758
 128            51.2364
 178             54.885
@@ -278,10 +280,12 @@ Temperature   Epot(NVT)
 403           -418.353
 393           -418.987
 343           -421.907
+570       
 313           -423.652
 406           -418.051
 303           -424.222
 295           -424.771
+526       
 363           -420.749
 353           -421.266
 293           -424.883
@@ -355,6 +359,7 @@ Temperature   Epot(NVT)
 275       
 ethylene gas bcc
 Temperature   Epot(NVT)
+138       
 128             24.575
 90             23.3326
 104             23.789
@@ -420,8 +425,11 @@ Temperature   Epot(NVT)
 231           -29.0261
 succinic_acid gas bcc
 Temperature   Epot(NVT)
+470       
 298           -308.181
 295           -308.303
+509       
+495       
 uracil gas bcc
 Temperature   Epot(NVT)
 425           -638.011
@@ -652,6 +660,8 @@ cyclopropane gas resp
 Temperature   Epot(NVT)
 85             95.0285
 115            96.8519
+165       
+155       
 125            97.5262
 135             98.173
 105            96.2987
@@ -659,13 +669,19 @@ Temperature   Epot(NVT)
 145            98.7817
 108            96.5474
 75             94.4095
+175       
 95             95.6376
 ethyne gas resp
 Temperature   Epot(NVT)
 152            29.5474
+227       
 172            30.1298
+209       
+182       
+192       
 162            29.8352
 142            29.2589
+188       
 furan gas resp
 Temperature   Epot(NVT)
 152             49.717

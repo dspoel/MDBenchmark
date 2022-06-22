@@ -157,6 +157,8 @@ def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str):
 solid = "solid"
 gas   = "gas"
 with open("allresults.csv", "w") as csvf:
+    csvf.write(",,bcc,,,,,resp,,,,\n")
+    csvf.write("Compound,Temperature,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub\n")
     for compound in moldb.keys():
         alltemps = []
         # Fetch all the temperatures from all compounds
@@ -166,8 +168,6 @@ with open("allresults.csv", "w") as csvf:
                     if not int(myt) in alltemps and not myt == "0":
                         alltemps.append(int(myt))
         # Now loop over them and print what data we have
-        csvf.write(",,bcc,,,,resp,,,,\n")
-        csvf.write("Compound,Temperature,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub\n")
         for myT in sorted(alltemps):
             csvf.write("%s,%d" % ( compound, myT ))
             for top in [ "bcc", "resp" ]:
