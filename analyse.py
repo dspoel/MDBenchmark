@@ -45,7 +45,7 @@ def analyse_solid(outf, moldb):
             sdens = 0
             if soliddens in moldb[compound]:
                 sdens = moldb[compound][soliddens]
-            mysolid = { soliddens: sdens }
+            mysolid = {}
             outf.write("%s %s %s solid density %g\n" % ( compound, phase, top, sdens ))
             outf.write("%-10s  %10s  %10s  %10s\n" % ( "Temperature", "P(NVT)", "Rho(NPT)", "Epot(NPT)" ) )
             mytemps = []
@@ -148,7 +148,7 @@ for top in [ "bcc", "resp" ]:
 
 outf.close()
 
-def getstr(allresults, top:str, phase:str, compound:str, myT:int, prop:str):
+def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str):
     if myT in allresults[top][phase][compound]:
         if prop in allresults[top][phase][compound][myT]:
             return str(allresults[top][phase][compound][myT][prop])
@@ -163,16 +163,17 @@ with open("allresults.csv", "w") as csvf:
         for top in [ "bcc", "resp" ]:
             for phase in [ solid, gas ]:
                 for myt in allresults[top][phase][compound].keys():
-                    if not myt in alltemps and not myt == "0":
-                        alltemps.append(int(myt)]
+                    if not int(myt) in alltemps and not myt == "0":
+                        alltemps.append(int(myt))
         # Now loop over them and print what data we have
         csvf.write(",,bcc,,,,resp,,,,\n")
         csvf.write("Compound,Temperature,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub\n")
         for myT in sorted(alltemps):
             csvf.write("%s,%d" % ( compound, myT ))
             for top in [ "bcc", "resp" ]:
-                epotnpt = get_str(allresults, top, solid, compound, myT, "epotnpt")
-                epotgas = get_str(allresults, top, gas, compound, myT, "epotgas")
+                myTstr  = str(myT)
+                epotnpt = get_str(allresults, top, solid, compound, myTstr, "epotnpt")
+                epotgas = get_str(allresults, top, gas, compound, myTstr, "epotgas")
                 dhsub   = ""
                 try:
                     epsolid = float(epotnpt)
@@ -180,8 +181,9 @@ with open("allresults.csv", "w") as csvf:
                     dhsub   = str(epgas-epsolid)
                 except ValueError:
                     # do nothing
-                csv.write(",%s,%s,%s,%s,%s" % (
-                    get_str(allresults, top, solid, compound, myT, "pnvt"),
-                    get_str(allresults, top, solid, compound, myT, "rhonpt"),
-                    epotnpt, epotgas, dhsub ))
-            csv.write("\n")
+                    print("Missing value")
+                csvf.write(",%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "pnvt"),
+                                                 get_str(allresults, top, solid, compound, myTstr, "rhonpt"),
+                                                 epotnpt, epotgas, dhsub ) )
+            csvf.write("\n")
+
