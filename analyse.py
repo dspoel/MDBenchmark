@@ -80,17 +80,18 @@ def analyse_solid(outf, moldb):
                             outf.write("  %10g (%g)" % ( aver, error))
                                 
                     if os.path.exists("NPT.gro"):
+                        tbegin = 4500
                         rhonpt = "density-npt.xvg"
                         if not os.path.exists(rhonpt):
                             os.system("echo Density | gmx energy -f NPT.edr -o %s" % rhonpt)
-                        aver, error = get_averages(rhonpt, 3000)
+                        aver, error = get_averages(rhonpt, tbegin)
                         if None != aver and None != error:
                             mysolid[str(temp)]["rhonpt"] = [ aver, error ]
                             outf.write("  %10g (%g)" % ( aver, error ))
                         epotnpt = "epot-npt.xvg"
                         if not os.path.exists(epotnpt):
                             os.system("echo Potential | gmx energy -f NPT.edr -o %s -nmol %d" % ( epotnpt, moldb[compound]["nsolid"]) )
-                        aver, error = get_averages(epotnpt, 3000)
+                        aver, error = get_averages(epotnpt, tbegin)
                         if None != aver and None != error:
                             mysolid[str(temp)]["epotnpt"] = [ aver, error ]
                             outf.write("  %10g (%10g)" % ( aver, error ))
@@ -159,15 +160,16 @@ outf.close()
 def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str):
     if myT in allresults[top][phase][compound]:
         if prop in allresults[top][phase][compound][myT]:
-            return ("%g,%g" % ( allresults[top][phase][compound][myT][prop][0],
-                                allresults[top][phase][compound][myT][prop][1]))
+            allres = allresults[top][phase][compound][myT][prop]
+            if len(allres) == 2:
+                return ("%g,%g" % ( allres[0], allres[1] ))
     return ","
 
 solid = "solid"
 gas   = "gas"
 with open("allresults.csv", "w") as csvf:
     csvf.write(",,bcc,,,,,,,,,,resp,,,,,,,,,\n")
-    csvf.write("Compound,Temperature,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH\n")
+    csvf.write("Compound,Temperature,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH\n")
     for compound in moldb.keys():
         alltemps = []
         # Fetch all the temperatures from all compounds
@@ -186,9 +188,11 @@ with open("allresults.csv", "w") as csvf:
                 epotgas = get_str(allresults, top, gas, compound, myTstr, "epotgas")
                 dhsub   = ","
                 try:
-                    epsolid = float(epotnpt[0])
-                    epgas   = float(epotgas[0])
-                    errsub  = math.sqrt(float(epotnpt[1])**2 + float(epotgas[1]))
+                    epn     = epotnpt.split(",")
+                    epg     = epotgas.split(",")
+                    epsolid = float(epn[0])
+                    epgas   = float(epg[0])
+                    errsub  = math.sqrt(float(epn[1])**2 + float(epg[1])**2)
                     dhsub   = ("%g,%g" % ( epgas-epsolid-2*myT*Boltz, errsub ))
                 except ValueError:
                     # do nothing
