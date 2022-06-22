@@ -36,6 +36,7 @@ def get_averages(infile:str, begin:int) -> list:
     return aver
 
 def analyse_solid(outf, moldb):
+    solids = {}
     for compound in moldb.keys():
         print("Looking for %s" % compound)
         if os.path.isdir(compound):
@@ -44,6 +45,7 @@ def analyse_solid(outf, moldb):
             sdens = 0
             if soliddens in moldb[compound]:
                 sdens = moldb[compound][soliddens]
+            mysolid = { soliddens: sdens }
             outf.write("%s %s %s solid density %g\n" % ( compound, phase, top, sdens ))
             outf.write("%-10s  %10s  %10s  %10s\n" % ( "Temperature", "P(NVT)", "Rho(NPT)", "Epot(NPT)" ) )
             mytemps = []
@@ -58,54 +60,66 @@ def analyse_solid(outf, moldb):
                 temp = str(mytemp)
                 if os.path.isdir(str(temp)):
                     os.chdir(str(temp))
+                    mysolid[str(temp)] = {}
                     outf.write("%-10s" % temp)
                     if os.path.exists("NVT.gro"):
                         pnvt = "pressure-nvt.xvg"
                         if not os.path.exists(pnvt):
-                            os.system("echo Pressure | gmx energy -f NVT -o %s" % pnvt)
+                            os.system("echo Pressure | gmx energy -f NVT.edr -o %s" % pnvt)
                         aver = get_averages(pnvt, 500)
                         if len(aver) > 0:
+                            mysolid[str(temp)]["pnvt"] = aver[0]
                             outf.write("  %10g" % aver[0])
                                 
                     if os.path.exists("NPT.gro"):
                         rhonpt = "density-npt.xvg"
                         if not os.path.exists(rhonpt):
-                            os.system("echo Density | gmx energy -f NPT -o %s" % rhonpt)
+                            os.system("echo Density | gmx energy -f NPT.edr -o %s" % rhonpt)
                         aver = get_averages(rhonpt, 3000)
                         if len(aver) > 0:
+                            mysolid[str(temp)]["rhonpt"] = aver[0]
                             outf.write("  %10g" % aver[0])
                         epotnpt = "epot-npt.xvg"
                         if not os.path.exists(epotnpt):
-                            os.system("echo Potential | gmx energy -f NPT -o %s -nmol %d" % ( epotnpt, moldb[compound]["nsolid"]) )
+                            os.system("echo Potential | gmx energy -f NPT.edr -o %s -nmol %d" % ( epotnpt, moldb[compound]["nsolid"]) )
                         aver = get_averages(epotnpt, 3000)
                         if len(aver) > 0:
+                            mysolid[str(temp)]["epotnpt"] = aver[0]
                             outf.write("  %10g" % aver[0])
                     outf.write("\n")
                     os.chdir("..")
             os.chdir("..")
+            solids[compound] = mysolid
+    return solids
 
 def analyse_gas(outf, moldb):
+    gas = {}
     for compound in moldb.keys():
         print("Looking for %s" % compound)
         if os.path.isdir(compound):
             os.chdir(compound)
+            mygas = {}
             outf.write("%s %s %s\n" % ( compound, phase, top ))
             outf.write("%-10s  %10s\n" % ( "Temperature", "Epot(NVT)" ) )
             for temp in glob.glob("*"):
                 if os.path.isdir(str(temp)):
                     os.chdir(str(temp))
+                    mygas[str(temp)] = {}
                     outf.write("%-10s" % temp)
                     if os.path.exists("NVT.gro"):
                         epotnvt = "epot-nvt.xvg"
                         if not os.path.exists(epotnvt):
-                            os.system("echo Potential | gmx energy -f NVT -o %s" % ( epotnvt ) )
+                            os.system("echo Potential | gmx energy -f NVT.edr -o %s" % ( epotnvt ) )
                         aver = get_averages(epotnvt, 10000)
                         if len(aver) > 0:
+                            mygas[str(temp)]["epotgas"] = aver[0]
                             outf.write("  %10g" % aver[0])
                                 
                     outf.write("\n")
                     os.chdir("..")
             os.chdir("..")
+            gas[compound] = mygas
+    return gas
 
 if shutil.which("gmx") == None:
     sys.exit("Please load the gromacs environment using\nml load GCC/10.2.0  OpenMPI/4.0.5 GROMACS/2021")
@@ -115,18 +129,59 @@ moldb  = input_dens(moldb)
 output = "results.txt"
 outf   = open(output, "w")
 
+allresults = {}
+
 for top in [ "bcc", "resp" ]:
     print("Looking for %s" % top)
     if os.path.isdir(top):
         os.chdir(top)
+        allresults[top] = {}
         for phase in [ "solid", "gas" ]:
             if os.path.isdir(phase):
                 os.chdir(phase)
                 if "solid" == phase:
-                    analyse_solid(outf, moldb)
+                    allresults[top][phase] = analyse_solid(outf, moldb)
                 else:
-                    analyse_gas(outf, moldb)
+                    allresults[top][phase] = analyse_gas(outf, moldb)
                 os.chdir("..")
         os.chdir("..")
 
 outf.close()
+
+def getstr(allresults, top:str, phase:str, compound:str, myT:int, prop:str):
+    if myT in allresults[top][phase][compound]:
+        if prop in allresults[top][phase][compound][myT]:
+            return str(allresults[top][phase][compound][myT][prop])
+    return ""
+
+solid = "solid"
+gas   = "gas"
+with open("allresults.csv", "w") as csvf:
+    for compound in moldb.keys():
+        alltemps = []
+        # Fetch all the temperatures from all compounds
+        for top in [ "bcc", "resp" ]:
+            for phase in [ solid, gas ]:
+                for myt in allresults[top][phase][compound].keys():
+                    if not myt in alltemps and not myt == "0":
+                        alltemps.append(int(myt)]
+        # Now loop over them and print what data we have
+        csvf.write(",,bcc,,,,resp,,,,\n")
+        csvf.write("Compound,Temperature,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub\n")
+        for myT in sorted(alltemps):
+            csvf.write("%s,%d" % ( compound, myT ))
+            for top in [ "bcc", "resp" ]:
+                epotnpt = get_str(allresults, top, solid, compound, myT, "epotnpt")
+                epotgas = get_str(allresults, top, gas, compound, myT, "epotgas")
+                dhsub   = ""
+                try:
+                    epsolid = float(epotnpt)
+                    epgas   = float(epotgas)
+                    dhsub   = str(epgas-epsolid)
+                except ValueError:
+                    # do nothing
+                csv.write(",%s,%s,%s,%s,%s" % (
+                    get_str(allresults, top, solid, compound, myT, "pnvt"),
+                    get_str(allresults, top, solid, compound, myT, "rhonpt"),
+                    epotnpt, epotgas, dhsub ))
+            csv.write("\n")
