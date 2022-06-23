@@ -130,7 +130,6 @@ nstpcouple               = 10
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
 tau_p                    = 20
 compressibility          = 1e-5 1e-5 1e-5 0 0 0
-ref_p                    = 1.0 1.0 1.0 0.0 0.0 0.0
 ; Scaling of reference coordinates, No, All or COM
 refcoord_scaling         = com
 

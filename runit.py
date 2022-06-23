@@ -11,15 +11,17 @@ def write_top(compound:str, nmol: int):
         outf.write("[ molecules ]\n")
         outf.write("MOL %d\n" % ( nmol ))
 
-def fetch_mdp(src:str, dest:str, temp:int):
+def fetch_mdp(src:str, dest:str, temp:int, pres = None):
     if os.path.exists(dest):
         os.unlink(dest)
     shutil.copy(src, dest)
     with open(dest, "a") as mdpf:
         mdpf.write("ref_t = %d\n" % temp)
+        if None != pres:
+            mdpf.write("ref_p = %f %f %f 0 0 0\n" % ( pres, pres, pres ) )
     
 def write_input(compound, phase, top, temp, moldb):
-    if (("solid" == phase and os.path.exists("NPT.gro")) or
+    if (("solid" == phase and os.path.exists("NPT2.gro")) or
         ("gas" == phase and os.path.exists("NVT.gro")) or
         (temp == 0)):
         return None
@@ -27,20 +29,28 @@ def write_input(compound, phase, top, temp, moldb):
     job = ("%s-%s-%s-%s.sh" % ( compound, top, phase, temp ))
     with open(job, "w") as outf:
         outf.write("#!/bin/sh\n")
-        outf.write("#SBATCH -t 71:00:00\n#SBATCH -A SNIC2021-3-8\n")
+        outf.write("#SBATCH -t 36:00:00\n#SBATCH -A SNIC2021-3-8\n")
         confin = ( "../../../../box/%s/%s.pdb" % ( phase, compound ))
-        
+        pres   = 1
         if "solid" == phase:
             nmol = moldb[compound]["nsolid"]
             outf.write("#SBATCH -n 14\n")
-            for sim in [ "EM", "NVT", "NPT" ]:
-                mdp = sim + ".mdp"
-                tpr = sim + ".tpr"
-                fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp)
+            for sim in [ "EM", "NVT", "NPT", "NPT2" ]:
+                tpr    = sim + ".tpr"
                 outgro = sim + ".gro"
                 if not os.path.exists(outgro):
-                    outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
-                    outf.write("mpirun -np 12 gmx_mpi mdrun -dd 3 2 2 -s %s -deffnm %s -c %s\n" % ( tpr, sim, outgro))
+                    if sim == "NPT2":
+                        oldsim = "NPT"
+                        cpt    = oldsim + ".cpt"
+                        outf.write("mpirun -np 12 gmx_mpi mdrun -dd 3 2 2 -cpi %s -deffnm %s -nsteps 10000000 -c %s\n" % ( cpt, oldsim, outgro))
+                    else:
+                        pres   = None
+                        if sim.find("NPT") >= 0:
+                            pres = moldb[compound]["Pcryst"]
+                        mdp    = sim + ".mdp"
+                        fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp, pres)
+                        outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
+                        outf.write("mpirun -np 12 gmx_mpi mdrun -dd 3 2 2 -s %s -deffnm %s -c %s\n" % ( tpr, sim, outgro))
                 confin = outgro
         else:
             nmol   = 1
@@ -48,7 +58,7 @@ def write_input(compound, phase, top, temp, moldb):
             sim = "NVT"
             mdp = sim + ".mdp"
             tpr = sim + ".tpr"
-            fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp)
+            fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp, None)
             outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
             outf.write("gmx mdrun -s %s -deffnm %s  \n" % (tpr, sim))
         write_top(compound, nmol)
