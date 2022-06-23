@@ -79,8 +79,8 @@ def analyse_solid(outf, moldb):
                             mysolid[str(temp)]["pnvt"] = [ aver, error ]
                             outf.write("  %10g (%g)" % ( aver, error))
                                 
-                    if os.path.exists("NPT.gro"):
-                        tbegin = 4500
+                    if os.path.exists("NPT2.gro"):
+                        tbegin = 10000
                         rhonpt = "density-npt.xvg"
                         if not os.path.exists(rhonpt):
                             os.system("echo Density | gmx energy -f NPT.edr -o %s" % rhonpt)
