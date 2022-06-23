@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, shutil, glob, sys
+import os, shutil, glob, sys, math
 from molecule_db import *
 
 def input_dens(moldb):
@@ -20,20 +20,28 @@ def input_dens(moldb):
 
 def get_averages(infile:str, begin:int) -> list:
     ptxt = "koko.txt"
-    os.system("gmx analyze -f %s -b %d > %s 2>&1" % ( infile, begin, ptxt ))
-    aver = []
+    os.system("gmx analyze -ee -f %s -b %d > %s 2>&1" % ( infile, begin, ptxt ))
+    myaver  = None
+    myerror = None
     with open(ptxt, "r") as inf:
         for line in inf:
             if line.find("SS") >= 0:
                 words = line.split()
                 if len(words) >= 2:
                     try:
-                        aver.append(float(words[1]))
+                        myaver = float(words[1])
                     except ValueError:
                         print("Invalid line '%s'" % line)
                 else:
                     print("No words on line '%'" % line)
-    return aver
+            elif line.find("err.est") >= 0:
+                words = line.split()
+                if len(words) >= 4:
+                    try:
+                        myerror = float(words[3])
+                    except ValueError:
+                        print("Invalid line '%s'" % line)
+    return myaver, myerror
 
 def analyse_solid(outf, moldb):
     solids = {}
@@ -66,26 +74,27 @@ def analyse_solid(outf, moldb):
                         pnvt = "pressure-nvt.xvg"
                         if not os.path.exists(pnvt):
                             os.system("echo Pressure | gmx energy -f NVT.edr -o %s" % pnvt)
-                        aver = get_averages(pnvt, 500)
-                        if len(aver) > 0:
-                            mysolid[str(temp)]["pnvt"] = aver[0]
-                            outf.write("  %10g" % aver[0])
+                        aver,error = get_averages(pnvt, 500)
+                        if None != aver and None != error:
+                            mysolid[str(temp)]["pnvt"] = [ aver, error ]
+                            outf.write("  %10g (%g)" % ( aver, error))
                                 
                     if os.path.exists("NPT.gro"):
+                        tbegin = 4500
                         rhonpt = "density-npt.xvg"
                         if not os.path.exists(rhonpt):
                             os.system("echo Density | gmx energy -f NPT.edr -o %s" % rhonpt)
-                        aver = get_averages(rhonpt, 3000)
-                        if len(aver) > 0:
-                            mysolid[str(temp)]["rhonpt"] = aver[0]
-                            outf.write("  %10g" % aver[0])
+                        aver, error = get_averages(rhonpt, tbegin)
+                        if None != aver and None != error:
+                            mysolid[str(temp)]["rhonpt"] = [ aver, error ]
+                            outf.write("  %10g (%g)" % ( aver, error ))
                         epotnpt = "epot-npt.xvg"
                         if not os.path.exists(epotnpt):
                             os.system("echo Potential | gmx energy -f NPT.edr -o %s -nmol %d" % ( epotnpt, moldb[compound]["nsolid"]) )
-                        aver = get_averages(epotnpt, 3000)
-                        if len(aver) > 0:
-                            mysolid[str(temp)]["epotnpt"] = aver[0]
-                            outf.write("  %10g" % aver[0])
+                        aver, error = get_averages(epotnpt, tbegin)
+                        if None != aver and None != error:
+                            mysolid[str(temp)]["epotnpt"] = [ aver, error ]
+                            outf.write("  %10g (%10g)" % ( aver, error ))
                     outf.write("\n")
                     os.chdir("..")
             os.chdir("..")
@@ -110,10 +119,10 @@ def analyse_gas(outf, moldb):
                         epotnvt = "epot-nvt.xvg"
                         if not os.path.exists(epotnvt):
                             os.system("echo Potential | gmx energy -f NVT.edr -o %s" % ( epotnvt ) )
-                        aver = get_averages(epotnvt, 10000)
-                        if len(aver) > 0:
-                            mygas[str(temp)]["epotgas"] = aver[0]
-                            outf.write("  %10g" % aver[0])
+                        aver, error = get_averages(epotnvt, 10000)
+                        if None != aver and None != error:
+                            mygas[str(temp)]["epotgas"] = [ aver, error ]
+                            outf.write("  %10g (%g)" % (aver, error))
                                 
                     outf.write("\n")
                     os.chdir("..")
@@ -151,14 +160,16 @@ outf.close()
 def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str):
     if myT in allresults[top][phase][compound]:
         if prop in allresults[top][phase][compound][myT]:
-            return str(allresults[top][phase][compound][myT][prop])
-    return ""
+            allres = allresults[top][phase][compound][myT][prop]
+            if len(allres) == 2:
+                return ("%g,%g" % ( allres[0], allres[1] ))
+    return ","
 
 solid = "solid"
 gas   = "gas"
 with open("allresults.csv", "w") as csvf:
-    csvf.write(",,bcc,,,,,resp,,,,\n")
-    csvf.write("Compound,Temperature,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub,P(NVT),Rho(NPT),Epot(NPT),Epot(gas),DHsub\n")
+    csvf.write(",,bcc,,,,,,,,,,resp,,,,,,,,,\n")
+    csvf.write("Compound,Temperature,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH\n")
     for compound in moldb.keys():
         alltemps = []
         # Fetch all the temperatures from all compounds
@@ -168,17 +179,21 @@ with open("allresults.csv", "w") as csvf:
                     if not int(myt) in alltemps and not myt == "0":
                         alltemps.append(int(myt))
         # Now loop over them and print what data we have
+        Boltz = 0.00831415
         for myT in sorted(alltemps):
             csvf.write("%s,%d" % ( compound, myT ))
             for top in [ "bcc", "resp" ]:
                 myTstr  = str(myT)
                 epotnpt = get_str(allresults, top, solid, compound, myTstr, "epotnpt")
                 epotgas = get_str(allresults, top, gas, compound, myTstr, "epotgas")
-                dhsub   = ""
+                dhsub   = ","
                 try:
-                    epsolid = float(epotnpt)
-                    epgas   = float(epotgas)
-                    dhsub   = str(epgas-epsolid)
+                    epn     = epotnpt.split(",")
+                    epg     = epotgas.split(",")
+                    epsolid = float(epn[0])
+                    epgas   = float(epg[0])
+                    errsub  = math.sqrt(float(epn[1])**2 + float(epg[1])**2)
+                    dhsub   = ("%g,%g" % ( epgas-epsolid-2*myT*Boltz, errsub ))
                 except ValueError:
                     # do nothing
                     print("Missing value")
