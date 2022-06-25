@@ -105,7 +105,7 @@ def analyse_solid(outf, moldb):
                             mysolid[str(temp)]["epotnpt"] = [ aver, error ]
                             outf.write("  %10g (%10g)" % ( aver, error ))
                         gzsize = grogzsize(final_gro)
-                        mysolid[str(temp)]["gzsize"] = gzsize
+                        mysolid[str(temp)]["gzsize"] = [ gzsize ]
                         outf.write(" %10d" % gzsize)
                     outf.write("\n")
                     os.chdir("..")
@@ -176,6 +176,8 @@ def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str):
             allres = allresults[top][phase][compound][myT][prop]
             if len(allres) == 2:
                 return ("%g,%g" % ( allres[0], allres[1] ))
+            elif len(allres) == 1:
+                return ("%d" % ( allres[0] ))
     return ","
 
 solid = "solid"
@@ -210,13 +212,10 @@ with open("allresults.csv", "w") as csvf:
                 except ValueError:
                     # do nothing
                     print("Missing value")
-                gzsize = "gzsize"
-                mygz = ""
-                if gzsize in allresults[top][solid][compound]:
-                    mygz = str(allresults[top][solid][compound][gzsize])
                 
                 csvf.write(",%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "pnvt"),
                                                     get_str(allresults, top, solid, compound, myTstr, "rhonpt"),
-                                                    epotnpt, epotgas, dhsub, mygz) )
+                                                    epotnpt, epotgas, dhsub, 
+                                                    gzsize(allresults, top, solid, compound, myTstr, "gzsize")) )
             csvf.write("\n")
 
