@@ -182,7 +182,7 @@ solid = "solid"
 gas   = "gas"
 with open("allresults.csv", "w") as csvf:
     csvf.write(",,bcc,,,,,,,,,,,resp,,,,,,,,,,\n")
-    csvf.write("Compound,Temperature,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_sizeP(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size\n")
+    csvf.write("Compound,Temperature,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size\n")
     for compound in moldb.keys():
         alltemps = []
         # Fetch all the temperatures from all compounds
@@ -210,9 +210,13 @@ with open("allresults.csv", "w") as csvf:
                 except ValueError:
                     # do nothing
                     print("Missing value")
+                gzsize = "gzsize"
+                if gzsize in allresults[top][solid][compound]:
+                    mygz = str(allresults[top][solid][compound][gzsize])
+                else:
+                    mygz = ""
                 csvf.write(",%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "pnvt"),
                                                     get_str(allresults, top, solid, compound, myTstr, "rhonpt"),
-                                                    epotnpt, epotgas, dhsub,
-                                                    str(allresults[top][solid][compound][gzsize]) ) )
+                                                    epotnpt, epotgas, dhsub, mygz) )
             csvf.write("\n")
 

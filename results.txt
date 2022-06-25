@@ -178,7 +178,7 @@ octanoic_acid solid bcc solid density 1083.25
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 289            5501.52 (15.1025)
 344            6597.07 (15.8067)
-372            7171.84 (17.734)
+372            7171.84 (17.734)     847.638 (0.149146)    -120.358 ( 0.0451446)     863444
 pentane solid bcc solid density 866.519
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 143            1660.14 (11.2335)     850.563 (0.032265)    -15.1925 (0.00238251)     505010
@@ -614,7 +614,7 @@ octanoic_acid solid resp solid density 1083.25
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 289            5468.66 (13.8201)      1004.3 (0.0443012)    -202.955 ( 0.0067467)     851812
 344            6529.29 (15.4491)     968.135 (0.257425)    -183.319 ( 0.0628255)     855747
-372             7155.6 (17.8988)
+372             7155.6 (17.8988)     845.812 (0.17829)    -148.756 (   0.16457)     864626
 pentane solid resp solid density 866.519
 Temperature      P(NVT)    Rho(NPT)   Epot(NPT)
 143            1614.83 (12.2006)     851.006 (0.0307817)    -43.4924 (0.00210932)     505261
