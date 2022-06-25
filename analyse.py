@@ -211,10 +211,10 @@ with open("allresults.csv", "w") as csvf:
                     # do nothing
                     print("Missing value")
                 gzsize = "gzsize"
+                mygz = ""
                 if gzsize in allresults[top][solid][compound]:
                     mygz = str(allresults[top][solid][compound][gzsize])
-                else:
-                    mygz = ""
+                
                 csvf.write(",%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "pnvt"),
                                                     get_str(allresults, top, solid, compound, myTstr, "rhonpt"),
                                                     epotnpt, epotgas, dhsub, mygz) )
