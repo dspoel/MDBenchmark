@@ -216,6 +216,6 @@ with open("allresults.csv", "w") as csvf:
                 csvf.write(",%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "pnvt"),
                                                     get_str(allresults, top, solid, compound, myTstr, "rhonpt"),
                                                     epotnpt, epotgas, dhsub, 
-                                                    gzsize(allresults, top, solid, compound, myTstr, "gzsize")) )
+                                                    get_str(allresults, top, solid, compound, myTstr, "gzsize")) )
             csvf.write("\n")
 
