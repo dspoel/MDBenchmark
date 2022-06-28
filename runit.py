@@ -29,12 +29,14 @@ def write_input(compound, phase, top, temp, moldb):
     job = ("%s-%s-%s-%s.sh" % ( compound, top, phase, temp ))
     with open(job, "w") as outf:
         outf.write("#!/bin/sh\n")
-        outf.write("#SBATCH -t 36:00:00\n#SBATCH -A SNIC2021-3-8\n")
+        outf.write("#SBATCH -t 36:00:00\n")
+        #outf.write("#SBATCH -A SNIC2021-3-8\n")
         confin = ( "../../../../box/%s/%s.pdb" % ( phase, compound ))
         pres   = 1
         if "solid" == phase:
+            ncores = 8
             nmol = moldb[compound]["nsolid"]
-            outf.write("#SBATCH -n 14\n")
+            outf.write("#SBATCH -n %d\n" % ncores)
             for sim in [ "EM", "NVT", "NPT", "NPT2" ]:
                 tpr    = sim + ".tpr"
                 outgro = sim + ".gro"
@@ -42,7 +44,7 @@ def write_input(compound, phase, top, temp, moldb):
                     if sim == "NPT2":
                         oldsim = "NPT"
                         cpt    = oldsim + ".cpt"
-                        outf.write("mpirun -np 12 gmx_mpi mdrun -dd 3 2 2 -cpi %s -deffnm %s -nsteps 10000000 -c %s\n" % ( cpt, oldsim, outgro))
+                        outf.write("mpirun -np 8 gmx_mpi mdrun -dd 2 2 2 -cpi %s -deffnm %s -nsteps 5000000 -c %s\n" % ( cpt, oldsim, outgro))
                     else:
                         pres   = None
                         if sim.find("NPT") >= 0:
@@ -50,7 +52,7 @@ def write_input(compound, phase, top, temp, moldb):
                         mdp    = sim + ".mdp"
                         fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp, pres)
                         outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
-                        outf.write("mpirun -np 12 gmx_mpi mdrun -dd 3 2 2 -s %s -deffnm %s -c %s\n" % ( tpr, sim, outgro))
+                        outf.write("mpirun -np 8 gmx_mpi mdrun -dd 2 2 2 -s %s -deffnm %s -c %s\n" % ( tpr, sim, outgro))
                 confin = outgro
         else:
             nmol   = 1

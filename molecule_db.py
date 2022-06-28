@@ -6,7 +6,7 @@ def get_moldb(verbose:bool):
     moldb = {}
     for row in get_csv_rows("molecule_db.csv", 12):
         extrat = []
-        for r in range(5, 10):
+        for r in range(5, 11):
             if len(row[r]) > 0:
                 extrat.append(int(row[r]))
         try:
