@@ -44,7 +44,7 @@ def write_input(compound, phase, top, temp, moldb):
                     if sim == "NPT2":
                         oldsim = "NPT"
                         cpt    = oldsim + ".cpt"
-                        outf.write("mpirun -np 8 gmx_mpi mdrun -dd 2 2 2 -cpi %s -deffnm %s -nsteps 5000000 -c %s\n" % ( cpt, oldsim, outgro))
+                        outf.write("gmx mdrun -ntmpi 8  -ntomp 1 -dd 2 2 2 -cpi %s -deffnm %s -nsteps 5000000 -c %s\n" % ( cpt, oldsim, outgro))
                     else:
                         pres   = None
                         if sim.find("NPT") >= 0:
@@ -52,7 +52,7 @@ def write_input(compound, phase, top, temp, moldb):
                         mdp    = sim + ".mdp"
                         fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp, pres)
                         outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
-                        outf.write("mpirun -np 8 gmx_mpi mdrun -dd 2 2 2 -s %s -deffnm %s -c %s\n" % ( tpr, sim, outgro))
+                        outf.write("gmx mdrun -ntmpi 8 -ntomp 1 -dd 2 2 2 -s %s -deffnm %s -c %s\n" % ( tpr, sim, outgro))
                 confin = outgro
         else:
             nmol   = 1

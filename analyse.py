@@ -20,16 +20,17 @@ def input_dens(moldb):
 
 def get_averages(infile:str, begin:int, end: int) -> list:
     ptxt = "koko.txt"
-    os.system("gmx analyze -ee -f %s -b %d -e %d > %s 2>&1" % ( infile, begin, end, ptxt ))
+    os.system("gmx analyze -f %s -b %d -e %d > %s 2>&1" % ( infile, begin, end, ptxt ))
     myaver  = None
     myerror = None
     with open(ptxt, "r") as inf:
         for line in inf:
-            if line.find("SS") >= 0:
+            if line.find("SS1") >= 0:
                 words = line.split()
                 if len(words) >= 2:
                     try:
                         myaver = float(words[1])
+                        myerror = float(words[2])
                     except ValueError:
                         print("Invalid line '%s'" % line)
                 else:
