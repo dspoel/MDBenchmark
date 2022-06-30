@@ -171,7 +171,7 @@ for top in [ "bcc", "resp" ]:
 
 outf.close()
 
-def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str):
+def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str, expectError:bool):
     if myT in allresults[top][phase][compound]:
         if prop in allresults[top][phase][compound][myT]:
             allres = allresults[top][phase][compound][myT][prop]
@@ -179,7 +179,10 @@ def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str):
                 return ("%g,%g" % ( allres[0], allres[1] ))
             elif len(allres) == 1:
                 return ("%d" % ( allres[0] ))
-    return ","
+    if expectError:
+        return ","
+    else:
+        return ""
 
 solid = "solid"
 gas   = "gas"
@@ -200,8 +203,8 @@ with open("allresults.csv", "w") as csvf:
             csvf.write("%s,%d" % ( compound, myT ))
             for top in [ "bcc", "resp" ]:
                 myTstr  = str(myT)
-                epotnpt = get_str(allresults, top, solid, compound, myTstr, "epotnpt")
-                epotgas = get_str(allresults, top, gas, compound, myTstr, "epotgas")
+                epotnpt = get_str(allresults, top, solid, compound, myTstr, "epotnpt", True)
+                epotgas = get_str(allresults, top, gas, compound, myTstr, "epotgas", True)
                 dhsub   = ","
                 try:
                     epn     = epotnpt.split(",")
@@ -214,9 +217,9 @@ with open("allresults.csv", "w") as csvf:
                     # do nothing
                     print("Missing value")
                 
-                csvf.write(",%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "pnvt"),
-                                                    get_str(allresults, top, solid, compound, myTstr, "rhonpt"),
+                csvf.write(",%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "pnvt", True),
+                                                    get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
                                                     epotnpt, epotgas, dhsub, 
-                                                    get_str(allresults, top, solid, compound, myTstr, "gzsize")) )
+                                                    get_str(allresults, top, solid, compound, myTstr, "gzsize", False)) )
             csvf.write("\n")
 
