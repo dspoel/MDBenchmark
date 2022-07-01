@@ -41,10 +41,15 @@ def write_input(compound, phase, top, temp, moldb):
                 tpr    = sim + ".tpr"
                 outgro = sim + ".gro"
                 if not os.path.exists(outgro):
+                    hname = "HOSTNAME"
+                    if hname in os.environ and os.environ[hname].find("csb") >= 0:
+                        mdrun = "gmx mdrun -ntmpi 8  -ntomp 1 -dd 2 2 2"
+                    else:
+                        mdrun = "srun gmx_mpi -ntomp 1 -dd 3 2 2 "
                     if sim == "NPT2":
                         oldsim = "NPT"
                         cpt    = oldsim + ".cpt"
-                        outf.write("gmx mdrun -ntmpi 8  -ntomp 1 -dd 2 2 2 -cpi %s -deffnm %s -nsteps 5000000 -c %s\n" % ( cpt, oldsim, outgro))
+                        outf.write("%s -cpi %s -deffnm %s -nsteps 5000000 -c %s\n" % ( mdrun, cpt, oldsim, outgro))
                     else:
                         pres   = None
                         if sim.find("NPT") >= 0:
@@ -52,7 +57,7 @@ def write_input(compound, phase, top, temp, moldb):
                         mdp    = sim + ".mdp"
                         fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp, pres)
                         outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
-                        outf.write("gmx mdrun -ntmpi 8 -ntomp 1 -dd 2 2 2 -s %s -deffnm %s -c %s\n" % ( tpr, sim, outgro))
+                        outf.write("%s -s %s -deffnm %s -c %s\n" % ( mdrun, tpr, sim, outgro))
                 confin = outgro
         else:
             nmol   = 1
