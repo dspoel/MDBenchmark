@@ -8,8 +8,8 @@ include                  =
 integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
-dt                       = 0.001
-nsteps                   = 100000000
+dt                       = 0.0005
+nsteps                   = 200000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)

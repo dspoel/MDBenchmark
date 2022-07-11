@@ -92,7 +92,7 @@ def write_input(compound, phase, top, temp, moldb):
 moldb = get_moldb(True)
 for top in [ "bcc", "resp" ]:
     os.chdir(top)
-    for phase in [ "solid" ]:
+    for phase in [ "gas" ]:
         os.chdir(phase)
         for compound in moldb.keys():
             os.makedirs(compound, exist_ok=True)

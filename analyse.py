@@ -35,7 +35,7 @@ def get_averages(infile:str, begin:int, end: int) -> list:
                         print("Invalid line '%s'" % line)
                 else:
                     print("No words on line '%'" % line)
-            elif line.find("err.est") >= 0:
+            elif False and line.find("err.est") >= 0:
                 words = line.split()
                 if len(words) >= 4:
                     try:
