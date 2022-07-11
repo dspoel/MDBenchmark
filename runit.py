@@ -19,7 +19,22 @@ def fetch_mdp(src:str, dest:str, temp:int, pres = None):
         mdpf.write("ref_t = %d\n" % temp)
         if None != pres:
             mdpf.write("ref_p = %f %f %f 0 0 0\n" % ( pres, pres, pres ) )
-    
+
+def get_nsteps(logfile:str):
+    step = None
+    with open(logfile, "r") as inf:
+        lines = inf.readlines()
+        nlines = len(lines)
+        for i in range(nlines):
+            if lines[i].find("           Step           Time") >= 0 and i < nlines-1:
+                oldstep = step
+                try:
+                    words = lines[i+1].split()
+                    step  = int(words[0])
+                except ValueError:
+                    step = oldstep
+    return step
+
 def write_input(compound, phase, top, temp, moldb):
     if (("solid" == phase and os.path.exists("NPT2.gro")) or
         ("gas" == phase and os.path.exists("NVT.gro")) or
@@ -30,31 +45,33 @@ def write_input(compound, phase, top, temp, moldb):
     with open(job, "w") as outf:
         outf.write("#!/bin/sh\n")
         outf.write("#SBATCH -t 36:00:00\n")
-        #outf.write("#SBATCH -A SNIC2021-3-8\n")
+        outf.write("#SBATCH -A SNIC2021-3-8\n")
         confin = ( "../../../../box/%s/%s.pdb" % ( phase, compound ))
         pres   = 1
         if "solid" == phase:
-            ncores = 8
+            ncores = 12
             nmol = moldb[compound]["nsolid"]
             outf.write("#SBATCH -n %d\n" % ncores)
             for sim in [ "EM", "NVT", "NPT", "NPT2" ]:
                 tpr    = sim + ".tpr"
                 outgro = sim + ".gro"
+                mdp    = sim + ".mdp"
                 if not os.path.exists(outgro):
                     hname = "HOSTNAME"
-                    if hname in os.environ and os.environ[hname].find("csb") >= 0:
+                    if hname in os.environ and os.environ[hname].find("csb.bmc.uu.se") >= 0:
                         mdrun = "gmx mdrun -ntmpi 8  -ntomp 1 -dd 2 2 2"
                     else:
-                        mdrun = "srun gmx_mpi -ntomp 1 -dd 3 2 2 "
+                        mdrun = "mpirun gmx_mpi mdrun -ntomp 1 -dd 3 2 2 "
                     if sim == "NPT2":
                         oldsim = "NPT"
                         cpt    = oldsim + ".cpt"
-                        outf.write("%s -cpi %s -deffnm %s -nsteps 5000000 -c %s\n" % ( mdrun, cpt, oldsim, outgro))
+                        nsteps_done = get_nsteps(oldsim + ".log")
+                        nsteps_left = 15000000-nsteps_done
+                        outf.write("%s -cpi %s -deffnm %s -nsteps %d -c %s\n" % ( mdrun, cpt, oldsim, nsteps_left, outgro))
                     else:
                         pres   = None
                         if sim.find("NPT") >= 0:
                             pres = moldb[compound]["Pcryst"]
-                        mdp    = sim + ".mdp"
                         fetch_mdp(("../../../../MDP/%s%s.mdp" % ( sim, phase )), mdp, temp, pres)
                         outf.write("gmx grompp -maxwarn 2 -c %s -f %s -o %s\n" % ( confin, mdp, tpr ) )
                         outf.write("%s -s %s -deffnm %s -c %s\n" % ( mdrun, tpr, sim, outgro))
@@ -75,7 +92,7 @@ def write_input(compound, phase, top, temp, moldb):
 moldb = get_moldb(True)
 for top in [ "bcc", "resp" ]:
     os.chdir(top)
-    for phase in [ "gas", "solid" ]:
+    for phase in [ "solid" ]:
         os.chdir(phase)
         for compound in moldb.keys():
             os.makedirs(compound, exist_ok=True)
