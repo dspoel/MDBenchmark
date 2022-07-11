@@ -66,7 +66,7 @@ def write_input(compound, phase, top, temp, moldb):
                         oldsim = "NPT"
                         cpt    = oldsim + ".cpt"
                         nsteps_done = get_nsteps(oldsim + ".log")
-                        nsteps_left = 15000000-nsteps_done
+                        nsteps_left = max(10000, 15000000-nsteps_done)
                         outf.write("%s -cpi %s -deffnm %s -nsteps %d -c %s\n" % ( mdrun, cpt, oldsim, nsteps_left, outgro))
                     else:
                         pres   = None
