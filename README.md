@@ -1,2 +1,2 @@
 # MDBenchmark
-Input files to evaluate solid properties using simulation.
+Input files to evaluate properties of solids using molecular simulation.
