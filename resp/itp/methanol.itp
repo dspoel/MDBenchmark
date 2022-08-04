@@ -1,6 +1,6 @@
-; Topology generated from /home/spoel/Liquids/MOLECULES/OEP/methanol/methanol-3-oep.log.gz
-; Charge method used esp
-; MOL_GMX.top created by acpype (Rev: 0) on Sat Nov 18 22:17:49 2017
+; Topology generated from /home/ghahremanpour/Liquids/MOLECULES/OEP/methanol/methanol-3-oep.log.gz
+; Charge method used bcc
+; MOL_GMX.top created by acpype (Rev: 0) on Wed Feb 14 23:09:58 2018
 
 [ defaults ]
 ; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
@@ -8,10 +8,10 @@
 
 [ atomtypes ]
 ;name   bond_type     mass     charge   ptype   sigma         epsilon       Amb
- c3       c3          0.00000  0.00000   A     3.39967e-01   4.57730e-01 ; 1.91  0.1094
- h1       h1          0.00000  0.00000   A     2.47135e-01   6.56888e-02 ; 1.39  0.0157
  oh       oh          0.00000  0.00000   A     3.06647e-01   8.80314e-01 ; 1.72  0.2104
  ho       ho          0.00000  0.00000   A     0.00000e+00   0.00000e+00 ; 0.00  0.0000
+ c3       c3          0.00000  0.00000   A     3.39967e-01   4.57730e-01 ; 1.91  0.1094
+ h1       h1          0.00000  0.00000   A     2.47135e-01   6.56888e-02 ; 1.39  0.0157
 
 [ moleculetype ]
 ;name            nrexcl
@@ -19,41 +19,41 @@
 
 [ atoms ]
 ;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
-     1   c3     1   MOL    C1    1     0.213630     12.01000 ; qtot 0.214
-     2   h1     1   MOL    H1    2    -0.018984      1.00800 ; qtot 0.195
-     3   h1     1   MOL    H2    3    -0.018981      1.00800 ; qtot 0.176
-     4   h1     1   MOL    H3    4     0.048845      1.00800 ; qtot 0.225
-     5   oh     1   MOL    O1    5    -0.601674     16.00000 ; qtot -0.377
-     6   ho     1   MOL    H4    6     0.377163      1.00800 ; qtot 0.000
+     1   oh     1   MOL    O1    1     -0.601674    16.00000 ; qtot -0.599
+     2   ho     1   MOL    H1    2      0.377163     1.00800 ; qtot -0.203
+     3   c3     1   MOL    C1    3      0.213630    12.01000 ; qtot -0.086
+     4   h1     1   MOL    H2    4     -0.018984     1.00800 ; qtot -0.057
+     5   h1     1   MOL    H3    5      0.048845     1.00800 ; qtot -0.029
+     6   h1     1   MOL    H4    6     -0.018984     1.00800 ; qtot 0.000
 
 [ bonds ]
 ;   ai     aj funct   r             k
-     1      2   1    1.0969e-01    2.7665e+05 ;     C1 - H1    
-     1      3   1    1.0969e-01    2.7665e+05 ;     C1 - H2    
-     1      4   1    1.0969e-01    2.7665e+05 ;     C1 - H3    
-     1      5   1    1.4233e-01    2.6501e+05 ;     C1 - O1    
-     5      6   1    9.7300e-02    3.1079e+05 ;     O1 - H4    
+     1      2   1    9.7300e-02    3.1079e+05 ;     O1 - H1    
+     1      3   1    1.4233e-01    2.6501e+05 ;     O1 - C1    
+     3      4   1    1.0969e-01    2.7665e+05 ;     C1 - H2    
+     3      5   1    1.0969e-01    2.7665e+05 ;     C1 - H3    
+     3      6   1    1.0969e-01    2.7665e+05 ;     C1 - H4    
 
 [ pairs ]
 ;   ai     aj    funct
+     2      4      1 ;     H1 - H2    
+     2      5      1 ;     H1 - H3    
      2      6      1 ;     H1 - H4    
-     3      6      1 ;     H2 - H4    
-     4      6      1 ;     H3 - H4    
 
 [ angles ]
 ;   ai     aj     ak    funct   theta         cth
-     1      5      6      1    1.0726e+02    3.9648e+02 ;     C1 - O1     - H4    
-     2      1      3      1    1.0846e+02    3.2836e+02 ;     H1 - C1     - H2    
-     2      1      4      1    1.0846e+02    3.2836e+02 ;     H1 - C1     - H3    
-     2      1      5      1    1.1026e+02    4.2618e+02 ;     H1 - C1     - O1    
-     3      1      4      1    1.0846e+02    3.2836e+02 ;     H2 - C1     - H3    
-     3      1      5      1    1.1026e+02    4.2618e+02 ;     H2 - C1     - O1    
-     4      1      5      1    1.1026e+02    4.2618e+02 ;     H3 - C1     - O1    
+     1      3      4      1    1.1026e+02    4.2618e+02 ;     O1 - C1     - H2    
+     1      3      5      1    1.1026e+02    4.2618e+02 ;     O1 - C1     - H3    
+     1      3      6      1    1.1026e+02    4.2618e+02 ;     O1 - C1     - H4    
+     2      1      3      1    1.0726e+02    3.9648e+02 ;     H1 - O1     - C1    
+     4      3      5      1    1.0846e+02    3.2836e+02 ;     H2 - C1     - H3    
+     4      3      6      1    1.0846e+02    3.2836e+02 ;     H2 - C1     - H4    
+     5      3      6      1    1.0846e+02    3.2836e+02 ;     H3 - C1     - H4    
 
 [ dihedrals ] ; propers
 ; treated as RBs in GROMACS to use combine multiple AMBER torsions per quartet
 ;    i      j      k      l   func    C0         C1         C2         C3         C4         C5
-     2      1      5      6      3    0.69733    2.09200    0.00000   -2.78933    0.00000    0.00000 ;     H1-    C1-    O1-    H4
-     3      1      5      6      3    0.69733    2.09200    0.00000   -2.78933    0.00000    0.00000 ;     H2-    C1-    O1-    H4
-     4      1      5      6      3    0.69733    2.09200    0.00000   -2.78933    0.00000    0.00000 ;     H3-    C1-    O1-    H4
+     2      1      3      4      3    0.69733    2.09200    0.00000   -2.78933    0.00000    0.00000 ;     H1-    O1-    C1-    H2
+     2      1      3      5      3    0.69733    2.09200    0.00000   -2.78933    0.00000    0.00000 ;     H1-    O1-    C1-    H3
+     2      1      3      6      3    0.69733    2.09200    0.00000   -2.78933    0.00000    0.00000 ;     H1-    O1-    C1-    H4
 

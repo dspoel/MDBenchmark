@@ -22,6 +22,8 @@ def fetch_mdp(src:str, dest:str, temp:int, pres = None):
 
 def get_nsteps(logfile:str):
     step = None
+    if not os.path.exists(logfile):
+        return step
     with open(logfile, "r") as inf:
         lines = inf.readlines()
         nlines = len(lines)
@@ -52,7 +54,7 @@ def write_input(compound, phase, top, temp, moldb):
             ncores = 12
             nmol = moldb[compound]["nsolid"]
             outf.write("#SBATCH -n %d\n" % ncores)
-            for sim in [ "EM", "NVT", "NPT", "NPT2" ]:
+            for sim in [ "EM", "NVT", "NPT" ]: #, "NPT2" ]:
                 tpr    = sim + ".tpr"
                 outgro = sim + ".gro"
                 mdp    = sim + ".mdp"
@@ -92,7 +94,7 @@ def write_input(compound, phase, top, temp, moldb):
 moldb = get_moldb(True)
 for top in [ "bcc", "resp" ]:
     os.chdir(top)
-    for phase in [ "gas" ]:
+    for phase in [ "solid" ]:
         os.chdir(phase)
         for compound in moldb.keys():
             os.makedirs(compound, exist_ok=True)
