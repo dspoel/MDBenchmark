@@ -63,7 +63,7 @@ def analyse_solid(outf, moldb):
                 sdens = moldb[compound][soliddens]
             mysolid = {}
             outf.write("%s %s %s solid density %g\n" % ( compound, phase, top, sdens ))
-            outf.write("%-10s  %10s  %10s  %10s\n" % ( "Temperature", "P(NVT)", "Rho(NPT)", "Epot(NPT)" ) )
+            outf.write("%-10s  %10s  %10s  %10s  %10s  %10s\n" % ( "Temperature", "Px(NVT)", "Py(NVT)", "Pz(NVT)", "Rho(NPT)", "Epot(NPT)" ) )
             mytemps = []
             for temp in glob.glob("*"):
                 if os.path.isdir(str(temp)):
@@ -79,13 +79,15 @@ def analyse_solid(outf, moldb):
                     mysolid[str(temp)] = {}
                     outf.write("%-10s" % temp)
                     if os.path.exists("NVT.gro"):
-                        pnvt = "pressure-nvt.xvg"
-                        if not os.path.exists(pnvt):
-                            os.system("echo Pressure | gmx energy -f NVT.edr -o %s" % pnvt)
-                        aver,error = get_averages(pnvt, 500, 1000)
-                        if None != aver and None != error:
-                            mysolid[str(temp)]["pnvt"] = [ aver, error ]
-                            outf.write("  %10g (%g)" % ( aver, error))
+                        for direction in [ "XX", "YY", "ZZ" ]:
+                            pnvt = ( "pres-%s-nvt.xvg" % direction )
+                            sel  = ( "Pres-%s" % direction )
+                            if not os.path.exists(pnvt):
+                                os.system("echo %s | gmx energy -f NVT.edr -o %s" % ( sel, pnvt ))
+                            aver,error = get_averages(pnvt, 500, 1000)
+                            if None != aver and None != error:
+                                mysolid[str(temp)][sel] = [ aver, error ]
+                                outf.write("  %10g (%g)" % ( aver, error))
 
                     final_gro = "NPT2.gro"                
                     if os.path.exists(final_gro):
@@ -187,8 +189,8 @@ def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str, exp
 solid = "solid"
 gas   = "gas"
 with open("allresults.csv", "w") as csvf:
-    csvf.write(",,bcc,,,,,,,,,,,resp,,,,,,,,,,\n")
-    csvf.write("Compound,Temperature,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,P(NVT),sigmaP,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size\n")
+    csvf.write(",,bcc,,,,,,,,,,,,,,,resp,,,,,,,,,,,,,,\n")
+    csvf.write("Compound,Temperature,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size\n")
     for compound in moldb.keys():
         alltemps = []
         # Fetch all the temperatures from all compounds
@@ -217,9 +219,11 @@ with open("allresults.csv", "w") as csvf:
                     # do nothing
                     print("Missing value")
                 
-                csvf.write(",%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "pnvt", True),
-                                                    get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
-                                                    epotnpt, epotgas, dhsub, 
-                                                    get_str(allresults, top, solid, compound, myTstr, "gzsize", False)) )
+                csvf.write(",%s,%s,%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "Pres-XX", True),
+                                                          get_str(allresults, top, solid, compound, myTstr, "Pres-YY", True),
+                                                          get_str(allresults, top, solid, compound, myTstr, "Pres-ZZ", True),
+                                                          get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
+                                                          epotnpt, epotgas, dhsub, 
+                                                          get_str(allresults, top, solid, compound, myTstr, "gzsize", False)) )
             csvf.write("\n")
 
