@@ -10,10 +10,11 @@ def mklist():
         mytemp.append(int(md))
     return sorted(mytemp)
 
-def run_comp(compound:str):    
+def run_comp(compound:str, top:str):    
     mylist = mklist()
 
-    mycmd = ( "viewxvg -xmin 0. -ymin 0.25 -xmax 1 -ymax 4 -title 'RDF %s' -legend_right -noshow -pdf rdf_%s.pdf" % ( compound, compound ))
+    title = ("%s-%s" % ( compound, top ))
+    mycmd = ( "viewxvg -xmin 0 -ymin 0 -xmax 1 -ymax 4 -title %s -legend_right -noshow -pdf rdf_%s.pdf" % ( title, title ))
 
     mycmd +=  " -f xray/rdf.xvg"
     for ml in mylist:
@@ -26,12 +27,12 @@ def run_comp(compound:str):
     print(mycmd)
     os.system(mycmd)
 
-def do_rdf(moldb):
+def do_rdf(moldb, top:str):
     for compound in moldb.keys():
         print("Looking for %s" % compound)
         if os.path.isdir(compound):
             os.chdir(compound)
-            run_comp(compound)
+            run_comp(compound, top)
             os.chdir("..")
 
 moldb  = get_moldb(False)
@@ -43,6 +44,6 @@ for top in [ "bcc", "resp" ]:
         phase = "solid"
         if os.path.isdir(phase):
             os.chdir(phase)
-            do_rdf(moldb)
+            do_rdf(moldb, top)
             os.chdir("..")
         os.chdir("..")
