@@ -9,7 +9,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.001
-nsteps                   = 15000000
+nsteps                   = 20000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -124,7 +124,7 @@ tc-grps                  = MOL
 ; Time constant (ps) and reference temperature (K)
 tau_t                    = 0.1
 ; pressure coupling     
-pcoupl                   = Berendsen
+pcoupl                   = Parrinello-Rahman
 pcoupltype               = anisotropic
 nstpcouple               = 10
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)

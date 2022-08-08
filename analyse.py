@@ -111,7 +111,29 @@ def analyse_solid(outf, moldb):
                         mysolid[str(temp)]["gzsize"] = [ gzsize ]
                         outf.write(" %10d" % gzsize)
                     outf.write("\n")
-                    os.chdir("..")
+                    rotacf = "rotacf.xvg"
+                    mysolid[str(temp)]["rotacf"] = []
+                    if os.path.exists(rotacf):
+                        koko = "kokok"
+                        os.system("gmx analyze -f %s -b 250 > %s" % ( rotacf, koko ))
+                        with open(koko, "r") as inf:
+                            for line in inf:
+                                if line.find("SS1") >= 0:
+                                    try:
+                                        mysolid[str(temp)]["rotacf"] = [ float(line.split()[1]) ]
+                                    except ValueError:
+                                        print("Incomprehensible line '%s'" % line)
+                    msd = "msd.xvg"
+                    mysolid[str(temp)]["msd"] = []
+                    if os.path.exists(msd):
+                        with open(msd, "r") as inf:
+                            for line in inf:
+                                if line.find("D\[") >= 0:
+                                    try:
+                                        mysolid[str(tmp)]["msd"] = [ float(line.split()[4]) ]
+                                    except ValueError:
+                                        print("Incomprehensible line '%s'" % line)
+                os.chdir("..")
             os.chdir("..")
             solids[compound] = mysolid
     return solids
@@ -189,8 +211,8 @@ def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str, exp
 solid = "solid"
 gas   = "gas"
 with open("allresults.csv", "w") as csvf:
-    csvf.write(",,bcc,,,,,,,,,,,,,,,resp,,,,,,,,,,,,,,\n")
-    csvf.write("Compound,Temperature,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size\n")
+    csvf.write(",,bcc,,,,,,,,,,,,,,,,,resp,,,,,,,,,,,,,,,,\n")
+    csvf.write("Compound,Temperature,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0\n")
     for compound in moldb.keys():
         alltemps = []
         # Fetch all the temperatures from all compounds
@@ -219,11 +241,12 @@ with open("allresults.csv", "w") as csvf:
                     # do nothing
                     print("Missing value")
                 
-                csvf.write(",%s,%s,%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "Pres-XX", True),
-                                                          get_str(allresults, top, solid, compound, myTstr, "Pres-YY", True),
-                                                          get_str(allresults, top, solid, compound, myTstr, "Pres-ZZ", True),
-                                                          get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
-                                                          epotnpt, epotgas, dhsub, 
-                                                          get_str(allresults, top, solid, compound, myTstr, "gzsize", False)) )
+                csvf.write(",%s,%s,%s,%s,%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "Pres-XX", True),
+                                                                get_str(allresults, top, solid, compound, myTstr, "Pres-YY", True),
+                                                                get_str(allresults, top, solid, compound, myTstr, "Pres-ZZ", True),
+                                                                get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
+                                                                epotnpt, epotgas, dhsub,
+                                                                get_str(allresults, top, solid, compound, myTstr, "gzsize", False),
+                                                                get_str(allresults, top, solid, compound, myTstr, "D", False),
+                                                                get_str(allresults, top, solid, compound, myTstr, "S0", False) ) )
             csvf.write("\n")
-
