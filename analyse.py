@@ -73,11 +73,11 @@ def analyse_solid(outf, moldb):
                         print("%s is not a directory with an integer name" % temp)
             print(mytemps)
             for mytemp in sorted(mytemps):
-                temp = str(mytemp)
-                if os.path.isdir(str(temp)):
-                    os.chdir(str(temp))
-                    mysolid[str(temp)] = {}
-                    outf.write("%-10s" % temp)
+                tempstr = str(mytemp)
+                if os.path.isdir(tempstr):
+                    os.chdir(tempstr)
+                    mysolid[tempstr] = {}
+                    outf.write("%-10s" % tempstr)
                     if os.path.exists("NVT.gro"):
                         for direction in [ "XX", "YY", "ZZ" ]:
                             pnvt = ( "pres-%s-nvt.xvg" % direction )
@@ -86,7 +86,7 @@ def analyse_solid(outf, moldb):
                                 os.system("echo %s | gmx energy -f NVT.edr -o %s" % ( sel, pnvt ))
                             aver,error = get_averages(pnvt, 500, 1000)
                             if None != aver and None != error:
-                                mysolid[str(temp)][sel] = [ aver, error ]
+                                mysolid[tempstr][sel] = [ aver, error ]
                                 outf.write("  %10g (%g)" % ( aver, error))
 
                     final_gro = "NPT2.gro"                
@@ -98,20 +98,20 @@ def analyse_solid(outf, moldb):
                             os.system("echo Density | gmx energy -f NPT.edr -o %s" % rhonpt)
                         aver, error = get_averages(rhonpt, tbegin, tend)
                         if None != aver and None != error:
-                            mysolid[str(temp)]["rhonpt"] = [ aver, error ]
+                            mysolid[tempstr]["rhonpt"] = [ aver, error ]
                             outf.write("  %10g (%g)" % ( aver, error ))
                         epotnpt = "epot-npt.xvg"
                         if not os.path.exists(epotnpt):
                             os.system("echo Potential | gmx energy -f NPT.edr -o %s -nmol %d" % ( epotnpt, moldb[compound]["nsolid"]) )
                         aver, error = get_averages(epotnpt, tbegin, tend)
                         if None != aver and None != error:
-                            mysolid[str(temp)]["epotnpt"] = [ aver, error ]
+                            mysolid[tempstr]["epotnpt"] = [ aver, error ]
                             outf.write("  %10g (%10g)" % ( aver, error ))
                         gzsize = grogzsize(final_gro)
-                        mysolid[str(temp)]["gzsize"] = [ gzsize ]
+                        mysolid[tempstr]["gzsize"] = [ gzsize ]
                         outf.write(" %10d" % gzsize)
                         rotacf = "rotacf.xvg"
-                        mysolid[str(temp)]["rotacf"] = []
+                        mysolid[tempstr]["rotacf"] = []
                         if os.path.exists(rotacf):
                             koko = "kokok"
                             os.system("gmx analyze -f %s -b 250 > %s" % ( rotacf, koko ))
@@ -121,12 +121,12 @@ def analyse_solid(outf, moldb):
                                         try:
                                             words  = line.split()
                                             taurot = float(words[1])
-                                            mysolid[str(temp)]["rotacf"] = [ taurot ]
+                                            mysolid[tempstr]["rotacf"] = [ taurot ]
                                             outf.write(" %10g" % taurot)
                                         except ValueError:
                                             print("Incomprehensible line '%s'" % line)
                         msd = "msd.xvg"
-                        mysolid[str(temp)]["msd"] = []
+                        mysolid[tempstr]["msd"] = []
                         if os.path.exists(msd):
                             with open(msd, "r") as inf:
                                 for line in inf:
@@ -134,17 +134,31 @@ def analyse_solid(outf, moldb):
                                         try:
                                             words = line.split()
                                             dmsd  = float(words[4])
-                                            mysolid[str(temp)]["msd"] = [ dmsd ]
+                                            mysolid[tempstr]["msd"] = [ dmsd ]
                                             outf.write(" %10g" % dmsd)
                                         except ValueError:
                                             print("Incomprehensible line '%s'" % line)
-                        if len(mysolid[str(temp)]["rotacf"]) == 1 and len(mysolid[str(temp)]["msd"]) == 1:
-                            if mysolid[str(temp)]["msd"][0] >= 0.01:
+                        if len(mysolid[tempstr]["rotacf"]) == 1 and len(mysolid[tempstr]["msd"]) == 1:
+                            if mysolid[tempstr]["msd"][0] >= 0.01:
                                 outf.write(" liquid")
-                            elif mysolid[str(temp)]["rotacf"][0] < 0.5:
+                            elif mysolid[tempstr]["rotacf"][0] < 0.5:
                                 outf.write(" plastic")
                             else:
                                 outf.write(" crystal")
+                        rms = "allrmsd.xvg"
+                        mysolid[tempstr]["rmsd"] = []
+                        if os.path.exists(rms):
+                            rmstot = 0
+                            nrms   = 0
+                            with open(rms, "r") as inf:
+                                for line in inf:
+                                    try:
+                                        rmstot += float(line.strip())
+                                        nrms += 1
+                                    except ValueError:
+                                        print("Strange line '%s'" % line)
+                            if nrms > 0:
+                                mysolid[tempstr]["rmsd"] = [ rmstot/nrms ]
                         outf.write("\n")
                 os.chdir("..")
             os.chdir("..")
@@ -161,9 +175,10 @@ def analyse_gas(outf, moldb):
             outf.write("%s %s %s\n" % ( compound, phase, top ))
             outf.write("%-10s  %10s\n" % ( "Temperature", "Epot(NVT)" ) )
             for temp in glob.glob("*"):
-                if os.path.isdir(str(temp)):
-                    os.chdir(str(temp))
-                    mygas[str(temp)] = {}
+                tempstr = str(temp)
+                if os.path.isdir(tempstr):
+                    os.chdir(tempstr)
+                    mygas[tempstr] = {}
                     outf.write("%-10s" % temp)
                     final_gro = "NVT.gro"
                     if os.path.exists(final_gro):
@@ -172,7 +187,7 @@ def analyse_gas(outf, moldb):
                             os.system("echo Potential | gmx energy -f NVT.edr -o %s" % ( epotnvt ) )
                         aver, error = get_averages(epotnvt, 10000, 15000)
                         if None != aver and None != error:
-                            mygas[str(temp)]["epotgas"] = [ aver, error ]
+                            mygas[tempstr]["epotgas"] = [ aver, error ]
                             outf.write("  %10g (%g)" % (aver, error))
                                 
                     outf.write("\n")
@@ -224,8 +239,8 @@ def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str, exp
 solid = "solid"
 gas   = "gas"
 with open("allresults.csv", "w") as csvf:
-    csvf.write(",,bcc,,,,,,,,,,,,,,,,,resp,,,,,,,,,,,,,,,,\n")
-    csvf.write("Compound,Temperature,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0\n")
+    csvf.write(",,bcc,,,,,,,,,,,,,,,,,,resp,,,,,,,,,,,,,,,,,\n")
+    csvf.write("Compound,Temperature,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0,RMSD,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0,RMSD\n")
     for compound in moldb.keys():
         alltemps = []
         # Fetch all the temperatures from all compounds
@@ -254,12 +269,13 @@ with open("allresults.csv", "w") as csvf:
                     # do nothing
                     print("Missing value")
                 
-                csvf.write(",%s,%s,%s,%s,%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "Pres-XX", True),
+                csvf.write(",%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "Pres-XX", True),
                                                                 get_str(allresults, top, solid, compound, myTstr, "Pres-YY", True),
                                                                 get_str(allresults, top, solid, compound, myTstr, "Pres-ZZ", True),
                                                                 get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
                                                                 epotnpt, epotgas, dhsub,
                                                                 get_str(allresults, top, solid, compound, myTstr, "gzsize", False),
                                                                 get_str(allresults, top, solid, compound, myTstr, "msd", False),
-                                                                get_str(allresults, top, solid, compound, myTstr, "rotacf", False) ) )
+                                                                get_str(allresults, top, solid, compound, myTstr, "rotacf", False),
+                                                                get_str(allresults, top, solid, compound, myTstr, "rmsd", False) ) )
             csvf.write("\n")

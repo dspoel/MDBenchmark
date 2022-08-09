@@ -38,16 +38,24 @@ rotaxis = { "12-benzenediol": [ 1, 8 ],
 moldb = get_moldb(True)
 for mol in moldb.keys():
     nsolid = moldb[mol]["nsolid"]
+    gasbox  = ( "box/gas/%s.pdb" % mol )
+    natom   = 0
+    with open(gasbox, "r") as inf:
+        for line in inf:
+            if line.find("ATOM ") >= 0:
+                natom += 1
     if mol in rotaxis:
-        gasbox  = ( "box/gas/%s.pdb" % mol )
-        natom   = 0
-        with open(gasbox, "r") as inf:
-            for line in inf:
-                if line.find("ATOM ") >= 0:
-                    natom += 1
         outfile = ( "index/%s_rotaxis.ndx" % mol )
         with open(outfile, "w") as outf:
             outf.write("[ rotaxis ]\n")
             for i in range(nsolid):
                 outf.write("%d  %d\n" % ( i*natom+rotaxis[mol][0],
                                           i*natom+rotaxis[mol][1] ) )
+    outfile = ( "index/%s_rmsd.ndx" % mol)
+    with open(outfile, "w") as outf:
+        for i in range(nsolid):
+            outf.write("[ mol%d ]\n" % (i+1))
+            for j in range(1, natom+1):
+                outf.write(" %d" % ( i*natom+j ))
+            outf.write("\n")
+        
