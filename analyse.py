@@ -110,29 +110,42 @@ def analyse_solid(outf, moldb):
                         gzsize = grogzsize(final_gro)
                         mysolid[str(temp)]["gzsize"] = [ gzsize ]
                         outf.write(" %10d" % gzsize)
-                    outf.write("\n")
-                    rotacf = "rotacf.xvg"
-                    mysolid[str(temp)]["rotacf"] = []
-                    if os.path.exists(rotacf):
-                        koko = "kokok"
-                        os.system("gmx analyze -f %s -b 250 > %s" % ( rotacf, koko ))
-                        with open(koko, "r") as inf:
-                            for line in inf:
-                                if line.find("SS1") >= 0:
-                                    try:
-                                        mysolid[str(temp)]["rotacf"] = [ float(line.split()[1]) ]
-                                    except ValueError:
-                                        print("Incomprehensible line '%s'" % line)
-                    msd = "msd.xvg"
-                    mysolid[str(temp)]["msd"] = []
-                    if os.path.exists(msd):
-                        with open(msd, "r") as inf:
-                            for line in inf:
-                                if line.find("D\[") >= 0:
-                                    try:
-                                        mysolid[str(tmp)]["msd"] = [ float(line.split()[4]) ]
-                                    except ValueError:
-                                        print("Incomprehensible line '%s'" % line)
+                        rotacf = "rotacf.xvg"
+                        mysolid[str(temp)]["rotacf"] = []
+                        if os.path.exists(rotacf):
+                            koko = "kokok"
+                            os.system("gmx analyze -f %s -b 250 > %s" % ( rotacf, koko ))
+                            with open(koko, "r") as inf:
+                                for line in inf:
+                                    if line.find("SS1") >= 0:
+                                        try:
+                                            words  = line.split()
+                                            taurot = float(words[1])
+                                            mysolid[str(temp)]["rotacf"] = [ taurot ]
+                                            outf.write(" %10g" % taurot)
+                                        except ValueError:
+                                            print("Incomprehensible line '%s'" % line)
+                        msd = "msd.xvg"
+                        mysolid[str(temp)]["msd"] = []
+                        if os.path.exists(msd):
+                            with open(msd, "r") as inf:
+                                for line in inf:
+                                    if line.find("D") >= 0 and line.find("rotaxis") >= 0:
+                                        try:
+                                            words = line.split()
+                                            dmsd  = float(words[4])
+                                            mysolid[str(temp)]["msd"] = [ dmsd ]
+                                            outf.write(" %10g" % dmsd)
+                                        except ValueError:
+                                            print("Incomprehensible line '%s'" % line)
+                        if len(mysolid[str(temp)]["rotacf"]) == 1 and len(mysolid[str(temp)]["msd"]) == 1:
+                            if mysolid[str(temp)]["msd"][0] >= 0.01:
+                                outf.write(" liquid")
+                            elif mysolid[str(temp)]["rotacf"][0] < 0.5:
+                                outf.write(" plastic")
+                            else:
+                                outf.write(" crystal")
+                        outf.write("\n")
                 os.chdir("..")
             os.chdir("..")
             solids[compound] = mysolid
@@ -202,7 +215,7 @@ def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str, exp
             if len(allres) == 2:
                 return ("%g,%g" % ( allres[0], allres[1] ))
             elif len(allres) == 1:
-                return ("%d" % ( allres[0] ))
+                return ("%g" % ( allres[0] ))
     if expectError:
         return ","
     else:
@@ -247,6 +260,6 @@ with open("allresults.csv", "w") as csvf:
                                                                 get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
                                                                 epotnpt, epotgas, dhsub,
                                                                 get_str(allresults, top, solid, compound, myTstr, "gzsize", False),
-                                                                get_str(allresults, top, solid, compound, myTstr, "D", False),
-                                                                get_str(allresults, top, solid, compound, myTstr, "S0", False) ) )
+                                                                get_str(allresults, top, solid, compound, myTstr, "msd", False),
+                                                                get_str(allresults, top, solid, compound, myTstr, "rotacf", False) ) )
             csvf.write("\n")
