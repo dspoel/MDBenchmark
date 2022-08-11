@@ -5,8 +5,9 @@ from molecule_db import *
 
 def run_rotacf(compound):
     rotacfout = "rotacf.xvg"
+    rotplane  = "rotplane.xvg"
     msdout    = "msd.xvg"
-    if os.path.exists(rotacfout) and os.path.exists(msdout):
+    if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
         return
     job    = "rotacf.sh"
     with open(job, "w") as outf:
@@ -17,7 +18,10 @@ def run_rotacf(compound):
         tbegin = 14000
         tend   = 15000
         outf.write("gmx rotacf -d -n ../../../../index/%s_rotaxis.ndx -f NPT.xtc -s NPT.tpr -o %s -b %d -e %d \n" % ( compound, rotacfout, tbegin, tend ))
-        outf.write("gmx msd  -n ../../../../index/%s_rotaxis.ndx -f NPT.xtc -s NPT.tpr -o %s -b %d -e %d \n" % ( compound, msdout, tbegin, tend ))
+        planendx = ( "../../../../index/%s_rotplane.ndx" % compound )
+        if os.path.exists(planendx):
+            outf.write("gmx rotacf -n %s -f NPT.xtc -s NPT.tpr -o %s -b %d -e %d \n" % ( planendx, rotplane, tbegin, tend ))
+        outf.write("gmx msd -n ../../../../index/%s_rotaxis.ndx -f NPT.xtc -s NPT.tpr -o %s -b %d -e %d \n" % ( compound, msdout, tbegin, tend ))
     os.system("sbatch %s" % job)
 
 def do_rotacf(moldb):

@@ -51,6 +51,28 @@ def grogzsize(grofile):
     os.system("gunzip %s" % gzfile)
     return gzsize
 
+def get_tail(outf):
+    S0     = {}
+    rfiles = [ "rotacf.xvg", "rotplane.xvg" ]
+    for rotacf in rfiles:
+        if os.path.exists(rotacf):
+            koko = "kokok"
+            os.system("gmx analyze -f %s -b 250 > %s" % ( rotacf, koko ))
+            with open(koko, "r") as inf:
+                for line in inf:
+                    if line.find("SS1") >= 0:
+                        try:
+                            words  = line.split()
+                            taurot = float(words[1])
+                            S0[rotacf] = taurot
+                            outf.write(" %10g" % taurot)
+                        except ValueError:
+                            print("Incomprehensible line '%s'" % line)
+    if len(S0.keys()) == 2:
+        return (2*S0[rfiles[0]]+S0[rfiles[1]])/3.0
+    elif len(S0.keys()) == 1:
+        return S0[rfiles[0]]
+
 def analyse_solid(outf, moldb):
     solids = {}
     for compound in moldb.keys():
@@ -110,21 +132,9 @@ def analyse_solid(outf, moldb):
                         gzsize = grogzsize(final_gro)
                         mysolid[tempstr]["gzsize"] = [ gzsize ]
                         outf.write(" %10d" % gzsize)
-                        rotacf = "rotacf.xvg"
-                        mysolid[tempstr]["rotacf"] = []
-                        if os.path.exists(rotacf):
-                            koko = "kokok"
-                            os.system("gmx analyze -f %s -b 250 > %s" % ( rotacf, koko ))
-                            with open(koko, "r") as inf:
-                                for line in inf:
-                                    if line.find("SS1") >= 0:
-                                        try:
-                                            words  = line.split()
-                                            taurot = float(words[1])
-                                            mysolid[tempstr]["rotacf"] = [ taurot ]
-                                            outf.write(" %10g" % taurot)
-                                        except ValueError:
-                                            print("Incomprehensible line '%s'" % line)
+
+                        mysolid[tempstr]["rotacf"] = [ get_tail(outf) ]
+                        
                         msd = "msd.xvg"
                         mysolid[tempstr]["msd"] = []
                         if os.path.exists(msd):
@@ -141,7 +151,7 @@ def analyse_solid(outf, moldb):
                         if len(mysolid[tempstr]["rotacf"]) == 1 and len(mysolid[tempstr]["msd"]) == 1:
                             if mysolid[tempstr]["msd"][0] >= 0.01:
                                 outf.write(" liquid")
-                            elif mysolid[tempstr]["rotacf"][0] < 0.5:
+                            elif mysolid[tempstr]["rotacf"][0] < 0.9:
                                 outf.write(" plastic")
                             else:
                                 outf.write(" crystal")
