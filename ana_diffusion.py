@@ -29,7 +29,7 @@ def write_job(rootdir:str, mol:str, tempdict) -> str:
     with open(job, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
-        outf.write("#SBATCH -A SNIC2021-3-8\n")
+#        outf.write("#SBATCH -A SNIC2021-3-8\n")
         outf.write("#SBATCH -n 1\n")
         for temp in tempdict:
             msdxvg = ( "msd_%f.xvg" % temp )
@@ -49,8 +49,8 @@ def get_dict(topdir: str, moldb):
         if os.path.exists(mol):
             os.chdir(mol)
             mydict[mol] = {}
-            for simdir in glob.glob("OUT-%s*" % mol):
-                if os.path.exists(simdir):
+            for simdir in glob.glob("*%s*" % mol):
+                if os.path.isdir(simdir):
                     os.chdir(simdir)
                     newest_trr  = ""
                     newest_time = None
@@ -79,5 +79,6 @@ def get_dict(topdir: str, moldb):
     os.chdir(pwd)
 
 moldb = get_moldb(False)
-get_dict("/proj/nobackup/alexandria/lisa/melting", moldb)
+#get_dict("/proj/nobackup/alexandria/lisa/melting", moldb)
+get_dict("/home/lschmidt/MELTING", moldb)
 
