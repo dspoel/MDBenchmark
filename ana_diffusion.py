@@ -45,7 +45,7 @@ def get_dict(topdir: str, moldb):
     pwd = os.getcwd()
     os.chdir(topdir)
     mydict = {}
-    for mol in moldb:
+    for mol in [ "acoh", "ethylendiamine", "ethylenglycol" ]:
         if os.path.exists(mol):
             os.chdir(mol)
             mydict[mol] = {}
