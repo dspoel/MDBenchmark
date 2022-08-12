@@ -51,13 +51,12 @@ def grogzsize(grofile):
     os.system("gunzip %s" % gzfile)
     return gzsize
 
-def get_tail(outf):
+def get_tail(rfiles:list, begin:float):
     S0     = {}
-    rfiles = [ "rotacf.xvg", "rotplane.xvg" ]
     for rotacf in rfiles:
         if os.path.exists(rotacf):
             koko = "kokok"
-            os.system("gmx analyze -f %s -b 250 > %s" % ( rotacf, koko ))
+            os.system("gmx analyze -f %s -b %s > %s" % ( rotacf, begin, koko ))
             with open(koko, "r") as inf:
                 for line in inf:
                     if line.find("SS1") >= 0:
@@ -65,13 +64,14 @@ def get_tail(outf):
                             words  = line.split()
                             taurot = float(words[1])
                             S0[rotacf] = taurot
-                            outf.write(" %10g" % taurot)
                         except ValueError:
                             print("Incomprehensible line '%s'" % line)
     if len(S0.keys()) == 2:
         return (2*S0[rfiles[0]]+S0[rfiles[1]])/3.0
     elif len(S0.keys()) == 1:
         return S0[rfiles[0]]
+    else:
+        return None
 
 def analyse_solid(outf, moldb):
     solids = {}
@@ -133,7 +133,8 @@ def analyse_solid(outf, moldb):
                         mysolid[tempstr]["gzsize"] = [ gzsize ]
                         outf.write(" %10d" % gzsize)
 
-                        mysolid[tempstr]["rotacf"] = [ get_tail(outf) ]
+                        tbegin = 250 # ps
+                        mysolid[tempstr]["rotacf"] = [ get_tail([ "rotacf.xvg", "rotplane.xvg" ], tbegin ) ]
                         
                         msd = "msd.xvg"
                         mysolid[tempstr]["msd"] = []
@@ -208,33 +209,6 @@ def analyse_gas(outf, moldb):
             gas[compound] = mygas
     return gas
 
-if shutil.which("gmx") == None:
-    sys.exit("Please load the gromacs environment using\nml load GCC/10.2.0  OpenMPI/4.0.5 GROMACS/2021")
-moldb  = get_moldb(False)
-moldb  = input_dens(moldb)    
-
-output = "results.txt"
-outf   = open(output, "w")
-
-allresults = {}
-
-for top in [ "bcc", "resp" ]:
-    print("Looking for %s" % top)
-    if os.path.isdir(top):
-        os.chdir(top)
-        allresults[top] = {}
-        for phase in [ "solid", "gas" ]:
-            if os.path.isdir(phase):
-                os.chdir(phase)
-                if "solid" == phase:
-                    allresults[top][phase] = analyse_solid(outf, moldb)
-                else:
-                    allresults[top][phase] = analyse_gas(outf, moldb)
-                os.chdir("..")
-        os.chdir("..")
-
-outf.close()
-
 def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str, expectError:bool, floatVar=True):
     if myT in allresults[top][phase][compound]:
         if prop in allresults[top][phase][compound][myT]:
@@ -251,47 +225,74 @@ def get_str(allresults, top:str, phase:str, compound:str, myT:str, prop:str, exp
     else:
         return ""
 
-solid = "solid"
-gas   = "gas"
-with open("allresults.csv", "w") as csvf:
-    csvf.write(",,bcc,,,,,,,,,,,,,,,,,,,resp,,,,,,,,,,,,,,,,,,\n")
-    csvf.write("Compound,Temperature,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0,Phase,RMSD,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0,RMSD,Phase\n")
-    for compound in moldb.keys():
-        alltemps = []
-        # Fetch all the temperatures from all compounds
-        for top in [ "bcc", "resp" ]:
-            for phase in [ solid, gas ]:
-                for myt in allresults[top][phase][compound].keys():
-                    if not int(myt) in alltemps and not myt == "0":
-                        alltemps.append(int(myt))
-        # Now loop over them and print what data we have
-        Boltz = 0.00831415
-        for myT in sorted(alltemps):
-            csvf.write("%s,%d" % ( compound, myT ))
+if __name__ == '__main__':   
+    if shutil.which("gmx") == None:
+        sys.exit("Please load the gromacs environment using\nml load GCC/10.2.0  OpenMPI/4.0.5 GROMACS/2021")
+    moldb  = get_moldb(False)
+    moldb  = input_dens(moldb)    
+
+    output = "results.txt"
+    outf   = open(output, "w")
+
+    allresults = {}
+
+    for top in [ "bcc", "resp" ]:
+        print("Looking for %s" % top)
+        if os.path.isdir(top):
+            os.chdir(top)
+            allresults[top] = {}
+            for phase in [ "solid", "gas" ]:
+                if os.path.isdir(phase):
+                    os.chdir(phase)
+                    if "solid" == phase:
+                        allresults[top][phase] = analyse_solid(outf, moldb)
+                    else:
+                        allresults[top][phase] = analyse_gas(outf, moldb)
+                    os.chdir("..")
+            os.chdir("..")
+    outf.close()
+
+    solid = "solid"
+    gas   = "gas"
+    with open("allresults.csv", "w") as csvf:
+        csvf.write(",,bcc,,,,,,,,,,,,,,,,,,,resp,,,,,,,,,,,,,,,,,,\n")
+        csvf.write("Compound,Temperature,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0,Phase,RMSD,Px(NVT),sigmaPx,Py(NVT),sigmaPy,Pz(NVT),sigmaPz,Rho(NPT),sigmaRho,Epot(NPT),sigmaE,Epot(gas),sigmaE,DHsub,sigmaH,gzip_size,D,S0,RMSD,Phase\n")
+        for compound in moldb.keys():
+            alltemps = []
+            # Fetch all the temperatures from all compounds
             for top in [ "bcc", "resp" ]:
-                myTstr  = str(myT)
-                epotnpt = get_str(allresults, top, solid, compound, myTstr, "epotnpt", True)
-                epotgas = get_str(allresults, top, gas, compound, myTstr, "epotgas", True)
-                dhsub   = ","
-                try:
-                    epn     = epotnpt.split(",")
-                    epg     = epotgas.split(",")
-                    epsolid = float(epn[0])
-                    epgas   = float(epg[0])
-                    errsub  = math.sqrt(float(epn[1])**2 + float(epg[1])**2)
-                    dhsub   = ("%g,%g" % ( epgas-epsolid-2*myT*Boltz, errsub ))
-                except ValueError:
-                    # do nothing
-                    print("Missing value")
+                for phase in [ solid, gas ]:
+                    for myt in allresults[top][phase][compound].keys():
+                        if not int(myt) in alltemps and not myt == "0":
+                            alltemps.append(int(myt))
+            # Now loop over them and print what data we have
+            Boltz = 0.00831415
+            for myT in sorted(alltemps):
+                csvf.write("%s,%d" % ( compound, myT ))
+                for top in [ "bcc", "resp" ]:
+                    myTstr  = str(myT)
+                    epotnpt = get_str(allresults, top, solid, compound, myTstr, "epotnpt", True)
+                    epotgas = get_str(allresults, top, gas, compound, myTstr, "epotgas", True)
+                    dhsub   = ","
+                    try:
+                        epn     = epotnpt.split(",")
+                        epg     = epotgas.split(",")
+                        epsolid = float(epn[0])
+                        epgas   = float(epg[0])
+                        errsub  = math.sqrt(float(epn[1])**2 + float(epg[1])**2)
+                        dhsub   = ("%g,%g" % ( epgas-epsolid-2*myT*Boltz, errsub ))
+                    except ValueError:
+                        # do nothing
+                        print("Missing value")
                 
-                csvf.write(",%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "Pres-XX", True),
-                                                                      get_str(allresults, top, solid, compound, myTstr, "Pres-YY", True),
-                                                                      get_str(allresults, top, solid, compound, myTstr, "Pres-ZZ", True),
-                                                                      get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
-                                                                      epotnpt, epotgas, dhsub,
-                                                                      get_str(allresults, top, solid, compound, myTstr, "gzsize", False),
-                                                                      get_str(allresults, top, solid, compound, myTstr, "msd", False),
-                                                                      get_str(allresults, top, solid, compound, myTstr, "rotacf", False),
-                                                                      get_str(allresults, top, solid, compound, myTstr, "rmsd", False),
-                                                                      get_str(allresults, top, solid, compound, myTstr, "phase", False, False) ) )
-            csvf.write("\n")
+                    csvf.write(",%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s" % ( get_str(allresults, top, solid, compound, myTstr, "Pres-XX", True),
+                                                                          get_str(allresults, top, solid, compound, myTstr, "Pres-YY", True),
+                                                                          get_str(allresults, top, solid, compound, myTstr, "Pres-ZZ", True),
+                                                                          get_str(allresults, top, solid, compound, myTstr, "rhonpt", True),
+                                                                          epotnpt, epotgas, dhsub,
+                                                                          get_str(allresults, top, solid, compound, myTstr, "gzsize", False),
+                                                                          get_str(allresults, top, solid, compound, myTstr, "msd", False),
+                                                                          get_str(allresults, top, solid, compound, myTstr, "rotacf", False),
+                                                                          get_str(allresults, top, solid, compound, myTstr, "rmsd", False),
+                                                                          get_str(allresults, top, solid, compound, myTstr, "phase", False, False) ) )
+                csvf.write("\n")

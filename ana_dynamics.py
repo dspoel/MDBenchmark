@@ -10,7 +10,7 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
     with open(jobname, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
-#        outf.write("#SBATCH -A SNIC2021-3-8\n")
+        outf.write("#SBATCH -A SNIC2021-3-8\n")
         outf.write("#SBATCH -n 1\n")
         outf.write("gmx rotacf -d -n %s/%s_rotaxis.ndx -f %s -s %s -o %s -b %d -e %d \n" % ( indexdir, compound, traj, tpr, rotacfout, tbegin, tend ))
         planendx = ( "%s/%s_rotplane.ndx" % ( indexdir, compound ))
@@ -128,4 +128,6 @@ if False:
                 os.chdir("..")
             os.chdir("..")
 else:
-    get_dict("/home/lschmidt/MELTING", moldb)
+    get_dict("/proj/nobackup/alexandria/lisa/melting", moldb)
+    #get_dict("/home/lschmidt/MELTING", moldb)
+
