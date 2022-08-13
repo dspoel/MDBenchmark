@@ -40,7 +40,6 @@ def get_dict(topdir: str, moldb):
     os.chdir(topdir)
     lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
     lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-    lisa_csb  = [ "ethylene" ]
     for molname in lisa_csb:
         mol = molname
         if mol in lisa_name:
@@ -52,12 +51,18 @@ def get_dict(topdir: str, moldb):
                 if os.path.isdir(simdir):
                     os.chdir(simdir)
                     newest_trr  = ""
+                    newest_gro  = ""
                     newest_time = None
                     for trr in glob.glob("melting*trr"):
                         mytime = os.path.getmtime(trr)
                         if None == newest_time or mytime > newest_time:
                             newest_time = mytime
                             newest_trr  = trr
+                            mygro = trr[:-3] + "gro"
+                            if os.path.exists(mygro):
+                                newest_gro = mygro
+                            else:
+                                newset_gro = ""
                     if None != newest_time:
                         # Extract the temperature from the dir name
                         ptr = simdir.find(mol)
@@ -84,6 +89,8 @@ def get_dict(topdir: str, moldb):
                             indexdir  = "../../../index"
                             run_rotacf(jobname, molname, endtime-1000, endtime, traj, tpr,
                                        indexdir, rotacfout, rotplane, msdout)
+                            if len(newest_gro) > 4:
+                                shutil.copyfile(("%s/%s" % ( mydir, newest_gro)), ("final_%g.gro" % temp ))
                             os.chdir(mydir)
                     os.chdir("..")
             os.chdir("..")
