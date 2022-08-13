@@ -10,7 +10,7 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
     with open(jobname, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
-        outf.write("#SBATCH -A SNIC2021-3-8\n")
+#        outf.write("#SBATCH -A SNIC2021-3-8\n")
         outf.write("#SBATCH -n 1\n")
         outf.write("gmx rotacf -d -n %s/%s_rotaxis.ndx -f %s -s %s -o %s -b %d -e %d \n" % ( indexdir, compound, traj, tpr, rotacfout, tbegin, tend ))
         planendx = ( "%s/%s_rotplane.ndx" % ( indexdir, compound ))
@@ -38,8 +38,10 @@ def get_dict(topdir: str, moldb):
         sys.exit("No such dir %s" % topdir)
     pwd = os.getcwd()
     os.chdir(topdir)
-    lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol" }
-    for molname in moldb:
+    lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
+    lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea" ]
+    lisa_csb  = [ "ethylene" ]
+    for molname in lisa_csb:
         mol = molname
         if mol in lisa_name:
             mol = lisa_name[mol]
@@ -128,6 +130,6 @@ if False:
                 os.chdir("..")
             os.chdir("..")
 else:
-    get_dict("/proj/nobackup/alexandria/lisa/melting", moldb)
-    #get_dict("/home/lschmidt/MELTING", moldb)
+    #get_dict("/proj/nobackup/alexandria/lisa/melting", moldb)
+    get_dict("/home/lschmidt/MELTING", moldb)
 
