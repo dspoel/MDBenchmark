@@ -28,7 +28,8 @@ def do_filesize():
     for rot in glob.glob("final_*.gro"):
         temps.append(rot[6:-4])
 
-    fsize   = {}
+    fsize    = {}
+    min_size = 10000000
     max_size = 0
     for temp in temps:
         my_gro = ("final_%s.gro" % temp )
@@ -38,11 +39,12 @@ def do_filesize():
         fsize[float(temp)] = my_size
         os.unlink(koko)
         max_size = max(max_size, my_size)
+        min_size = min(min_size, my_size)
     
     with open("temp_filesize.xvg", "w") as outf:
         outf.write("@ xaxis label \"T (K)\"\n")
         for temp in sorted(fsize.keys()):
-            this_size = (1.0*fsize[temp])/max_size
+            this_size = 0.5+(0.5*(fsize[temp]-min_size))/(max_size-min_size)
             outf.write("%10g  %10g\n" % ( temp, this_size ) )
 
 def do_rotacf():
