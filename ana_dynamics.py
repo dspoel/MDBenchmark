@@ -39,8 +39,7 @@ def get_dict(topdir: str, moldb):
     pwd = os.getcwd()
     os.chdir(topdir)
     lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
-    lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea" ]
-    lisa_csb  = [ "ethylene" ]
+    lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
     for molname in lisa_csb:
         mol = molname
         if mol in lisa_name:
