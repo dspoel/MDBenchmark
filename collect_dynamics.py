@@ -65,7 +65,7 @@ def do_rotacf():
 moldb = get_moldb(False)
 os.chdir("bcc/melt")
 lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-if False:
+if True:
     for mol in moldb:
         if os.path.isdir(mol) and mol not in lisa_csb:
             os.chdir(mol)
