@@ -1,4 +1,4 @@
-@ xaxis legend "T (K)"
+@ xaxis label "T (K)"
         25    0.999711
         75    0.983357
         80    0.980471

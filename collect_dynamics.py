@@ -19,7 +19,7 @@ def do_msd():
                     except ValueError:
                         print("Incomprehensible line '%s'" % line)
     with open("temp_diff.xvg", "w") as outf:
-        outf.write("@ xaxis legend \"T (K)\"\n")
+        outf.write("@ xaxis label \"T (K)\"\n")
         for temp in sorted(td.keys()):
             outf.write("%10g  %10g\n" % ( temp, td[temp][0] ) )
 
@@ -36,14 +36,14 @@ def do_rotacf():
             S0[float(temp)] = myS0 
     
     with open("temp_S0.xvg", "w") as outf:
-        outf.write("@ xaxis legend \"T (K)\"\n")
+        outf.write("@ xaxis label \"T (K)\"\n")
         for temp in sorted(S0.keys()):
             outf.write("%10g  %10g\n" % ( temp, S0[temp] ) )
 
 moldb = get_moldb(False)
 os.chdir("bcc/melt")
 lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-if False:
+if True:
     for mol in moldb:
         if os.path.isdir(mol) and mol not in lisa_csb:
             os.chdir(mol)
