@@ -23,6 +23,28 @@ def do_msd():
         for temp in sorted(td.keys()):
             outf.write("%10g  %10g\n" % ( temp, td[temp][0] ) )
 
+def do_filesize():
+    temps = []
+    for rot in glob.glob("final_*.gro"):
+        temps.append(rot[6:-4])
+
+    fsize   = {}
+    max_size = 0
+    for temp in temps:
+        my_gro = ("final_%s.gro" % temp )
+        koko = "koko.gz"
+        os.system("gzip -c %s > %s" % ( my_gro, koko ))
+        my_size = os.path.getsize(koko)
+        fsize[float(temp)] = my_size
+        os.unlink(koko)
+        max_size = max(max_size, my_size)
+    
+    with open("temp_filesize.xvg", "w") as outf:
+        outf.write("@ xaxis label \"T (K)\"\n")
+        for temp in sorted(fsize.keys()):
+            this_size = (1.0*fsize[temp])/max_size
+            outf.write("%10g  %10g\n" % ( temp, this_size ) )
+
 def do_rotacf():
     temps = []
     for rot in glob.glob("rotacf_*.xvg"):
@@ -43,12 +65,13 @@ def do_rotacf():
 moldb = get_moldb(False)
 os.chdir("bcc/melt")
 lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-if True:
+if False:
     for mol in moldb:
         if os.path.isdir(mol) and mol not in lisa_csb:
             os.chdir(mol)
             do_msd()
             do_rotacf()
+            do_filesize()
             os.chdir("..")
 else:
     for mol in lisa_csb:
@@ -56,4 +79,5 @@ else:
             os.chdir(mol)
             do_msd()
             do_rotacf()
+            do_filesize()
             os.chdir("..")
