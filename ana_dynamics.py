@@ -16,7 +16,7 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
         planendx = ( "%s/%s_rotplane.ndx" % ( indexdir, compound ))
         if os.path.exists(planendx):
             outf.write("gmx rotacf -n %s -f %s -s %s -o %s -b %d -e %d \n" % ( planendx, traj, tpr, rotplane, tbegin, tend ))
-        outf.write("gmx msd -n %s/index/%s_rotaxis.ndx -f %s -s %s -o %s -b %d -e %d \n" % ( indexdir, compound, traj, tpr, msdout, tbegin, tend ))
+        outf.write("echo 0 | gmx msd -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, msdout, tbegin, tend ))
     os.system("sbatch %s" % jobname)
 
 def get_last_time(logfile:str) -> float:
@@ -40,6 +40,7 @@ def get_dict(topdir: str, moldb):
     os.chdir(topdir)
     lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
     lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
+    lisa_csb  = [ "ethylene" ]
     for molname in lisa_csb:
         mol = molname
         if mol in lisa_name:
