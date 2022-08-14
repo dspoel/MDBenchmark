@@ -86,7 +86,7 @@ def get_dict(topdir: str, molnames:list):
                             rotplane  = ("rotplane_%g.xvg" % temp )
                             msdout    = ("msd_%g.xvg" % temp )
                             indexdir  = "../../../index"
-                            run_rotacf(jobname, molname, endtime-1000, endtime, traj, tpr,
+                            run_rotacf(jobname, molname, endtime-200, endtime, traj, tpr,
                                        indexdir, rotacfout, rotplane, msdout)
                             if len(newest_gro) > 4:
                                 shutil.copyfile(("%s/%s" % ( mydir, newest_gro)), ("final_%g.gro" % temp ))
@@ -136,7 +136,7 @@ if False:
                 os.chdir("..")
             os.chdir("..")
 else:
-    if True:
+    if False:
         get_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys())
     else:
         lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
