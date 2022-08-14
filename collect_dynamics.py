@@ -4,9 +4,12 @@ import os, glob
 from molecule_db import *
 from analyse import get_tail
 
+csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
+
 ignore = {
     "ethane": [ 55, 60, 65, 70, 75, 80 ],
-    "pentane": [ 98, 113, 118, 123, 128, 133, 138 ]
+    "pentane": [ 98, 113, 118, 123, 128, 133, 138 ],
+    "cyclohexane": [ 129 ]
 }
 
 def get_temps(compound:str):
@@ -80,7 +83,7 @@ def do_rotacf(alltemp:list):
 moldb = get_moldb(False)
 os.chdir("bcc/melt")
 lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-if False:
+if not csb:
     for mol in moldb:
         if os.path.isdir(mol) and mol not in lisa_csb:
             os.chdir(mol)

@@ -7,8 +7,8 @@ csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 
 def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str, tpr: str,
                indexdir: str, rotacfout: str, rotplane: str, msdout: str):
-    if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
-        return
+#    if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
+#        return
     with open(jobname, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
