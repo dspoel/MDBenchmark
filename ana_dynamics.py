@@ -3,6 +3,8 @@
 import os, shutil, glob, sys, math
 from molecule_db import *
 
+csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
+
 def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str, tpr: str,
                indexdir: str, rotacfout: str, rotplane: str, msdout: str):
     if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
@@ -10,7 +12,8 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
     with open(jobname, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
-        outf.write("#SBATCH -A SNIC2021-3-8\n")
+        if not csb:
+            outf.write("#SBATCH -A SNIC2021-3-8\n")
         outf.write("#SBATCH -n 1\n")
         outf.write("gmx rotacf -d -n %s/%s_rotaxis.ndx -f %s -s %s -o %s -b %d -e %d \n" % ( indexdir, compound, traj, tpr, rotacfout, tbegin, tend ))
         planendx = ( "%s/%s_rotplane.ndx" % ( indexdir, compound ))
@@ -136,9 +139,9 @@ if False:
                 os.chdir("..")
             os.chdir("..")
 else:
-    if False:
-        get_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys())
-    else:
+    if csb:
         lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
         get_dict("/home/lschmidt/MELTING", lisa_csb)
+    else:
+        get_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys())
 
