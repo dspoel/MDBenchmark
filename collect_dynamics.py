@@ -71,7 +71,7 @@ def do_rotacf(alltemp:list):
     S0 = {}
     for temp in alltemp:
         my_files = [ ("rotacf_%s.xvg" % temp ), ("rotplane_%s.xvg" % temp ) ]
-        myS0 = get_tail(my_files, 250)
+        myS0 = get_tail(my_files, 50)
         if None != myS0:
             S0[float(temp)] = myS0 
     
