@@ -8,39 +8,38 @@ csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 
 def get_simtable() -> dict:
     simtable = {}
-    for row in get_csv_rows("simtable.csv", 4):
+    for row in get_csv_rows("simtable.csv", 5):
         if not row[0] in simtable:
             simtable[row[0]] = {}
         temp = int(row[1])
-        if not temp in simtable[row[0]] or float(row[2]) > simtable[row[0]][temp][1]:
-            simtable[row[0]][temp] = ( row[3], float(row[2]) )
+        if not temp in simtable[row[0]] or float(row[2]) > simtable[row[0]][temp]["length"]:
+            simtable[row[0]][temp] = { "host": row[3], "length": float(row[2]), "nmol": int(row[4]) }
     return simtable
 
 def dump_simtable(simtable:dict):
     with open("simtable.tex", "w") as outf:
-        outf.write("\\begin{table}[ht!]\n")
+        outf.write("\\begin{longtable}{lcp{12cm}}\n")
         outf.write("\\caption{Overview of melting simulations performed. Number of molecules in the system, temperature (K) and simulation length (ns).}\n")
-        outf.write("\\label{meltsims}\n")
-        outf.write("\\begin{tabular}{lcc}\n")
+        outf.write("\\label{meltsims}\\\\\n")
         outf.write("Compound & \# Mol & Temperature (Simulation length) \\\\\n")
         outf.write("\\hline\n")
-        os.chdir("bcc/melt")
         for mol in sorted(simtable.keys()):
-            nmol = 0
-            outf.write("%s & %d &" % ( mol, nmol ) )
+            printStart = False
             for temp in sorted(simtable[mol].keys()):
-                outf.write(" %d(%.0f)" % ( temp, simtable[mol][temp][1]  ) )
+                if not printStart:
+                    outf.write("%s & %d &" % ( mol, simtable[mol][temp]["nmol"] ) )
+                    printStart = True
+                outf.write(" %d(%.0f)" % ( temp, simtable[mol][temp]["length"] ) )
             outf.write("\\\\\n")
         outf.write("\\hline\n")
-        outf.write("\\end{tabular}\n")
-        outf.write("\\end{table}\n")
+        outf.write("\\end{longtable}\n")
 
 def use_sim(simtable:dict, mol:str, temp: int) -> bool:
     if not mol in simtable or not temp in simtable[mol]:
         sys.exit("Cannot find mol %s, temp %g in simtable. Sorry." % ( mol, temp ))
-    if csb and simtable[mol][temp][0] == "csb":
+    if csb and simtable[mol][temp]["host"] == "csb":
         return True
-    if not csb and simtable[mol][temp][0] == "keb":
+    if not csb and simtable[mol][temp]["host"] == "keb":
         return True
     return False
         
@@ -81,6 +80,7 @@ def get_dict(topdir: str, molnames:list):
     simtable = get_simtable()
     dump_simtable(simtable)
     pwd = os.getcwd()
+    print("pwd %s" % pwd)
     os.chdir(topdir)
     lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
     for molname in molnames:
