@@ -23,9 +23,9 @@ def get_nmol(mol:str, natom:int) -> int:
 if __name__ == '__main__':
     moldb = get_moldb(False)
     if csb:
-        mydict = get_run_dict("/home/lschmidt/MELTING", moldb.keys())
+        mydict = get_run_dict("/home/lschmidt/MELTING", moldb.keys(), True)
     else:
-        mydict = get_run_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys())
+        mydict = get_run_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys(), True)
 
     textab = "melt_mols.tex"
     with open(textab, "w") as outf:
@@ -41,8 +41,8 @@ if __name__ == '__main__':
                 os.chdir(mol)
                 nmol = get_nmol(mol, moldb[mol]["natom"])
                 outf.write("%s & %d &" % ( mol, nmol ) )
-                for temp in mydict[mol]:
-                    outf.write(" %g(%.1f)" % ( temp, mydict[mol][temp]["endtime"]/1000 ) )
+                for temp in sorted(mydict[mol].keys()):
+                    outf.write(" %g(%.0f)" % ( temp, mydict[mol][temp]["endtime"]/1000 ) )
                 outf.write("\\\\\n")
                 os.chdir("..")
         outf.write("\\hline\n")

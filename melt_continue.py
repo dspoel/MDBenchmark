@@ -7,7 +7,7 @@ from collect_dynamics import *
 
 csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 
-def get_run_dict(topdir: str, molnames:list):
+def get_run_dict(topdir: str, molnames:list, useall:bool):
     if not os.path.exists(topdir):
         sys.exit("No such dir %s" % topdir)
     pwd = os.getcwd()
@@ -48,7 +48,7 @@ def get_run_dict(topdir: str, molnames:list):
                             print("Cannot extract temperature from %s" % simdir)
                             temp = 0.0
                         # Check whether we really have to extend this one
-                        if int(temp) in ignore[molname]:
+                        if useall or int(temp) in ignore[molname]:
                             logfile = newest_trr[:-3] + "log"
                             tprfile = newest_trr[:-3] + "tpr"
                             if os.path.exists(logfile) and os.path.exists(tprfile):
@@ -104,9 +104,9 @@ if __name__ == '__main__':
 
     if csb:
         lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-        mydict = get_run_dict("/home/lschmidt/MELTING", lisa_csb)
+        mydict = get_run_dict("/home/lschmidt/MELTING", lisa_csb, False)
     else:
-        mydict = get_run_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys())
+        mydict = get_run_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys(), False)
     
     for mol in mydict:
         for temp in mydict[mol]:
