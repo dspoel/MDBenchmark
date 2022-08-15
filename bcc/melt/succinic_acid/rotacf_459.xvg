@@ -1,0 +1,95 @@
+# This file was created Sun Aug 14 17:00:47 2022
+# Created by:
+#                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
+# 
+# Executable:   /hpc2n/eb/software/GROMACS/2021-foss-2020b/bin/gmx
+# Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
+# Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/succinic_acid
+# Command line:
+#   gmx rotacf -d -n ../../../index/succinic_acid_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid459.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid459.0/melting-npt-y_20_NPTY.tpr -o rotacf_459.xvg -b -48 -e 152
+# gmx rotacf is part of G R O M A C S:
+#
+# Gromacs Runs One Microsecond At Cannonball Speeds
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     1.000     0.88347
+     2.000     0.85095
+     3.000     0.82632
+     4.000     0.80545
+     5.000     0.78703
+     6.000     0.77029
+     7.000     0.75476
+     8.000     0.74066
+     9.000     0.72787
+    10.000     0.71552
+    11.000     0.70338
+    12.000     0.69248
+    13.000     0.68158
+    14.000     0.67157
+    15.000     0.66149
+    16.000     0.65245
+    17.000     0.64312
+    18.000     0.63434
+    19.000     0.62580
+    20.000     0.61781
+    21.000     0.60987
+    22.000     0.60244
+    23.000     0.59461
+    24.000     0.58680
+    25.000     0.57968
+    26.000     0.57242
+    27.000     0.56534
+    28.000     0.55855
+    29.000     0.55163
+    30.000     0.54514
+    31.000     0.53846
+    32.000     0.53217
+    33.000     0.52605
+    34.000     0.51996
+    35.000     0.51449
+    36.000     0.50842
+    37.000     0.50306
+    38.000     0.49782
+    39.000     0.49227
+    40.000     0.48722
+    41.000     0.48229
+    42.000     0.47689
+    43.000     0.47198
+    44.000     0.46696
+    45.000     0.46245
+    46.000     0.45764
+    47.000     0.45310
+    48.000     0.44892
+    49.000     0.44491
+    50.000     0.44056
+    51.000     0.43652
+    52.000     0.43275
+    53.000     0.42888
+    54.000     0.42488
+    55.000     0.42094
+    56.000     0.41754
+    57.000     0.41372
+    58.000     0.41016
+    59.000     0.40669
+    60.000     0.40309
+    61.000     0.39989
+    62.000     0.39636
+    63.000     0.39294
+    64.000     0.38982
+    65.000     0.38686
+    66.000     0.38372
+    67.000     0.38071
+    68.000     0.37792
+    69.000     0.37506
+    70.000     0.37226
+    71.000     0.36942
+    72.000     0.36669
+    73.000     0.36401
+    74.000     0.36161
+    75.000     0.35897
+    76.000     0.35665
+&

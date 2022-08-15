@@ -12,18 +12,21 @@ ignore = {
     # 204 and 209 are polycrystalline
     "cyclohexane": [ 129, 184, 204, 209 ],
     "benzene": [ 128, 178 ],
-    "imidazol": [ 263, 268 ],
+    "imidazole": [ 263, 268 ],
     # 161 i spolycrystalline
     "methanol": [ 151, 156, 161 ],
     # No ethanol crystal that converged to the crystal state. 
     # First one that is not omitted is liquid.
     # 184 may still be on its way to the liquid state
-    "ethanol": [ 109, 114, 119, 124, 129, 134, 139, 144, 149, 154, 159, 164, 169 174,  179, 184 ]
+    "ethanol": [ 109, 114, 119, 124, 129, 134, 139, 144, 149, 154, 159, 164, 169, 174,  179, 184 ],
     # No real crystal for this compound either.  First one that is not omitted is liquid.
     "ethyleneglycol": [ 160, 190, 195, 200, 205, 210, 215, 220, 225, 230 ],
     # No real crystal here either. First one that is not omitted is liquid.
     "phenol": [ 244, 254, 259, 264, 269, 274 ],
-    "12-benzenediol": [ 327, 332, 337, 342, 347, 352, 357, 377, 382, 387, 392, 397 ], 
+    "12-benzenediol": [ 327, #332, 
+                        337, 342, 347, 352, 357, 377, 382, 387, 392
+                        #, 397
+    ]
 }
 
 def get_temps(compound:str):
@@ -94,24 +97,25 @@ def do_rotacf(alltemp:list):
         for temp in sorted(S0.keys()):
             outf.write("%10g  %10g\n" % ( temp, S0[temp] ) )
 
-moldb = get_moldb(False)
-os.chdir("bcc/melt")
-lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-if not csb:
-    for mol in moldb:
-        if os.path.isdir(mol) and mol not in lisa_csb:
-            os.chdir(mol)
-            alltemp = get_temps(mol)
-            do_msd(alltemp)
-            do_rotacf(alltemp)
-            do_filesize(alltemp)
-            os.chdir("..")
-else:
-    for mol in lisa_csb:
-        if os.path.isdir(mol):
-            os.chdir(mol)
-            alltemp = get_temps(mol)
-            do_msd(alltemp)
-            do_rotacf(alltemp)
-            do_filesize(alltemp)
-            os.chdir("..")
+if __name__ == '__main__':
+    moldb = get_moldb(False)
+    os.chdir("bcc/melt")
+    lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
+    if not csb:
+        for mol in moldb:
+            if os.path.isdir(mol) and mol not in lisa_csb:
+                os.chdir(mol)
+                alltemp = get_temps(mol)
+                do_msd(alltemp)
+                do_rotacf(alltemp)
+                do_filesize(alltemp)
+                os.chdir("..")
+    else:
+        for mol in lisa_csb:
+            if os.path.isdir(mol):
+                os.chdir(mol)
+                alltemp = get_temps(mol)
+                do_msd(alltemp)
+                do_rotacf(alltemp)
+                do_filesize(alltemp)
+                os.chdir("..")

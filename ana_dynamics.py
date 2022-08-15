@@ -122,26 +122,28 @@ def do_rotacf(moldb):
                     os.chdir("..")
             os.chdir("..")
 
-if shutil.which("gmx") == None:
-    sys.exit("Please load the gromacs environment using\nml load GCC/10.2.0  OpenMPI/4.0.5 GROMACS/2021")
+if __name__ == '__main__':
 
-moldb  = get_moldb(False)
+    if shutil.which("gmx") == None:
+        sys.exit("Please load the gromacs environment using\nml load GCC/10.2.0  OpenMPI/4.0.5 GROMACS/2021")
 
-if False:
-    for top in [ "bcc", "resp" ]:
-        print("Looking for %s" % top)
-        if os.path.isdir(top):
-            os.chdir(top)
-            phase = "solid"
-            if os.path.isdir(phase):
-                os.chdir(phase)
-                do_rotacf(moldb)
+    moldb  = get_moldb(False)
+
+    if False:
+        for top in [ "bcc", "resp" ]:
+            print("Looking for %s" % top)
+            if os.path.isdir(top):
+                os.chdir(top)
+                phase = "solid"
+                if os.path.isdir(phase):
+                    os.chdir(phase)
+                    do_rotacf(moldb)
+                    os.chdir("..")
                 os.chdir("..")
-            os.chdir("..")
-else:
-    if csb:
-        lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-        get_dict("/home/lschmidt/MELTING", lisa_csb)
     else:
-        get_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys())
+        if csb:
+            lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
+            get_dict("/home/lschmidt/MELTING", lisa_csb)
+        else:
+            get_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys())
 

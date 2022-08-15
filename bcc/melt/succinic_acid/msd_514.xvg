@@ -1,0 +1,19 @@
+# This file was created Sun Aug 14 17:01:10 2022
+# Created by:
+#                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
+# 
+# Executable:   /hpc2n/eb/software/GROMACS/2021-foss-2020b/bin/gmx
+# Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
+# Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/succinic_acid
+# Command line:
+#   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid514.0/melting-nvt.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid514.0/melting-nvt.tpr -o msd_514.xvg -b -199 -e 1
+# gmx msd is part of G R O M A C S:
+#
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
+#
+@    title "Mean Square Displacement"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "MSD (nm\S2\N)"
+@TYPE xy
+         0           0
+         1   0.0118684

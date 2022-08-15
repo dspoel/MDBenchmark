@@ -1,0 +1,19 @@
+# This file was created Sun Aug 14 16:51:54 2022
+# Created by:
+#                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
+# 
+# Executable:   /hpc2n/eb/software/GROMACS/2021-foss-2020b/bin/gmx
+# Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
+# Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/imidazole
+# Command line:
+#   gmx rotacf -d -n ../../../index/imidazole_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole303.0/melting-nvt.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole303.0/melting-nvt.tpr -o rotacf_303.xvg -b -199 -e 1
+# gmx rotacf is part of G R O M A C S:
+#
+# Gnomes, ROck Monsters And Chili Sauce
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+&

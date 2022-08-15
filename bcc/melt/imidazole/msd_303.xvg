@@ -1,0 +1,19 @@
+# This file was created Sun Aug 14 16:51:55 2022
+# Created by:
+#                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
+# 
+# Executable:   /hpc2n/eb/software/GROMACS/2021-foss-2020b/bin/gmx
+# Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
+# Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/imidazole
+# Command line:
+#   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole303.0/melting-nvt.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole303.0/melting-nvt.tpr -o msd_303.xvg -b -199 -e 1
+# gmx msd is part of G R O M A C S:
+#
+# S  C  A  M  O  R  G
+#
+@    title "Mean Square Displacement"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "MSD (nm\S2\N)"
+@TYPE xy
+         0           0
+         1   0.0201483

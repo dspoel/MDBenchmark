@@ -1,0 +1,24 @@
+# This file was created Sun Aug 14 17:01:12 2022
+# Created by:
+#                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
+# 
+# Executable:   /hpc2n/eb/software/GROMACS/2021-foss-2020b/bin/gmx
+# Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
+# Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/succinic_acid
+# Command line:
+#   gmx rotacf -d -n ../../../index/succinic_acid_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid449.0/melting-nvt.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid449.0/melting-nvt.tpr -o rotacf_449.xvg -b -190 -e 10
+# gmx rotacf is part of G R O M A C S:
+#
+# GROningen Mixture of Alchemy and Childrens' Stories
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     1.000     0.94834
+     2.000     0.94005
+     3.000     0.93393
+     4.000     0.92826
+     5.000     0.92190
+&
