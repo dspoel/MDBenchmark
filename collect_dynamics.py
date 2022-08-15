@@ -9,6 +9,7 @@ csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 ignore = {
     "ethane": [ 55, 60, 65, 70, 75, 80 ],
     "pentane": [ 98, 113, 118, 123, 128, 133, 138 ],
+    "propane": [ 70, 80, 90, 100 ],
     # 204 and 209 are polycrystalline
     "cyclohexane": [ 129, 184, 204, 209 ],
     "benzene": [ 128, 178 ],
@@ -23,10 +24,15 @@ ignore = {
     "ethyleneglycol": [ 160, 190, 195, 200, 205, 210, 215, 220, 225, 230 ],
     # No real crystal here either. First one that is not omitted is liquid.
     "phenol": [ 244, 254, 259, 264, 269, 274 ],
-    "12-benzenediol": [ 327, 332, 
-                        337, 342, 347, 352, 357, 377, 382, 387, 392
-                        , 397
-    ]
+    "12-benzenediol": [ 327, 332, 337, 342, 347, 352, 357, 377, 382, 387, 392, 397 ],
+    "123-benzenetriol": [ 378, 398, 418, 438 ],
+    "12-ethanediamine": [ 269, 279, 289, 399, 309 ],
+    "formic_acid": [ 246, 246, 266, 276 ],
+    "acooh": [ 189, 229, 249, 269 ],
+    "octanoic_acid": [ 284, 294, 304, 314 ],
+    "succinic_acid": [ 424, 464, 504 ],
+    "acetamide": [ 294, 304, 314, 324 ],
+    "urea": [ 436  ]
 }
 
 def get_temps(compound:str):
