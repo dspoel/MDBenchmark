@@ -46,7 +46,7 @@ def get_run_dict(topdir: str, molnames:list, useall:bool):
                             print("Cannot extract temperature from %s" % simdir)
                             temp = 0.0
                         # Check whether we really have to extend this one
-                        if useall or int(temp) in ignore[molname]:
+                        if useall or (molname in ignore and int(temp) in ignore[molname]):
                             logfile = newest_trr[:-3] + "log"
                             tprfile = newest_trr[:-3] + "tpr"
                             if os.path.exists(logfile) and os.path.exists(tprfile):
