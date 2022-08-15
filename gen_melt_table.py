@@ -22,11 +22,14 @@ def get_nmol(mol:str, natom:int) -> int:
 
 if __name__ == '__main__':
     moldb = get_moldb(False)
+    host  = "keb"
     if csb:
         mydict = get_run_dict("/home/lschmidt/MELTING", moldb.keys(), True)
+        host   = "csb"
     else:
         mydict = get_run_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys(), True)
 
+    csv = open("mm.csv", "w")
     textab = "melt_mols.tex"
     with open(textab, "w") as outf:
         outf.write("\\begin{table}[ht!]\n")
@@ -42,9 +45,13 @@ if __name__ == '__main__':
                 nmol = get_nmol(mol, moldb[mol]["natom"])
                 outf.write("%s & %d &" % ( mol, nmol ) )
                 for temp in sorted(mydict[mol].keys()):
-                    outf.write(" %g(%.0f)" % ( temp, mydict[mol][temp]["endtime"]/1000 ) )
+                    mytime = mydict[mol][temp]["endtime"]/1000
+                    if mytime >= 1:
+                        outf.write(" %g(%.0f)" % ( temp, mytime  ) )
+                        csv.write("%s|%s|%g|%g\n" % ( host, mol, temp, mytime ) ) 
                 outf.write("\\\\\n")
                 os.chdir("..")
         outf.write("\\hline\n")
         outf.write("\\end{tabular}\n")
         outf.write("\\end{table}\n")
+    csv.close()
