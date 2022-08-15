@@ -56,6 +56,8 @@ def get_dict(topdir: str, molnames:list):
                     newest_gro  = ""
                     newest_time = None
                     for trr in glob.glob("melting*trr"):
+                        if trr.find("nvt") >= 0 or trr.find("NVT") >= 0:
+                            continue
                         mytime = os.path.getmtime(trr)
                         if None == newest_time or mytime > newest_time:
                             newest_time = mytime
