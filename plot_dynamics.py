@@ -10,7 +10,7 @@ def plot_it(mol:str):
     title = mol
     if title in molrename:
         title = molrename[title]
-    os.system("viewxvg -f temp_diff.xvg temp_S0.xvg -alfs 14 -lfs 16 -tfs 16 -ymin -0.05 -ymax 1.2 -mk  -label D S0 -title %s -pdf %s_dynamics.pdf -noshow" % ( title, mol ))
+    os.system("viewxvg -f temp_diff.xvg temp_S0.xvg temp_filesize.xvg -alfs 18 -lfs 18 -tfs 18 -ymin -0.05 -ymax 1.2 -mk  -label D S0 Zip -title '%s' -pdf %s_dynamics.pdf -noshow" % ( title, mol ))
     
 moldb = get_moldb(False)
 os.chdir("bcc/melt")

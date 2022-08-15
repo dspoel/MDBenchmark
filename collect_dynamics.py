@@ -9,7 +9,21 @@ csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 ignore = {
     "ethane": [ 55, 60, 65, 70, 75, 80 ],
     "pentane": [ 98, 113, 118, 123, 128, 133, 138 ],
-    "cyclohexane": [ 129 ]
+    # 204 and 209 are polycrystalline
+    "cyclohexane": [ 129, 184, 204, 209 ],
+    "benzene": [ 128, 178 ],
+    "imidazol": [ 263, 268 ],
+    # 161 i spolycrystalline
+    "methanol": [ 151, 156, 161 ],
+    # No ethanol crystal that converged to the crystal state. 
+    # First one that is not omitted is liquid.
+    # 184 may still be on its way to the liquid state
+    "ethanol": [ 109, 114, 119, 124, 129, 134, 139, 144, 149, 154, 159, 164, 169 174,  179, 184 ]
+    # No real crystal for this compound either.  First one that is not omitted is liquid.
+    "ethyleneglycol": [ 160, 190, 195, 200, 205, 210, 215, 220, 225, 230 ],
+    # No real crystal here either. First one that is not omitted is liquid.
+    "phenol": [ 244, 254, 259, 264, 269, 274 ],
+    "12-benzenediol": [ 327, 332, 337, 342, 347, 352, 357, 377, 382, 387, 392, 397 ], 
 }
 
 def get_temps(compound:str):
