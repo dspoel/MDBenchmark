@@ -1,0 +1,18 @@
+# This file was created Mon Aug 15 11:55:54 2022
+# Created by:
+#                        :-) GROMACS - gmx msd, 2021 (-:
+# 
+# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/acetamide
+# Command line:
+#   gmx msd -f /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.trr -s /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.tpr -o msd_364.xvg -b -200 -e 0
+# gmx msd is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "Mean Square Displacement"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "MSD (nm\S2\N)"
+@TYPE xy
+         0           0
