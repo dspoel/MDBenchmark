@@ -18,9 +18,7 @@ def get_run_dict(topdir: str, molnames:list, useall:bool):
         mol = molname
         if mol in lisa_name:
             mol = lisa_name[mol]
-        if not molname in ignore and not useall:
-            continue
-        if os.path.exists(mol):
+        if (molname in ignore or useall) and os.path.exists(mol):
             os.chdir(mol)
             mydict[mol] = {}
             for simdir in glob.glob("*%s*" % mol):
