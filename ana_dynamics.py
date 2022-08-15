@@ -1,14 +1,53 @@
 #!/usr/bin/env python3
         
 import os, shutil, glob, sys, math
-from molecule_db import *
+from molecule_db  import *
+from get_csv_rows import *
 
 csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 
+def get_simtable() -> dict:
+    simtable = {}
+    for row in get_csv_rows("simtable.csv", 4):
+        if not row[0] in simtable:
+            simtable[row[0]] = {}
+        temp = int(row[1])
+        if not temp in simtable[row[0]] or float(row[2]) > simtable[row[0]][temp][1]:
+            simtable[row[0]][temp] = ( row[3], float(row[2]) )
+    return simtable
+
+def dump_simtable(simtable:dict):
+    with open("simtable.tex", "w") as outf:
+        outf.write("\\begin{table}[ht!]\n")
+        outf.write("\\caption{Overview of melting simulations performed. Number of molecules in the system, temperature (K) and simulation length (ns).}\n")
+        outf.write("\\label{meltsims}\n")
+        outf.write("\\begin{tabular}{lcc}\n")
+        outf.write("Compound & \# Mol & Temperature (Simulation length) \\\\\n")
+        outf.write("\\hline\n")
+        os.chdir("bcc/melt")
+        for mol in sorted(simtable.keys()):
+            nmol = 0
+            outf.write("%s & %d &" % ( mol, nmol ) )
+            for temp in sorted(simtable[mol].keys()):
+                outf.write(" %d(%.0f)" % ( temp, simtable[mol][temp][1]  ) )
+            outf.write("\\\\\n")
+        outf.write("\\hline\n")
+        outf.write("\\end{tabular}\n")
+        outf.write("\\end{table}\n")
+
+def use_sim(simtable:dict, mol:str, temp: int) -> bool:
+    if not mol in simtable or not temp in simtable[mol]:
+        sys.exit("Cannot find mol %s, temp %g in simtable. Sorry." % ( mol, temp ))
+    if csb and simtable[mol][temp][0] == "csb":
+        return True
+    if not csb and simtable[mol][temp][0] == "keb":
+        return True
+    return False
+        
 def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str, tpr: str,
                indexdir: str, rotacfout: str, rotplane: str, msdout: str):
-    if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
-        return
+#    if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
+#        return
     with open(jobname, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
@@ -39,6 +78,8 @@ def get_last_time(logfile:str) -> float:
 def get_dict(topdir: str, molnames:list):
     if not os.path.exists(topdir):
         sys.exit("No such dir %s" % topdir)
+    simtable = get_simtable()
+    dump_simtable(simtable)
     pwd = os.getcwd()
     os.chdir(topdir)
     lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
@@ -77,7 +118,7 @@ def get_dict(topdir: str, molnames:list):
                             temp = 0.0
                         logfile = newest_trr[:-3] + "log"
                         tprfile = newest_trr[:-3] + "tpr"
-                        if os.path.exists(logfile) and os.path.exists(tprfile):
+                        if os.path.exists(logfile) and os.path.exists(tprfile) and use_sim(simtable, molname, temp):
                             endtime = get_last_time(logfile)
                             mydir   = os.getcwd()
                             workdir = ("%s/bcc/melt/%s" % ( pwd, molname ) )

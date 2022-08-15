@@ -29,29 +29,14 @@ if __name__ == '__main__':
     else:
         mydict = get_run_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys(), True)
 
-    csv = open("mm.csv", "w")
-    textab = "melt_mols.tex"
-    with open(textab, "w") as outf:
-        outf.write("\\begin{table}[ht!]\n")
-        outf.write("\\caption{Overview of melting simulations performed. Number of molecules in the system, temperature (K) and simulation length (ns).}\n")
-        outf.write("\\label{meltsims}\n")
-        outf.write("\\begin{tabular}{lcc}\n")
-        outf.write("Compound & \# Mol & Temperature (Simulation length) \\\\\n")
-        outf.write("\\hline\n")
+    with open("melt_table.csv", "w") as csv:
         os.chdir("bcc/melt")
         for mol in mydict:
             if os.path.isdir(mol):
                 os.chdir(mol)
                 nmol = get_nmol(mol, moldb[mol]["natom"])
-                outf.write("%s & %d &" % ( mol, nmol ) )
                 for temp in sorted(mydict[mol].keys()):
                     mytime = mydict[mol][temp]["endtime"]/1000
                     if mytime >= 1:
-                        outf.write(" %g(%.0f)" % ( temp, mytime  ) )
-                        csv.write("%s|%s|%g|%g\n" % ( host, mol, temp, mytime ) ) 
-                outf.write("\\\\\n")
+                        csv.write("%s|%g|%g|%s|%d\n" % ( mol, temp, mytime, host, nmol ) ) 
                 os.chdir("..")
-        outf.write("\\hline\n")
-        outf.write("\\end{tabular}\n")
-        outf.write("\\end{table}\n")
-    csv.close()
