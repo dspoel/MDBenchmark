@@ -23,9 +23,9 @@ ignore = {
     "ethyleneglycol": [ 160, 190, 195, 200, 205, 210, 215, 220, 225, 230 ],
     # No real crystal here either. First one that is not omitted is liquid.
     "phenol": [ 244, 254, 259, 264, 269, 274 ],
-    "12-benzenediol": [ 327, #332, 
+    "12-benzenediol": [ 327, 332, 
                         337, 342, 347, 352, 357, 377, 382, 387, 392
-                        #, 397
+                        , 397
     ]
 }
 
@@ -41,7 +41,7 @@ def get_temps(compound:str):
         rtemp[rot[7:-4]] = 1
     alltemp = []
     for m in mtemp:
-        if m in ftemp and m in rtemp and (not compound in ignore or not int(m) in ignore[compound]): 
+        if m in ftemp and m in rtemp: # and (not compound in ignore or not int(m) in ignore[compound]): 
             alltemp.append(m)
     return alltemp
 
