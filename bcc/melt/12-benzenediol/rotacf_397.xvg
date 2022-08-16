@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:46:00 2022
+# This file was created Mon Aug 15 23:30:02 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/12-benzenediol_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/OUT-12-benzenediol397.0/melting-npt-y_120_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/OUT-12-benzenediol397.0/melting-npt-y_120_NPTY.tpr -o rotacf_397.xvg -b 39800 -e 40000
 # gmx rotacf is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -7,62 +7,6 @@ from collect_dynamics import *
 
 csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 
-def get_run_dict(topdir: str, molnames:list, useall:bool):
-    if not os.path.exists(topdir):
-        sys.exit("No such dir %s" % topdir)
-    pwd = os.getcwd()
-    os.chdir(topdir)
-    lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
-    mydict = {}
-    for molname in molnames:
-        mol = molname
-        if mol in lisa_name:
-            mol = lisa_name[mol]
-        if (molname in ignore or useall) and os.path.exists(mol):
-            os.chdir(mol)
-            mydict[mol] = {}
-            for simdir in glob.glob("*%s*" % mol):
-                if os.path.isdir(simdir):
-                    os.chdir(simdir)
-                    newest_trr  = ""
-                    newest_gro  = ""
-                    newest_time = None
-                    for trr in glob.glob("melting*trr"):
-                        mytime = os.path.getmtime(trr)
-                        if None == newest_time or mytime > newest_time:
-                            newest_time = mytime
-                            newest_trr  = trr
-                            mygro = trr[:-3] + "gro"
-                            if os.path.exists(mygro):
-                                newest_gro = mygro
-                            else:
-                                newset_gro = ""
-                    if None != newest_time:
-                        # Extract the temperature from the dir name
-                        ptr = simdir.find(mol)
-                        try:
-                            temp = float(simdir[ptr+len(mol):])
-                        except ValueError:
-                            print("Cannot extract temperature from %s" % simdir)
-                            temp = 0.0
-                        # Check whether we really have to extend this one
-                        if useall or (molname in ignore and int(temp) in ignore[molname]):
-                            logfile = newest_trr[:-3] + "log"
-                            tprfile = newest_trr[:-3] + "tpr"
-                            if os.path.exists(logfile) and os.path.exists(tprfile):
-                                mydict[mol][temp] = { "simdir": os.getcwd(),
-                                                      "logfile": logfile,
-                                                      "cptfile": newest_trr[:-3] + "cpt",
-                                                      "tprfile": tprfile,
-                                                      "trrfile": newest_trr,
-                                                      "edrfile": newest_trr[:-3] + "edr",
-                                                      "endtime": get_last_time(logfile)
-                                }
-                    os.chdir("..")
-            os.chdir("..")
-    os.chdir(pwd)
-    return mydict
-
 def write_run_job(target:str, nsteps:int):
     job = target + ".sh"
     with open(job, "w") as outf:

@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:43:23 2022
+# This file was created Mon Aug 15 23:27:44 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT123-benzenetriol353.0/melting-npt-y_7_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT123-benzenetriol353.0/melting-npt-y_7_NPTY.tpr -o msd_353.xvg -b 6800 -e 7000
 # gmx msd is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

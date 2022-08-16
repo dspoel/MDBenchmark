@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:50:57 2022
+# This file was created Mon Aug 15 23:35:10 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/123-benzenetriol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT-123-benzenetriol393.0/melting-npt-y_120_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT-123-benzenetriol393.0/melting-npt-y_120_NPTY.tpr -o rotplane_393.xvg -b 42722 -e 42922
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

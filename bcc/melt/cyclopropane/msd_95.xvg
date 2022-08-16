@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:47:19 2022
+# This file was created Mon Aug 15 23:31:16 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane95.0/melting-npt-y_140_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane95.0/melting-npt-y_140_NPTY.tpr -o msd_95.xvg -b 39800 -e 40000
 # gmx msd is part of G R O M A C S:
 #
-# GROningen Mixture of Alchemy and Childrens' Stories
+# Gyas ROwers Mature At Cryogenic Speed
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

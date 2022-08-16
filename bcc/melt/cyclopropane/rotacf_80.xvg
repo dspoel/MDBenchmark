@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:43:36 2022
+# This file was created Mon Aug 15 23:27:16 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/cyclopropane_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane80.0/melting-npt-y_60_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane80.0/melting-npt-y_60_NPTY.tpr -o rotacf_80.xvg -b 59800 -e 60000
 # gmx rotacf is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

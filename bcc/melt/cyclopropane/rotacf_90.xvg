@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:43:17 2022
+# This file was created Mon Aug 15 23:27:09 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/cyclopropane_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane90.0/melting-npt-y_260_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane90.0/melting-npt-y_260_NPTY.tpr -o rotacf_90.xvg -b 59800 -e 60000
 # gmx rotacf is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
