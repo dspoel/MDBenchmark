@@ -1,4 +1,4 @@
-# This file was created Tue Aug 16 17:25:50 2022
+# This file was created Tue Aug 16 22:37:36 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -6,25 +6,114 @@
 # Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
 # Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/12-benzenediol
 # Command line:
-#   gmx rotacf -n ../../../index/12-benzenediol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/327/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/327/melting-npt-y.tpr -o rotplane_327.xvg -b -178 -e 22
+#   gmx rotacf -n ../../../index/12-benzenediol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/327/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/327/melting-npt-y.tpr -o rotplane_327.xvg -b 21800 -e 22000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
 @    yaxis  label "C(t)"
 @TYPE xy
      0.000     1.00000
-     1.000     0.94809
-     2.000     0.93354
-     3.000     0.92113
-     4.000     0.90942
-     5.000     0.89809
-     6.000     0.88764
-     7.000     0.87775
-     8.000     0.86738
-     9.000     0.85606
-    10.000     0.84512
-    11.000     0.83513
+     1.000     0.94336
+     2.000     0.93447
+     3.000     0.92853
+     4.000     0.92352
+     5.000     0.91913
+     6.000     0.91528
+     7.000     0.91177
+     8.000     0.90848
+     9.000     0.90534
+    10.000     0.90205
+    11.000     0.89889
+    12.000     0.89618
+    13.000     0.89330
+    14.000     0.89036
+    15.000     0.88759
+    16.000     0.88505
+    17.000     0.88246
+    18.000     0.88003
+    19.000     0.87760
+    20.000     0.87529
+    21.000     0.87295
+    22.000     0.87080
+    23.000     0.86842
+    24.000     0.86619
+    25.000     0.86406
+    26.000     0.86171
+    27.000     0.85954
+    28.000     0.85721
+    29.000     0.85530
+    30.000     0.85318
+    31.000     0.85094
+    32.000     0.84910
+    33.000     0.84696
+    34.000     0.84488
+    35.000     0.84300
+    36.000     0.84099
+    37.000     0.83905
+    38.000     0.83705
+    39.000     0.83501
+    40.000     0.83315
+    41.000     0.83154
+    42.000     0.82944
+    43.000     0.82777
+    44.000     0.82587
+    45.000     0.82416
+    46.000     0.82257
+    47.000     0.82102
+    48.000     0.81913
+    49.000     0.81744
+    50.000     0.81570
+    51.000     0.81388
+    52.000     0.81209
+    53.000     0.81034
+    54.000     0.80876
+    55.000     0.80691
+    56.000     0.80522
+    57.000     0.80352
+    58.000     0.80178
+    59.000     0.80002
+    60.000     0.79824
+    61.000     0.79666
+    62.000     0.79477
+    63.000     0.79304
+    64.000     0.79140
+    65.000     0.78955
+    66.000     0.78758
+    67.000     0.78576
+    68.000     0.78406
+    69.000     0.78231
+    70.000     0.78068
+    71.000     0.77891
+    72.000     0.77708
+    73.000     0.77556
+    74.000     0.77350
+    75.000     0.77182
+    76.000     0.77045
+    77.000     0.76882
+    78.000     0.76717
+    79.000     0.76560
+    80.000     0.76369
+    81.000     0.76219
+    82.000     0.76068
+    83.000     0.75930
+    84.000     0.75774
+    85.000     0.75646
+    86.000     0.75500
+    87.000     0.75335
+    88.000     0.75182
+    89.000     0.75019
+    90.000     0.74862
+    91.000     0.74708
+    92.000     0.74554
+    93.000     0.74400
+    94.000     0.74249
+    95.000     0.74098
+    96.000     0.73942
+    97.000     0.73787
+    98.000     0.73652
+    99.000     0.73506
+   100.000     0.73361
 &

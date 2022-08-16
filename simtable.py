@@ -143,7 +143,8 @@ def get_run_dict(topdir: str, molnames:list):
                     if None != newdict:
                         if Debug:
                             print(newdict)
-                        mydict[molname][temp] = newdict
+                        if not temp in mydict[molname] or (newdict["trrtime"] > mydict[molname][temp]["trrtime"]):
+                            mydict[molname][temp] = newdict
                     else:
                         if Debug:
                             print("Failed to find dictionary entry")

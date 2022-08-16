@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:42:26 2022
+# This file was created Tue Aug 16 22:33:32 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/12-benzenediol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/12-benzenediol367.0/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/12-benzenediol367.0/melting-npt-y.tpr -o rotplane_367.xvg -b 1745 -e 1945
 # gmx rotacf is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
