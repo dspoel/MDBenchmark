@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:55:47 2022
+# This file was created Mon Aug 15 23:30:11 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/urea_rotplane.ndx -f /home/lschmidt/MELTING/urea/urea421.0/melting-npt-y_4.trr -s /home/lschmidt/MELTING/urea/urea421.0/melting-npt-y_4.tpr -o rotplane_421.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# GROwing Monsters And Cloning Shrimps
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -11,12 +11,13 @@ def get_simtable(filename:str) -> dict:
     for row in get_csv_rows(filename, 12):
         if not row[0] in simtable:
             simtable[row[0]] = {}
-        temp = int(row[1])
-        if not temp in simtable[row[0]] or float(row[2]) > simtable[row[0]][temp]["length"]:
-            simtable[row[0]][temp] = { "host": row[3], "length": float(row[2]), "nmol": int(row[4]),
+        temp   = int(row[1])
+        length = float(row[2])
+        if not temp in simtable[row[0]] or length > simtable[row[0]][temp]["length"]:
+            simtable[row[0]][temp] = { "host": row[3], "length": length, "nmol": int(row[4]),
                                        "simdir": row[5], "logfile": row[6], "cptfile": row[7],
                                        "tprfile": row[8], "trrfile": row[9], "edrfile": row[10],
-                                       "trrtime": int(row[11]) }
+                                       "trrtime": float(row[11]) }
     return simtable
 
 def dump_simtable(simtable:dict, filename:str):
@@ -68,7 +69,7 @@ def get_dict_entry(mol:str):
     if None != newest_time:
         simdir = os.getcwd()
         # Extract the temperature from the dir name
-        ptr = simdir.find(mol)
+        ptr = simdir.rfind(mol)
         try:
             if ptr >= 0:
                 temp = float(simdir[ptr+len(mol):])

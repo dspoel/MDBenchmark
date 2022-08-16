@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:42:54 2022
+# This file was created Mon Aug 15 23:21:54 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formaldehyde_rotaxis.ndx -f /home/lschmidt/MELTING/formaldehyde/formaldehyde151.0/melting-npt-y_L.trr -s /home/lschmidt/MELTING/formaldehyde/formaldehyde151.0/melting-npt-y_L.tpr -o rotacf_151.xvg -b 800 -e 1000
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

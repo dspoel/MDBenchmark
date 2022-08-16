@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:43:18 2022
+# This file was created Mon Aug 15 23:22:27 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formaldehyde_rotplane.ndx -f /home/lschmidt/MELTING/formaldehyde/formaldehyde151.0/melting-npt-y_L.trr -s /home/lschmidt/MELTING/formaldehyde/formaldehyde151.0/melting-npt-y_L.tpr -o rotplane_151.xvg -b 800 -e 1000
 # gmx rotacf is part of G R O M A C S:
 #
-# Grunge ROck MAChoS
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

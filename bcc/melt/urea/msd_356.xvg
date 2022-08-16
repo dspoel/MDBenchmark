@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:56:22 2022
+# This file was created Mon Aug 15 23:29:15 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/urea/urea356.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/urea/urea356.0/melting-npt-y_2.tpr -o msd_356.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Gnomes, ROck Monsters And Chili Sauce
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

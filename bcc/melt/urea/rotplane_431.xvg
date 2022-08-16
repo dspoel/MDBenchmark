@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:58:54 2022
+# This file was created Mon Aug 15 23:31:10 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/urea_rotplane.ndx -f /home/lschmidt/MELTING/urea/urea431.0/melting-npt-y_18.trr -s /home/lschmidt/MELTING/urea/urea431.0/melting-npt-y_18.tpr -o rotplane_431.xvg -b 9800 -e 10000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

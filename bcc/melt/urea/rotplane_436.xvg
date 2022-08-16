@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:58:53 2022
+# This file was created Mon Aug 15 23:31:10 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/urea_rotplane.ndx -f /home/lschmidt/MELTING/urea/urea436.0/melting-npt-y_28.trr -s /home/lschmidt/MELTING/urea/urea436.0/melting-npt-y_28.tpr -o rotplane_436.xvg -b 9800 -e 10000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

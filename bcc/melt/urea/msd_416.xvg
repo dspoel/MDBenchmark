@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:56:57 2022
+# This file was created Mon Aug 15 23:30:28 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/urea/urea416.0/melting-npt-y_4.trr -s /home/lschmidt/MELTING/urea/urea416.0/melting-npt-y_4.tpr -o msd_416.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

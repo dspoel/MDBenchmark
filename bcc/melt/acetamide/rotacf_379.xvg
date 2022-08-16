@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:56:06 2022
+# This file was created Mon Aug 15 23:29:13 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/acetamide_rotaxis.ndx -f /home/lschmidt/MELTING/acetamide/acetamide379.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/acetamide/acetamide379.0/melting-npt-y_2.tpr -o rotacf_379.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROup of MAchos and Cynical Suckers
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
