@@ -140,7 +140,8 @@ def get_run_dict(topdir: str, molnames:list):
                     os.chdir(simdir)
                     newdict, temp = get_dict_entry(moldir)
                     if None != newdict:
-                        print(newdict)
+                        if Debug:
+                            print(newdict)
                         mydict[molname][temp] = newdict
                     else:
                         if Debug:
@@ -200,8 +201,8 @@ if __name__ == '__main__':
                     print(mydict.keys())
                     for molname in mydict:
                         moldir = molname
-                        if moldir in lisa_name and not host == "keb2":
-                            moldir = lisa_name[moldir]
+#                        if moldir in lisa_name and not host == "keb2":
+#                            moldir = lisa_name[moldir]
                         if os.path.isdir(moldir):
                             os.chdir(moldir)
                             nmol = get_nmol(molname, moldb[molname]["natom"])
