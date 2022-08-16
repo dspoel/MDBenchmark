@@ -5,6 +5,7 @@ from molecule_db import *
 from simtable    import *
 
 csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
+Debug = True
 
 def use_sim(simtable:dict, mol:str, temp: int) -> bool:
     if not mol in simtable or not temp in simtable[mol]:
@@ -14,12 +15,15 @@ def use_sim(simtable:dict, mol:str, temp: int) -> bool:
         return True
     if not csb and simtable[mol][temp]["host"].find("keb") >= 0:
         return True
+    if Debug:
+        boolname = { False: "False", True: "True" }
+        print("csb: %s host: %s" % ( boolname[csb], simtable[mol][temp]["host"]))
     return False
         
 def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str, tpr: str,
-               indexdir: str, rotacfout: str, rotplane: str, msdout: str):
+               indexdir: str, rotacfout: str, rotplane: str, msdout: str, force:bool):
     # If files exist, do nothing, except when trajectory is newer.
-    if (os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane)) and not os.path.getmtime(traj) > os.path.getmtime(rotacfout):
+    if not force and ((os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane)) and not os.path.getmtime(traj) > os.path.getmtime(rotacfout)):
         return
     with open(jobname, "w") as outf:
         outf.write("#!/bin/bash\n")
@@ -36,7 +40,7 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
 
 def ana_dynamics(simtable_file:str):
     simtable = get_simtable(simtable_file)
-
+    print(simtable.keys())
     pwd = os.getcwd()
     print("pwd %s" % pwd)
     os.chdir("bcc/melt")
@@ -45,6 +49,8 @@ def ana_dynamics(simtable_file:str):
         os.chdir(molname)
         for temp in simtable[molname]:
             if use_sim(simtable, molname, temp):
+                if Debug:
+                    print("%s %f" % ( molname, temp ))
                 jobname = ("%s_%g.sh" % ( molname, temp ))
                 simdir  = simtable[molname][temp]["simdir"] + "/"
                 traj    = simdir + simtable[molname][temp]["trrfile"]
@@ -53,9 +59,9 @@ def ana_dynamics(simtable_file:str):
                 rotplane  = ("rotplane_%g.xvg" % temp )
                 msdout    = ("msd_%g.xvg" % temp )
                 indexdir  = "../../../index"
-                length    = simtable[molname][temp]["length"]
+                length    = simtable[molname][temp]["length"]*1000
                 run_rotacf(jobname, molname, length-200, length, traj, tpr,
-                           indexdir, rotacfout, rotplane, msdout)
+                           indexdir, rotacfout, rotplane, msdout, True)
                 finalgro  = simtable[molname][temp]["grofile"] 
                 if len(newest_gro) > 4:
                     srcf = ("%s/%s" % ( mydir, newest_gro))
