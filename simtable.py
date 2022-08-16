@@ -12,7 +12,7 @@ def get_simtable(filename:str) -> dict:
     if not os.path.exists(filename):
         return None
     simtable = {}
-    for row in get_csv_rows(filename, 12):
+    for row in get_csv_rows(filename, 13):
         if not row[0] in simtable:
             simtable[row[0]] = {}
         temp   = int(row[1])
@@ -21,7 +21,7 @@ def get_simtable(filename:str) -> dict:
             simtable[row[0]][temp] = { "host": row[3], "length": length, "nmol": int(row[4]),
                                        "simdir": row[5], "logfile": row[6], "cptfile": row[7],
                                        "tprfile": row[8], "trrfile": row[9], "edrfile": row[10],
-                                       "trrtime": float(row[11]) }
+                                       "grofile": row[11], "trrtime": float(row[12]) }
     return simtable
 
 def dump_simtable(simtable:dict, filename:str):
@@ -71,7 +71,7 @@ def get_dict_entry(mol:str):
             if os.path.exists(mygro):
                 newest_gro = mygro
             else:
-                newset_gro = ""
+                newest_gro = ""
     if None != newest_time:
         simdir = os.getcwd()
         # Extract the temperature from the dir name
@@ -107,6 +107,7 @@ def get_dict_entry(mol:str):
                         "cptfile": cptfile,
                         "tprfile": tprfile,
                         "trrfile": newest_trr,
+                        "grofile": newest_gro,
                         "edrfile": edrfile,
                         "endtime": get_last_time(logfile),
                         "trrtime": newest_time }
@@ -209,7 +210,7 @@ if __name__ == '__main__':
                             for temp in sorted(mydict[molname].keys()):
                                 mytime = mydict[molname][temp]["endtime"]/1000.0
                                 if mytime >= 1:
-                                    csv.write("%s|%g|%g|%s|%d|%s|%s|%s|%s|%s|%s|%s\n" % 
+                                    csv.write("%s|%g|%g|%s|%d|%s|%s|%s|%s|%s|%s|%s|%s\n" % 
                                               ( molname, temp, mytime, host, nmol,
                                                 mydict[molname][temp]["simdir"],
                                                 mydict[molname][temp]["logfile"],
@@ -217,6 +218,7 @@ if __name__ == '__main__':
                                                 mydict[molname][temp]["tprfile"],
                                                 mydict[molname][temp]["trrfile"],
                                                 mydict[molname][temp]["edrfile"],
+                                                mydict[molname][temp]["grofile"],
                                                 str(mydict[molname][temp]["trrtime"]) ) ) 
                             os.chdir("..")
                         else:
