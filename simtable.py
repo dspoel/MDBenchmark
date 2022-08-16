@@ -25,6 +25,11 @@ def get_simtable(filename:str) -> dict:
     return simtable
 
 def dump_simtable(simtable:dict, filename:str):
+    replace_names = { "acooh": "acetic acid", "menh2": "methylamine",
+                      "12-benzenediol": "benzene-1,2-diol",
+                      "12-ethanediamine": "ethanediamine",
+                      "123-benzenetriol": "benzene-1,2,3-triol",
+                      "14-benzoquinone": "1,4-benzoquinone" }
     with open(filename, "w") as outf:
         outf.write("\\begin{longtable}{lcp{12cm}}\n")
         outf.write("\\caption{Overview of melting simulations performed. Number of molecules in the system, simulation temperatures (K).}\n")
@@ -33,9 +38,12 @@ def dump_simtable(simtable:dict, filename:str):
         outf.write("\\hline\n")
         for mol in sorted(simtable.keys()):
             printStart = False
+            printmol = mol.replace("_", " ")
+            if printmol in replace_names:
+                printmol = replace_names[printmol]
             for temp in sorted(simtable[mol].keys()):
                 if not printStart:
-                    outf.write("%s & %d &" % ( mol, simtable[mol][temp]["nmol"] ) )
+                    outf.write("%s & %d &" % ( printmol, simtable[mol][temp]["nmol"] ) )
                     printStart = True
                 outf.write(" %d" % ( temp ) )
             outf.write("\\\\\n")
