@@ -27,9 +27,9 @@ def get_simtable(filename:str) -> dict:
 def dump_simtable(simtable:dict, filename:str):
     with open(filename, "w") as outf:
         outf.write("\\begin{longtable}{lcp{12cm}}\n")
-        outf.write("\\caption{Overview of melting simulations performed. Number of molecules in the system, temperature (K) and simulation length (ns).}\n")
+        outf.write("\\caption{Overview of melting simulations performed. Number of molecules in the system, simulation temperatures (K).}\n")
         outf.write("\\label{meltsims}\\\\\n")
-        outf.write("Compound & \# Mol & Temperature (Simulation length) \\\\\n")
+        outf.write("Compound & \# Mol & Temperature\\\\\n")
         outf.write("\\hline\n")
         for mol in sorted(simtable.keys()):
             printStart = False
@@ -37,7 +37,7 @@ def dump_simtable(simtable:dict, filename:str):
                 if not printStart:
                     outf.write("%s & %d &" % ( mol, simtable[mol][temp]["nmol"] ) )
                     printStart = True
-                outf.write(" %d(%.0f)" % ( temp, simtable[mol][temp]["length"] ) )
+                outf.write(" %d" % ( temp ) )
             outf.write("\\\\\n")
         outf.write("\\hline\n")
         outf.write("\\end{longtable}\n")
