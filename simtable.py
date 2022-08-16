@@ -4,6 +4,10 @@ import os, glob, argparse
 from molecule_db import *
 from get_csv_rows import *
 
+lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
+
+Debug = False
+
 def get_simtable(filename:str) -> dict:
     if not os.path.exists(filename):
         return None
@@ -53,6 +57,8 @@ def get_last_time(logfile:str) -> float:
     return 0.0
 
 def get_dict_entry(mol:str):
+    if Debug:
+        print("Looking for %s in %s" % ( mol, os.getcwd() ) )
     newest_trr  = ""
     newest_gro  = ""
     newest_time = None
@@ -69,16 +75,27 @@ def get_dict_entry(mol:str):
     if None != newest_time:
         simdir = os.getcwd()
         # Extract the temperature from the dir name
-        ptr = simdir.rfind(mol)
+        findTemp = True
         try:
-            if ptr >= 0:
-                temp = float(simdir[ptr+len(mol):])
-            else:
-                temp = float(simdir)
+            stemp = simdir[simdir.rfind("/")+1:]
+            if Debug:
+                print("Looking for temperature in %s" % stemp)
+            temp = float(stemp)
         except ValueError:
+            ptr = simdir.rfind(mol)
+            try:
+                if ptr >= 0:
+                    temp = float(simdir[ptr+len(mol):])
+                else:
+                    findTemp = False
+            except ValueError:
+                findTemp = False
+        if not findTemp:
             print("Cannot extract temperature from %s" % simdir)
             temp = 0.0
-        
+        else:
+            if Debug:
+                print("Found temp %g for %s in %s" % ( temp, mol, simdir ) )
         logfile = newest_trr[:-3] + "log"
         tprfile = newest_trr[:-3] + "tpr"
         edrfile = newest_trr[:-3] + "edr"
@@ -94,6 +111,12 @@ def get_dict_entry(mol:str):
                         "endtime": get_last_time(logfile),
                         "trrtime": newest_time }
             return newdict, temp
+        else:
+            if Debug:
+                print("Could not find all files in %s" % simdir)
+    else:
+        if Debug:
+            print("Could not find a simulation.")
     return None, 0.0
 
 def get_run_dict(topdir: str, molnames:list):
@@ -101,7 +124,6 @@ def get_run_dict(topdir: str, molnames:list):
         sys.exit("No such dir %s" % topdir)
     pwd = os.getcwd()
     os.chdir(topdir)
-    lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
     mydict = {}
     for molname in molnames:
         mol = molname
@@ -109,15 +131,20 @@ def get_run_dict(topdir: str, molnames:list):
             mol = lisa_name[mol]
         if os.path.exists(mol):
             os.chdir(mol)
-            mydict[mol] = {}
+            mydict[molname] = {}
             simdirs = glob.glob("*%s*" % mol) + glob.glob("[1-9]*")
-            print(simdirs)
+            if Debug:
+                print(simdirs)
             for simdir in simdirs:
                 if os.path.isdir(simdir):
                     os.chdir(simdir)
                     newdict, temp = get_dict_entry(mol)
                     if None != newdict:
-                        mydict[mol][temp] = newdict
+                        print(newdict)
+                        mydict[molname][temp] = newdict
+                    else:
+                        if Debug:
+                            print("Failed to find dictionary entry")
                     os.chdir("..")
             os.chdir("..")
     os.chdir(pwd)
@@ -152,12 +179,15 @@ time, so please run in the background.
     parser.add_argument("-out", "--output", help="Filename to write to, default "+mtname, type=str, default=mtname)
     parser.add_argument("-in", "--input", help="Filename to read a table from", type=str, default=None)
     parser.add_argument("-dump", "--dump", help="Dump the contents of the table to a latex file", type=str, default=None)
+    parser.add_argument("-v", "--verbose", help="Print debugging info", action="store_true")
     return parser.parse_args()
 
 if __name__ == '__main__':
     moldb = get_moldb(False)
     args  = parseArguments()
-    
+    if args.verbose:
+        Debug = True
+        
     if args.generate:
         with open(args.output, "w") as csv:
             os.chdir("bcc/melt")
@@ -168,23 +198,29 @@ if __name__ == '__main__':
                 if os.path.isdir(topdirs[host]):
                     mydict = get_run_dict(topdirs[host], moldb.keys())
                     print(mydict.keys())
-                    for mol in mydict:
-                        if os.path.isdir(mol):
-                            os.chdir(mol)
-                            nmol = get_nmol(mol, moldb[mol]["natom"])
-                            for temp in sorted(mydict[mol].keys()):
-                                mytime = mydict[mol][temp]["endtime"]/1000.0
+                    for molname in mydict:
+                        moldir = molname
+                        if moldir in lisa_name and not host == "keb2":
+                            moldir = lisa_name[moldir]
+                        if os.path.isdir(moldir):
+                            os.chdir(moldir)
+                            nmol = get_nmol(molname, moldb[molname]["natom"])
+                            for temp in sorted(mydict[molname].keys()):
+                                mytime = mydict[molname][temp]["endtime"]/1000.0
                                 if mytime >= 2:
                                     csv.write("%s|%g|%g|%s|%d|%s|%s|%s|%s|%s|%s|%s\n" % 
-                                              ( mol, temp, mytime, host, nmol,
-                                                mydict[mol][temp]["simdir"],
-                                                mydict[mol][temp]["logfile"],
-                                                mydict[mol][temp]["cptfile"],
-                                                mydict[mol][temp]["tprfile"],
-                                                mydict[mol][temp]["trrfile"],
-                                                mydict[mol][temp]["edrfile"],
-                                                str(mydict[mol][temp]["trrtime"]) ) ) 
+                                              ( molname, temp, mytime, host, nmol,
+                                                mydict[molname][temp]["simdir"],
+                                                mydict[molname][temp]["logfile"],
+                                                mydict[molname][temp]["cptfile"],
+                                                mydict[molname][temp]["tprfile"],
+                                                mydict[molname][temp]["trrfile"],
+                                                mydict[molname][temp]["edrfile"],
+                                                str(mydict[molname][temp]["trrtime"]) ) ) 
                             os.chdir("..")
+                        else:
+                            if Debug:
+                                print("Cannot find director %s, am here: %s" % ( moldir, os.getcwd() ) )
             os.chdir("../..")
     if None != args.dump and None != args.input:
         simtable = get_simtable(args.input)
