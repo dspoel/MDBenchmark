@@ -126,19 +126,19 @@ def get_run_dict(topdir: str, molnames:list):
     os.chdir(topdir)
     mydict = {}
     for molname in molnames:
-        mol = molname
-        if mol in lisa_name:
-            mol = lisa_name[mol]
-        if os.path.exists(mol):
-            os.chdir(mol)
+        moldir = molname
+        if moldir in lisa_name:
+            moldir = lisa_name[moldir]
+        if os.path.exists(moldir):
+            os.chdir(moldir)
             mydict[molname] = {}
-            simdirs = glob.glob("*%s*" % mol) + glob.glob("[1-9]*")
+            simdirs = glob.glob("*%s*" % moldir) + glob.glob("[1-9]*")
             if Debug:
                 print(simdirs)
             for simdir in simdirs:
                 if os.path.isdir(simdir):
                     os.chdir(simdir)
-                    newdict, temp = get_dict_entry(mol)
+                    newdict, temp = get_dict_entry(moldir)
                     if None != newdict:
                         print(newdict)
                         mydict[molname][temp] = newdict
