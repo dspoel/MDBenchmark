@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:57:12 2022
+# This file was created Wed Aug 17 07:52:00 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formic_acid_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/formic_acid/OUT-formic_acid241.0/melting-npt-y_900_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/formic_acid/OUT-formic_acid241.0/melting-npt-y_900_NPTY.tpr -o rotacf_241.xvg -b 199800 -e 200000
 # gmx rotacf is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

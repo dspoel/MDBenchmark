@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:04:07 2022
+# This file was created Wed Aug 17 07:53:21 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/octanoic_acid_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/octanoic_acid/OUT-octanoic_acid309.0/melting-npt-y_44_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/octanoic_acid/OUT-octanoic_acid309.0/melting-npt-y_44_NPTY.tpr -o rotplane_309.xvg -b 21800 -e 22000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:31:42 2022
+# This file was created Wed Aug 17 07:52:13 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/OUT-12-benzenediol417.0/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/OUT-12-benzenediol417.0/melting-npt-y_40_NPTY.tpr -o msd_417.xvg -b 19800 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# GROwing Monsters And Cloning Shrimps
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

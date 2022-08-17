@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:03:57 2022
+# This file was created Wed Aug 17 07:54:52 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/imidazole_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole273.0/melting-npt-y_200_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole273.0/melting-npt-y_200_NPTY.tpr -o rotacf_273.xvg -b 168642 -e 168842
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

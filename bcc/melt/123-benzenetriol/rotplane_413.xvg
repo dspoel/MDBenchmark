@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:29:49 2022
+# This file was created Wed Aug 17 07:45:43 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/123-benzenetriol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT-123-benzenetriol413.0/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT-123-benzenetriol413.0/melting-npt-y_40_NPTY.tpr -o rotplane_413.xvg -b 19800 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

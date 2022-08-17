@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:51:13 2022
+# This file was created Wed Aug 17 07:41:59 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/12-ethanediamine_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/ethylendiamine/OUT-ethylendiamine234.0/melting-npt-y_60_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/ethylendiamine/OUT-ethylendiamine234.0/melting-npt-y_60_NPTY.tpr -o rotplane_234.xvg -b 19800 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

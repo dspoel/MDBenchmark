@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:51:09 2022
+# This file was created Wed Aug 17 07:39:08 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/formic_acid/OUT-formic_acid306.0/melting-npt-y_5_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/formic_acid/OUT-formic_acid306.0/melting-npt-y_5_NPTY.tpr -o msd_306.xvg -b 4800 -e 5000
 # gmx msd is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

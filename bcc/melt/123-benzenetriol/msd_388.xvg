@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:55:35 2022
+# This file was created Wed Aug 17 08:14:03 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT-123-benzenetriol388.0/melting-npt-y_210_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT-123-benzenetriol388.0/melting-npt-y_210_NPTY.tpr -o msd_388.xvg -b 89800 -e 90000
 # gmx msd is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

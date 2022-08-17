@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:45:22 2022
+# This file was created Wed Aug 17 07:38:47 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/acooh_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/acoh/OUT-acoh214.0/melting-npt-y_120_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/acoh/OUT-acoh214.0/melting-npt-y_120_NPTY.tpr -o rotacf_214.xvg -b 19800 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:02:21 2022
+# This file was created Wed Aug 17 07:44:33 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid439.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid439.0/melting-npt-y_20_NPTY.tpr -o msd_439.xvg -b 2663 -e 2863
 # gmx msd is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:14:03 2022
+# This file was created Wed Aug 17 08:01:06 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pentane/OUT-pentane168.0/melting-npt-y_200_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pentane/OUT-pentane168.0/melting-npt-y_200_NPTY.tpr -o msd_168.xvg -b 53324 -e 53524
 # gmx msd is part of G R O M A C S:
 #
-# GROup of MAchos and Cynical Suckers
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

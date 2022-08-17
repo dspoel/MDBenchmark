@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:00:06 2022
+# This file was created Wed Aug 17 07:50:26 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/naphthalene/OUT-naphthalene323.0/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/naphthalene/OUT-naphthalene323.0/melting-npt-y_40_NPTY.tpr -o msd_323.xvg -b 19800 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# GROup of MAchos and Cynical Suckers
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

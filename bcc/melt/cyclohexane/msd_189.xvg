@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:58:43 2022
+# This file was created Wed Aug 17 08:04:08 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane189.0/melting-npt-y_80_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane189.0/melting-npt-y_80_NPTY.tpr -o msd_189.xvg -b 39800 -e 40000
 # gmx msd is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

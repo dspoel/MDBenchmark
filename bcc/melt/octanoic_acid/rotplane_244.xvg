@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:13:02 2022
+# This file was created Wed Aug 17 07:58:02 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/octanoic_acid_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/octanoic_acid/OUT-octanoic_acid244.0/melting-npt-y_124_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/octanoic_acid/OUT-octanoic_acid244.0/melting-npt-y_124_NPTY.tpr -o rotplane_244.xvg -b 40193 -e 40393
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:27:55 2022
+# This file was created Wed Aug 17 07:43:42 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane185.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane185.0/melting-npt-y_20_NPTY.tpr -o msd_185.xvg -b 19800 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

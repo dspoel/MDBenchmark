@@ -1,4 +1,4 @@
-# This file was created Tue Aug 16 22:44:56 2022
+# This file was created Wed Aug 17 07:53:41 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/337/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/337/melting-npt-y_40_NPTY.tpr -o msd_337.xvg -b 39800 -e 40000
 # gmx msd is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

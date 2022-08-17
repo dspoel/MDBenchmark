@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:07:12 2022
+# This file was created Wed Aug 17 07:56:49 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/octanoic_acid/OUT-octanoic_acid294.0/melting-npt-y_110_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/octanoic_acid/OUT-octanoic_acid294.0/melting-npt-y_110_NPTY.tpr -o msd_294.xvg -b 21800 -e 22000
 # gmx msd is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

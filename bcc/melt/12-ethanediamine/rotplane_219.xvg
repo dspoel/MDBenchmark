@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:59:21 2022
+# This file was created Wed Aug 17 07:56:22 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/12-ethanediamine_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/ethylendiamine/OUT-ethylendiamine219.0/melting-npt-y_120_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/ethylendiamine/OUT-ethylendiamine219.0/melting-npt-y_120_NPTY.tpr -o rotplane_219.xvg -b 79800 -e 80000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gnomes, ROck Monsters And Chili Sauce
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

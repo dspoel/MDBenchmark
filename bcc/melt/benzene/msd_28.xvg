@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:45:11 2022
+# This file was created Wed Aug 17 07:37:55 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/benzene/benzene28.0/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/benzene/benzene28.0/melting-npt-y.tpr -o msd_28.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# GROningen Mixture of Alchemy and Childrens' Stories
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

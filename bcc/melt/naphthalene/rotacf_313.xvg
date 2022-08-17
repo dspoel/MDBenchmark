@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:56:43 2022
+# This file was created Wed Aug 17 07:42:50 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/naphthalene_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/naphthalene/OUT-naphthalene313.0/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/naphthalene/OUT-naphthalene313.0/melting-npt-y_40_NPTY.tpr -o rotacf_313.xvg -b 19800 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

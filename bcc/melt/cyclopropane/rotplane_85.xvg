@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:31:03 2022
+# This file was created Wed Aug 17 07:48:47 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclopropane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane85.0/melting-npt-y_260_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane85.0/melting-npt-y_260_NPTY.tpr -o rotplane_85.xvg -b 59800 -e 60000
 # gmx rotacf is part of G R O M A C S:
 #
-# Good gRace! Old Maple Actually Chews Slate
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

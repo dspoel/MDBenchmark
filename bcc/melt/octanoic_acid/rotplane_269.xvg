@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:04:32 2022
+# This file was created Wed Aug 17 07:52:23 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/octanoic_acid_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/octanoic_acid/OUT-octanoic_acid269.0/melting-npt-y_44_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/octanoic_acid/OUT-octanoic_acid269.0/melting-npt-y_44_NPTY.tpr -o rotplane_269.xvg -b 22950 -e 23150
 # gmx rotacf is part of G R O M A C S:
 #
-# Gnomes, ROck Monsters And Chili Sauce
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

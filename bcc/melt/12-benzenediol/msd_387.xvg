@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:49:51 2022
+# This file was created Wed Aug 17 08:09:11 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/OUT-12-benzenediol387.0/melting-npt-y_220_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/OUT-12-benzenediol387.0/melting-npt-y_220_NPTY.tpr -o msd_387.xvg -b 79800 -e 80000
 # gmx msd is part of G R O M A C S:
 #
-# Gnomes, ROck Monsters And Chili Sauce
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

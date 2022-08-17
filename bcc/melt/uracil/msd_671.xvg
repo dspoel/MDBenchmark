@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:02:04 2022
+# This file was created Wed Aug 17 07:43:08 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/uracil/uracil671.0/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/uracil/uracil671.0/melting-npt-y.tpr -o msd_671.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# GROtesk MACabre and Sinister
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

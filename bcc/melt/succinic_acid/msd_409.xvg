@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:02:15 2022
+# This file was created Wed Aug 17 07:43:58 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid409.0/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid409.0/melting-npt-y_40_NPTY.tpr -o msd_409.xvg -b 2065 -e 2265
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

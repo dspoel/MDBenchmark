@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:01:54 2022
+# This file was created Wed Aug 17 07:43:46 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid429.0/melting-npt-y_120_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid429.0/melting-npt-y_120_NPTY.tpr -o msd_429.xvg -b 2194 -e 2394
 # gmx msd is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

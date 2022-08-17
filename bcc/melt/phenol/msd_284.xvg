@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:13:25 2022
+# This file was created Wed Aug 17 07:58:11 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/phenol/OUT-phenol284.0/melting-npt-y_80_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/phenol/OUT-phenol284.0/melting-npt-y_80_NPTY.tpr -o msd_284.xvg -b 39800 -e 40000
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

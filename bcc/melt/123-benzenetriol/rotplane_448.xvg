@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:27:05 2022
+# This file was created Wed Aug 17 07:39:11 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/123-benzenetriol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT123-benzenetriol448.0/melting-npt-y_7_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT123-benzenetriol448.0/melting-npt-y_7_NPTY.tpr -o rotplane_448.xvg -b 6800 -e 7000
 # gmx rotacf is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# Gyas ROwers Mature At Cryogenic Speed
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Tue Aug 16 22:39:49 2022
+# This file was created Wed Aug 17 07:47:29 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/332/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/332/melting-npt-y.tpr -o msd_332.xvg -b 21800 -e 22000
 # gmx msd is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
