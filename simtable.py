@@ -79,7 +79,11 @@ def get_dict_entry(mol:str):
             if os.path.exists(mygro):
                 newest_gro = mygro
             else:
-                newest_gro = ""
+                mygro = "NPT2.gro"
+                if os.path.exists(mygro):
+                    newest_gro = mygro
+                else:
+                    newest_gro = ""
     if None != newest_time:
         simdir = os.getcwd()
         # Extract the temperature from the dir name

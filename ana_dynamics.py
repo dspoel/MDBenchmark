@@ -61,7 +61,7 @@ def ana_dynamics(simtable_file:str):
                 indexdir  = "../../../index"
                 length    = simtable[molname][temp]["length"]*1000
                 run_rotacf(jobname, molname, length-200, length, traj, tpr,
-                           indexdir, rotacfout, rotplane, msdout, True)
+                           indexdir, rotacfout, rotplane, msdout, False)
                 finalgro  = simtable[molname][temp]["grofile"] 
                 if len(finalgro) > 4:
                     srcf = ("%s/%s" % ( simdir, finalgro) )
