@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:44:55 2022
+# This file was created Wed Aug 17 07:37:28 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/benzene_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/benzene/benzene78.0/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/benzene/benzene78.0/melting-npt-y.tpr -o rotplane_78.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# GRoups of Organic Molecules in ACtion for Science
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

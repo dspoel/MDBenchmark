@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:26:57 2022
+# This file was created Wed Aug 17 08:15:54 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/propane/OUT-propane60.0/melting-npt-y_350_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/propane/OUT-propane60.0/melting-npt-y_350_NPTY.tpr -o msd_60.xvg -b 141681 -e 141881
 # gmx msd is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

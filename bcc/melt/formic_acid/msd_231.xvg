@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:57:33 2022
+# This file was created Wed Aug 17 07:50:08 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/formic_acid/OUT-formic_acid231.0/melting-npt-y_340_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/formic_acid/OUT-formic_acid231.0/melting-npt-y_340_NPTY.tpr -o msd_231.xvg -b 59800 -e 60000
 # gmx msd is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

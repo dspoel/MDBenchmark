@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:53:47 2022
+# This file was created Wed Aug 17 07:41:43 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole393.0/melting-npt-y_7_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole393.0/melting-npt-y_7_NPTY.tpr -o msd_393.xvg -b 6800 -e 7000
 # gmx msd is part of G R O M A C S:
 #
-# Gnomes, ROck Monsters And Chili Sauce
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

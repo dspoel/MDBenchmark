@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:09:26 2022
+# This file was created Wed Aug 17 07:59:17 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/propane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/propane/OUT-propane85.0/melting-npt-y_220_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/propane/OUT-propane85.0/melting-npt-y_220_NPTY.tpr -o rotplane_85.xvg -b 79800 -e 80000
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

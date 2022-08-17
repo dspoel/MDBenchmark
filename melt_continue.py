@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
         
-import os, shutil, glob, sys, math
-from molecule_db import *
-from ana_dynamics import *
+import os, shutil, glob, sys, math, argparse
+from molecule_db      import *
+from simtable         import *
 from collect_dynamics import *
 
 csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
@@ -14,7 +14,7 @@ def write_run_job(target:str, nsteps:int):
         outf.write("#SBATCH -t 72:00:00\n")
         outf.write("#SBATCH -A SNIC2021-3-8\n")
         outf.write("#SBATCH -n 12\n")
-        outf.write("mpirun gmx_mpi mdrun -ntomp 1 -dd  2 3 2  -cpi %s.cpt -deffnm %s -nsteps %d -c NPT2.gro\n" % ( target, target, nsteps) )
+        outf.write("mpirun gmx_mpi mdrun -ntomp 1 -dd  2 3 2  -cpi %s.cpt -deffnm %s -nsteps %d \n" % ( target, target, nsteps ) )
     os.system("sbatch %s" % job)
 
 def copy_ifnot_exists(src:str, dst:str):
@@ -22,6 +22,8 @@ def copy_ifnot_exists(src:str, dst:str):
         shutil.copy(src, dst)
         
 def run_melt(mol:str, temp:float, prev:dict):
+    if not ((prev["host"] == "csb" and csb) or (prev["host"] != "csb" and not csb)):
+        return
     meltroot = "melting"
     os.makedirs(meltroot, exist_ok=True)
     os.chdir(meltroot)
@@ -42,16 +44,9 @@ if __name__ == '__main__':
     if shutil.which("gmx") == None:
         sys.exit("Please load the gromacs environment using\nml load GCC/10.2.0  OpenMPI/4.0.5 GROMACS/2021")
 
-    moldb  = get_moldb(False)
-
-    if csb:
-        lisa_csb  = [ "ethane", "ethyne", "formamide", "formaldehyde", "urea", "ethylene" ]
-        mydict = get_run_dict("/home/lschmidt/MELTING", lisa_csb, False)
-    else:
-        mydict = get_run_dict("/proj/nobackup/alexandria/lisa/melting", moldb.keys(), False)
+    simtable = get_simtable("simtable.csv")
     
-    for mol in mydict:
-        for temp in mydict[mol]:
-            run_melt(mol, temp, mydict[mol][temp])
-          #  sys.exit(0)
+    for mol in [ "furan" ]:
+        for temp in ignore[mol]:
+            run_melt(mol, temp, simtable[mol][temp])
 

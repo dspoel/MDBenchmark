@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:30:21 2022
+# This file was created Wed Aug 17 07:48:53 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclopropane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane90.0/melting-npt-y_260_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane90.0/melting-npt-y_260_NPTY.tpr -o rotplane_90.xvg -b 59800 -e 60000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

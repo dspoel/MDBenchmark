@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:46:12 2022
+# This file was created Wed Aug 17 07:45:16 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/14-benzoquinone/OUT-14-benzoquinone378.0/melting-npt-y_47_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/14-benzoquinone/OUT-14-benzoquinone378.0/melting-npt-y_47_NPTY.tpr -o msd_378.xvg -b 19800 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

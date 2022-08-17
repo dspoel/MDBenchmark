@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:47:59 2022
+# This file was created Wed Aug 17 07:46:46 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/acetamide/OUT-acetamide154.0/melting-npt-y_60_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/acetamide/OUT-acetamide154.0/melting-npt-y_60_NPTY.tpr -o msd_154.xvg -b 19800 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

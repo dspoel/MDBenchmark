@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:10:34 2022
+# This file was created Wed Aug 17 08:00:47 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole288.0/melting-npt-y_300_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/imidazole/OUT-imidazole288.0/melting-npt-y_300_NPTY.tpr -o msd_288.xvg -b 79800 -e 80000
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# Good ROcking Metal Altar for Chronical Sinners
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

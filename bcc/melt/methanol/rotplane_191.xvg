@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:00:28 2022
+# This file was created Wed Aug 17 07:50:26 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/methanol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/methanol/OUT-methanol191.0/melting-npt-y_340_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/methanol/OUT-methanol191.0/melting-npt-y_340_NPTY.tpr -o rotplane_191.xvg -b 119800 -e 120000
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

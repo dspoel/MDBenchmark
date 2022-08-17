@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:52:20 2022
+# This file was created Wed Aug 17 07:44:26 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/formic_acid/OUT-formic_acid261.0/melting-npt-y_60_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/formic_acid/OUT-formic_acid261.0/melting-npt-y_60_NPTY.tpr -o msd_261.xvg -b 19800 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

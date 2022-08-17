@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:45:08 2022
+# This file was created Wed Aug 17 07:37:47 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/benzene/benzene78.0/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/benzene/benzene78.0/melting-npt-y.tpr -o msd_78.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Gnomes, ROck Monsters And Chili Sauce
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

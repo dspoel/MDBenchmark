@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:00:11 2022
+# This file was created Wed Aug 17 07:44:42 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/propane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/propane/OUT-propane130.0/melting-npt-y_7_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/propane/OUT-propane130.0/melting-npt-y_7_NPTY.tpr -o rotplane_130.xvg -b 6800 -e 7000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

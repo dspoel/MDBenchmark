@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:44:10 2022
+# This file was created Wed Aug 17 07:39:08 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/14-benzoquinone/OUT-14-benzoquinone348.0/melting-npt-y_27_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/14-benzoquinone/OUT-14-benzoquinone348.0/melting-npt-y_27_NPTY.tpr -o msd_348.xvg -b 6800 -e 7000
 # gmx msd is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

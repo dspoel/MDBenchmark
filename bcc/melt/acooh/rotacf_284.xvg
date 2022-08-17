@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:50:43 2022
+# This file was created Wed Aug 17 07:51:50 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/acooh_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/acoh/OUT-acoh284.0/melting-npt-y_260_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/acoh/OUT-acoh284.0/melting-npt-y_260_NPTY.tpr -o rotacf_284.xvg -b 119800 -e 120000
 # gmx rotacf is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

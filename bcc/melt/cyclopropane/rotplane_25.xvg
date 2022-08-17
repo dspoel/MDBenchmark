@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:26:35 2022
+# This file was created Wed Aug 17 07:41:04 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclopropane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane25.0/melting-npt-y_60_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclopropane/OUT-cyclopropane25.0/melting-npt-y_60_NPTY.tpr -o rotplane_25.xvg -b 19800 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

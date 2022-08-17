@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:42:43 2022
+# This file was created Wed Aug 17 07:37:25 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/12-benzenediol367.0/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/12-benzenediol367.0/melting-npt-y.tpr -o msd_367.xvg -b 1745 -e 1945
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

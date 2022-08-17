@@ -32,7 +32,8 @@ ignore = {
     "octanoic_acid": [ 284, 294, 304, 314 ],
     "succinic_acid": [ 424, 464, 504 ],
     "acetamide": [ 294, 304, 314, 324 ],
-    "urea": [ 436  ]
+    "urea": [ 436  ],
+    "furan": [ 122, 132, 157, 177, 197, 217 ] 
 }
 
 def get_temps(compound:str):

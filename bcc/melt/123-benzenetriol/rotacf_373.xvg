@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:35:45 2022
+# This file was created Wed Aug 17 07:53:43 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/123-benzenetriol_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT-123-benzenetriol373.0/melting-npt-y_390_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/123-benzenetriol/OUT-123-benzenetriol373.0/melting-npt-y_390_NPTY.tpr -o rotacf_373.xvg -b 89800 -e 90000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

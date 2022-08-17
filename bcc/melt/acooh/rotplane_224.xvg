@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:44:50 2022
+# This file was created Wed Aug 17 07:39:28 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/acooh_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/acoh/OUT-acoh224.0/melting-npt-y_100_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/acoh/OUT-acoh224.0/melting-npt-y_100_NPTY.tpr -o rotplane_224.xvg -b 8374 -e 8574
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

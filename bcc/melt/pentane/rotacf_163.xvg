@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:03:17 2022
+# This file was created Wed Aug 17 07:52:34 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/pentane_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pentane/OUT-pentane163.0/melting-npt-y_140_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pentane/OUT-pentane163.0/melting-npt-y_140_NPTY.tpr -o rotacf_163.xvg -b 59800 -e 60000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:04:44 2022
+# This file was created Wed Aug 17 07:48:00 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/propane_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/propane/OUT-propane75.0/melting-npt-y_180_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/propane/OUT-propane75.0/melting-npt-y_180_NPTY.tpr -o rotacf_75.xvg -b 39800 -e 40000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

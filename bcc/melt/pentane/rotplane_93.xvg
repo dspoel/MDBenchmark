@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:00:53 2022
+# This file was created Wed Aug 17 07:49:12 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/pentane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pentane/OUT-pentane93.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pentane/OUT-pentane93.0/melting-npt-y_20_NPTY.tpr -o rotplane_93.xvg -b 19800 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:08:35 2022
+# This file was created Wed Aug 17 07:55:46 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/pentane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pentane/OUT-pentane168.0/melting-npt-y_200_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pentane/OUT-pentane168.0/melting-npt-y_200_NPTY.tpr -o rotplane_168.xvg -b 53324 -e 53524
 # gmx rotacf is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

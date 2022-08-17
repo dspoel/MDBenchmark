@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:02:43 2022
+# This file was created Wed Aug 17 07:41:40 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/uracil_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/uracil/OUT-uracil661.0/melting-npt-y_2.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/uracil/OUT-uracil661.0/melting-npt-y_2.tpr -o rotacf_661.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

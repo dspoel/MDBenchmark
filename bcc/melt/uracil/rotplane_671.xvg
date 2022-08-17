@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:01:54 2022
+# This file was created Wed Aug 17 07:42:39 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/uracil_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/uracil/uracil671.0/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/uracil/uracil671.0/melting-npt-y.tpr -o rotplane_671.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

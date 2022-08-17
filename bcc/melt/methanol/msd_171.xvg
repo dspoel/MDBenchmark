@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 16:56:32 2022
+# This file was created Wed Aug 17 07:42:41 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/methanol/OUT-methanol171.0/melting-npt-y_100_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/methanol/OUT-methanol171.0/melting-npt-y_100_NPTY.tpr -o msd_171.xvg -b 19800 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

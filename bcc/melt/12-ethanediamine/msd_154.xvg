@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:11:47 2022
+# This file was created Wed Aug 17 08:10:21 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/ethylendiamine/OUT-ethylendiamine154.0/melting-npt-y_120_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/ethylendiamine/OUT-ethylendiamine154.0/melting-npt-y_120_NPTY.tpr -o msd_154.xvg -b 119800 -e 120000
 # gmx msd is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

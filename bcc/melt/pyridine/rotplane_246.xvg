@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:03:26 2022
+# This file was created Wed Aug 17 07:47:02 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/pyridine_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pyridine/OUT-pyridine246.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/pyridine/OUT-pyridine246.0/melting-npt-y_20_NPTY.tpr -o rotplane_246.xvg -b 19800 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

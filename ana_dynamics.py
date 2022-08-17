@@ -5,6 +5,7 @@ from molecule_db import *
 from simtable    import *
 
 csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
+Debug = True
 
 def use_sim(simtable:dict, mol:str, temp: int) -> bool:
     if not mol in simtable or not temp in simtable[mol]:
@@ -12,14 +13,18 @@ def use_sim(simtable:dict, mol:str, temp: int) -> bool:
         return False
     if csb and simtable[mol][temp]["host"] == "csb":
         return True
-    if not csb and simtable[mol][temp]["host"] == "keb":
+    if not csb and simtable[mol][temp]["host"].find("keb") >= 0:
         return True
+    if Debug:
+        boolname = { False: "False", True: "True" }
+        print("csb: %s host: %s" % ( boolname[csb], simtable[mol][temp]["host"]))
     return False
         
 def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str, tpr: str,
-               indexdir: str, rotacfout: str, rotplane: str, msdout: str):
-#    if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
-#        return
+               indexdir: str, rotacfout: str, rotplane: str, msdout: str, force:bool):
+    # If files exist, do nothing, except when trajectory is newer.
+    if not force and ((os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane)) and not os.path.getmtime(traj) > os.path.getmtime(rotacfout)):
+        return
     with open(jobname, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
@@ -33,72 +38,37 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
         outf.write("echo 0 | gmx msd -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, msdout, tbegin, tend ))
     os.system("sbatch %s" % jobname)
 
-def ana_dynamics(topdirs: list, molnames:list):
-    simtable = get_simtable()
-    dump_simtable(simtable)
+def ana_dynamics(simtable_file:str):
+    simtable = get_simtable(simtable_file)
+    print(simtable.keys())
     pwd = os.getcwd()
     print("pwd %s" % pwd)
-    lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethyleneglycol": "ethylenglycol", "ethylene": "ethene" }
-    for molname in molnames:
-        mol = molname
-        if mol in lisa_name:
-            mol = lisa_name[mol]
-
-        for topdir in topdirs:
-            if not os.path.exists(topdir):
-                continue
-            os.chdir(topdir)
-            if os.path.exists(mol):
-                os.chdir(mol)
-                for simdir in glob.glob("*%s*" % mol):
-                    if os.path.isdir(simdir):
-                        os.chdir(simdir)
-                        newest_trr  = ""
-                        newest_gro  = ""
-                        newest_time = None
-                        for trr in glob.glob("melting*trr"):
-                            if trr.find("nvt") >= 0 or trr.find("NVT") >= 0:
-                                continue
-                            mytime = os.path.getmtime(trr)
-                            if None == newest_time or mytime > newest_time:
-                                newest_time = mytime
-                                newest_trr  = trr
-                                mygro = trr[:-3] + "gro"
-                                if os.path.exists(mygro):
-                                    newest_gro = mygro
-                                else:
-                                    newset_gro = ""
-                        if None != newest_time:
-                            # Extract the temperature from the dir name
-                            ptr = simdir.find(mol)
-                            try:
-                                temp = float(simdir[ptr+len(mol):])
-                            except ValueError:
-                                print("Cannot extract temperature from %s" % simdir)
-                                temp = 0.0
-                            logfile = newest_trr[:-3] + "log"
-                            tprfile = newest_trr[:-3] + "tpr"
-                            if os.path.exists(logfile) and os.path.exists(tprfile) and use_sim(simtable, molname, temp):
-                                endtime = get_last_time(logfile)
-                                mydir   = os.getcwd()
-                                workdir = ("%s/bcc/melt/%s" % ( pwd, molname ) )
-                                if not os.path.isdir(workdir):
-                                    sys.exit("No such directory %s" % workdir)
-                                os.chdir(workdir)
-                                jobname = ("%s_%g.sh" % ( molname, temp ))
-                                traj    = ("%s/%s" % ( mydir, newest_trr ))
-                                tpr     = ("%s/%s" % ( mydir, tprfile ))
-                                rotacfout = ("rotacf_%g.xvg" % temp )
-                                rotplane  = ("rotplane_%g.xvg" % temp )
-                                msdout    = ("msd_%g.xvg" % temp )
-                                indexdir  = "../../../index"
-                                run_rotacf(jobname, molname, endtime-200, endtime, traj, tpr,
-                                           indexdir, rotacfout, rotplane, msdout)
-                                if len(newest_gro) > 4:
-                                    shutil.copyfile(("%s/%s" % ( mydir, newest_gro)), ("final_%g.gro" % temp ))
-                                os.chdir(mydir)
-                    os.chdir("..")
-            os.chdir("..")
+    os.chdir("bcc/melt")
+    for molname in simtable.keys():
+        os.makedirs(molname, exist_ok=True)
+        os.chdir(molname)
+        for temp in simtable[molname]:
+            if use_sim(simtable, molname, temp):
+                if Debug:
+                    print("%s %f" % ( molname, temp ))
+                jobname = ("%s_%g.sh" % ( molname, temp ))
+                simdir  = simtable[molname][temp]["simdir"] + "/"
+                traj    = simdir + simtable[molname][temp]["trrfile"]
+                tpr     = simdir + simtable[molname][temp]["tprfile"]
+                rotacfout = ("rotacf_%g.xvg" % temp )
+                rotplane  = ("rotplane_%g.xvg" % temp )
+                msdout    = ("msd_%g.xvg" % temp )
+                indexdir  = "../../../index"
+                length    = simtable[molname][temp]["length"]*1000
+                run_rotacf(jobname, molname, length-200, length, traj, tpr,
+                           indexdir, rotacfout, rotplane, msdout, True)
+                finalgro  = simtable[molname][temp]["grofile"] 
+                if len(finalgro) > 4:
+                    srcf = ("%s/%s" % ( simdir, finalgro) )
+                    dstf = ("final_%g.gro" % temp )
+                    if not os.path.exists(dstf) or os.path.getmtime(srcf) > os.path.getmtime(dstf):
+                        shutil.copyfile(srcf, dstf)
+        os.chdir("..")
     os.chdir(pwd)
 
 def do_rotacf(moldb):
@@ -144,8 +114,5 @@ if __name__ == '__main__':
                     os.chdir("..")
                 os.chdir("..")
     else:
-        topdirs = [ "/proj/nobackup/alexandria/spoel/MDBenchmark/melting",
-                    "/proj/nobackup/alexandria/lisa/melting",
-                    "/home/lschmidt/MELTING" ]
-        ana_dynamics(topdirs, moldb.keys())
+        ana_dynamics("simtable.csv")
 
