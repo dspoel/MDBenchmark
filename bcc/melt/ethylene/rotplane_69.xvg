@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:52:32 2022
+# This file was created Wed Aug 17 07:50:48 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethylene_rotplane.ndx -f /home/lschmidt/MELTING/ethene/ethene69.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene69.0/melting-npt-y2.tpr -o rotplane_69.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

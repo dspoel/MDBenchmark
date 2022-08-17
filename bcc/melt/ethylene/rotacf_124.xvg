@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:54:51 2022
+# This file was created Wed Aug 17 07:47:47 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethylene_rotaxis.ndx -f /home/lschmidt/MELTING/ethene/ethene124.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene124.0/melting-npt-y2.tpr -o rotacf_124.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

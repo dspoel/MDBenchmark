@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:59:27 2022
+# This file was created Wed Aug 17 08:07:00 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/formamide/formamide338.0/melting-npt-y.trr -s /home/lschmidt/MELTING/formamide/formamide338.0/melting-npt-y.tpr -o msd_338.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# GROwing Monsters And Cloning Shrimps
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

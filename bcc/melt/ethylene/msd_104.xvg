@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:55:54 2022
+# This file was created Wed Aug 17 07:55:40 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethene/ethene104.0/melting-npt-y.trr -s /home/lschmidt/MELTING/ethene/ethene104.0/melting-npt-y.tpr -o msd_104.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

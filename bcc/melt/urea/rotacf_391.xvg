@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:29:33 2022
+# This file was created Wed Aug 17 08:13:07 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/urea_rotaxis.ndx -f /home/lschmidt/MELTING/urea/urea391.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/urea/urea391.0/melting-npt-y_2.tpr -o rotacf_391.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Gnomes, ROck Monsters And Chili Sauce
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

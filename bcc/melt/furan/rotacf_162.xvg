@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:26:15 2022
+# This file was created Wed Aug 17 08:03:55 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/furan_rotaxis.ndx -f /home/lschmidt/MELTING/furan/furan162.0/melting-npt-y_ori.trr -s /home/lschmidt/MELTING/furan/furan162.0/melting-npt-y_ori.tpr -o rotacf_162.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Grunge ROck MAChoS
+# S  C  A  M  O  R  G
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

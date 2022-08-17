@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:30:40 2022
+# This file was created Wed Aug 17 08:20:22 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/urea_rotaxis.ndx -f /home/lschmidt/MELTING/urea/urea436.0/melting-npt-y_28.trr -s /home/lschmidt/MELTING/urea/urea436.0/melting-npt-y_28.tpr -o rotacf_436.xvg -b 9800 -e 10000
 # gmx rotacf is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

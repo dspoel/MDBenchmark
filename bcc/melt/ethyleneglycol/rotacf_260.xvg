@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:54:27 2022
+# This file was created Wed Aug 17 07:46:44 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethyleneglycol_rotaxis.ndx -f /home/lschmidt/MELTING/ethylenglycol/ethylenglycol260.0/melting-npt.trr -s /home/lschmidt/MELTING/ethylenglycol/ethylenglycol260.0/melting-npt.tpr -o rotacf_260.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

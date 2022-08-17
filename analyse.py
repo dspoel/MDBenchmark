@@ -151,7 +151,7 @@ def analyse_solid(outf, moldb):
                                             print("Incomprehensible line '%s'" % line)
                         mysolid[tempstr]["phase"] = [ "unknown" ]
                         if len(mysolid[tempstr]["rotacf"]) == 1 and len(mysolid[tempstr]["msd"]) == 1:
-                            if mysolid[tempstr]["msd"][0] >= 0.01:
+                            if mysolid[tempstr]["msd"][0] > 0.02:
                                 mysolid[tempstr]["phase"] = [ "liquid" ]
                             elif mysolid[tempstr]["rotacf"][0] < 0.9:
                                 mysolid[tempstr]["phase"] =  [ "plastic" ]

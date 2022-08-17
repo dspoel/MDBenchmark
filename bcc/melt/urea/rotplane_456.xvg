@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:22:49 2022
+# This file was created Wed Aug 17 08:12:18 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/urea_rotplane.ndx -f /home/lschmidt/MELTING/urea/urea456.0/melting-npt-y.trr -s /home/lschmidt/MELTING/urea/urea456.0/melting-npt-y.tpr -o rotplane_456.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

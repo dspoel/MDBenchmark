@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 12:04:29 2022
+# This file was created Wed Aug 17 08:28:19 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/octanoic_acid/octanoic_acid229.0/melting-npt-y_22_NPTY.trr -s /home/lschmidt/MELTING/octanoic_acid/octanoic_acid229.0/melting-npt-y_22_NPTY.tpr -o msd_229.xvg -b 5472 -e 5672
 # gmx msd is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

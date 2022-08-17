@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:26:18 2022
+# This file was created Wed Aug 17 08:00:06 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/formaldehyde/formaldehyde221.0/melting-npt-y_L.trr -s /home/lschmidt/MELTING/formaldehyde/formaldehyde221.0/melting-npt-y_L.tpr -o msd_221.xvg -b 800 -e 1000
 # gmx msd is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:51:13 2022
+# This file was created Wed Aug 17 07:55:37 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethene/ethene84.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene84.0/melting-npt-y2.tpr -o msd_84.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:54:59 2022
+# This file was created Wed Aug 17 07:46:51 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethane_rotplane.ndx -f /home/lschmidt/MELTING/ethane/ethane90.0/melting-npt-y.trr -s /home/lschmidt/MELTING/ethane/ethane90.0/melting-npt-y.tpr -o rotplane_90.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
