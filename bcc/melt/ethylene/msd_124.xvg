@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:55:45 2022
+# This file was created Wed Aug 17 07:48:09 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethene/ethene124.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene124.0/melting-npt-y2.tpr -o msd_124.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 12:01:56 2022
+# This file was created Wed Aug 17 08:07:01 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/pyridine_rotaxis.ndx -f /home/lschmidt/MELTING/pyridine/pyridine201.0/melting-npt-y.trr -s /home/lschmidt/MELTING/pyridine/pyridine201.0/melting-npt-y.tpr -o rotacf_201.xvg -b 1402 -e 1602
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# S  C  A  M  O  R  G
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

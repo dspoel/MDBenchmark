@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:26:16 2022
+# This file was created Wed Aug 17 07:57:13 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formaldehyde_rotplane.ndx -f /home/lschmidt/MELTING/formaldehyde/formaldehyde226.0/melting-npt-y_L.trr -s /home/lschmidt/MELTING/formaldehyde/formaldehyde226.0/melting-npt-y_L.tpr -o rotplane_226.xvg -b 800 -e 1000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# GROtesk MACabre and Sinister
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

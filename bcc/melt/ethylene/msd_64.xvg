@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:52:58 2022
+# This file was created Wed Aug 17 07:50:11 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethene/ethene64.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene64.0/melting-npt-y2.tpr -o msd_64.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

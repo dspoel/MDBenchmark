@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:29:24 2022
+# This file was created Wed Aug 17 07:49:44 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/14-benzoquinone_rotplane.ndx -f /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone438.0/melting-npt.trr -s /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone438.0/melting-npt.tpr -o rotplane_438.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Good ROcking Metal Altar for Chronical Sinners
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

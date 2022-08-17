@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:56:45 2022
+# This file was created Wed Aug 17 07:52:09 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/acetamide/acetamide359.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/acetamide/acetamide359.0/melting-npt-y_2.tpr -o msd_359.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

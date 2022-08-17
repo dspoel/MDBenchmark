@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:58:43 2022
+# This file was created Wed Aug 17 08:04:26 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/menh2_rotplane.ndx -f /home/lschmidt/MELTING/menh2/menh2259.0/melting-npt-y.trr -s /home/lschmidt/MELTING/menh2/menh2259.0/melting-npt-y.tpr -o rotplane_259.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Gnomes, ROck Monsters And Chili Sauce
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

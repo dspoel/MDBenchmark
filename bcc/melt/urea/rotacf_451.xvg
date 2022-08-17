@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:29:29 2022
+# This file was created Wed Aug 17 08:11:37 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/urea_rotaxis.ndx -f /home/lschmidt/MELTING/urea/urea451.0/melting-npt-y.trr -s /home/lschmidt/MELTING/urea/urea451.0/melting-npt-y.tpr -o rotacf_451.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Good ROcking Metal Altar for Chronical Sinners
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:25:14 2022
+# This file was created Wed Aug 17 08:13:26 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/urea_rotplane.ndx -f /home/lschmidt/MELTING/urea/urea371.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/urea/urea371.0/melting-npt-y_2.tpr -o rotplane_371.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

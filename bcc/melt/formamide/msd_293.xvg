@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 12:02:17 2022
+# This file was created Wed Aug 17 08:07:08 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/formamide/formamide293.0/melting-npt-y_15_NPTY.trr -s /home/lschmidt/MELTING/formamide/formamide293.0/melting-npt-y_15_NPTY.tpr -o msd_293.xvg -b 4800 -e 5000
 # gmx msd is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

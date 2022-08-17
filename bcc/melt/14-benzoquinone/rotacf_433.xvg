@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:26:47 2022
+# This file was created Wed Aug 17 07:49:14 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/14-benzoquinone_rotaxis.ndx -f /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone433.0/melting-npt.trr -s /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone433.0/melting-npt.tpr -o rotacf_433.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

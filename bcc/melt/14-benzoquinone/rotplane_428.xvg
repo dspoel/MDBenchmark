@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:29:23 2022
+# This file was created Wed Aug 17 07:49:43 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/14-benzoquinone_rotplane.ndx -f /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone428.0/melting-npt.trr -s /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone428.0/melting-npt.tpr -o rotplane_428.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
