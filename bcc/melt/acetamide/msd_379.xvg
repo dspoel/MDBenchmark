@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:29:40 2022
+# This file was created Wed Aug 17 07:52:12 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/acetamide/acetamide379.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/acetamide/acetamide379.0/melting-npt-y_2.tpr -o msd_379.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

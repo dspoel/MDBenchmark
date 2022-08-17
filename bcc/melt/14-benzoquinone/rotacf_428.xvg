@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:29:09 2022
+# This file was created Wed Aug 17 07:47:56 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/14-benzoquinone_rotaxis.ndx -f /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone428.0/melting-npt.trr -s /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone428.0/melting-npt.tpr -o rotacf_428.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

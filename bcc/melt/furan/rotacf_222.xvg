@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:27:35 2022
+# This file was created Wed Aug 17 07:59:55 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/furan_rotaxis.ndx -f /home/lschmidt/MELTING/furan/furan222.0/melting-npt-y_ori.trr -s /home/lschmidt/MELTING/furan/furan222.0/melting-npt-y_ori.tpr -o rotacf_222.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

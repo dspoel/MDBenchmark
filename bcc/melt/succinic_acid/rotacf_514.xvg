@@ -1,19 +1,119 @@
-# This file was created Sun Aug 14 17:01:10 2022
+# This file was created Wed Aug 17 08:09:28 2022
 # Created by:
-#                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
+#                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
-# Executable:   /hpc2n/eb/software/GROMACS/2021-foss-2020b/bin/gmx
-# Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
-# Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/succinic_acid
+# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/succinic_acid
 # Command line:
-#   gmx rotacf -d -n ../../../index/succinic_acid_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid514.0/melting-nvt.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid514.0/melting-nvt.tpr -o rotacf_514.xvg -b -199 -e 1
+#   gmx rotacf -d -n ../../../index/succinic_acid_rotaxis.ndx -f /home/lschmidt/MELTING/succinic_acid/succinic_acid514.0/melting-npt-y_NPTY.trr -s /home/lschmidt/MELTING/succinic_acid/succinic_acid514.0/melting-npt-y_NPTY.tpr -o rotacf_514.xvg -b 906 -e 1106
 # gmx rotacf is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# GROwing Monsters And Cloning Shrimps
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
 @    yaxis  label "C(t)"
 @TYPE xy
      0.000     1.00000
+     1.000     0.82107
+     2.000     0.75106
+     3.000     0.69811
+     4.000     0.65397
+     5.000     0.61562
+     6.000     0.58144
+     7.000     0.55125
+     8.000     0.52357
+     9.000     0.49800
+    10.000     0.47493
+    11.000     0.45388
+    12.000     0.43414
+    13.000     0.41612
+    14.000     0.39915
+    15.000     0.38288
+    16.000     0.36754
+    17.000     0.35337
+    18.000     0.34006
+    19.000     0.32752
+    20.000     0.31526
+    21.000     0.30419
+    22.000     0.29314
+    23.000     0.28277
+    24.000     0.27276
+    25.000     0.26295
+    26.000     0.25386
+    27.000     0.24507
+    28.000     0.23683
+    29.000     0.22871
+    30.000     0.22086
+    31.000     0.21312
+    32.000     0.20617
+    33.000     0.19898
+    34.000     0.19253
+    35.000     0.18702
+    36.000     0.18114
+    37.000     0.17551
+    38.000     0.17023
+    39.000     0.16495
+    40.000     0.15982
+    41.000     0.15445
+    42.000     0.14963
+    43.000     0.14525
+    44.000     0.14043
+    45.000     0.13600
+    46.000     0.13148
+    47.000     0.12722
+    48.000     0.12362
+    49.000     0.11968
+    50.000     0.11574
+    51.000     0.11193
+    52.000     0.10837
+    53.000     0.10468
+    54.000     0.10146
+    55.000     0.09836
+    56.000     0.09500
+    57.000     0.09231
+    58.000     0.08945
+    59.000     0.08628
+    60.000     0.08431
+    61.000     0.08177
+    62.000     0.07880
+    63.000     0.07597
+    64.000     0.07369
+    65.000     0.07139
+    66.000     0.06888
+    67.000     0.06699
+    68.000     0.06465
+    69.000     0.06264
+    70.000     0.06050
+    71.000     0.05810
+    72.000     0.05554
+    73.000     0.05345
+    74.000     0.05187
+    75.000     0.05074
+    76.000     0.04872
+    77.000     0.04724
+    78.000     0.04548
+    79.000     0.04351
+    80.000     0.04221
+    81.000     0.04091
+    82.000     0.04002
+    83.000     0.03910
+    84.000     0.03795
+    85.000     0.03709
+    86.000     0.03620
+    87.000     0.03538
+    88.000     0.03462
+    89.000     0.03391
+    90.000     0.03328
+    91.000     0.03178
+    92.000     0.03017
+    93.000     0.02951
+    94.000     0.02844
+    95.000     0.02783
+    96.000     0.02665
+    97.000     0.02605
+    98.000     0.02466
+    99.000     0.02461
+   100.000     0.02416
 &

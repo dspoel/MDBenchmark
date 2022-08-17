@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:56:01 2022
+# This file was created Wed Aug 17 08:02:32 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formamide_rotaxis.ndx -f /home/lschmidt/MELTING/formamide/formamide328.0/melting-npt-y.trr -s /home/lschmidt/MELTING/formamide/formamide328.0/melting-npt-y.tpr -o rotacf_328.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Good gRace! Old Maple Actually Chews Slate
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

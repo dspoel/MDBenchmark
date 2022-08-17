@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:22:29 2022
+# This file was created Wed Aug 17 07:55:43 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/formaldehyde/formaldehyde196.0/melting-npt-y_L.trr -s /home/lschmidt/MELTING/formaldehyde/formaldehyde196.0/melting-npt-y_L.tpr -o msd_196.xvg -b 800 -e 1000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

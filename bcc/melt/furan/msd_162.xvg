@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:26:34 2022
+# This file was created Wed Aug 17 08:04:21 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/furan/furan162.0/melting-npt-y_ori.trr -s /home/lschmidt/MELTING/furan/furan162.0/melting-npt-y_ori.tpr -o msd_162.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

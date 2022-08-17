@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 23:25:27 2022
+# This file was created Wed Aug 17 07:52:45 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethyne/ethyne207.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/ethyne/ethyne207.0/melting-npt-y_2.tpr -o msd_207.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# GROningen Mixture of Alchemy and Childrens' Stories
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

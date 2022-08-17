@@ -1,4 +1,4 @@
-# This file was created Mon Aug 15 11:54:44 2022
+# This file was created Wed Aug 17 07:52:36 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethylene_rotaxis.ndx -f /home/lschmidt/MELTING/ethene/ethene109.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene109.0/melting-npt-y2.tpr -o rotacf_109.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
