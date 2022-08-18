@@ -12,9 +12,15 @@ def write_run_job(target:str, nsteps:int):
     with open(job, "w") as outf:
         outf.write("#!/bin/sh\n")
         outf.write("#SBATCH -t 72:00:00\n")
-        outf.write("#SBATCH -A SNIC2021-3-8\n")
-        outf.write("#SBATCH -n 12\n")
-        outf.write("mpirun gmx_mpi mdrun -ntomp 1 -dd  2 3 2  -cpi %s.cpt -deffnm %s -nsteps %d \n" % ( target, target, nsteps ) )
+        if csb:
+            ncore = 8
+            gromacs = ("srun gmx mdrun -ntmpi %d -dd 2 2 2" % ncore)
+        else:
+            ncore = 12
+            gromacs = "mpirun gmx_mpi mdrun -ntomp 1 -dd 2 3 2"
+            outf.write("#SBATCH -A SNIC2021-3-8\n")
+        outf.write("#SBATCH -n %d\n" % ncore)
+        outf.write("%s -cpi %s.cpt -deffnm %s -nsteps %d \n" % ( gromacs, target, target, nsteps ) )
     os.system("sbatch %s" % job)
 
 def copy_ifnot_exists(src:str, dst:str):
@@ -22,7 +28,7 @@ def copy_ifnot_exists(src:str, dst:str):
         shutil.copy(src, dst)
         
 def run_melt(mol:str, temp:float, prev:dict, nsteps:int):
-    if not ((prev["host"] == "csb" and csb) or (prev["host"] != "csb" and not csb)):
+    if not ((prev["host"].find("csb") >= 0 and csb) or (prev["host"].find("csb") < 0 and not csb)):
         print("Cannot continue this simulation on this host since it was run on %s earlier" % prev["host"])
         return
     meltroot = "melting"
@@ -76,7 +82,5 @@ if __name__ == '__main__':
             if temp not in simtable[args.molecule]:
                 print("No previous simulation at temperature %g. Try one of these:\n" % temp)
                 print(sorted(simtable[args.molecule].keys()))
-            elif simtable[args.molecule][temp]["host"].find("csb") >= 0:
-                print("Can only continue simulations on kebnekaise")
             else:
                 run_melt(args.molecule, temp, simtable[args.molecule][temp], args.nsteps)

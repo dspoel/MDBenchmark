@@ -208,7 +208,8 @@ if __name__ == '__main__':
             os.chdir("bcc/melt")
             topdirs = { "keb2": "/proj/nobackup/alexandria/spoel/MDBenchmark/melting",
                         "keb": "/proj/nobackup/alexandria/lisa/melting",
-                        "csb": "/home/lschmidt/MELTING"  }
+                        "csb": "/home/lschmidt/MELTING",
+                        "csb2": "/home/spoel/wd/MDBenchmark/melting" }
             for host in topdirs.keys():
                 if os.path.isdir(topdirs[host]):
                     mydict = get_run_dict(topdirs[host], moldb.keys())
