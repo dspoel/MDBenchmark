@@ -11,7 +11,7 @@ def use_sim(simtable:dict, mol:str, temp: int) -> bool:
     if not mol in simtable or not temp in simtable[mol]:
         print("Cannot find mol %s, temp %g in simtable. Sorry." % ( mol, temp ))
         return False
-    if csb and simtable[mol][temp]["host"] == "csb":
+    if csb and simtable[mol][temp]["host"].find("csb") >= 0:
         return True
     if not csb and simtable[mol][temp]["host"].find("keb") >= 0:
         return True
@@ -63,12 +63,11 @@ def ana_dynamics(simtable_file:str):
                 length    = simtable[molname][temp]["length"]*1000
                 run_rotacf(jobname, molname, length-200, length, traj, tpr,
                            indexdir, rotacfout, rotplane, msdout, False)
-                finalgro  = simtable[molname][temp]["grofile"] 
-                if len(finalgro) > 4:
-                    srcf = ("%s/%s" % ( simdir, finalgro) )
-                    dstf = ("final_%g.gro" % temp )
-                    if not os.path.exists(dstf) or os.path.getmtime(srcf) > os.path.getmtime(dstf):
-                        shutil.copyfile(srcf, dstf)
+                finalgro  = simdir + simtable[molname][temp]["grofile"] 
+                dstf      = ("final_%g.gro" % temp )
+                print("Will try to copy %s to %s if needed" % ( finalgro, dstf ) )
+                if os.path.exists(finalgro) and (not os.path.exists(dstf) or os.path.getmtime(finalgro) > os.path.getmtime(dstf)):
+                    shutil.copyfile(finalgro, dstf)
         os.chdir("..")
     os.chdir(pwd)
 
