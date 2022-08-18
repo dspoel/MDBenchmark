@@ -23,8 +23,9 @@ def use_sim(simtable:dict, mol:str, temp: int) -> bool:
 def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str, tpr: str,
                indexdir: str, rotacfout: str, rotplane: str, msdout: str, force:bool):
     # If files exist, do nothing, except when trajectory is newer.
-    if not force and ((os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane)) and not os.path.getmtime(traj) > os.path.getmtime(rotacfout)):
-        return
+    if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
+        if not (force or os.path.getmtime(traj) > os.path.getmtime(rotacfout)):
+            return
     with open(jobname, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
