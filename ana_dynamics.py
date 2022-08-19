@@ -63,11 +63,12 @@ def ana_dynamics(simtable_file:str):
                 length    = simtable[molname][temp]["length"]*1000
                 run_rotacf(jobname, molname, length-200, length, traj, tpr,
                            indexdir, rotacfout, rotplane, msdout, False)
-                finalgro  = simdir + simtable[molname][temp]["grofile"] 
-                dstf      = ("final_%g.gro" % temp )
-                print("Will try to copy %s to %s if needed" % ( finalgro, dstf ) )
-                if os.path.exists(finalgro) and (not os.path.exists(dstf) or os.path.getmtime(finalgro) > os.path.getmtime(dstf)):
-                    shutil.copyfile(finalgro, dstf)
+                if len(simtable[molname][temp]["grofile"]) > 4:
+                    finalgro  = simdir + simtable[molname][temp]["grofile"] 
+                    dstf      = ("final_%g.gro" % temp )
+                    print("Will try to copy %s to %s if needed" % ( finalgro, dstf ) )
+                    if os.path.exists(finalgro) and (not os.path.exists(dstf) or os.path.getmtime(finalgro) > os.path.getmtime(dstf)):
+                        shutil.copyfile(finalgro, dstf)
         os.chdir("..")
     os.chdir(pwd)
 
