@@ -16,9 +16,11 @@ def write_run_job(target:str, nsteps:int):
             ncore = 32
             gromacs = ("gmx mdrun -ntomp 4 -ntmpi %d -dd 2 2 2" % 8)
         else:
-            ncore = 12
-            gromacs = "mpirun gmx_mpi mdrun -ntomp 1 -dd 2 3 2"
+            ncore = 24
+            gromacs = "gmx mdrun -ntmpi 8 -ntomp 3 -dd 2 2 2"
             outf.write("#SBATCH -A SNIC2021-3-8\n")
+            outf.write("export OMP_NUM_THREADS=3\n")
+            outf.write("#SBATCH -m ae\n")
         outf.write("#SBATCH -n %d\n" % ncore)
         outf.write("%s -cpi %s.cpt -deffnm %s -nsteps %d \n" % ( gromacs, target, target, nsteps ) )
     os.system("sbatch %s" % job)
