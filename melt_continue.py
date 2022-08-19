@@ -13,8 +13,8 @@ def write_run_job(target:str, nsteps:int):
         outf.write("#!/bin/sh\n")
         outf.write("#SBATCH -t 72:00:00\n")
         if csb:
-            ncore = 8
-            gromacs = ("srun gmx mdrun -ntmpi %d -dd 2 2 2" % ncore)
+            ncore = 32
+            gromacs = ("gmx mdrun -ntomp 4 -ntmpi %d -dd 2 2 2" % 8)
         else:
             ncore = 12
             gromacs = "mpirun gmx_mpi mdrun -ntomp 1 -dd 2 3 2"
