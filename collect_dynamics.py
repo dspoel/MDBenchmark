@@ -6,37 +6,112 @@ from analyse import get_tail
 
 csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 
-not_converged = {
-    "ethane": [ 55, 60, 65, 70, 75, 80 ],
-    "pentane": [ 98, 113, 118, 123, 128, 133,  148, 153, 158, 163, 168, 173, 178, 183, 188 ],
-    "propane": [ 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105 ],
+sim_status = {
+    # Fig. S4
+    "ethane": { "failed": [ 50, 55, 60 ], 
+                "running": [ 65 ], 
+                "success": [ 70, 75, 80, 85, 90, 95, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150 ] },
+    "propane": { "failed": [ 35, 40, 45, 50, 55, 60, 65, 75, 85, 95, 105 ],
+                 "running": [ 70, 80, 90 ],
+                 "success": [ 100, 110, 115, 120, 125, 130, 135 ] },
+    "cyclopropane": { "failed": [ 25 ],
+                      "running": [ 90 ],
+                      "success": [ 75, 80, 85, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145,
+                                   150, 155, 160, 165, 170, 180, 185, 190, 195, 200, 205, 210, 215, 220, 225 ] },
+    "pentane": { "failed": [ 93, 98, 103, 108, 113, 123, 133, 153, 163, 168, 173, 178, 183, 188 ],
+                 "running": [ 118, 128,  138, 148, 158, 168, 178 ],
+                 "success": [ 188 ] },
     # 204 and 209 are polycrystalline
-    "cyclohexane": [ 129, 204, 209 ],
-    "benzene": [ 128 ],
-    "imidazole": [ 213, 283, 293, 303, 313, 323, 333 ],
-    # 161 i spolycrystalline
-    "methanol": [ 126, 131, 136, 141, 146, 151, 156, 166, 176, 186, 196, 206 ],
+    "cyclohexane": { "failed": [29, 79, 129, 194, 199, 204, 209, 214, 219, 224, 229, 234  ],
+                     "running": [  ],
+                     "success": [ 179, 184, 189 ] },
+    "ethylene": { "failed": [],
+                  "running": [],
+                  "success": [ 59, 64, 69, 74, 79, 84, 89, 94, 104, 109, 114, 119, 124, 129, 134, 139, 144, 149 ]},
+    # Fig. S5
+    "ethyne": { "failed": [ ],
+                "running": [ ],
+                "success": [ 142, 147, 152, 157, 162, 167, 172, 177, 182, 187, 192, 197, 202,
+                             207, 212, 217, 222, 227, 232, 237, 242 ] },
+    "14-benzoquinone": { "failed": [ 338, 343, 348, 353, 358, 363, 373, 378 ],
+                         "running": [ 368, 378, 403, 413 ],
+                         "success": [ 383, 393, 398, 408, 418, 423, 428, 433, 438 ] },
+    "benzene": { "failed": [ 128 ], 
+                 "running": [  ],
+                 "success": [ 178, 203, 208, 213, 218, 223, 228, 233, 238, 243, 248, 253, 258, 263, 268, 273,
+                              283, 288, 293, 298, 303, 308, 313, 318, 323, 328 ] },
+    "naphthalene": { "failed": [ 318, 323, 328 ], 
+                     "running": [ 343, 348, 368 ],
+                     "success": [ 303, 308, 313, 333, 338, 353, 358, 363, 373, 383, 388, 393, 398, 403 ] },
+    "furan": { "failed": [ 7, 12, 37, 112 ],
+               "running": [ 87, 117 ],
+               "success": [ 122, 132, 127, 137, 142, 147, 152, 157, 162, 167, 172, 177, 182, 192, 
+                            197, 202, 207, 212, 217, 222, 227,232, 237 ] },
+    "imidazole": { "failed": [ 113, 163, 213, 273, 283, 293, 313, 323, 333 ],
+                   "running": [ 263, 268, 278, 288 ],
+                   "success": [ 298, 308, 318, 328, 338, 343, 348, 353, 358, 363, 368, 373, 378, 383, 388, 393, 398, 403, 408, 413 ] },
+    # Fig. S6
+    # 161 is polycrystalline
+    "methanol": { "failed": [ 126, 131, 136, 141, 146, 151, 156, 166, 176, 196, 206 ], 
+                  "running": [ 186  ],
+                  "success": [ 161, 171, 181, 191, 201, 211, 216 ] },
     # No ethanol crystal that converged to the crystal state. 
     # First one that is not omitted is liquid.
     # 184 may still be on its way to the liquid state
-    "ethanol": [ 109, 114, 119, 124, 129, 134, 139, 144, 149, 154, 159, 164, 169, 174, 179 ],
-    # No real crystal for this compound either.  First one that is not omitted is liquid.
-    "ethyleneglycol": [ 160, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260, ],
-    "formic_acid" : [ 216, 221, 226, 231, 236, 241, 246, 256, 266, 276 ],
-    # No real crystal here either. First one that is not omitted is liquid.
-    "phenol": [ 239, 244, 254, 259, 264, 269, 274, 279, 284, 289, 299, 314, 324 ],
-    "12-benzenediol": [ 327, 332, 337, 342, 347, 352, 357, 417, 427 ],
-    "123-benzenetriol": [ 353, 358, 363, 368, 373, 378, 383, 393, 403 ],
-    "12-ethanediamine": [ 269, 279, 289, 299, 309 ],
-    "pyridine": [ 181, 186, 191, 196, 201, 206, 211, 216, 221, 226, 236, 241 ],
-    "menh2": [ 139, 144, 149, 154, 159, 164, 169, 174 ],
-    "acooh": [ 189, 229, 249, 269 ],
-    "octanoic_acid": [ 284, 294, 304, 314 ],
-    "succinic_acid": [ 424, 464, 504 ],
-    "acetamide": [ 104, 154, 204, 284, 294  ],
-    "formamide": [],
-    "urea": [ 436  ]
-}
+    "ethanol": { "failed": [ 109, 114, 119, 124, 129, 134, 139, 144, 149, 154, 159, 164, 169 ],
+                 "running": [ 174, 179, 184   ],
+                 "success": [ 189, 194, 199, 204, 209] },
+    
+    "ethyleneglycol": { "failed": [ 160, 190, 195, 200, 205, 210, 215, 220, 225, 230, 235, 240, 245, 250, 255, 260 ],
+                        "running": [ 265, 270, 275, 280 ],
+                        "success": [ 285, 290, 295, 300, 305, 310 ] },
+    "phenol": { "failed": [ 239, 244, 254, 259, 264, 269, 274  ],
+                "running": [  279, 284, 289, 299 ],
+                "success": [ 294, 304, 309, 319, 324, 329, 334, 339, 344, 349, 354, 359, 364 ] },
+    "12-benzenediol": { "failed": [ 327, 332, 337, 342, 347, 352, 357, 372, 382, 392, 402, 412, 417, 427],
+                        "running": [  ],
+                        "success": [ 377, 387, 397, 407, 422] },
+    "123-benzenetriol": { "failed": [ 353, 358, 363, 373, 383, 388, 393, 398  ],
+                          "running": [ 368, 378  ],
+                          "success": [ 408, 413, 418, 423, 428, 433, 438, 443, 448, 453 ] },
+    # meh2 at 429K most likely gas phase
+    "menh2": { "failed": [ 134, 139, 144, 149, 154, 159, 164, 169, 174, 184, 189, 194, 199, 204, 229, 239, 244],
+               "running": [  ],
+               "success": [ 209, 214, 219, 224, 234, 249, 254, 259, 264, 279, 329, 379, 429 ] },
+    "12-ethanediamine": { "failed": [ 34, 84, 134, 154, 179, 184, 214, 219, 224, 229, 234, 239, 244, 249, 254, 259, 264, 274, 294, 299, 304, 309 ],
+                        "running": [ 264, 259, 254 ],
+                          "success": [ 269, 279, 289, 314, 319, 324, 329, 334 ] },
+    "formic_acid" : { "failed": [ 216, 221, 226, 231, 251, 256, 271, ],
+                      "running": [ 236, 241, 246 ],
+                      "success": [ 251, 256, 266, 276, 286, 291, 296, 301, 306, 311, 316, 321, 326, 331 ] },
+    "acooh": { "failed": [ 139, 189, 214, 234, 239, 244, 254, 259, 264, 274, 279, 284, 304, 309, 319, 324, 329 ],
+               "running": [ 229, 249, 269, 289 ],
+               "success": [ 334, 339 ] },
+    "octanoic_acid": { "failed": [ 229, 234, 239, 244, 249, 254, 259, 264, 269, 274, 279, 284, 294, 299, 304, 309, 314, 319, 324 ],
+                       "running": [  ],
+                       "success": [ 329, 334, 339 ] },
+    "succinic_acid": { "failed": [ 309, 359, 384, 389, 394, 399, 404, 409, 414, 419, 424, 429, 434, 439, 454, 464, 469, 494, 499, 504, 509, 514 ],
+                       "running": [  ],
+                       "success": [  ] },
+    # formaide at 253K might be considered as converged, at 263K polycrystalline
+    "formamide": { "failed": [ 248, 253, 258, 273, 288, 293, 298,  ],
+                   "running": [  ],
+                   "success": [ 263, 268, 278, 283, 303, 308, 313, 318, 323, 328, 333, 338, 343, 348 ] },
+    "acetamide": { "failed": [ 104, 154, 204, 254, 279, 284, 289, 294, 299, 309, 319, 329 ],
+                   "running": [  ],
+                   "success": [ 304, 314, 324, 334, 339, 344, 349, 359, 364, 369, 374, 379, 384, 389, 394, 399, 404 ] },
+    "urea": { "failed": [ 436 ],
+              "running": [  ],
+              "success": [ 356, 361, 366, 371, 376, 381, 386, 391, 396, 401, 406, 411, 416, 421, 426, 431, 441, 446, 451, 456 ] },
+    "formaldehyde": { "failed": [  ],
+                      "running": [  ],
+                      "success": [ 131, 136, 141, 146, 151, 156, 161, 166, 171, 176, 181, 186, 191, 196, 201, 206, 211, 216, 221, 226, 231 ] },
+    "uracil": { "failed": [  ],
+                "running": [  ],
+                "success": [ 561, 566, 571, 576, 581, 586, 591, 596, 601, 606, 616, 621, 626, 631, 636, 641, 646, 651, 656, 661, 666, 671, 676, 681, 686, 711, 731, 736, 741, 746, 751, 756, 761, 766, 771, 786, 811, 861 ] },
+    "pyridine": { "failed": [ 181, 186, 191, 196, 201, 206, 211, 216, 221, 226, 236, 241, 246, 251, 256, 281 ],
+                  "running": [  ],
+                  "success": [ 261, 266, 271, 276 ] }}
 
 def get_temps(compound:str):
     mtemp = {}
@@ -50,7 +125,7 @@ def get_temps(compound:str):
         rtemp[rot[7:-4]] = 1
     alltemp = []
     for m in mtemp:
-        if m in ftemp and m in rtemp and (not compound in not_converged or not int(m) in not_converged[compound]): 
+        if m in ftemp and m in rtemp and not (int(m) in sim_status[compound]["failed"]):
             alltemp.append(m)
     return alltemp
 
@@ -90,7 +165,9 @@ def do_filesize(alltemp:list):
     with open("temp_filesize.xvg", "w") as outf:
         outf.write("@ xaxis label \"T (K)\"\n")
         for temp in sorted(fsize.keys()):
-            this_size = 0.5+(0.5*(fsize[temp]-min_size))/(max_size-min_size)
+            this_size = min_size
+            if max_size > min_size:
+                this_size = 0.5+(0.5*(fsize[temp]-min_size))/(max_size-min_size)
             outf.write("%10g  %10g\n" % ( temp, this_size ) )
 
 def do_rotacf(alltemp:list):
