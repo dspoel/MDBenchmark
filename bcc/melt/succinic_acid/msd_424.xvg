@@ -1,4 +1,4 @@
-# This file was created Thu Aug 18 13:41:01 2022
+# This file was created Fri Aug 19 11:04:52 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/succinic_acid/424/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/succinic_acid/424/melting-npt-y_20_NPTY.tpr -o msd_424.xvg -b 9800 -e 10000
 # gmx msd is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# GRoups of Organic Molecules in ACtion for Science
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
