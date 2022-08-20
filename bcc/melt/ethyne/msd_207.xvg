@@ -1,4 +1,4 @@
-# This file was created Sat Aug 20 13:11:28 2022
+# This file was created Sat Aug 20 21:40:30 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethyne/ethyne207.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/ethyne/ethyne207.0/melting-npt-y_2.tpr -o msd_207.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

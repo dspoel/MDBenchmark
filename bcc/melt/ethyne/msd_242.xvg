@@ -1,4 +1,4 @@
-# This file was created Sat Aug 20 13:10:40 2022
+# This file was created Sat Aug 20 21:38:59 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethyne/ethyne242.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/ethyne/ethyne242.0/melting-npt-y_2.tpr -o msd_242.xvg -b 1800 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
