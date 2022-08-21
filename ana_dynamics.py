@@ -23,7 +23,8 @@ def use_sim(simtable:dict, mol:str, temp: int) -> bool:
 def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str, tpr: str,
                indexdir: str, rotacfout: str, rotplane: str, msdout: str, force:bool):
     # If files exist, do nothing, except when trajectory is newer.
-    if os.path.exists(rotacfout) and os.path.exists(msdout) and os.path.exists(rotplane):
+    planendx = ( "%s/%s_rotplane.ndx" % ( indexdir, compound ))
+    if os.path.exists(rotacfout) and os.path.exists(msdout) and (os.path.exists(rotplane) or not os.path.exists(planendx)):
         if not (force or os.path.getmtime(traj) > os.path.getmtime(rotacfout)):
             return
     with open(jobname, "w") as outf:
@@ -33,7 +34,6 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
             outf.write("#SBATCH -A SNIC2021-3-8\n")
         outf.write("#SBATCH -n 1\n")
         outf.write("gmx rotacf -d -n %s/%s_rotaxis.ndx -f %s -s %s -o %s -b %d -e %d \n" % ( indexdir, compound, traj, tpr, rotacfout, tbegin, tend ))
-        planendx = ( "%s/%s_rotplane.ndx" % ( indexdir, compound ))
         if os.path.exists(planendx):
             outf.write("gmx rotacf -n %s -f %s -s %s -o %s -b %d -e %d \n" % ( planendx, traj, tpr, rotplane, tbegin, tend ))
         outf.write("echo 0 | gmx msd -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, msdout, tbegin, tend ))

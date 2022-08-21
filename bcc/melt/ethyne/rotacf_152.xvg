@@ -1,4 +1,4 @@
-# This file was created Sat Aug 20 21:39:49 2022
+# This file was created Sun Aug 21 08:11:59 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethyne_rotaxis.ndx -f /home/lschmidt/MELTING/ethyne/ethyne152.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/ethyne/ethyne152.0/melting-npt-y_2.tpr -o rotacf_152.xvg -b 1800 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROup of MAchos and Cynical Suckers
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
