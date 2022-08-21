@@ -132,7 +132,7 @@ def get_dict_entry(mol:str):
             print("Could not find a simulation.")
     return None, 0.0
 
-def get_run_dict(topdir: str, molnames:list):
+def get_run_dict(topdir: str, molnames:list, useLisaName:bool):
     if not os.path.exists(topdir):
         sys.exit("No such dir %s" % topdir)
     pwd = os.getcwd()
@@ -140,7 +140,7 @@ def get_run_dict(topdir: str, molnames:list):
     mydict = {}
     for molname in molnames:
         moldir = molname
-        if moldir in lisa_name:
+        if useLisaName and moldir in lisa_name:
             moldir = lisa_name[moldir]
         if os.path.exists(moldir):
             os.chdir(moldir)
@@ -212,12 +212,10 @@ if __name__ == '__main__':
                         "csb2": "/home/spoel/wd/MDBenchmark/melting" }
             for host in topdirs.keys():
                 if os.path.isdir(topdirs[host]):
-                    mydict = get_run_dict(topdirs[host], moldb.keys())
+                    mydict = get_run_dict(topdirs[host], moldb.keys(), host.find("2") < 0)
                     print(mydict.keys())
                     for molname in mydict:
                         moldir = molname
-#                        if moldir in lisa_name and not host == "keb2":
-#                            moldir = lisa_name[moldir]
                         if os.path.isdir(moldir):
                             os.chdir(moldir)
                             nmol = get_nmol(molname, moldb[molname]["natom"])
