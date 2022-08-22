@@ -26,7 +26,10 @@ def run_rdf(job:str, rdfout:str, tbegin:float, tend:float, traj:str, tpr: str):
     with open(job, "w") as outf:
         outf.write("#!/bin/bash\n")
         outf.write("#SBATCH -t 24:00:00\n")
-        outf.write("#SBATCH -A SNIC2021-3-8\n")
+        if not csb:
+            outf.write("#SBATCH -A SNIC2021-3-8\n")
+        else:
+            outf.write("#SBATCH -p CLUSTER-AMD\n")
         outf.write("#SBATCH -n 1\n")
         outf.write("gmx rdf -sel 0 -ref 0 -dt 1 -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, rdfout, tbegin, tend ))
     os.system("sbatch %s" % job)
