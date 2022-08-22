@@ -20,6 +20,17 @@ def use_sim(simtable:dict, mol:str, temp: int) -> bool:
         print("csb: %s host: %s" % ( boolname[csb], simtable[mol][temp]["host"]))
     return False
         
+def run_rdf(job:str, rdfout:str, tbegin:float, tend:float, traj:str, tpr: str):
+    if os.path.exists(rdfout):
+        return
+    with open(job, "w") as outf:
+        outf.write("#!/bin/bash\n")
+        outf.write("#SBATCH -t 24:00:00\n")
+        outf.write("#SBATCH -A SNIC2021-3-8\n")
+        outf.write("#SBATCH -n 1\n")
+        outf.write("gmx rdf -sel 0 -ref 0 -dt 1 -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, rdfout, tbegin, tend ))
+    os.system("sbatch %s" % job)
+
 def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str, tpr: str,
                indexdir: str, rotacfout: str, rotplane: str, msdout: str, force:bool):
     # If files exist, do nothing, except when trajectory is newer.
@@ -60,9 +71,13 @@ def ana_dynamics(simtable_file:str):
                 rotplane  = ("rotplane_%g.xvg" % temp )
                 msdout    = ("msd_%g.xvg" % temp )
                 indexdir  = "../../../index"
-                length    = simtable[molname][temp]["length"]
-                run_rotacf(jobname, molname, length-200, length, traj, tpr,
+                tend      = simtable[molname][temp]["length"]
+                tbegin    = tend-200
+                run_rotacf(jobname, molname, tbegin, tend, traj, tpr,
                            indexdir, rotacfout, rotplane, msdout, False)
+                rdfout    = ("rdf_%g.xvg" % temp)
+                job       = rdfout[:-3] + ".sh"
+                run_rdf(job, rdfout, tbegin, tend, traj, tpr)
                 if len(simtable[molname][temp]["grofile"]) > 4:
                     finalgro  = simdir + simtable[molname][temp]["grofile"] 
                     dstf      = ("final_%g.gro" % temp )
