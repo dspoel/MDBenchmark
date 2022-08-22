@@ -220,7 +220,7 @@ if __name__ == '__main__':
                             os.chdir(moldir)
                             nmol = get_nmol(molname, moldb[molname]["natom"])
                             for temp in sorted(mydict[molname].keys()):
-                                mytime = mydict[molname][temp]["endtime"]/1000.0
+                                mytime = mydict[molname][temp]["endtime"]
                                 if mytime >= 0.1:
                                     csv.write("%s|%g|%g|%s|%d|%s|%s|%s|%s|%s|%s|%s|%s\n" % 
                                               ( molname, temp, mytime, host, nmol,
