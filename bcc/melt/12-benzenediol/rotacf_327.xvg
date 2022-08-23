@@ -1,4 +1,4 @@
-# This file was created Wed Aug 17 07:39:30 2022
+# This file was created Tue Aug 23 14:38:50 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -6,114 +6,25 @@
 # Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
 # Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/12-benzenediol
 # Command line:
-#   gmx rotacf -d -n ../../../index/12-benzenediol_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/327/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/327/melting-npt-y.tpr -o rotacf_327.xvg -b 21800 -e 22000
+#   gmx rotacf -d -n ../../../index/12-benzenediol_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/327/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/327/melting-npt-y.tpr -o rotacf_327.xvg -b -1978 -e 22
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
 @    yaxis  label "C(t)"
 @TYPE xy
      0.000     1.00000
-     1.000     0.95584
-     2.000     0.94710
-     3.000     0.94088
-     4.000     0.93551
-     5.000     0.93070
-     6.000     0.92639
-     7.000     0.92248
-     8.000     0.91868
-     9.000     0.91515
-    10.000     0.91146
-    11.000     0.90799
-    12.000     0.90479
-    13.000     0.90157
-    14.000     0.89833
-    15.000     0.89532
-    16.000     0.89227
-    17.000     0.88935
-    18.000     0.88637
-    19.000     0.88365
-    20.000     0.88082
-    21.000     0.87807
-    22.000     0.87530
-    23.000     0.87256
-    24.000     0.86995
-    25.000     0.86736
-    26.000     0.86465
-    27.000     0.86208
-    28.000     0.85944
-    29.000     0.85700
-    30.000     0.85470
-    31.000     0.85220
-    32.000     0.84988
-    33.000     0.84745
-    34.000     0.84514
-    35.000     0.84280
-    36.000     0.84046
-    37.000     0.83821
-    38.000     0.83598
-    39.000     0.83378
-    40.000     0.83157
-    41.000     0.82954
-    42.000     0.82731
-    43.000     0.82526
-    44.000     0.82326
-    45.000     0.82129
-    46.000     0.81923
-    47.000     0.81729
-    48.000     0.81522
-    49.000     0.81316
-    50.000     0.81118
-    51.000     0.80907
-    52.000     0.80706
-    53.000     0.80491
-    54.000     0.80294
-    55.000     0.80082
-    56.000     0.79885
-    57.000     0.79690
-    58.000     0.79483
-    59.000     0.79287
-    60.000     0.79095
-    61.000     0.78911
-    62.000     0.78698
-    63.000     0.78492
-    64.000     0.78293
-    65.000     0.78083
-    66.000     0.77875
-    67.000     0.77659
-    68.000     0.77466
-    69.000     0.77268
-    70.000     0.77078
-    71.000     0.76864
-    72.000     0.76657
-    73.000     0.76470
-    74.000     0.76266
-    75.000     0.76057
-    76.000     0.75877
-    77.000     0.75681
-    78.000     0.75501
-    79.000     0.75307
-    80.000     0.75142
-    81.000     0.74975
-    82.000     0.74798
-    83.000     0.74618
-    84.000     0.74445
-    85.000     0.74287
-    86.000     0.74113
-    87.000     0.73941
-    88.000     0.73767
-    89.000     0.73583
-    90.000     0.73400
-    91.000     0.73199
-    92.000     0.73035
-    93.000     0.72861
-    94.000     0.72680
-    95.000     0.72500
-    96.000     0.72326
-    97.000     0.72164
-    98.000     0.71992
-    99.000     0.71830
-   100.000     0.71656
+     1.000     0.95727
+     2.000     0.94251
+     3.000     0.93010
+     4.000     0.91830
+     5.000     0.90711
+     6.000     0.89641
+     7.000     0.88609
+     8.000     0.87567
+     9.000     0.86464
+    10.000     0.85363
+    11.000     0.84314
 &
