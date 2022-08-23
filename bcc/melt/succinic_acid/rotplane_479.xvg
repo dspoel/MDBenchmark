@@ -1,0 +1,24 @@
+# This file was created Mon Aug 22 09:38:19 2022
+# Created by:
+#                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
+# 
+# Executable:   /hpc2n/eb/software/GROMACS/2021-foss-2020b/bin/gmx
+# Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
+# Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/succinic_acid
+# Command line:
+#   gmx rotacf -n ../../../index/succinic_acid_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid479.0/melting-nvt.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid479.0/melting-nvt.tpr -o rotplane_479.xvg -b -190 -e 10
+# gmx rotacf is part of G R O M A C S:
+#
+# Great Red Owns Many ACres of Sand 
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     1.000     0.91183
+     2.000     0.89327
+     3.000     0.88032
+     4.000     0.86966
+     5.000     0.85723
+&
