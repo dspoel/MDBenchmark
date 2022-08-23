@@ -59,7 +59,7 @@ def ana_dynamics(simtable_file:str):
     pwd = os.getcwd()
     print("pwd %s" % pwd)
     os.chdir("bcc/melt")
-    for molname in simtable.keys():
+    for molname in [ "benzene" ]: #simtable.keys():
         os.makedirs(molname, exist_ok=True)
         os.chdir(molname)
         for temp in simtable[molname]:
@@ -75,7 +75,7 @@ def ana_dynamics(simtable_file:str):
                 msdout    = ("msd_%g.xvg" % temp )
                 indexdir  = "../../../index"
                 tend      = simtable[molname][temp]["length"]
-                tbegin    = tend-200
+                tbegin    = tend-1000
                 run_rotacf(jobname, molname, tbegin, tend, traj, tpr,
                            indexdir, rotacfout, rotplane, msdout, False)
                 rdfout    = ("rdf_%g.xvg" % temp)
