@@ -78,7 +78,7 @@ def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool):
                 msdout    = ("msd_%g.xvg" % temp )
                 indexdir  = "../../../index"
                 tend      = simtable[molname][temp]["length"]
-                tbegin    = tend-1000
+                tbegin    = tend-length
                 run_rotacf(jobname, molname, tbegin, tend, traj, tpr,
                            indexdir, rotacfout, rotplane, msdout, force)
                 rdfout    = ("rdf_%g.xvg" % temp)
