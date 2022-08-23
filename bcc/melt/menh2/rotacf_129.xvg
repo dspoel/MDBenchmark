@@ -1,0 +1,24 @@
+# This file was created Mon Aug 22 09:35:59 2022
+# Created by:
+#                       :-) GROMACS - gmx rotacf, 2021 (-:
+# 
+# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/menh2
+# Command line:
+#   gmx rotacf -d -n ../../../index/menh2_rotaxis.ndx -f /home/lschmidt/MELTING/menh2/menh2129.0/melting-nvt.trr -s /home/lschmidt/MELTING/menh2/menh2129.0/melting-nvt.tpr -o rotacf_129.xvg -b -190 -e 10
+# gmx rotacf is part of G R O M A C S:
+#
+# Gromacs Runs On Most of All Computer Systems
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     1.000     0.90408
+     2.000     0.86408
+     3.000     0.82783
+     4.000     0.79417
+     5.000     0.76210
+&

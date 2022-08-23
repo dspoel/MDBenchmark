@@ -1,0 +1,24 @@
+# This file was created Mon Aug 22 09:36:02 2022
+# Created by:
+#                       :-) GROMACS - gmx rotacf, 2021 (-:
+# 
+# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/pyridine
+# Command line:
+#   gmx rotacf -d -n ../../../index/pyridine_rotaxis.ndx -f /home/lschmidt/MELTING/pyridine/pyridine231.0/melting-nvt.trr -s /home/lschmidt/MELTING/pyridine/pyridine231.0/melting-nvt.tpr -o rotacf_231.xvg -b -190 -e 10
+# gmx rotacf is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     1.000     0.92531
+     2.000     0.89045
+     3.000     0.86206
+     4.000     0.83337
+     5.000     0.80778
+&
