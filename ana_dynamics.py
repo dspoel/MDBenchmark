@@ -46,6 +46,8 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
         outf.write("#SBATCH -t 24:00:00\n")
         if not csb:
             outf.write("#SBATCH -A SNIC2021-3-8\n")
+        else:
+            outf.write("#SBATCH -p CLUSTER-AMD\n")
         outf.write("#SBATCH -n 1\n")
         outf.write("gmx rotacf -d -n %s/%s_rotaxis.ndx -f %s -s %s -o %s -b %d -e %d \n" % ( indexdir, compound, traj, tpr, rotacfout, tbegin, tend ))
         if os.path.exists(planendx):
@@ -53,7 +55,7 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
         outf.write("echo 0 | gmx msd -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, msdout, tbegin, tend ))
     os.system("sbatch %s" % jobname)
 
-def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool):
+def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool, rdf:bool):
     simtable = get_simtable(simtable_file)
     print(simtable.keys())
     pwd = os.getcwd()
@@ -81,9 +83,10 @@ def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool):
                 tbegin    = tend-length
                 run_rotacf(jobname, molname, tbegin, tend, traj, tpr,
                            indexdir, rotacfout, rotplane, msdout, force)
-                rdfout    = ("rdf_%g.xvg" % temp)
-                job       = rdfout[:-3] + ".sh"
-                run_rdf(job, rdfout, tbegin, tend, traj, tpr)
+                if rdf:
+                    rdfout    = ("rdf_%g.xvg" % temp)
+                    job       = rdfout[:-3] + ".sh"
+                    run_rdf(job, rdfout, tbegin, tend, traj, tpr)
                 if len(simtable[molname][temp]["grofile"]) > 4:
                     finalgro  = simdir + simtable[molname][temp]["grofile"] 
                     dstf      = ("final_%g.gro" % temp )
@@ -130,6 +133,7 @@ Script to analyse dynamics in solid or melting simulations.
     parser.add_argument("-v", "--verbose", help="Print debugging info", action="store_true")
     parser.add_argument("-force", "--force", help="Run analysis even if data is present already", action="store_true")
     parser.add_argument("-solid", "--solid", help="Analyse solid simulations rather than melting simulations", action="store_true")
+    parser.add_argument("-rdf", "--rdf", help="Run RDF analyses as well (slow!)", action="store_true")
     return parser.parse_args()
     
 if __name__ == '__main__':
@@ -152,5 +156,5 @@ if __name__ == '__main__':
                     os.chdir("..")
                 os.chdir("..")
     else:
-        ana_dynamics("simtable.csv", args.molecules, args.length, args.force)
+        ana_dynamics("simtable.csv", args.molecules, args.length, args.force, args.rdf)
 
