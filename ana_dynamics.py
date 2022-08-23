@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
         
-import os, shutil, glob, sys, math
+import os, shutil, glob, sys, math, argparse
 from molecule_db import *
 from simtable    import *
 
@@ -53,13 +53,16 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
         outf.write("echo 0 | gmx msd -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, msdout, tbegin, tend ))
     os.system("sbatch %s" % jobname)
 
-def ana_dynamics(simtable_file:str):
+def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool):
     simtable = get_simtable(simtable_file)
     print(simtable.keys())
     pwd = os.getcwd()
     print("pwd %s" % pwd)
     os.chdir("bcc/melt")
-    for molname in [ "benzene" ]: #simtable.keys():
+    mol_list = simtable.keys()
+    if None != mols:
+        mol_list = mols
+    for molname in mol_list:
         os.makedirs(molname, exist_ok=True)
         os.chdir(molname)
         for temp in simtable[molname]:
@@ -77,7 +80,7 @@ def ana_dynamics(simtable_file:str):
                 tend      = simtable[molname][temp]["length"]
                 tbegin    = tend-1000
                 run_rotacf(jobname, molname, tbegin, tend, traj, tpr,
-                           indexdir, rotacfout, rotplane, msdout, False)
+                           indexdir, rotacfout, rotplane, msdout, force)
                 rdfout    = ("rdf_%g.xvg" % temp)
                 job       = rdfout[:-3] + ".sh"
                 run_rdf(job, rdfout, tbegin, tend, traj, tpr)
@@ -90,9 +93,9 @@ def ana_dynamics(simtable_file:str):
         os.chdir("..")
     os.chdir(pwd)
 
-def do_rotacf(moldb):
-    tbegin    = 14000
+def do_rotacf(mols:list, length: int):
     tend      = 15000
+    tbegin    = max(0, tend-length)
     traj      = "NPT.xtc"
     tpr       = "NPT.tpr"
     rotacfout = "rotacf.xvg"
@@ -100,7 +103,7 @@ def do_rotacf(moldb):
     msdout    = "msd.xvg"
     jobname   = "rotacf.sh"
     indexdir  = "../../../../index"
-    for compound in moldb.keys():
+    for compound in mols:
         print("Looking for %s" % compound)
         if os.path.isdir(compound):
             os.chdir(compound)
@@ -110,18 +113,33 @@ def do_rotacf(moldb):
                     final_gro = "NPT2.gro"                
                     if os.path.exists(final_gro):
                         run_rotacf(jobname, compound, tbegin, tend, traj, tpr,
-                                   indexdir, rotacfout, rotplane, msdout)
+                                   indexdir, rotacfout, rotplane, msdout, False)
                     os.chdir("..")
             os.chdir("..")
 
+def parseArguments():
+    parser = argparse.ArgumentParser(
+      prog='ana_dynamics.py',
+      description=
+"""
+Script to analyse dynamics in solid or melting simulations.
+""")
+    parser.add_argument("-mols", "--molecules", nargs="+", help="The molecule(s) to analyze, if none is given all will be analysed", type=str, default=None)
+    length = 200
+    parser.add_argument("-length", "--length", help="length of trajectory to analyse in ps, default "+str(length), type=int, default=length)
+    parser.add_argument("-v", "--verbose", help="Print debugging info", action="store_true")
+    parser.add_argument("-force", "--force", help="Run analysis even if data is present already", action="store_true")
+    parser.add_argument("-solid", "--solid", help="Analyse solid simulations rather than melting simulations", action="store_true")
+    return parser.parse_args()
+    
 if __name__ == '__main__':
 
     if shutil.which("gmx") == None:
         sys.exit("Please load the gromacs environment using\nml load GCC/10.2.0  OpenMPI/4.0.5 GROMACS/2021")
-
+    args = parseArguments()
     moldb  = get_moldb(False)
 
-    if False:
+    if args.solid:
         for top in [ "bcc", "resp" ]:
             print("Looking for %s" % top)
             if os.path.isdir(top):
@@ -129,9 +147,10 @@ if __name__ == '__main__':
                 phase = "solid"
                 if os.path.isdir(phase):
                     os.chdir(phase)
-                    do_rotacf(moldb)
+                    if None != args.mols:
+                        do_rotacf(args.mols, args.length)
                     os.chdir("..")
                 os.chdir("..")
     else:
-        ana_dynamics("simtable.csv")
+        ana_dynamics("simtable.csv", args.molecules, args.length, args.force)
 
