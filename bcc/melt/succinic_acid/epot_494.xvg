@@ -1,0 +1,35 @@
+# This file was created Wed Aug 24 16:48:34 2022
+# Created by:
+#                       :-) GROMACS - gmx energy, 2021 (-:
+# 
+# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/succinic_acid
+# Command line:
+#   gmx energy -nmol 2400 -f /home/lschmidt/MELTING/succinic_acid/succinic_acid494.0/melting-nvt.edr -o epot_494.xvg
+# gmx energy is part of G R O M A C S:
+#
+# GROup of MAchos and Cynical Suckers
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Potential"
+    0.000000  -464.619415
+    1.000000  -392.361145
+    2.000000  -391.504456
+    3.000000  -389.380829
+    4.000000  -389.625671
+    5.000000  -389.383392
+    6.000000  -389.763947
+    7.000000  -388.984039
+    8.000000  -389.586609
+    9.000000  -389.107910
+   10.000000  -388.434570

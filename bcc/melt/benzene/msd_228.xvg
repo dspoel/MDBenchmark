@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 09:37:36 2022
+# This file was created Wed Aug 24 17:00:14 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/benzene/228/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/benzene/228/melting-npt-y.tpr -o msd_228.xvg -b 4000 -e 6000
 # gmx msd is part of G R O M A C S:
 #
-# GROningen Mixture of Alchemy and Childrens' Stories
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

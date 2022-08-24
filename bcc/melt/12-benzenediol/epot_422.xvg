@@ -1,0 +1,27 @@
+# This file was created Wed Aug 24 16:46:18 2022
+# Created by:
+#                       :-) GROMACS - gmx energy, 2021 (-:
+# 
+# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/12-benzenediol
+# Command line:
+#   gmx energy -nmol 3168 -f /home/lschmidt/MELTING/12-benzenediol/12-benzenediol422.0/melting-nvt.edr -o epot_422.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Great Red Owns Many ACres of Sand 
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Potential"
+    0.000000  -102.503670
+    1.000000  -61.565632
+    2.000000  -44.500149

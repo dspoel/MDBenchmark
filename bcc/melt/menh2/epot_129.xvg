@@ -1,0 +1,35 @@
+# This file was created Wed Aug 24 16:47:35 2022
+# Created by:
+#                       :-) GROMACS - gmx energy, 2021 (-:
+# 
+# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/menh2
+# Command line:
+#   gmx energy -nmol 2352 -f /home/lschmidt/MELTING/menh2/menh2129.0/melting-nvt.edr -o epot_129.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Good gRace! Old Maple Actually Chews Slate
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Potential"
+    0.000000  -16.514286
+    1.000000   -8.003451
+    2.000000   -7.936975
+    3.000000   -8.347332
+    4.000000   -8.651650
+    5.000000   -8.749360
+    6.000000   -8.948793
+    7.000000   -9.007258
+    8.000000   -8.989446
+    9.000000   -9.044650
+   10.000000   -9.059482

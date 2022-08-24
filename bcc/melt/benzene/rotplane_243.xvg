@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 09:36:34 2022
+# This file was created Wed Aug 24 16:59:01 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/benzene_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/benzene/243/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/benzene/243/melting-npt-y.tpr -o rotplane_243.xvg -b 4000 -e 6000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen Mixture of Alchemy and Childrens' Stories
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

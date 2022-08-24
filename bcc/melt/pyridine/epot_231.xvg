@@ -1,0 +1,35 @@
+# This file was created Wed Aug 24 16:48:38 2022
+# Created by:
+#                       :-) GROMACS - gmx energy, 2021 (-:
+# 
+# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/pyridine
+# Command line:
+#   gmx energy -nmol 2880 -f /home/lschmidt/MELTING/pyridine/pyridine231.0/melting-nvt.edr -o epot_231.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(kJ/mol)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Potential"
+    0.000000  -97.258423
+    1.000000  -74.867004
+    2.000000  -75.833672
+    3.000000  -73.218758
+    4.000000  -73.382751
+    5.000000  -74.155975
+    6.000000  -73.639061
+    7.000000  -74.069321
+    8.000000  -73.986862
+    9.000000  -74.179131
+   10.000000  -73.920158
