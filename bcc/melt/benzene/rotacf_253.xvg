@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 09:35:26 2022
+# This file was created Wed Aug 24 11:30:09 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/benzene_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/253/melting-npt-y_2.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/253/melting-npt-y_2.tpr -o rotacf_253.xvg -b 14000 -e 16000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

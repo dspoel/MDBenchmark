@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 09:38:39 2022
+# This file was created Wed Aug 24 11:33:23 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/258/melting-npt-y_2.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/258/melting-npt-y_2.tpr -o msd_258.xvg -b 14000 -e 16000
 # gmx msd is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

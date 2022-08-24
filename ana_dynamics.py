@@ -91,7 +91,7 @@ def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool, rdf:bool)
                            indexdir, rotacfout, rotplane, msdout, force)
                 job       = ( "epot_%g.sh" % temp )
                 epotout   = ( "epot_%g.xvg" % temp )
-                run_epot(job, epotout, simtable[molname][temp]["edrfile"], simtable[molname][temp]["nmol"])
+                run_epot(job, epotout, simdir+simtable[molname][temp]["edrfile"], simtable[molname][temp]["nmol"])
                 if rdf:
                     rdfout    = ("rdf_%g.xvg" % temp)
                     job       = rdfout[:-3] + ".sh"
