@@ -19,18 +19,21 @@ def use_sim(simtable:dict, mol:str, temp: int) -> bool:
         boolname = { False: "False", True: "True" }
         print("csb: %s host: %s" % ( boolname[csb], simtable[mol][temp]["host"]))
     return False
-        
+    
+def job_header(outf, ncores:int):
+    outf.write("#!/bin/bash\n")
+    outf.write("#SBATCH -t 24:00:00\n")
+    if not csb:
+        outf.write("#SBATCH -A SNIC2021-3-8\n")
+    else:
+        outf.write("#SBATCH -p CLUSTER-AMD\n")
+    outf.write("#SBATCH -n %d\n" % ncores)
+    
 def run_rdf(job:str, rdfout:str, tbegin:float, tend:float, traj:str, tpr: str):
     if os.path.exists(rdfout):
         return
     with open(job, "w") as outf:
-        outf.write("#!/bin/bash\n")
-        outf.write("#SBATCH -t 24:00:00\n")
-        if not csb:
-            outf.write("#SBATCH -A SNIC2021-3-8\n")
-        else:
-            outf.write("#SBATCH -p CLUSTER-AMD\n")
-        outf.write("#SBATCH -n 1\n")
+        job_header(outf, 1)
         outf.write("gmx rdf -sel 0 -ref 0 -dt 1 -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, rdfout, tbegin, tend ))
     os.system("sbatch %s" % job)
 
@@ -42,19 +45,22 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
         if not (force or os.path.getmtime(traj) > os.path.getmtime(rotacfout)):
             return
     with open(jobname, "w") as outf:
-        outf.write("#!/bin/bash\n")
-        outf.write("#SBATCH -t 24:00:00\n")
-        if not csb:
-            outf.write("#SBATCH -A SNIC2021-3-8\n")
-        else:
-            outf.write("#SBATCH -p CLUSTER-AMD\n")
-        outf.write("#SBATCH -n 1\n")
+        job_header(outf, 1)
         outf.write("gmx rotacf -d -n %s/%s_rotaxis.ndx -f %s -s %s -o %s -b %d -e %d \n" % ( indexdir, compound, traj, tpr, rotacfout, tbegin, tend ))
         if os.path.exists(planendx):
             outf.write("gmx rotacf -n %s -f %s -s %s -o %s -b %d -e %d \n" % ( planendx, traj, tpr, rotplane, tbegin, tend ))
         outf.write("echo 0 | gmx msd -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, msdout, tbegin, tend ))
     os.system("sbatch %s" % jobname)
 
+def run_epot(jobname:str, epotout:str, edr:str, nmol:int):
+    if os.path.exists(epotout):
+        if not (force or os.path.getmtime(edr) > os.path.getmtime(epotout)):
+            return
+    with open(jobname, "w") as outf:
+        job_header(outf, 1)
+        outf.write("echo Potential | gmx energy -nmol %d -f %s -o %s\n" % ( nmol, edr, epotout ))
+    os.system("sbatch %s" % jobname)
+    
 def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool, rdf:bool):
     simtable = get_simtable(simtable_file)
     print(simtable.keys())
@@ -83,6 +89,9 @@ def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool, rdf:bool)
                 tbegin    = tend-length
                 run_rotacf(jobname, molname, tbegin, tend, traj, tpr,
                            indexdir, rotacfout, rotplane, msdout, force)
+                job       = ( "epot_%g.sh" % temp )
+                epotout   = ( "epot_%g.xvg" % temp )
+                run_epot(job, epotout, simtable[molname][temp]["edrfile"], simtable[molname][temp]["nmol"])
                 if rdf:
                     rdfout    = ("rdf_%g.xvg" % temp)
                     job       = rdfout[:-3] + ".sh"
@@ -141,7 +150,6 @@ if __name__ == '__main__':
     if shutil.which("gmx") == None:
         sys.exit("Please load the gromacs environment using\nml load GCC/10.2.0  OpenMPI/4.0.5 GROMACS/2021")
     args = parseArguments()
-    moldb  = get_moldb(False)
 
     if args.solid:
         for top in [ "bcc", "resp" ]:
