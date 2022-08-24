@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 15:56:46 2022
+# This file was created Wed Aug 24 09:45:55 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/cyclohexane_rotaxis.ndx -f /home/lschmidt/MELTING/cyclohexane/cyclohexane264.0/melting-npt-y.trr -s /home/lschmidt/MELTING/cyclohexane/cyclohexane264.0/melting-npt-y.tpr -o rotacf_264.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# GROwing Monsters And Cloning Shrimps
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

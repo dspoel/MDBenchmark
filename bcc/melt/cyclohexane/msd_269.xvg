@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 15:58:17 2022
+# This file was created Wed Aug 24 09:47:28 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/cyclohexane/cyclohexane269.0/melting-npt-y.trr -s /home/lschmidt/MELTING/cyclohexane/cyclohexane269.0/melting-npt-y.tpr -o msd_269.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# GROningen Mixture of Alchemy and Childrens' Stories
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

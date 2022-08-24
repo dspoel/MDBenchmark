@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 15:59:42 2022
+# This file was created Wed Aug 24 09:47:37 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclohexane_rotplane.ndx -f /home/lschmidt/MELTING/cyclohexane/cyclohexane299.0/melting-npt-y.trr -s /home/lschmidt/MELTING/cyclohexane/cyclohexane299.0/melting-npt-y.tpr -o rotplane_299.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# GROtesk MACabre and Sinister
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

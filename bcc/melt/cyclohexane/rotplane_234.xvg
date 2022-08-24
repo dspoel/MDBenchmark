@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 15:51:39 2022
+# This file was created Wed Aug 24 09:45:05 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclohexane_rotplane.ndx -f /home/lschmidt/MELTING/cyclohexane/cyclohexane234.0/melting-npt-y.trr -s /home/lschmidt/MELTING/cyclohexane/cyclohexane234.0/melting-npt-y.tpr -o rotplane_234.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

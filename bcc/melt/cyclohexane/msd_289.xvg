@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 16:00:36 2022
+# This file was created Wed Aug 24 09:47:23 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/cyclohexane/cyclohexane289.0/melting-npt-y.trr -s /home/lschmidt/MELTING/cyclohexane/cyclohexane289.0/melting-npt-y.tpr -o msd_289.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
