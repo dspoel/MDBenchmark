@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 15:40:06 2022
+# This file was created Wed Aug 24 10:01:23 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/204/melting-npt-y_80_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/204/melting-npt-y_80_NPTY.tpr -o msd_204.xvg -b 58000 -e 60000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

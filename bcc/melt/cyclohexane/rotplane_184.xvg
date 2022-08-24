@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 15:33:13 2022
+# This file was created Wed Aug 24 09:55:26 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclohexane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/184/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/184/melting-npt-y_40_NPTY.tpr -o rotplane_184.xvg -b 58000 -e 60000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# GROningen Mixture of Alchemy and Childrens' Stories
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

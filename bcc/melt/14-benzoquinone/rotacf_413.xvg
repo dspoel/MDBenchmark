@@ -1,15 +1,15 @@
-# This file was created Tue Aug 23 15:22:43 2022
+# This file was created Wed Aug 24 09:46:16 2022
 # Created by:
-#                       :-) GROMACS - gmx rotacf, 2021 (-:
+#                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
-# Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
-# Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
-# Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/14-benzoquinone
+# Executable:   /hpc2n/eb/software/GROMACS/2021-foss-2020b/bin/gmx
+# Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
+# Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/14-benzoquinone
 # Command line:
 #   gmx rotacf -d -n ../../../index/14-benzoquinone_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/14-benzoquinone/413/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/14-benzoquinone/413/melting-npt-y_20_NPTY.tpr -o rotacf_413.xvg -b 28000 -e 30000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

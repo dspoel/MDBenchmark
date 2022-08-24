@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 15:22:43 2022
+# This file was created Wed Aug 24 09:46:13 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/14-benzoquinone_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/14-benzoquinone/378/melting-npt-y_47_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/14-benzoquinone/378/melting-npt-y_47_NPTY.tpr -o rotacf_378.xvg -b 28000 -e 30000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
