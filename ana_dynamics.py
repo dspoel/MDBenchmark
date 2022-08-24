@@ -52,7 +52,7 @@ def run_rotacf(jobname: str, compound:str, tbegin: float, tend: float, traj: str
         outf.write("echo 0 | gmx msd -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, msdout, tbegin, tend ))
     os.system("sbatch %s" % jobname)
 
-def run_epot(jobname:str, epotout:str, edr:str, nmol:int):
+def run_epot(jobname:str, epotout:str, edr:str, nmol:int, force:bool):
     if os.path.exists(epotout):
         if not (force or os.path.getmtime(edr) > os.path.getmtime(epotout)):
             return
@@ -91,7 +91,7 @@ def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool, rdf:bool)
                            indexdir, rotacfout, rotplane, msdout, force)
                 job       = ( "epot_%g.sh" % temp )
                 epotout   = ( "epot_%g.xvg" % temp )
-                run_epot(job, epotout, simdir+simtable[molname][temp]["edrfile"], simtable[molname][temp]["nmol"])
+                run_epot(job, epotout, simdir+simtable[molname][temp]["edrfile"], simtable[molname][temp]["nmol"], force)
                 if rdf:
                     rdfout    = ("rdf_%g.xvg" % temp)
                     job       = rdfout[:-3] + ".sh"

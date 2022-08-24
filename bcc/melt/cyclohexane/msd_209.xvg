@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 10:13:07 2022
+# This file was created Wed Aug 24 16:47:42 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/209/melting-npt-y_200_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/209/melting-npt-y_200_NPTY.tpr -o msd_209.xvg -b 98000 -e 100000
 # gmx msd is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
