@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:26:19 2022
+# This file was created Thu Aug 25 17:59:26 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/octanoic_acid_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/octanoic_acid/304/melting-npt-y_66_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/octanoic_acid/304/melting-npt-y_66_NPTY.tpr -o rotplane_304.xvg -b 40000 -e 42000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

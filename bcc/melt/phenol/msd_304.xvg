@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:20:01 2022
+# This file was created Thu Aug 25 17:51:31 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/304/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/304/melting-npt-y_20_NPTY.tpr -o msd_304.xvg -b 22000 -e 24000
 # gmx msd is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Gyas ROwers Mature At Cryogenic Speed
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

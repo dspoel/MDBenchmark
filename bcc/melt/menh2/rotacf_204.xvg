@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:12:30 2022
+# This file was created Thu Aug 25 17:38:30 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/menh2_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/204/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/204/melting-npt-y_20_NPTY.tpr -o rotacf_204.xvg -b 38000 -e 40000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

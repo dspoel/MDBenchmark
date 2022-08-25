@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 15:10:14 2022
+# This file was created Thu Aug 25 17:59:19 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/imidazole_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/imidazole/288/melting-npt-y_300_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/imidazole/288/melting-npt-y_300_NPTY.tpr -o rotplane_288.xvg -b 112060 -e 114060
 # gmx rotacf is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# GROtesk MACabre and Sinister
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

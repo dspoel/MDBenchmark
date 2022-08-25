@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:25:28 2022
+# This file was created Thu Aug 25 17:53:46 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/195/melting-npt-y_60_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/195/melting-npt-y_60_NPTY.tpr -o msd_195.xvg -b 77145 -e 79145
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# GROtesk MACabre and Sinister
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

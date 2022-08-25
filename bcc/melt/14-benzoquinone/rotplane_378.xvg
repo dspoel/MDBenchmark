@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:14:25 2022
+# This file was created Thu Aug 25 17:37:25 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/14-benzoquinone_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/14-benzoquinone/378/melting-npt-y_47_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/14-benzoquinone/378/melting-npt-y_47_NPTY.tpr -o rotplane_378.xvg -b 28000 -e 30000
 # gmx rotacf is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

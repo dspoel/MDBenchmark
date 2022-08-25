@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:09:35 2022
+# This file was created Thu Aug 25 17:32:41 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3168 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/382/melting-npt-y_7_NPTY.edr -o epot_382.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

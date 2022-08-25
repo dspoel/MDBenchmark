@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 16:40:53 2022
+# This file was created Thu Aug 25 17:57:06 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclohexane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane199.0/melting-npt-y_80_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane199.0/melting-npt-y_80_NPTY.tpr -o rotplane_199.xvg -b 38000 -e 40000
 # gmx rotacf is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:21:57 2022
+# This file was created Thu Aug 25 17:51:58 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/123-benzenetriol/408/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/123-benzenetriol/408/melting-npt-y_40_NPTY.tpr -o msd_408.xvg -b 28000 -e 30000
 # gmx msd is part of G R O M A C S:
 #
-# GROup of MAchos and Cynical Suckers
+# Good ROcking Metal Altar for Chronical Sinners
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

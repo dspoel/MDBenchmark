@@ -1,4 +1,4 @@
-# This file was created Sun Aug 14 17:01:11 2022
+# This file was created Thu Aug 25 17:40:15 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -6,10 +6,10 @@
 # Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
 # Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/succinic_acid
 # Command line:
-#   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid454.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid454.0/melting-npt-y_20_NPTY.tpr -o msd_454.xvg -b -1 -e 199
+#   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid454.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid454.0/melting-npt-y_20_NPTY.tpr -o msd_454.xvg -b -1801 -e 199
 # gmx msd is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

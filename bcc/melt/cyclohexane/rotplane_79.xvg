@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 16:38:51 2022
+# This file was created Thu Aug 25 17:51:43 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclohexane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane79.0/melting-npt-y_60_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane79.0/melting-npt-y_60_NPTY.tpr -o rotplane_79.xvg -b 18000 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

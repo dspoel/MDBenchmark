@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:10:03 2022
+# This file was created Thu Aug 25 17:34:32 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2520 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/230/melting-npt-y_260_NPTY.edr -o epot_230.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Grunge ROck MAChoS
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:13:50 2022
+# This file was created Thu Aug 25 17:46:45 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/329/melting-npt-y_3.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/329/melting-npt-y_3.tpr -o msd_329.xvg -b 4000 -e 6000
 # gmx msd is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

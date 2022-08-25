@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:30:39 2022
+# This file was created Thu Aug 25 18:03:13 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethanol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethanol/149/melting-npt-y_420_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethanol/149/melting-npt-y_420_NPTY.tpr -o rotplane_149.xvg -b 158000 -e 160000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

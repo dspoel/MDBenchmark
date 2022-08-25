@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:15:26 2022
+# This file was created Thu Aug 25 17:45:38 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/pentane_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/pentane/178/melting-npt-y_3.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/pentane/178/melting-npt-y_3.tpr -o rotacf_178.xvg -b 32058 -e 34058
 # gmx rotacf is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

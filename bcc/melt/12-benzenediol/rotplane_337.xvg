@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:18:53 2022
+# This file was created Thu Aug 25 17:45:14 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/12-benzenediol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/337/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/337/melting-npt-y_40_NPTY.tpr -o rotplane_337.xvg -b 38000 -e 40000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Gnomes, ROck Monsters And Chili Sauce
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

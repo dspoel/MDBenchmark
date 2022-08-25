@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:23:21 2022
+# This file was created Thu Aug 25 17:56:05 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/acooh/249/melting-npt-y_100_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/acooh/249/melting-npt-y_100_NPTY.tpr -o msd_249.xvg -b 78059 -e 80059
 # gmx msd is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

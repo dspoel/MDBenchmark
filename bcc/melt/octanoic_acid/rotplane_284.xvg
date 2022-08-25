@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:26:27 2022
+# This file was created Thu Aug 25 17:58:32 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/octanoic_acid_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/octanoic_acid/284/melting-npt-y_132_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/octanoic_acid/284/melting-npt-y_132_NPTY.tpr -o rotplane_284.xvg -b 40000 -e 42000
 # gmx rotacf is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

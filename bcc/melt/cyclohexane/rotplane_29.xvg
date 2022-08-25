@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 16:38:56 2022
+# This file was created Thu Aug 25 17:51:20 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclohexane_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane29.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane29.0/melting-npt-y_20_NPTY.tpr -o rotplane_29.xvg -b 18000 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

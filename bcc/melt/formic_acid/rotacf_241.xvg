@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:19:12 2022
+# This file was created Thu Aug 25 17:49:05 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formic_acid_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/formic_acid/241/melting-npt-y_900_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/formic_acid/241/melting-npt-y_900_NPTY.tpr -o rotacf_241.xvg -b 223064 -e 225064
 # gmx rotacf is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 16:36:47 2022
+# This file was created Thu Aug 25 17:45:17 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/cyclohexane_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane79.0/melting-npt-y_60_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane79.0/melting-npt-y_60_NPTY.tpr -o rotacf_79.xvg -b 18000 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

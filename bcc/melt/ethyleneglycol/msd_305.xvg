@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:12:15 2022
+# This file was created Thu Aug 25 17:36:43 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/305/melting-npt-y_3.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/305/melting-npt-y_3.tpr -o msd_305.xvg -b 4000 -e 6000
 # gmx msd is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

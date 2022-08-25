@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:20:20 2022
+# This file was created Thu Aug 25 17:50:25 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/imidazole_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/imidazole/263/melting-npt-y_160_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/imidazole/263/melting-npt-y_160_NPTY.tpr -o rotacf_263.xvg -b 118059 -e 120059
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

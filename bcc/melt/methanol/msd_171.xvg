@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:13:44 2022
+# This file was created Thu Aug 25 17:41:23 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/171/melting-npt-y_100_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/171/melting-npt-y_100_NPTY.tpr -o msd_171.xvg -b 28000 -e 30000
 # gmx msd is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

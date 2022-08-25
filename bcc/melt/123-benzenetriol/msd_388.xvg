@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:46:04 2022
+# This file was created Thu Aug 25 18:17:25 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/123-benzenetriol/388/melting-npt-y_210_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/123-benzenetriol/388/melting-npt-y_210_NPTY.tpr -o msd_388.xvg -b 98000 -e 100000
 # gmx msd is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

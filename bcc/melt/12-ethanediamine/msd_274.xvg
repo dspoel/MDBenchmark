@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:17:11 2022
+# This file was created Thu Aug 25 17:45:22 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-ethanediamine/274/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-ethanediamine/274/melting-npt-y_40_NPTY.tpr -o msd_274.xvg -b 28000 -e 30000
 # gmx msd is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

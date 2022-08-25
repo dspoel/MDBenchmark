@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 14:54:19 2022
+# This file was created Thu Aug 25 17:36:16 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2352 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/239/melting-npt-y_20_NPTY.edr -o epot_239.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:16:41 2022
+# This file was created Thu Aug 25 17:45:40 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/194/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/194/melting-npt-y_20_NPTY.tpr -o msd_194.xvg -b 35497 -e 37497
 # gmx msd is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

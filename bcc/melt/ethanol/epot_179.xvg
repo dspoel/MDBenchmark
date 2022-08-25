@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:09:52 2022
+# This file was created Thu Aug 25 17:33:56 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3200 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethanol/179/melting-npt-y_100_NPTY.edr -o epot_179.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# GROup of MAchos and Cynical Suckers
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:13:41 2022
+# This file was created Thu Aug 25 17:41:13 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/methanol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/161/melting-npt-y_100_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/161/melting-npt-y_100_NPTY.tpr -o rotplane_161.xvg -b 48000 -e 50000
 # gmx rotacf is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

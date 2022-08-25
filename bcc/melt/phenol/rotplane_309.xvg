@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:15:54 2022
+# This file was created Thu Aug 25 17:48:20 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/phenol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/309/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/309/melting-npt-y_20_NPTY.tpr -o rotplane_309.xvg -b 22000 -e 24000
 # gmx rotacf is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

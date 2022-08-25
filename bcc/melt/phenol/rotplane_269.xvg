@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:38:02 2022
+# This file was created Thu Aug 25 18:10:09 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/phenol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/269/melting-npt-y_200_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/269/melting-npt-y_200_NPTY.tpr -o rotplane_269.xvg -b 128059 -e 130059
 # gmx rotacf is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# GROningen Mixture of Alchemy and Childrens' Stories
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

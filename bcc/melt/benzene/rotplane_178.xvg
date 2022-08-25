@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:14:28 2022
+# This file was created Thu Aug 25 17:38:20 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/benzene_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/178/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/178/melting-npt-y.tpr -o rotplane_178.xvg -b 20000 -e 22000
 # gmx rotacf is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

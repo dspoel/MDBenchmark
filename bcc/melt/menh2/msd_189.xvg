@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:14:17 2022
+# This file was created Thu Aug 25 17:40:58 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/189/melting-npt-y_2.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/189/melting-npt-y_2.tpr -o msd_189.xvg -b 20000 -e 22000
 # gmx msd is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

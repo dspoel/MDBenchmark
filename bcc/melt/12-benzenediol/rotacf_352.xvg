@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:13:44 2022
+# This file was created Thu Aug 25 17:39:13 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/12-benzenediol_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/352/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-benzenediol/352/melting-npt-y_40_NPTY.tpr -o rotacf_352.xvg -b 38000 -e 40000
 # gmx rotacf is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

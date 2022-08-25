@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:55:31 2022
+# This file was created Thu Aug 25 18:26:45 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/123-benzenetriol/378/melting-npt-y_210_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/123-benzenetriol/378/melting-npt-y_210_NPTY.tpr -o msd_378.xvg -b 128000 -e 130000
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

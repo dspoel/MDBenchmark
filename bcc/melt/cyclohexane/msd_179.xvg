@@ -1,4 +1,4 @@
-# This file was created Tue Aug 23 16:38:57 2022
+# This file was created Thu Aug 25 17:55:51 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane179.0/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane179.0/melting-npt-y_40_NPTY.tpr -o msd_179.xvg -b 18000 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:17:55 2022
+# This file was created Thu Aug 25 17:49:08 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethanol_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethanol/144/melting-npt-y_240_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethanol/144/melting-npt-y_240_NPTY.tpr -o rotacf_144.xvg -b 118000 -e 120000
 # gmx rotacf is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

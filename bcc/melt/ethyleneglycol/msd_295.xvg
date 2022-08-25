@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:12:12 2022
+# This file was created Thu Aug 25 17:36:42 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/295/melting-npt-y_3.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/295/melting-npt-y_3.tpr -o msd_295.xvg -b 4000 -e 6000
 # gmx msd is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

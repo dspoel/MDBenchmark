@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:13:58 2022
+# This file was created Thu Aug 25 17:39:46 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formic_acid_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/formic_acid/251/melting-npt-y_420_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/formic_acid/251/melting-npt-y_420_NPTY.tpr -o rotacf_251.xvg -b 83000 -e 85000
 # gmx rotacf is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

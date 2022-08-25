@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:14:41 2022
+# This file was created Thu Aug 25 17:42:57 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethyleneglycol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/230/melting-npt-y_260_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/230/melting-npt-y_260_NPTY.tpr -o rotplane_230.xvg -b 29503 -e 31503
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# S  C  A  M  O  R  G
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:11:01 2022
+# This file was created Thu Aug 25 17:38:49 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3360 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/254/melting-npt-y_160_NPTY.edr -o epot_254.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

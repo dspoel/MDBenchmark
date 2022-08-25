@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:13:02 2022
+# This file was created Thu Aug 25 17:37:41 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethyleneglycol_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/270/melting-npt-y_3.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/ethyleneglycol/270/melting-npt-y_3.tpr -o rotplane_270.xvg -b 20000 -e 22000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# S  C  A  M  O  R  G
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

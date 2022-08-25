@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 14:59:27 2022
+# This file was created Thu Aug 25 17:46:04 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/239/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/239/melting-npt-y_20_NPTY.tpr -o msd_239.xvg -b 40000 -e 42000
 # gmx msd is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
