@@ -23,10 +23,13 @@ def write_run_job(target:str, nsteps:int):
         outf.write("%s -cpi %s.cpt -deffnm %s -nsteps %d \n" % ( gromacs, target, target, nsteps ) )
     os.system("sbatch %s" % job)
 
-def copy_ifnot_exists(src:str, dst:str):
+def copy_ifnot_exists(src:str, dst:str) -> bool:
+    if not os.path.exists(src):
+        return False
     if not os.path.exists(dst):
         shutil.copy(src, dst)
-        
+    return True
+    
 def run_melt(mol:str, temp:float, prev:dict, nsteps:int):
     if not ((prev["host"].find("csb") >= 0 and csb) or (prev["host"].find("csb") < 0 and not csb)):
         print("Cannot continue this simulation on this host since it was run on %s earlier" % prev["host"])
@@ -41,9 +44,13 @@ def run_melt(mol:str, temp:float, prev:dict, nsteps:int):
     os.chdir(tempdir)
     basedir = prev["simdir"] + "/"
     target  = prev["trrfile"][:-4]
+    foundAll = True
     for fn in [ "cptfile", "edrfile", "trrfile", "tprfile", "tprfile", "logfile" ]:
-        copy_ifnot_exists(basedir+prev[fn], prev[fn])
-    write_run_job(target, nsteps)
+        foundAll = foundAll and copy_ifnot_exists(basedir+prev[fn], prev[fn])
+    if foundAll:
+        write_run_job(target, nsteps)
+    else:
+        print("Could not find all files needed to continue simulation for %s @ %g" % ( mol, temp ))
     os.chdir("../../..")
     
 def parseArguments():
