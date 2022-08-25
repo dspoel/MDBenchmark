@@ -23,9 +23,10 @@ sim_status = {
                  "running": [   ],
                  "success": [ 148, 158, 178, 188, 193 ] },
     # 204 and 209 are polycrystalline
-    "cyclohexane": { "failed": [29, 79, 129, 229, 294],
+    "cyclohexane": { "failed": [29, 79, 129 ],
                      "running": [  ],
-                     "success": [ 179, 184, 189, 194, 199, 204, 209, 214, 219, 224, 234, 239, 244, 249, 254, 259, 264, 269, 274, 284, 289, 299, 304, 309, 314, 319, 324, 329] },
+                     "success": [ 179, 184, 189, 194, 199, 204, 209, 214, 219, 224, 229, 234, 239, 244, 249, 254, 259, 264, 269, 274, 284, 289, 294, 299, 304, 309, 314, 319, 324, 329] },
+    # 84 is polycrystalline
     "ethylene": { "failed": [],
                   "running": [],
                   "success": [ 59, 64, 69, 74, 79, 84, 89, 94, 104, 109, 114, 119, 124, 129, 134, 139, 144, 149 ]},
@@ -49,9 +50,9 @@ sim_status = {
                "success": [ 122, 132, 127, 137, 142, 147, 152, 157, 162, 167, 172, 177, 182, 192, 
                             197, 202, 207, 212, 217, 222, 227,232, 237 ] },
     # 263 K is polycrystalline
-    "imidazole": { "failed": [ 113, 163, 213, 268, 273, 278, 283, 288, 293, 313, 323, 333 ],
+    "imidazole": { "failed": [ 113, 163, 213, 268, 273, 278, 283, 288, 293, 313, 323 ],
                    "running": [  ],
-                   "success": [ 263, 298, 308, 318, 328, 338, 343, 348, 353, 358, 363, 368, 373, 378, 383, 388, 393, 398, 403, 408, 413 ] },
+                   "success": [ 263, 298, 308, 318, 328, 333, 338, 343, 348, 353, 358, 363, 368, 373, 378, 383, 388, 393, 398, 403, 408, 413 ] },
     # Fig. S6
     # 161 is polycrystalline. T = 191 an 201 K have extensive box deformation that can explain
     # the large file size.
@@ -78,7 +79,7 @@ sim_status = {
                           "running": [   ],
                           "success": [ 408, 413, 418, 423, 428, 433, 438, 443, 448, 453 ] },
     # meh2 at 429K most likely gas phase
-    "menh2": { "failed": [ 134, 139, 144, 149, 154, 159, 164, 169, 174, 184, 189, 194, 199, 204, 229, 239, 244],
+    "menh2": { "failed": [ 129, 134, 139, 144, 149, 154, 159, 164, 169, 174, 184, 189, 194, 199, 204, 229, 239, 244],
                "running": [  ],
                "success": [ 209, 214, 219, 224, 234, 249, 254, 259, 264, 279, 329, 379, 429 ] },
     "12-ethanediamine": { "failed": [ 34, 84, 134, 154, 179, 184, 214, 219, 224, 229, 234, 239, 244, 249, 254, 274, 294, 299, 304, 309 ],
@@ -93,10 +94,10 @@ sim_status = {
     "octanoic_acid": { "failed": [ 229, 234, 239, 244, 249, 254, 259, 264, 269, 274, 279, 284, 294, 299, 304, 309, 314, 324 ],
                        "running": [  ],
                        "success": [ 319, 329, 334, 339 ] },
-    "succinic_acid": { "failed": [ 309, 359, 384, 389, 394, 399, 404, 409, 414, 419, 429, 434, 439, 454, 469, 494, 499, 509, 514, 424, 464, 504 ],
-                       "running": [  ],
-                       "success": [  ] },
-    # formaide at 253K might be considered as converged, at 263K polycrystalline
+    "succinic_acid": { "failed": [ 309, 359, 389, 394, 399, 404, 409, 414, 419, 429, 434, 439, 449, 454, 469, 474, 479, 494, 499, 509, 514, 504 ],
+                       "running": [ 384, 424  ],
+                       "success": [ 464 ] },
+    # formamide at 253K might be considered as converged, at 263K polycrystalline
     "formamide": { "failed": [ 298  ],
                    "running": [  ],
                    "success": [ 248, 253, 258, 273, 288, 263, 268, 278, 283, 293, 303, 308, 313, 318, 323, 328, 333, 338, 343, 348 ] },
@@ -193,7 +194,17 @@ def do_rotacf(alltemp:list):
     S0 = {}
     for temp in alltemp:
         my_files = [ ("rotacf_%s.xvg" % temp ), ("rotplane_%s.xvg" % temp ) ]
-        myS0 = get_tail(my_files, 50)
+        tbegin   = 0
+        with open(my_files[0], "r") as inf:
+            lines = inf.readlines()
+            nline = len(lines)
+            while lines[nline-1].strip() == "&" and nline > 0:
+                nline -= 1
+            try:
+                tbegin = float(lines[nline-1].strip().split()[0])/2.0
+            except ValueError:
+                print("Cannot find length of analysis here: '%s'" % lines[nline-1])
+        myS0 = get_tail(my_files, tbegin)
         if None != myS0:
             S0[float(temp)] = myS0 
     

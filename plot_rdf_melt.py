@@ -31,14 +31,20 @@ def plot_it(mol:str):
         filelist = reffile
         templist = ( "%s@%s" % ( refphase, reftemp ) )
     found_data = False
-    for t in sorted(temps):
-        rdf = ( "rdf_%g.xvg" % t)
+    sorted_temps = sorted(temps)
+    ndelta = 1
+    if len(sorted_temps) > 12:
+        ndelta = 2
+        if len(sorted_temps) > 24:
+            ndelta = 3
+    for t in range(0, len(sorted_temps), ndelta):
+        rdf = ( "rdf_%g.xvg" % sorted_temps[t])
         if os.path.exists(rdf):
             filelist += (" %s" % rdf)
-            templist += (" %g" % t)
+            templist += (" %g" % sorted_temps[t])
             found_data = True
     if found_data:
-        os.system("viewxvg -f %s -alfs 18 -lfs 14 -tfs 18 -legend_out -ymin -0.02 -ymax 4 -xmin 0 -xmax 1.2  -label %s -title '%s' -pdf %s_rdf.pdf -noshow" % ( filelist, templist, title, mol ))
+        os.system("viewxvg -f %s -alfs 18 -lfs 14 -tfs 18 -legend_out -ymin -0.02 -ymax 4 -xmin 0 -xmax 1.2  -label %s -title '%s' -pdf ../RDF/%s_rdf.pdf -noshow" % ( filelist, templist, title, mol ))
     
 moldb = get_moldb(False)
 os.chdir("bcc/melt")
