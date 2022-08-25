@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 11:30:45 2022
+# This file was created Thu Aug 25 07:12:10 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/benzene_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/128/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/128/melting-npt-y.tpr -o rotacf_128.xvg -b 20000 -e 22000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# GROningen Mixture of Alchemy and Childrens' Stories
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

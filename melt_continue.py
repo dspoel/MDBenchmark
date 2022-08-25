@@ -68,7 +68,8 @@ if __name__ == '__main__':
     if args.verbose:
         Debug = True
 
-    simtable = get_simtable("simtable.csv")
+    simtabs = glob.glob("*_simtable.csv")
+    simtable = get_simtable(simtabs)
 
     if None == args.molecule:
         print("Please provide a molecule name (use -h flag to get info)")

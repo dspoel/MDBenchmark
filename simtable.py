@@ -8,21 +8,21 @@ lisa_name = { "acooh": "acoh", "12-ethanediamine": "ethylendiamine", "ethylenegl
 
 Debug = False
 
-def get_simtable(filename:str) -> dict:
-    if not os.path.exists(filename):
-        return None
+def get_simtable(filenames:list) -> dict:
     simtable = {}
-    for row in get_csv_rows(filename, 13):
-        if not row[0] in simtable:
-            simtable[row[0]] = {}
-        temp   = int(row[1])
-        length = float(row[2])
-        if (not temp in simtable[row[0]] or length > simtable[row[0]][temp]["length"] or 
-            (length == simtable[row[0]][temp]["length"] and row[3].find("keb") >= 0)):
-            simtable[row[0]][temp] = { "host": row[3], "length": length, "nmol": int(row[4]),
-                                       "simdir": row[5], "logfile": row[6], "cptfile": row[7],
-                                       "tprfile": row[8], "trrfile": row[9], "edrfile": row[10],
-                                       "grofile": row[11], "trrtime": float(row[12]) }
+    for filename in filenames:
+        if os.path.exists(filename):
+            for row in get_csv_rows(filename, 13):
+                if not row[0] in simtable:
+                    simtable[row[0]] = {}
+                temp   = int(row[1])
+                length = float(row[2])
+                if (not temp in simtable[row[0]] or length > simtable[row[0]][temp]["length"] or 
+                    (length == simtable[row[0]][temp]["length"] and row[3].find("keb") >= 0)):
+                    simtable[row[0]][temp] = { "host": row[3], "length": length, "nmol": int(row[4]),
+                                               "simdir": row[5], "logfile": row[6], "cptfile": row[7],
+                                               "tprfile": row[8], "trrfile": row[9], "edrfile": row[10],
+                                               "grofile": row[11], "trrtime": float(row[12]) }
     return simtable
 
 def dump_simtable(simtable:dict, filename:str):
@@ -193,7 +193,7 @@ time, so please run in the background.
     mtname = "melt_table.csv" 
     parser.add_argument("-gen", "--generate", help="Generate the table", action="store_true")
     parser.add_argument("-out", "--output", help="Filename to write to, default "+mtname, type=str, default=mtname)
-    parser.add_argument("-in", "--input", help="Filename to read a table from", type=str, default=None)
+    parser.add_argument("-in", "--input", nargs="+", help="Filename(s) to read a table from", type=str, default=None)
     parser.add_argument("-dump", "--dump", help="Dump the contents of the table to a latex file", type=str, default=None)
     parser.add_argument("-v", "--verbose", help="Print debugging info", action="store_true")
     return parser.parse_args()

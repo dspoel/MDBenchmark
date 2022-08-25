@@ -61,8 +61,8 @@ def run_epot(jobname:str, epotout:str, edr:str, nmol:int, force:bool):
         outf.write("echo Potential | gmx energy -nmol %d -f %s -o %s\n" % ( nmol, edr, epotout ))
     os.system("sbatch %s" % jobname)
     
-def ana_dynamics(simtable_file:str, mols:list, length:int, force:bool, rdf:bool):
-    simtable = get_simtable(simtable_file)
+def ana_dynamics(simtable_files:list, mols:list, length:int, force:bool, rdf:bool):
+    simtable = get_simtable(simtable_files)
     print(simtable.keys())
     pwd = os.getcwd()
     print("pwd %s" % pwd)
@@ -164,5 +164,6 @@ if __name__ == '__main__':
                     os.chdir("..")
                 os.chdir("..")
     else:
-        ana_dynamics("simtable.csv", args.molecules, args.length, args.force, args.rdf)
+        simtabs = [ "csb_simtable.csv", "keb_simtable.csv" ]
+        ana_dynamics(simtabs, args.molecules, args.length, args.force, args.rdf)
 

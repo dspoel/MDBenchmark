@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 09:35:07 2022
+# This file was created Thu Aug 25 07:12:44 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/succinic_acid/424/melting-npt-y_30_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/succinic_acid/424/melting-npt-y_30_NPTY.tpr -o msd_424.xvg -b 11878 -e 13878
 # gmx msd is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
