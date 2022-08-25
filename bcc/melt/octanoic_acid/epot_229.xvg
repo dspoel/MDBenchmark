@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:47:59 2022
+# This file was created Thu Aug 25 08:05:28 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2912 -f /home/lschmidt/MELTING/octanoic_acid/octanoic_acid229.0/melting-npt-y_22_NPTY.edr -o epot_229.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:37:05 2022
+# This file was created Thu Aug 25 07:09:44 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3072 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/258/melting-npt-y_2.edr -o epot_258.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

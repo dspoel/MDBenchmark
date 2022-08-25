@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 10:02:15 2022
+# This file was created Thu Aug 25 07:28:47 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/184/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/184/melting-npt-y_40_NPTY.tpr -o msd_184.xvg -b 58000 -e 60000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

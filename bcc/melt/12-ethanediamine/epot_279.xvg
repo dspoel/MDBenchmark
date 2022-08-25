@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:46:05 2022
+# This file was created Thu Aug 25 07:09:59 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2520 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-ethanediamine/279/melting-npt-y_40_NPTY.edr -o epot_279.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# Great Red Owns Many ACres of Sand 
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

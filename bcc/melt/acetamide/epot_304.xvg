@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:46:06 2022
+# This file was created Thu Aug 25 07:09:39 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3600 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/acetamide/304/melting-npt-y_80_NPTY.edr -o epot_304.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# GROningen MAchine for Chemical Simulation
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

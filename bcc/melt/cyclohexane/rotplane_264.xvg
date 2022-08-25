@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 22:17:32 2022
+# This file was created Thu Aug 25 07:46:33 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclohexane_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/cyclohexane/264/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/cyclohexane/264/melting-npt-y.tpr -o rotplane_264.xvg -b 2000 -e 4000
 # gmx rotacf is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

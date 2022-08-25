@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:37:24 2022
+# This file was created Thu Aug 25 07:27:34 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethane_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/85/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/85/melting-npt-y.tpr -o rotacf_85.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

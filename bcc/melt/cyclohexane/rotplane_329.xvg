@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 09:50:05 2022
+# This file was created Thu Aug 25 07:31:11 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/cyclohexane_rotplane.ndx -f /home/lschmidt/MELTING/cyclohexane/cyclohexane329.0/melting-npt-y.trr -s /home/lschmidt/MELTING/cyclohexane/cyclohexane329.0/melting-npt-y.tpr -o rotplane_329.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# Grunge ROck MAChoS
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

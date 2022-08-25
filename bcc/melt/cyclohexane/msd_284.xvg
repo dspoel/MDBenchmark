@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 22:18:40 2022
+# This file was created Thu Aug 25 07:50:46 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/cyclohexane/284/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/cyclohexane/284/melting-npt-y.tpr -o msd_284.xvg -b 2000 -e 4000
 # gmx msd is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# GROtesk MACabre and Sinister
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

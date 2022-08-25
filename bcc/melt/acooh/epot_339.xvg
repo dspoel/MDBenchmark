@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:45:56 2022
+# This file was created Thu Aug 25 06:56:38 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3072 -f /home/lschmidt/MELTING/acoh/acoh339.0/melting-npt-y.edr -o epot_339.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

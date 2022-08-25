@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:46:15 2022
+# This file was created Thu Aug 25 07:09:14 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2816 -f /home/lschmidt/MELTING/ethane/ethane125.0/melting-npt-y.edr -o epot_125.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

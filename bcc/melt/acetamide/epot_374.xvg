@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:45:46 2022
+# This file was created Thu Aug 25 06:48:00 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3600 -f /home/lschmidt/MELTING/acetamide/acetamide374.0/melting-npt-y.edr -o epot_374.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# GROningen MAchine for Chemical Simulation
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"
@@ -303,4 +303,4 @@
   278.000000  -256.658813
   279.000000  -256.413330
   280.000000  -256.251312
-  281.000000  -256.0
+  281.000000  -256.028

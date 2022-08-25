@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 22:16:41 2022
+# This file was created Thu Aug 25 07:24:06 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/benzene/243/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/benzene/243/melting-npt-y.tpr -o msd_243.xvg -b 8000 -e 10000
 # gmx msd is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# Guyana Rwanda Oman Macau Angola Cameroon Senegal
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

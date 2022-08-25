@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:48:22 2022
+# This file was created Thu Aug 25 09:08:22 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2880 -f /home/lschmidt/MELTING/pyridine/pyridine236.0/melting-npt-y.edr -o epot_236.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# GROup of MAchos and Cynical Suckers
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

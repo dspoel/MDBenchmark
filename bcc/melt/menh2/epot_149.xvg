@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:47:37 2022
+# This file was created Thu Aug 25 08:00:50 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2352 -f /home/lschmidt/MELTING/menh2/menh2149.0/melting-npt-y.edr -o epot_149.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Grunge ROck MAChoS
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

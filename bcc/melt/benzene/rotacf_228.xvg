@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 22:14:07 2022
+# This file was created Thu Aug 25 07:20:24 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/benzene_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/benzene/228/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/benzene/228/melting-npt-y.tpr -o rotacf_228.xvg -b 8000 -e 10000
 # gmx rotacf is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

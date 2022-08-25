@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:47:58 2022
+# This file was created Thu Aug 25 08:03:28 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2268 -f /home/lschmidt/MELTING/naphthalene/naphthalene383.0/melting-npt-y.edr -o epot_383.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GROup of MAchos and Cynical Suckers
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

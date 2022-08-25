@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:47:47 2022
+# This file was created Thu Aug 25 07:10:22 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2352 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/menh2/184/melting-npt-y_2.edr -o epot_184.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

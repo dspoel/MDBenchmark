@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:39:25 2022
+# This file was created Thu Aug 25 07:51:44 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/ethane/80/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/80/melting-npt-y.tpr -o msd_80.xvg -b 4000 -e 6000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

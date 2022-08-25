@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:47:36 2022
+# This file was created Thu Aug 25 07:51:23 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3360 -f /home/lschmidt/MELTING/imidazole/imidazole373.0/melting-npt-y.edr -o epot_373.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

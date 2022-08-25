@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:46:05 2022
+# This file was created Thu Aug 25 07:09:57 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2520 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/12-ethanediamine/249/melting-npt-y_2.edr -o epot_249.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# Good ROcking Metal Altar for Chronical Sinners
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

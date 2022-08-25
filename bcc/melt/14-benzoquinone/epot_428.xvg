@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:45:43 2022
+# This file was created Thu Aug 25 06:40:00 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2304 -f /home/lschmidt/MELTING/14-benzoquinone/14-benzoquinone428.0/melting-npt.edr -o epot_428.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# GROningen MAchine for Chemical Simulation
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

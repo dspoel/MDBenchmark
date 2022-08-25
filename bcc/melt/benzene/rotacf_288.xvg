@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 09:34:33 2022
+# This file was created Thu Aug 25 07:15:27 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/benzene_rotaxis.ndx -f /home/lschmidt/MELTING/benzene/benzene288.0/melting-npt-y.trr -s /home/lschmidt/MELTING/benzene/benzene288.0/melting-npt-y.tpr -o rotacf_288.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Good gRace! Old Maple Actually Chews Slate
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

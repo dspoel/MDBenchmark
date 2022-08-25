@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:45:44 2022
+# This file was created Thu Aug 25 06:38:06 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2520 -f /home/lschmidt/MELTING/ethylendiamine/ethylendiamine239.0/melting-npt-y.edr -o epot_239.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Grunge ROck MAChoS
+# GRoups of Organic Molecules in ACtion for Science
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

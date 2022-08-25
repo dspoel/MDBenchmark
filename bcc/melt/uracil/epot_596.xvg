@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:48:37 2022
+# This file was created Thu Aug 25 09:17:02 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2800 -f /home/lschmidt/MELTING/uracil/uracil596.0/melting-npt-y.edr -o epot_596.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

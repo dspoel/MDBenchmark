@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 09:35:16 2022
+# This file was created Thu Aug 25 07:17:54 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/benzene_rotplane.ndx -f /home/lschmidt/MELTING/benzene/benzene293.0/melting-npt-y.trr -s /home/lschmidt/MELTING/benzene/benzene293.0/melting-npt-y.tpr -o rotplane_293.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

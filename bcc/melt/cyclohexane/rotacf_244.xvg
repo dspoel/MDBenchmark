@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 22:16:24 2022
+# This file was created Thu Aug 25 07:15:11 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/cyclohexane_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/cyclohexane/244/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/cyclohexane/244/melting-npt-y.tpr -o rotacf_244.xvg -b 2000 -e 4000
 # gmx rotacf is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

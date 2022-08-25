@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:43:30 2022
+# This file was created Thu Aug 25 07:49:36 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethane_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/90/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/90/melting-npt-y.tpr -o rotplane_90.xvg -b 4000 -e 6000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
