@@ -112,9 +112,11 @@ def get_dict_entry(mol:str):
         logfile = newest_trr[:-3] + "log"
         tprfile = newest_trr[:-3] + "tpr"
         edrfile = newest_trr[:-3] + "edr"
-        cptfile = newest_trr[:-3] + "cpt"
         if (os.path.exists(logfile) and os.path.exists(tprfile) and
-            os.path.exists(edrfile) and os.path.exists(cptfile)):
+            os.path.exists(edrfile)):
+            cptfile = newest_trr[:-3] + "cpt"
+            if not os.path.exists(cptfile):
+                cptfile = ""
             newdict = { "simdir":  simdir,
                         "logfile": logfile,
                         "cptfile": cptfile,
