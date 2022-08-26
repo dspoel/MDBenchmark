@@ -8,9 +8,9 @@ csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
 
 sim_status = {
     # Fig. S4
-    "ethane": { "failed": [  ], 
+    "ethane": { "failed": [ 95, 110, 120  ], 
                 "running": [  ], 
-                "success": [ 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150 ] },
+                "success": [ 50, 55, 60, 65, 70, 75, 80, 85, 90, 105, 115,  125, 130, 135, 140, 145, 150 ] },
     "propane": { "failed": [ 35, 40, 45, 50, 60, 65, 75, 85, 95, 105, 55, 70, 80, 90, 100 ],
                  "running": [  ],
                  "success": [ 110, 115, 120, 125, 130, 135 ] },
@@ -38,7 +38,7 @@ sim_status = {
     "14-benzoquinone": { "failed": [ 338, 343, 348, 353, 358, 363, 373 ],
                          "running": [  ],
                          "success": [ 368, 378, 383, 393, 398, 403, 408, 413, 418, 423, 428, 433, 438 ] },
-    "benzene": { "failed": [ 28, 78, 128, 208, 213, 218 ], 
+    "benzene": { "failed": [ 28, 78, 128  ], 
                  "running": [  ],
                  "success": [ 178, 203, 208, 213, 218, 223, 228, 233, 238, 243, 248, 253, 258, 263, 268, 273,
                               283, 288, 293, 298, 303, 308, 313, 318, 323, 328 ] },
@@ -94,16 +94,16 @@ sim_status = {
     "octanoic_acid": { "failed": [ 229, 234, 239, 244, 249, 254, 259, 264, 269, 274, 279, 284, 294, 299, 304, 309, 314, 324 ],
                        "running": [  ],
                        "success": [ 319, 329, 334, 339 ] },
-    "succinic_acid": { "failed": [ 309, 359, 389, 394, 399, 404, 409, 414, 419, 429, 434, 439, 449, 454, 469, 474, 479, 494, 499, 509, 514, 504 ],
-                       "running": [ 384, 424  ],
+    "succinic_acid": { "failed": [ 309, 359, 384, 424, 389, 394, 399, 404, 409, 414, 419, 429, 434, 439, 449, 454, 469, 474, 479, 494, 499, 509, 514, 504 ],
+                       "running": [   ],
                        "success": [ 464 ] },
     # formamide at 253K might be considered as converged, at 263K polycrystalline
     "formamide": { "failed": [ 298  ],
                    "running": [  ],
                    "success": [ 248, 253, 258, 273, 288, 263, 268, 278, 283, 293, 303, 308, 313, 318, 323, 328, 333, 338, 343, 348 ] },
-    "acetamide": { "failed": [ 104, 154, 204, 254, 279, 284, 374, 379 ],
+    "acetamide": { "failed": [ 104, 154, 204, 254, 279, 284, 374 ],
                    "running": [  ],
-                   "success": [ 289, 294, 299, 304, 309, 314, 319, 324, 329, 334, 339, 344, 349, 359, 364, 369,  384, 389, 394, 399, 404 ] },
+                   "success": [ 289, 294, 299, 304, 309, 314, 319, 324, 329, 334, 339, 344, 349, 359, 364, 369, 379,  384, 389, 394, 399, 404 ] },
     "urea": { "failed": [ 436 ],
               "running": [  ],
               "success": [ 356, 361, 366, 371, 376, 381, 386, 391, 396, 401, 406, 411, 416, 421, 426, 431, 441, 446, 451, 456 ] },
@@ -145,7 +145,7 @@ def get_temps(compound:str):
         rtemp[rot[7:-4]] = 1
     alltemp = []
     for m in mtemp:
-        if m in ftemp and m in rtemp and not (int(m) in sim_status[compound]["failed"]):
+        if m in ftemp and m in rtemp and (int(m) in sim_status[compound]["success"]):
             alltemp.append(m)
     return alltemp
 

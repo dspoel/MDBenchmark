@@ -34,7 +34,7 @@ melting_points = {"12-benzenediol":[377, 392],
                   "phenol":[314, 279], 
                   "propane":[85.46, 110], 
                   "pyridine":[231.53, 246],
-                  "succinic_acid":[459, 0], 
+                  "succinic_acid":[459, 464], 
                   "urea":[406, 436], 
                   "uracil":[611.15, 748.5]
 }
