@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 09:46:46 2022
+# This file was created Fri Aug 26 12:10:57 2022
 # Created by:
 #                        :-) GROMACS - gmx rdf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rdf -sel 0 -ref 0 -dt 1 -f /home/spoel/wd/MDBenchmark/melting/benzene/238/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/benzene/238/melting-npt-y.tpr -o rdf_238.xvg -b 9800 -e 10000
 # gmx rdf is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# GRoups of Organic Molecules in ACtion for Science
 #
 @    title "Radial distribution"
 @    xaxis  label "r (nm)"

@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 09:49:12 2022
+# This file was created Fri Aug 26 12:10:30 2022
 # Created by:
 #                        :-) GROMACS - gmx rdf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rdf -sel 0 -ref 0 -dt 1 -f /home/spoel/wd/MDBenchmark/melting/benzene/243/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/benzene/243/melting-npt-y.tpr -o rdf_243.xvg -b 9800 -e 10000
 # gmx rdf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# GRoups of Organic Molecules in ACtion for Science
 #
 @    title "Radial distribution"
 @    xaxis  label "r (nm)"

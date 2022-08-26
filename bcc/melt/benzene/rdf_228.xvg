@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 09:48:45 2022
+# This file was created Fri Aug 26 12:10:56 2022
 # Created by:
 #                        :-) GROMACS - gmx rdf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rdf -sel 0 -ref 0 -dt 1 -f /home/spoel/wd/MDBenchmark/melting/benzene/228/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/benzene/228/melting-npt-y.tpr -o rdf_228.xvg -b 9800 -e 10000
 # gmx rdf is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Radial distribution"
 @    xaxis  label "r (nm)"
