@@ -23,8 +23,8 @@ def write_run_job(target:str, nsteps:int):
         outf.write("%s -cpi %s.cpt -deffnm %s -nsteps %d \n" % ( gromacs, target, target, nsteps ) )
     os.system("sbatch %s" % job)
 
-def copy_ifnot_exists(src:str, dst:str) -> bool:
-    if not os.path.exists(src):
+def copy_ifnot_exists(srcdir:str, src:str, dst:str) -> bool:
+    if len(src) == 0 or not os.path.exists(srcdir+src):
         return False
     if not os.path.exists(dst):
         shutil.copy(src, dst)
@@ -46,7 +46,7 @@ def run_melt(mol:str, temp:float, prev:dict, nsteps:int):
     target  = prev["trrfile"][:-4]
     foundAll = True
     for fn in [ "cptfile", "edrfile", "trrfile", "tprfile", "tprfile", "logfile" ]:
-        foundAll = foundAll and copy_ifnot_exists(basedir+prev[fn], prev[fn])
+        foundAll = foundAll and copy_ifnot_exists(basedir, prev[fn], prev[fn])
     if foundAll:
         write_run_job(target, nsteps)
     else:

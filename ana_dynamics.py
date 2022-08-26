@@ -5,7 +5,7 @@ from molecule_db import *
 from simtable    import *
 
 csb = "HOST" in os.environ and os.environ["HOST"].find("csb") >= 0
-Debug = True
+Debug = False
 
 def use_sim(simtable:dict, mol:str, temp: int) -> bool:
     if not mol in simtable or not temp in simtable[mol]:
@@ -64,9 +64,11 @@ def run_epot(jobname:str, epotout:str, edr:str, nmol:int, force:bool):
     
 def ana_dynamics(simtable_files:list, mols:list, length:int, force:bool, rdf:bool):
     simtable = get_simtable(simtable_files)
-    print(simtable.keys())
+    if Debug:
+        print(simtable.keys())
     pwd = os.getcwd()
-    print("pwd %s" % pwd)
+    if Debug:
+        print("pwd %s" % pwd)
     os.chdir("bcc/melt")
     mol_list = simtable.keys()
     if None != mols:
@@ -100,7 +102,8 @@ def ana_dynamics(simtable_files:list, mols:list, length:int, force:bool, rdf:boo
                 if len(simtable[molname][temp]["grofile"]) > 4:
                     finalgro  = simdir + simtable[molname][temp]["grofile"] 
                     dstf      = ("final_%g.gro" % temp )
-                    print("Will try to copy %s to %s if needed" % ( finalgro, dstf ) )
+                    if Debug:
+                        print("Will try to copy %s to %s if needed" % ( finalgro, dstf ) )
                     if os.path.exists(finalgro) and (not os.path.exists(dstf) or os.path.getmtime(finalgro) > os.path.getmtime(dstf)):
                         shutil.copyfile(finalgro, dstf)
         os.chdir("..")
@@ -117,7 +120,8 @@ def do_rotacf(mols:list, length: int):
     jobname   = "rotacf.sh"
     indexdir  = "../../../../index"
     for compound in mols:
-        print("Looking for %s" % compound)
+        if Debug:
+            print("Looking for %s" % compound)
         if os.path.isdir(compound):
             os.chdir(compound)
             for temp in glob.glob("*"):
@@ -154,7 +158,8 @@ if __name__ == '__main__':
 
     if args.solid:
         for top in [ "bcc", "resp" ]:
-            print("Looking for %s" % top)
+            if Debug:
+                print("Looking for %s" % top)
             if os.path.isdir(top):
                 os.chdir(top)
                 phase = "solid"
