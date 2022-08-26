@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 20:15:58 2022
+# This file was created Fri Aug 26 14:52:17 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/ethane/55/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/55/melting-npt-y.tpr -o msd_55.xvg -b 12000 -e 14000
 # gmx msd is part of G R O M A C S:
 #
-# Gnomes, ROck Monsters And Chili Sauce
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

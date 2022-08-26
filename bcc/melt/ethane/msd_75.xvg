@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 18:09:01 2022
+# This file was created Fri Aug 26 14:50:44 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/ethane/75/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/75/melting-npt-y.tpr -o msd_75.xvg -b 6000 -e 8000
 # gmx msd is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# GRoups of Organic Molecules in ACtion for Science
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
