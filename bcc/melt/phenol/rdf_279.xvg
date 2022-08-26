@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 10:03:51 2022
+# This file was created Fri Aug 26 13:01:16 2022
 # Created by:
 #                    :-) GROMACS - gmx rdf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rdf -sel 0 -ref 0 -dt 1 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/279/melting-npt-y_200_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/phenol/279/melting-npt-y_200_NPTY.tpr -o rdf_279.xvg -b 51800 -e 52000
 # gmx rdf is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Radial distribution"
 @    xaxis  label "r (nm)"
