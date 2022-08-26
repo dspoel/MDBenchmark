@@ -544,6 +544,7 @@ uracil|656|2000|csb|2800|/home/lschmidt/MELTING/uracil/uracil656.0|melting-npt-y
 uracil|661|559|csb|2800|/home/lschmidt/MELTING/uracil/uracil661.0|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1645623039.5522008
 furan|117|32007.8|csb2|2048|/home/spoel/wd/MDBenchmark/melting/furan/117|melting-npt-y_ori.log|melting-npt-y_ori.cpt|melting-npt-y_ori.tpr|melting-npt-y_ori.trr|melting-npt-y_ori.edr|melting-npt-y_ori.gro|1660933361.3699028
 urea|436|12045|csb2|2304|/home/spoel/wd/MDBenchmark/melting/urea/436|melting-npt-y_28.log|melting-npt-y_28.cpt|melting-npt-y_28.tpr|melting-npt-y_28.trr|melting-npt-y_28.edr||1660817024.6836333
+acetamide|379|3000|csb2|3600|/home/spoel/wd/MDBenchmark/melting/acetamide/379|melting-npt-y_2.log|melting-npt-y_2.cpt|melting-npt-y_2.tpr|melting-npt-y_2.trr|melting-npt-y_2.edr|melting-npt-y_2.gro|1661503556.067718
 benzene|228|10000|csb2|3072|/home/spoel/wd/MDBenchmark/melting/benzene/228|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661369982.0312784
 benzene|233|6000|csb2|3072|/home/spoel/wd/MDBenchmark/melting/benzene/233|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661262975.8511972
 benzene|238|10000|csb2|3072|/home/spoel/wd/MDBenchmark/melting/benzene/238|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661360727.7885883
