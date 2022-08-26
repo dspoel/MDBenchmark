@@ -29,9 +29,10 @@ def job_header(outf, ncores:int):
         outf.write("#SBATCH -p CLUSTER-AMD\n")
     outf.write("#SBATCH -n %d\n" % ncores)
     
-def run_rdf(job:str, rdfout:str, tbegin:float, tend:float, traj:str, tpr: str):
+def run_rdf(job:str, rdfout:str, tbegin:float, tend:float, traj:str, tpr: str, force:bool):
     if os.path.exists(rdfout):
-        return
+        if not (force or os.path.getmtime(traj) > os.path.getmtime(rdfout)):
+            return
     with open(job, "w") as outf:
         job_header(outf, 1)
         outf.write("gmx rdf -sel 0 -ref 0 -dt 1 -f %s -s %s -o %s -b %d -e %d \n" % ( traj, tpr, rdfout, tbegin, tend ))
@@ -95,7 +96,7 @@ def ana_dynamics(simtable_files:list, mols:list, length:int, force:bool, rdf:boo
                 if rdf:
                     rdfout    = ("rdf_%g.xvg" % temp)
                     job       = rdfout[:-3] + ".sh"
-                    run_rdf(job, rdfout, tbegin, tend, traj, tpr)
+                    run_rdf(job, rdfout, tbegin, tend, traj, tpr, force)
                 if len(simtable[molname][temp]["grofile"]) > 4:
                     finalgro  = simdir + simtable[molname][temp]["grofile"] 
                     dstf      = ("final_%g.gro" % temp )
