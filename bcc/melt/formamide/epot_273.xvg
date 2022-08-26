@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:35:01 2022
+# This file was created Thu Aug 25 18:18:30 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2112 -f /home/spoel/wd/MDBenchmark/melting/formamide/273/melting-npt-y_10_NPTY.edr -o epot_273.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Grunge ROck MAChoS
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

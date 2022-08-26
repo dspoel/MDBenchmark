@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:39:53 2022
+# This file was created Thu Aug 25 18:53:00 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formamide_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/formamide/273/melting-npt-y_10_NPTY.trr -s /home/spoel/wd/MDBenchmark/melting/formamide/273/melting-npt-y_10_NPTY.tpr -o rotacf_273.xvg -b 13027 -e 15027
 # gmx rotacf is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Gyas ROwers Mature At Cryogenic Speed
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

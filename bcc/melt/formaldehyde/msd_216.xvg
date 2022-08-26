@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:33:31 2022
+# This file was created Thu Aug 25 17:40:14 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/formaldehyde/formaldehyde216.0/melting-npt-y_L.trr -s /home/lschmidt/MELTING/formaldehyde/formaldehyde216.0/melting-npt-y_L.tpr -o msd_216.xvg -b -1000 -e 1000
 # gmx msd is part of G R O M A C S:
 #
-# Grunge ROck MAChoS
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

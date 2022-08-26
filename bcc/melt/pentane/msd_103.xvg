@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 09:02:52 2022
+# This file was created Thu Aug 25 19:25:15 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/pentane/pentane103.0/melting-npt-y.trr -s /home/lschmidt/MELTING/pentane/pentane103.0/melting-npt-y.tpr -o msd_103.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# GROningen Mixture of Alchemy and Childrens' Stories
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

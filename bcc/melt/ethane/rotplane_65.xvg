@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 14:48:45 2022
+# This file was created Thu Aug 25 18:05:37 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethane_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/65/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/65/melting-npt-y.tpr -o rotplane_65.xvg -b 6000 -e 8000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

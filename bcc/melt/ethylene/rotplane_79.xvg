@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 16:09:46 2022
+# This file was created Thu Aug 25 18:11:33 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethylene_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/ethylene/79/melting-npt-y2.trr -s /home/spoel/wd/MDBenchmark/melting/ethylene/79/melting-npt-y2.tpr -o rotplane_79.xvg -b 2000 -e 4000
 # gmx rotacf is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

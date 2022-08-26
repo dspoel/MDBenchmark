@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:37:50 2022
+# This file was created Thu Aug 25 18:28:01 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/formamide/formamide253.0/melting-npt-y_10_NPTY.trr -s /home/lschmidt/MELTING/formamide/formamide253.0/melting-npt-y_10_NPTY.tpr -o msd_253.xvg -b 3000 -e 5000
 # gmx msd is part of G R O M A C S:
 #
-# GROningen Mixture of Alchemy and Childrens' Stories
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

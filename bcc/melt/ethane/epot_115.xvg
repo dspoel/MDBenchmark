@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:07:08 2022
+# This file was created Thu Aug 25 18:02:34 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -6,10 +6,10 @@
 # Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
 # Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/ethane
 # Command line:
-#   gmx energy -nmol 2816 -f /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.edr -o epot_115.xvg
+#   gmx energy -nmol 2816 -f /home/lschmidt/MELTING/ethane/ethane115.0/melting-npt-y.edr -o epot_115.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"
@@ -2022,3 +2022,4 @@
  1997.000000   -6.578838
  1998.000000   -6.582542
  1999.000000   -6.583313
+ 2000.000000   -6.528122

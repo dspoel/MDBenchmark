@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:41:08 2022
+# This file was created Thu Aug 25 18:21:46 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2112 -f /home/lschmidt/MELTING/formamide/formamide338.0/melting-npt-y.edr -o epot_338.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

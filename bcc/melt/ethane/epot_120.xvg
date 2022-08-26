@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:09:06 2022
+# This file was created Thu Aug 25 18:03:20 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -6,7 +6,7 @@
 # Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
 # Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/ethane
 # Command line:
-#   gmx energy -nmol 2816 -f /home/spoel/wd/MDBenchmark/melting/ethane/120/melting-npt-y.edr -o epot_120.xvg
+#   gmx energy -nmol 2816 -f /home/lschmidt/MELTING/ethane/ethane120.0/melting-npt-y.edr -o epot_120.xvg
 # gmx energy is part of G R O M A C S:
 #
 # Grunge ROck MAChoS
@@ -2022,3 +2022,4 @@
  1997.000000   -6.050231
  1998.000000   -6.058980
  1999.000000   -5.973430
+ 2000.000000   -6.134657

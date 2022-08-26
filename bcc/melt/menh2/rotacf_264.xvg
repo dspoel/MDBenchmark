@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 08:09:08 2022
+# This file was created Thu Aug 25 18:44:36 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/menh2_rotaxis.ndx -f /home/lschmidt/MELTING/menh2/menh2264.0/melting-npt-y.trr -s /home/lschmidt/MELTING/menh2/menh2264.0/melting-npt-y.tpr -o rotacf_264.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

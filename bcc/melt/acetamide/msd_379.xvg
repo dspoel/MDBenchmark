@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 06:55:19 2022
+# This file was created Thu Aug 25 18:01:47 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/acetamide/acetamide379.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/acetamide/acetamide379.0/melting-npt-y_2.tpr -o msd_379.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

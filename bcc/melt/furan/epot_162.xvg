@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:46:47 2022
+# This file was created Thu Aug 25 17:35:36 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2048 -f /home/lschmidt/MELTING/furan/furan162.0/melting-npt-y_ori.edr -o epot_162.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Great Red Oystrich Makes All Chemists Sane
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

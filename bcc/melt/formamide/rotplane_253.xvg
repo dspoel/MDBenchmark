@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:36:23 2022
+# This file was created Thu Aug 25 18:27:08 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formamide_rotplane.ndx -f /home/lschmidt/MELTING/formamide/formamide253.0/melting-npt-y_10_NPTY.trr -s /home/lschmidt/MELTING/formamide/formamide253.0/melting-npt-y_10_NPTY.tpr -o rotplane_253.xvg -b 3000 -e 5000
 # gmx rotacf is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# Gnomes, ROck Monsters And Chili Sauce
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

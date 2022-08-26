@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:38:52 2022
+# This file was created Thu Aug 25 18:28:51 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formamide_rotplane.ndx -f /home/lschmidt/MELTING/formamide/formamide283.0/melting-npt-y_10_NPTY.trr -s /home/lschmidt/MELTING/formamide/formamide283.0/melting-npt-y_10_NPTY.tpr -o rotplane_283.xvg -b 3000 -e 5000
 # gmx rotacf is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# GROningen Mixture of Alchemy and Childrens' Stories
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

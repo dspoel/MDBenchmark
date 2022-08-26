@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 06:44:03 2022
+# This file was created Thu Aug 25 18:07:34 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/12-ethanediamine_rotaxis.ndx -f /home/lschmidt/MELTING/ethylendiamine/ethylendiamine309.0/melting-npt-y.trr -s /home/lschmidt/MELTING/ethylendiamine/ethylendiamine309.0/melting-npt-y.tpr -o rotacf_309.xvg -b -283 -e 1717
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

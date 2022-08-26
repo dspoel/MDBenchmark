@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 09:22:59 2022
+# This file was created Thu Aug 25 19:40:15 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/succinic_acid/succinic_acid499.0/melting-npt-y_NPTY.trr -s /home/lschmidt/MELTING/succinic_acid/succinic_acid499.0/melting-npt-y_NPTY.tpr -o msd_499.xvg -b -726 -e 1274
 # gmx msd is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

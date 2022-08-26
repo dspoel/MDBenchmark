@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 14:49:30 2022
+# This file was created Thu Aug 25 18:09:03 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/ethane/70/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/70/melting-npt-y.tpr -o msd_70.xvg -b 6000 -e 8000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

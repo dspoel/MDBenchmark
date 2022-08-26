@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 16:10:44 2022
+# This file was created Thu Aug 25 18:20:52 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/ethylene/104/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethylene/104/melting-npt-y.tpr -o msd_104.xvg -b 1587 -e 3587
 # gmx msd is part of G R O M A C S:
 #
-# Good gRace! Old Maple Actually Chews Slate
+# GROwing Monsters And Cloning Shrimps
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

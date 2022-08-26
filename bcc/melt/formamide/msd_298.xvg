@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 10:16:02 2022
+# This file was created Thu Aug 25 20:46:46 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/formamide/298/melting-npt-y_20_NPTY.trr -s /home/spoel/wd/MDBenchmark/melting/formamide/298/melting-npt-y_20_NPTY.tpr -o msd_298.xvg -b 38025 -e 40025
 # gmx msd is part of G R O M A C S:
 #
-# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

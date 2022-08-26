@@ -571,7 +571,7 @@ ethane|70|8000|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/70|melting-np
 ethane|75|8000|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/75|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661430480.9941773
 ethane|80|8000|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/80|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661428179.0317981
 ethane|85|2000|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/85|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1661263145.7127244
-ethane|90|6820|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/90|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661436441.510775
+ethane|90|8000|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/90|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661458484.4050577
 ethane|95|2000|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/95|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1661271283.862729
 ethane|105|2000|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/105|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1661271284.8976836
 ethane|110|2000|csb2|2816|/home/spoel/wd/MDBenchmark/melting/ethane/110|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1661271286.5296118
@@ -581,8 +581,8 @@ ethylene|79|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/79|meltin
 ethylene|84|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/84|melting-npt-y2.log|melting-npt-y2.cpt|melting-npt-y2.tpr|melting-npt-y2.trr|melting-npt-y2.edr|melting-npt-y2.gro|1661429066.3976965
 ethylene|89|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/89|melting-npt-y2.log|melting-npt-y2.cpt|melting-npt-y2.tpr|melting-npt-y2.trr|melting-npt-y2.edr|melting-npt-y2.gro|1661429067.2526586
 ethylene|94|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/94|melting-npt-y2.log|melting-npt-y2.cpt|melting-npt-y2.tpr|melting-npt-y2.trr|melting-npt-y2.edr|melting-npt-y2.gro|1661430477.3423388
-ethylene|104|3587|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/104|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1661436462.3908446
-ethyleneglycol|260|2739|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/260|melting-npt.log|melting-npt.cpt|melting-npt.tpr|melting-npt.trr|melting-npt.edr||1661436456.0861256
+ethylene|104|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/104|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661438925.7193294
+ethyleneglycol|260|4000|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/260|melting-npt.log|melting-npt.cpt|melting-npt.tpr|melting-npt.trr|melting-npt.edr|melting-npt.gro|1661464492.453733
 ethyleneglycol|265|5662|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/265|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1660907061.110498
 ethyleneglycol|270|4000|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/270|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1660876981.230286
 ethyleneglycol|275|2781|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/275|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1660866767.9334455

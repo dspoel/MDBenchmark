@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 06:52:03 2022
+# This file was created Thu Aug 25 18:00:02 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/acetamide_rotplane.ndx -f /home/lschmidt/MELTING/acetamide/acetamide359.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/acetamide/acetamide359.0/melting-npt-y_2.tpr -o rotplane_359.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Good gRace! Old Maple Actually Chews Slate
+# Grunge ROck MAChoS
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

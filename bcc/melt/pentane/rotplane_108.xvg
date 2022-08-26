@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 09:00:56 2022
+# This file was created Thu Aug 25 19:17:59 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/pentane_rotplane.ndx -f /home/lschmidt/MELTING/pentane/pentane108.0/melting-npt-y.trr -s /home/lschmidt/MELTING/pentane/pentane108.0/melting-npt-y.tpr -o rotplane_108.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

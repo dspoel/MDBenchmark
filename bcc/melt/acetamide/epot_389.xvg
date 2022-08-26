@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 06:48:41 2022
+# This file was created Thu Aug 25 17:44:19 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3600 -f /home/lschmidt/MELTING/acetamide/acetamide389.0/melting-npt-y_2.edr -o epot_389.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gyas ROwers Mature At Cryogenic Speed
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

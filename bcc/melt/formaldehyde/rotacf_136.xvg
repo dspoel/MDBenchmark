@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:32:24 2022
+# This file was created Thu Aug 25 17:36:54 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formaldehyde_rotaxis.ndx -f /home/lschmidt/MELTING/formaldehyde/formaldehyde136.0/melting-npt-y_L.trr -s /home/lschmidt/MELTING/formaldehyde/formaldehyde136.0/melting-npt-y_L.tpr -o rotacf_136.xvg -b -1000 -e 1000
 # gmx rotacf is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

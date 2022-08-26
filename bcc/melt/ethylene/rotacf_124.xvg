@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:34:24 2022
+# This file was created Thu Aug 25 18:17:48 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethylene_rotaxis.ndx -f /home/lschmidt/MELTING/ethene/ethene124.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene124.0/melting-npt-y2.tpr -o rotacf_124.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Gnomes, ROck Monsters And Chili Sauce
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

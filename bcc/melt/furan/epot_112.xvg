@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:43:05 2022
+# This file was created Thu Aug 25 17:34:28 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2048 -f /home/lschmidt/MELTING/furan/furan112.0/melting-npt-y_ori.edr -o epot_112.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# Grunge ROck MAChoS
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:40:49 2022
+# This file was created Thu Aug 25 18:27:12 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/formamide/formamide338.0/melting-npt-y.trr -s /home/lschmidt/MELTING/formamide/formamide338.0/melting-npt-y.tpr -o msd_338.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

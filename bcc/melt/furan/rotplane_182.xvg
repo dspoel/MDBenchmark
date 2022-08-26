@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 08:04:13 2022
+# This file was created Thu Aug 25 17:40:37 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/furan_rotplane.ndx -f /home/lschmidt/MELTING/furan/furan182.0/melting-npt-y_ori.trr -s /home/lschmidt/MELTING/furan/furan182.0/melting-npt-y_ori.tpr -o rotplane_182.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:40:32 2022
+# This file was created Thu Aug 25 18:26:38 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formamide_rotplane.ndx -f /home/lschmidt/MELTING/formamide/formamide338.0/melting-npt-y.trr -s /home/lschmidt/MELTING/formamide/formamide338.0/melting-npt-y.tpr -o rotplane_338.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:15:47 2022
+# This file was created Thu Aug 25 18:13:38 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethane/ethane140.0/melting-npt-y.trr -s /home/lschmidt/MELTING/ethane/ethane140.0/melting-npt-y.tpr -o msd_140.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

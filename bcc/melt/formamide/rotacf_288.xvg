@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 08:19:34 2022
+# This file was created Thu Aug 25 18:56:22 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formamide_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/formamide/288/melting-npt-y_15_NPTY.trr -s /home/spoel/wd/MDBenchmark/melting/formamide/288/melting-npt-y_15_NPTY.tpr -o rotacf_288.xvg -b 13027 -e 15027
 # gmx rotacf is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

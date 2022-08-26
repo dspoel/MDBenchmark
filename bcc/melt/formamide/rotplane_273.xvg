@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:40:24 2022
+# This file was created Thu Aug 25 19:31:55 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formamide_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/formamide/273/melting-npt-y_10_NPTY.trr -s /home/spoel/wd/MDBenchmark/melting/formamide/273/melting-npt-y_10_NPTY.tpr -o rotplane_273.xvg -b 13027 -e 15027
 # gmx rotacf is part of G R O M A C S:
 #
-# Gnomes, ROck Monsters And Chili Sauce
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

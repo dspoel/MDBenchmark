@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 09:16:54 2022
+# This file was created Thu Aug 25 19:35:25 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/pyridine/pyridine201.0/melting-npt-y.trr -s /home/lschmidt/MELTING/pyridine/pyridine201.0/melting-npt-y.tpr -o msd_201.xvg -b -398 -e 1602
 # gmx msd is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

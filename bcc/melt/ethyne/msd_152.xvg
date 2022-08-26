@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:30:27 2022
+# This file was created Thu Aug 25 17:37:15 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethyne/ethyne152.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/ethyne/ethyne152.0/melting-npt-y_2.tpr -o msd_152.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

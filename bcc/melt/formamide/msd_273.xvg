@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:41:04 2022
+# This file was created Thu Aug 25 19:56:23 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/formamide/273/melting-npt-y_10_NPTY.trr -s /home/spoel/wd/MDBenchmark/melting/formamide/273/melting-npt-y_10_NPTY.tpr -o msd_273.xvg -b 13027 -e 15027
 # gmx msd is part of G R O M A C S:
 #
-# Good gRace! Old Maple Actually Chews Slate
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:31:24 2022
+# This file was created Thu Aug 25 17:36:49 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethyne_rotaxis.ndx -f /home/lschmidt/MELTING/ethyne/ethyne187.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/ethyne/ethyne187.0/melting-npt-y_2.tpr -o rotacf_187.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# GROwing Monsters And Cloning Shrimps
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

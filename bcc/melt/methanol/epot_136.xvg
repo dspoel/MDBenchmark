@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 08:00:30 2022
+# This file was created Thu Aug 25 18:39:55 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2048 -f /home/lschmidt/MELTING/methanol/methanol136.0/melting-npt-y_L.edr -o epot_136.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GROningen Mixture of Alchemy and Childrens' Stories
+# GROup of MAchos and Cynical Suckers
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

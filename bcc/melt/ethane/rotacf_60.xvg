@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 08:29:30 2022
+# This file was created Thu Aug 25 19:02:22 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethane_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/60/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/60/melting-npt-y.tpr -o rotacf_60.xvg -b 12000 -e 14000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen Mixture of Alchemy and Childrens' Stories
+# Gravel Rubs Often Many Awfully Cauterized Sores
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

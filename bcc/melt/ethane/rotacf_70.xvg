@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 14:48:09 2022
+# This file was created Thu Aug 25 18:06:38 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethane_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/70/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/70/melting-npt-y.tpr -o rotacf_70.xvg -b 6000 -e 8000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

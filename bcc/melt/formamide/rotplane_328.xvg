@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:40:22 2022
+# This file was created Thu Aug 25 18:27:02 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formamide_rotplane.ndx -f /home/lschmidt/MELTING/formamide/formamide328.0/melting-npt-y.trr -s /home/lschmidt/MELTING/formamide/formamide328.0/melting-npt-y.tpr -o rotplane_328.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

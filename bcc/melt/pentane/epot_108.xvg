@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 08:13:25 2022
+# This file was created Thu Aug 25 18:59:32 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2688 -f /home/lschmidt/MELTING/pentane/pentane108.0/melting-npt-y.edr -o epot_108.xvg
 # gmx energy is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 08:00:36 2022
+# This file was created Thu Aug 25 18:40:17 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2048 -f /home/lschmidt/MELTING/methanol/methanol146.0/melting-npt-y_L.edr -o epot_146.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

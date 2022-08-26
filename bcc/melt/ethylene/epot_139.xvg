@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:23:10 2022
+# This file was created Thu Aug 25 18:15:38 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2268 -f /home/lschmidt/MELTING/ethene/ethene139.0/melting-npt-y2.edr -o epot_139.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Good gRace! Old Maple Actually Chews Slate
+# GROup of MAchos and Cynical Suckers
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

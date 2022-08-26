@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:22:46 2022
+# This file was created Thu Aug 25 18:17:08 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethylene_rotaxis.ndx -f /home/lschmidt/MELTING/ethene/ethene114.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene114.0/melting-npt-y2.tpr -o rotacf_114.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

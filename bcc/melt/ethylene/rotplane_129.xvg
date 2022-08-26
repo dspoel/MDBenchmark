@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:23:23 2022
+# This file was created Thu Aug 25 18:20:31 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethylene_rotplane.ndx -f /home/lschmidt/MELTING/ethene/ethene129.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene129.0/melting-npt-y2.tpr -o rotplane_129.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

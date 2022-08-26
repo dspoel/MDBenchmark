@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:48:23 2022
+# This file was created Thu Aug 25 17:39:29 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/furan_rotaxis.ndx -f /home/lschmidt/MELTING/furan/furan222.0/melting-npt-y_ori.trr -s /home/lschmidt/MELTING/furan/furan222.0/melting-npt-y_ori.tpr -o rotacf_222.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# S  C  A  M  O  R  G
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 08:07:43 2022
+# This file was created Thu Aug 25 17:40:15 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/furan/furan147.0/melting-npt-y_ori.trr -s /home/lschmidt/MELTING/furan/furan147.0/melting-npt-y_ori.tpr -o msd_147.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Giant Rising Ordinary Mutants for A Clerical Setup
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

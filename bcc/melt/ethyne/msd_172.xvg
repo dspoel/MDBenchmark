@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:31:01 2022
+# This file was created Thu Aug 25 17:37:47 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethyne/ethyne172.0/melting-npt-y_2.trr -s /home/lschmidt/MELTING/ethyne/ethyne172.0/melting-npt-y_2.tpr -o msd_172.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

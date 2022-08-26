@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:23:12 2022
+# This file was created Thu Aug 25 18:20:13 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/lschmidt/MELTING/ethene/ethene114.0/melting-npt-y2.trr -s /home/lschmidt/MELTING/ethene/ethene114.0/melting-npt-y2.tpr -o msd_114.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

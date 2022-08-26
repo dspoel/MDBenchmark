@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:46:50 2022
+# This file was created Thu Aug 25 18:27:01 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formamide_rotplane.ndx -f /home/lschmidt/MELTING/formamide/formamide323.0/melting-npt-y.trr -s /home/lschmidt/MELTING/formamide/formamide323.0/melting-npt-y.tpr -o rotplane_323.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

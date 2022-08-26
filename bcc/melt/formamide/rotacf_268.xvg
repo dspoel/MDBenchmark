@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:36:52 2022
+# This file was created Thu Aug 25 18:17:35 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formamide_rotaxis.ndx -f /home/lschmidt/MELTING/formamide/formamide268.0/melting-npt-y_10_NPTY.trr -s /home/lschmidt/MELTING/formamide/formamide268.0/melting-npt-y_10_NPTY.tpr -o rotacf_268.xvg -b 3000 -e 5000
 # gmx rotacf is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 07:06:08 2022
+# This file was created Thu Aug 25 18:02:05 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2520 -f /home/lschmidt/MELTING/cyclohexane/cyclohexane324.0/melting-npt-y.edr -o epot_324.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

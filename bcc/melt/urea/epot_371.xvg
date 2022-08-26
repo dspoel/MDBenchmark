@@ -1,4 +1,4 @@
-# This file was created Wed Aug 24 16:48:53 2022
+# This file was created Thu Aug 25 17:38:47 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2304 -f /home/lschmidt/MELTING/urea/urea371.0/melting-npt-y_2.edr -o epot_371.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# GROup of MAchos and Cynical Suckers
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"
