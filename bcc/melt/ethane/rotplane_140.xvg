@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 14:45:03 2022
+# This file was created Fri Aug 26 15:15:37 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/ethane_rotplane.ndx -f /home/lschmidt/MELTING/ethane/ethane140.0/melting-npt-y.trr -s /home/lschmidt/MELTING/ethane/ethane140.0/melting-npt-y.tpr -o rotplane_140.xvg -b 0 -e 2000
 # gmx rotacf is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

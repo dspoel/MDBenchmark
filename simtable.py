@@ -18,7 +18,7 @@ def get_simtable(filenames:list) -> dict:
                 temp   = int(row[1])
                 length = float(row[2])
                 if (not temp in simtable[row[0]] or length > simtable[row[0]][temp]["length"] or 
-                    (length == simtable[row[0]][temp]["length"] and row[3].find("keb") >= 0)):
+                    (length == simtable[row[0]][temp]["length"] and (row[3].find("keb") >= 0) or (row[3].find("csb2") >= 0))):
                     simtable[row[0]][temp] = { "host": row[3], "length": length, "nmol": int(row[4]),
                                                "simdir": row[5], "logfile": row[6], "cptfile": row[7],
                                                "tprfile": row[8], "trrfile": row[9], "edrfile": row[10],

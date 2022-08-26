@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 14:41:33 2022
+# This file was created Fri Aug 26 15:12:11 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2816 -f /home/lschmidt/MELTING/ethane/ethane135.0/melting-npt-y.edr -o epot_135.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

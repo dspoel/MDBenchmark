@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 14:54:33 2022
+# This file was created Fri Aug 26 15:16:24 2022
 # Created by:
 #                        :-) GROMACS - gmx msd, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.tpr -o msd_115.xvg -b 2000 -e 4000
 # gmx msd is part of G R O M A C S:
 #
-# Green Red Orange Magenta Azure Cyan Skyblue
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

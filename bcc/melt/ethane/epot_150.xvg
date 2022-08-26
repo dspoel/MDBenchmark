@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 14:41:39 2022
+# This file was created Fri Aug 26 15:12:12 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2816 -f /home/lschmidt/MELTING/ethane/ethane150.0/melting-npt-y.edr -o epot_150.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"
