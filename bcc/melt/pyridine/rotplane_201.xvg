@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 19:34:21 2022
+# This file was created Sat Aug 27 08:09:57 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/pyridine_rotplane.ndx -f /home/lschmidt/MELTING/pyridine/pyridine201.0/melting-npt-y.trr -s /home/lschmidt/MELTING/pyridine/pyridine201.0/melting-npt-y.tpr -o rotplane_201.xvg -b -398 -e 1602
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs One Microsecond At Cannonball Speeds
+# Great Red Owns Many ACres of Sand 
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
