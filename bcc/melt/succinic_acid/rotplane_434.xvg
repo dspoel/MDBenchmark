@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:40:31 2022
+# This file was created Sun Aug 28 11:06:52 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/succinic_acid_rotplane.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid434.0/melting-npt-y_20_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/succinic_acid/OUT-succinic_acid434.0/melting-npt-y_20_NPTY.tpr -o rotplane_434.xvg -b -1364 -e 636
 # gmx rotacf is part of G R O M A C S:
 #
-# GROwing Monsters And Cloning Shrimps
+# GROningen MAchine for Chemical Simulation
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

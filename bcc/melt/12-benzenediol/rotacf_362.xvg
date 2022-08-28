@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:32:44 2022
+# This file was created Sun Aug 28 11:05:47 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/12-benzenediol_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/12-benzenediol362.0/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/12-benzenediol/12-benzenediol362.0/melting-npt-y.tpr -o rotacf_362.xvg -b -1776 -e 224
 # gmx rotacf is part of G R O M A C S:
 #
-# GROningen MAchine for Chemical Simulation
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 10:56:24 2022
+# This file was created Fri Aug 26 13:37:07 2022
 # Created by:
 #                    :-) GROMACS - gmx rdf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rdf -sel 0 -ref 0 -dt 1 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/204/melting-npt-y_80_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/204/melting-npt-y_80_NPTY.tpr -o rdf_204.xvg -b 61800 -e 62000
 # gmx rdf is part of G R O M A C S:
 #
-# Gnomes, ROck Monsters And Chili Sauce
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Radial distribution"
 @    xaxis  label "r (nm)"

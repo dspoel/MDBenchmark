@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:39:57 2022
+# This file was created Sun Aug 28 11:06:41 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/succinic_acid_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/succinic_acid/504/melting-npt-y_10.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/succinic_acid/504/melting-npt-y_10.tpr -o rotacf_504.xvg -b -1632 -e 368
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Gyas ROwers Mature At Cryogenic Speed
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
