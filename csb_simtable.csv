@@ -544,6 +544,7 @@ uracil|656|2000|csb|2800|/home/lschmidt/MELTING/uracil/uracil656.0|melting-npt-y
 uracil|661|559|csb|2800|/home/lschmidt/MELTING/uracil/uracil661.0|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1645623039.5522008
 furan|117|32007.8|csb2|2048|/home/spoel/wd/MDBenchmark/melting/furan/117|melting-npt-y_ori.log|melting-npt-y_ori.cpt|melting-npt-y_ori.tpr|melting-npt-y_ori.trr|melting-npt-y_ori.edr|melting-npt-y_ori.gro|1660933361.3699028
 urea|436|12045|csb2|2304|/home/spoel/wd/MDBenchmark/melting/urea/436|melting-npt-y_28.log|melting-npt-y_28.cpt|melting-npt-y_28.tpr|melting-npt-y_28.trr|melting-npt-y_28.edr||1660817024.6836333
+acetamide|374|2300|csb2|3600|/home/spoel/wd/MDBenchmark/melting/acetamide/374|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661593713.2111683
 acetamide|379|3000|csb2|3600|/home/spoel/wd/MDBenchmark/melting/acetamide/379|melting-npt-y_2.log|melting-npt-y_2.cpt|melting-npt-y_2.tpr|melting-npt-y_2.trr|melting-npt-y_2.edr|melting-npt-y_2.gro|1661503556.067718
 benzene|228|10000|csb2|3072|/home/spoel/wd/MDBenchmark/melting/benzene/228|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661369982.0312784
 benzene|233|6000|csb2|3072|/home/spoel/wd/MDBenchmark/melting/benzene/233|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661262975.8511972
@@ -586,6 +587,7 @@ ethylene|84|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/84|meltin
 ethylene|89|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/89|melting-npt-y2.log|melting-npt-y2.cpt|melting-npt-y2.tpr|melting-npt-y2.trr|melting-npt-y2.edr|melting-npt-y2.gro|1661429067.2526586
 ethylene|94|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/94|melting-npt-y2.log|melting-npt-y2.cpt|melting-npt-y2.tpr|melting-npt-y2.trr|melting-npt-y2.edr|melting-npt-y2.gro|1661430477.3423388
 ethylene|104|4000|csb2|2268|/home/spoel/wd/MDBenchmark/melting/ethylene/104|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661438925.7193294
+ethyleneglycol|255|2900|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/255|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661592180.8517876
 ethyleneglycol|260|4000|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/260|melting-npt.log|melting-npt.cpt|melting-npt.tpr|melting-npt.trr|melting-npt.edr|melting-npt.gro|1661464492.453733
 ethyleneglycol|265|5662|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/265|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1660907061.110498
 ethyleneglycol|270|4000|csb2|2520|/home/spoel/wd/MDBenchmark/melting/ethyleneglycol/270|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1660876981.230286
@@ -606,3 +608,6 @@ menh2|219|2000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/219|melting-np
 menh2|224|2000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/224|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1661419016.7808518
 menh2|234|6000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/234|melting-npt-y_2.log|melting-npt-y_2.cpt|melting-npt-y_2.tpr|melting-npt-y_2.trr|melting-npt-y_2.edr|melting-npt-y_2.gro|1661426022.9002128
 menh2|249|4000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/249|melting-npt-y_2.log|melting-npt-y_2.cpt|melting-npt-y_2.tpr|melting-npt-y_2.trr|melting-npt-y_2.edr|melting-npt-y_2.gro|1661425413.0682108
+pyridine|196|2400|csb2|2880|/home/spoel/wd/MDBenchmark/melting/pyridine/196|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661593623.934104
+pyridine|201|3600|csb2|2880|/home/spoel/wd/MDBenchmark/melting/pyridine/201|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661593443.97804
+pyridine|281|3600|csb2|2880|/home/spoel/wd/MDBenchmark/melting/pyridine/281|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661593257.0802867

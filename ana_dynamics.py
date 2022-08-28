@@ -97,7 +97,7 @@ def ana_dynamics(simtable_files:list, mols:list, length:int, force:bool, rdf:boo
                 run_epot(job, epotout, simdir+simtable[molname][temp]["edrfile"], simtable[molname][temp]["nmol"], force)
                 if rdf:
                     rdfout    = ("rdf_%g.xvg" % temp)
-                    job       = rdfout[:-3] + ".sh"
+                    job       = rdfout[:-3] + "sh"
                     run_rdf(job, rdfout, tbegin, tend, traj, tpr, force)
                 if len(simtable[molname][temp]["grofile"]) > 4:
                     finalgro  = simdir + simtable[molname][temp]["grofile"] 
