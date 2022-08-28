@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:37:17 2022
+# This file was created Sun Aug 28 12:17:32 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/acooh_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/acooh/229/melting-npt-y_120_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/acooh/229/melting-npt-y_120_NPTY.tpr -o rotacf_229.xvg -b 58060 -e 60060
 # gmx rotacf is part of G R O M A C S:
 #
-# Getting the Right Output Means no Artefacts in Calculating Stuff
+# God Rules Over Mankind, Animals, Cosmos and Such
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

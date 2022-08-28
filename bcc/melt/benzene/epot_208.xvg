@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 11:06:22 2022
+# This file was created Sun Aug 28 12:14:14 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 3072 -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/208/melting-npt-y.edr -o epot_208.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# GROningen Mixture of Alchemy and Childrens' Stories
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:36:06 2022
+# This file was created Sun Aug 28 12:15:32 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/benzene/OUT-benzene298.0/melting-npt-y_2.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/benzene/OUT-benzene298.0/melting-npt-y_2.tpr -o msd_298.xvg -b 0 -e 2000
 # gmx msd is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# Getting the Right Output Means no Artefacts in Calculating Stuff
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

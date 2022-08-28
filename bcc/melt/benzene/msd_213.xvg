@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 11:07:43 2022
+# This file was created Sun Aug 28 12:15:35 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/213/melting-npt-y.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/benzene/213/melting-npt-y.tpr -o msd_213.xvg -b 2000 -e 4000
 # gmx msd is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# GRowing Old MAkes el Chrono Sweat
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
