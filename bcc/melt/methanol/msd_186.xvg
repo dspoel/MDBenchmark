@@ -1,4 +1,4 @@
-# This file was created Sun Aug 28 13:34:22 2022
+# This file was created Mon Aug 29 08:00:07 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -6,10 +6,10 @@
 # Data prefix:  /hpc2n/eb/software/GROMACS/2021-foss-2020b
 # Working dir:  /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/bcc/melt/methanol
 # Command line:
-#   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/186/melting-npt-y_100_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/186/melting-npt-y_100_NPTY.tpr -o msd_186.xvg -b 19800 -e 20000
+#   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/186/melting-npt-y_100_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/186/melting-npt-y_100_NPTY.tpr -o msd_186.xvg -b 18000 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# Green Red Orange Magenta Azure Cyan Skyblue
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"

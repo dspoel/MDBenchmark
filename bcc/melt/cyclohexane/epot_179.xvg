@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:33:39 2022
+# This file was created Mon Aug 29 07:24:03 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2520 -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane179.0/melting-npt-y_40_NPTY.edr -o epot_179.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

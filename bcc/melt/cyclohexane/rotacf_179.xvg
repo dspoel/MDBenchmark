@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:40:28 2022
+# This file was created Mon Aug 29 07:26:17 2022
 # Created by:
 #                  :-) GROMACS - gmx rotacf, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/cyclohexane_rotaxis.ndx -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane179.0/melting-npt-y_40_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane179.0/melting-npt-y_40_NPTY.tpr -o rotacf_179.xvg -b 18000 -e 20000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

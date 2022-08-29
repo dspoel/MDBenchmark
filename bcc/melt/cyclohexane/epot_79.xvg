@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:33:40 2022
+# This file was created Mon Aug 29 07:24:04 2022
 # Created by:
 #                  :-) GROMACS - gmx energy, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2520 -f /pfs/proj/nobackup/fs/projnb10/alexandria/lisa/melting/cyclohexane/OUT-cyclohexane79.0/melting-npt-y_60_NPTY.edr -o epot_79.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Giant Rising Ordinary Mutants for A Clerical Setup
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

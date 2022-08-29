@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 18:13:06 2022
+# This file was created Mon Aug 29 07:55:34 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/209/melting-npt-y_200_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/cyclohexane/209/melting-npt-y_200_NPTY.tpr -o msd_209.xvg -b 100000 -e 102000
 # gmx msd is part of G R O M A C S:
 #
-# Glycine aRginine prOline Methionine Alanine Cystine Serine
+# Good gRace! Old Maple Actually Chews Slate
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
