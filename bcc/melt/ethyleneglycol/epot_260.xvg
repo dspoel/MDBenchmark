@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 06:50:35 2022
+# This file was created Mon Aug 29 15:05:07 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2520 -f /home/spoel/wd/MDBenchmark/melting/ethyleneglycol/260/melting-npt.edr -o epot_260.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Great Red Owns Many ACres of Sand 
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"
