@@ -1,4 +1,4 @@
-# This file was created Mon Aug 29 12:08:27 2022
+# This file was created Mon Aug 29 13:03:36 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2048 -f /home/spoel/wd/MDBenchmark/melting/formaldehyde/176/melting-npt-y_L.edr -o epot_176.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# S  C  A  M  O  R  G
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"

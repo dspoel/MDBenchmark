@@ -1,4 +1,4 @@
-# This file was created Fri Aug 26 06:51:28 2022
+# This file was created Mon Aug 29 15:07:40 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/ethyleneglycol_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/ethyleneglycol/260/melting-npt.trr -s /home/spoel/wd/MDBenchmark/melting/ethyleneglycol/260/melting-npt.tpr -o rotacf_260.xvg -b 2000 -e 4000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Grunge ROck MAChoS
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
