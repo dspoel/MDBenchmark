@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 18:08:16 2022
+# This file was created Sun Aug 28 21:31:06 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -6,10 +6,10 @@
 # Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
 # Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/12-ethanediamine
 # Command line:
-#   gmx energy -nmol 2520 -f /home/lschmidt/MELTING/ethylendiamine/ethylendiamine309.0/melting-npt-y.edr -o epot_309.xvg
+#   gmx energy -nmol 2520 -f /home/spoel/wd/MDBenchmark/melting/12-ethanediamine/309/melting-npt-y.edr -o epot_309.xvg
 # gmx energy is part of G R O M A C S:
 #
-# Gravel Rubs Often Many Awfully Cauterized Sores
+# Gromacs Runs On Most of All Computer Systems
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"
@@ -1727,16 +1727,3 @@
  1702.000000   54.294567
  1703.000000   54.222984
  1704.000000   54.248272
- 1705.000000   54.048599
- 1706.000000   54.126911
- 1707.000000   54.213165
- 1708.000000   54.103458
- 1709.000000   54.182907
- 1710.000000   54.320213
- 1711.000000   54.443081
- 1712.000000   54.527847
- 1713.000000   54.320568
- 1714.000000   54.329700
- 1715.000000   54.295296
- 1716.000000   54.245075
- 1717.000000   54.448467
