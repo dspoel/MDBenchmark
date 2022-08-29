@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 18:38:43 2022
+# This file was created Mon Aug 29 15:00:46 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx energy -nmol 2352 -f /home/lschmidt/MELTING/menh2/menh2259.0/melting-npt-y.edr -o epot_259.xvg
 # gmx energy is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"
