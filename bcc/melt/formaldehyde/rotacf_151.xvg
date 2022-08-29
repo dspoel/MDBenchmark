@@ -1,4 +1,4 @@
-# This file was created Sun Aug 28 21:33:09 2022
+# This file was created Mon Aug 29 13:05:21 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -d -n ../../../index/formaldehyde_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/formaldehyde/151/melting-npt-y_L.trr -s /home/spoel/wd/MDBenchmark/melting/formaldehyde/151/melting-npt-y_L.tpr -o rotacf_151.xvg -b 2000 -e 4000
 # gmx rotacf is part of G R O M A C S:
 #
-# GROtesk MACabre and Sinister
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"

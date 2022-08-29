@@ -1,4 +1,4 @@
-# This file was created Sun Aug 28 21:33:54 2022
+# This file was created Mon Aug 29 13:05:29 2022
 # Created by:
 #                       :-) GROMACS - gmx rotacf, 2021 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx rotacf -n ../../../index/formaldehyde_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/formaldehyde/196/melting-npt-y_L.trr -s /home/spoel/wd/MDBenchmark/melting/formaldehyde/196/melting-npt-y_L.tpr -o rotplane_196.xvg -b 2000 -e 4000
 # gmx rotacf is part of G R O M A C S:
 #
-# Gromacs Runs On Most of All Computer Systems
+# Good ROcking Metal Altar for Chronical Sinners
 #
 @    title "Rotational Correlation Function"
 @    xaxis  label "Time (ps)"
