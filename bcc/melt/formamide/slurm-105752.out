@@ -1,0 +1,69 @@
+                       :-) GROMACS - gmx energy, 2021 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx energy, version 2021
+Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/formamide
+Command line:
+  gmx energy -nmol 2112 -f /home/lschmidt/MELTING/formamide/formamide263.0/melting-npt-y_10_NPTY.edr -o epot_263.xvg
+
+Opened /home/lschmidt/MELTING/formamide/formamide263.0/melting-npt-y_10_NPTY.edr as single precision energy file
+
+Select the terms you want from the following list by
+selecting either (part of) the name or the number or a combination.
+End your selection with an empty line or a zero.
+-------------------------------------------------------------------
+  1  Bond             2  Angle            3  Proper-Dih.      4  Ryckaert-Bell.
+  5  LJ-14            6  Coulomb-14       7  LJ-(SR)          8  Disper.-corr. 
+  9  Coulomb-(SR)    10  Coul.-recip.    11  LJ-recip.       12  Potential     
+ 13  Kinetic-En.     14  Total-Energy    15  Conserved-En.   16  Temperature   
+ 17  Pres.-DC        18  Pressure        19  Constr.-rmsd    20  Box-X         
+ 21  Box-Y           22  Box-Z           23  Volume          24  Density       
+ 25  pV              26  Enthalpy        27  Vir-XX          28  Vir-XY        
+ 29  Vir-XZ          30  Vir-YX          31  Vir-YY          32  Vir-YZ        
+ 33  Vir-ZX          34  Vir-ZY          35  Vir-ZZ          36  Pres-XX       
+ 37  Pres-XY         38  Pres-XZ         39  Pres-YX         40  Pres-YY       
+ 41  Pres-YZ         42  Pres-ZX         43  Pres-ZY         44  Pres-ZZ       
+ 45  #Surf*SurfTen   46  T-MOL           47  Lamb-MOL      
+
+Reading energy frame      0 time    0.000         Reading energy frame      1 time    1.000         Reading energy frame      2 time    2.000         Reading energy frame      3 time    3.000         Reading energy frame      4 time    4.000         Reading energy frame      5 time    5.000         Reading energy frame      6 time    6.000         Reading energy frame      7 time    7.000         Reading energy frame      8 time    8.000         Reading energy frame      9 time    9.000         Reading energy frame     10 time   10.000         Reading energy frame     11 time   11.000         Reading energy frame     12 time   12.000         Reading energy frame     13 time   13.000         Reading energy frame     14 time   14.000         Reading energy frame     15 time   15.000         Reading energy frame     16 time   16.000         Reading energy frame     17 time   17.000         Reading energy frame     18 time   18.000         Reading energy frame     19 time   19.000         Reading energy frame     20 time   20.000         Reading energy frame     30 time   30.000         Reading energy frame     40 time   40.000         Reading energy frame     50 time   50.000         Reading energy frame     60 time   60.000         Reading energy frame     70 time   70.000         Reading energy frame     80 time   80.000         Reading energy frame     90 time   90.000         Reading energy frame    100 time  100.000         Reading energy frame    110 time  110.000         Reading energy frame    120 time  120.000         Reading energy frame    130 time  130.000         Reading energy frame    140 time  140.000         Reading energy frame    150 time  150.000         Reading energy frame    160 time  160.000         Reading energy frame    170 time  170.000         Reading energy frame    180 time  180.000         Reading energy frame    190 time  190.000         Reading energy frame    200 time  200.000         Reading energy frame    300 time  300.000         Reading energy frame    400 time  400.000         Reading energy frame    500 time  500.000         Reading energy frame    600 time  600.000         Reading energy frame    700 time  700.000         Reading energy frame    800 time  800.000         Reading energy frame    900 time  900.000         Reading energy frame   1000 time 1000.000         Reading energy frame   1100 time 1100.000         Reading energy frame   1200 time 1200.000         Reading energy frame   1300 time 1300.000         Reading energy frame   1400 time 1400.000         Reading energy frame   1500 time 1500.000         Reading energy frame   1600 time 1600.000         Reading energy frame   1700 time 1700.000         Reading energy frame   1800 time 1800.000         Reading energy frame   1900 time 1900.000         Reading energy frame   2000 time 2000.000         Reading energy frame   3000 time 3000.000         Reading energy frame   4000 time 4000.000         Reading energy frame   5000 time 5000.000         Last energy frame read 5000 time 5000.000         
+
+GROMACS reminds you: "If you don't know what you're doing, use a (M)BAR-based method" (Erik Lindahl)
+
+
+Statistics over 2500001 steps [ 0.0000 through 5000.0000 ps ], 1 data sets
+All statistics are over 25001 points
+
+Energy                      Average   Err.Est.       RMSD  Tot-Drift
+-------------------------------------------------------------------------------
+Potential                  -185.278      0.019   0.146804 -0.0927838  (kJ/mol)

@@ -1,0 +1,159 @@
+                       :-) GROMACS - gmx rotacf, 2021 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx rotacf, version 2021
+Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/acetamide
+Command line:
+  gmx rotacf -d -n ../../../index/acetamide_rotaxis.ndx -f /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.trr -s /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.tpr -o rotacf_364.xvg -b -200 -e 0
+
+Group     0 (        rotaxis) has  7200 elements
+There is one group in the index
+Reading file /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.tpr, VERSION 2021 (single precision)
+trr version: GMX_trn_file (single precision)
+Reading frame       0 time    0.000   Last frame          0 time    0.000   
+
+Done with trajectory
+Not enough frames for correlation function
+
+GROMACS reminds you: "What They Need's a Damn Good Whacking" (The Beatles)
+
+                       :-) GROMACS - gmx rotacf, 2021 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx rotacf, version 2021
+Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/acetamide
+Command line:
+  gmx rotacf -n ../../../index/acetamide_rotplane.ndx -f /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.trr -s /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.tpr -o rotplane_364.xvg -b -200 -e 0
+
+Group     0 (       rotplane) has  5400 elements
+There is one group in the index
+Reading file /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.tpr, VERSION 2021 (single precision)
+trr version: GMX_trn_file (single precision)
+Reading frame       0 time    0.000   Last frame          0 time    0.000   
+
+Done with trajectory
+Not enough frames for correlation function
+
+GROMACS reminds you: "Let Me Do This" (Urban Dance Squad)
+
+                        :-) GROMACS - gmx msd, 2021 (-:
+
+                            GROMACS is written by:
+     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
+         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
+       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
+     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
+    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
+       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
+      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
+    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
+      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
+       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
+        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
+        Szilard Pall               Sander Pronk              Roland Schulz       
+       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
+       Peter Tieleman              Jon Vincent              Teemu Virolainen     
+     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx msd, version 2021
+Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
+Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
+Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/acetamide
+Command line:
+  gmx msd -f /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.trr -s /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.tpr -o msd_364.xvg -b -200 -e 0
+
+Reading file /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.tpr, VERSION 2021 (single precision)
+Reading file /home/lschmidt/MELTING/acetamide/acetamide364.0/melting-npt-y.tpr, VERSION 2021 (single precision)
+
+Select a group to calculate mean squared displacement for:
+Group     0 (         System) has 32400 elements
+Group     1 (          Other) has 32400 elements
+Group     2 (            MOL) has 32400 elements
+Select a group: trr version: GMX_trn_file (single precision)
+Reading frame       0 time    0.000   Last frame          0 time    0.000   
+
+Used 1 restart points spaced 10 ps over 0 ps
+
+
+GROMACS reminds you: "O My God, They Killed Kenny !" (South Park)
+
+Selected 0: 'System'
+Fitting from 0 to 0 ps
+
+Not enough points for fitting (1).
+Can not determine the diffusion constant.
