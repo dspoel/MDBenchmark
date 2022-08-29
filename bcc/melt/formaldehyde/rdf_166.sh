@@ -1,5 +1,0 @@
-#!/bin/bash
-#SBATCH -t 24:00:00
-#SBATCH -p CLUSTER-AMD
-#SBATCH -n 1
-gmx rdf -sel 0 -ref 0 -dt 1 -f /home/spoel/wd/MDBenchmark/melting/formaldehyde/166/melting-npt-y_L.trr -s /home/spoel/wd/MDBenchmark/melting/formaldehyde/166/melting-npt-y_L.tpr -o rdf_166.xvg -b 1804 -e 2004 

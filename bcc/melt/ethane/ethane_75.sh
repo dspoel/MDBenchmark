@@ -1,7 +1,0 @@
-#!/bin/bash
-#SBATCH -t 24:00:00
-#SBATCH -p CLUSTER-AMD
-#SBATCH -n 1
-gmx rotacf -d -n ../../../index/ethane_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/75/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/75/melting-npt-y.tpr -o rotacf_75.xvg -b 6000 -e 8000 
-gmx rotacf -n ../../../index/ethane_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/75/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/75/melting-npt-y.tpr -o rotplane_75.xvg -b 6000 -e 8000 
-echo 0 | gmx msd -f /home/spoel/wd/MDBenchmark/melting/ethane/75/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/75/melting-npt-y.tpr -o msd_75.xvg -b 6000 -e 8000 

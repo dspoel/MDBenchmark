@@ -1,49 +1,0 @@
-                        :-) GROMACS - gmx rdf, 2021 (-:
-
-                            GROMACS is written by:
-     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
-         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
-       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
-     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
-    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
-       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
-      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
-    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
-      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
-       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
-        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
-        Szilard Pall               Sander Pronk              Roland Schulz       
-       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
-       Peter Tieleman              Jon Vincent              Teemu Virolainen     
-     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
-                           and the project leaders:
-        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
-
-Copyright (c) 1991-2000, University of Groningen, The Netherlands.
-Copyright (c) 2001-2019, The GROMACS development team at
-Uppsala University, Stockholm University and
-the Royal Institute of Technology, Sweden.
-check out http://www.gromacs.org for more information.
-
-GROMACS is free software; you can redistribute it and/or modify it
-under the terms of the GNU Lesser General Public License
-as published by the Free Software Foundation; either version 2.1
-of the License, or (at your option) any later version.
-
-GROMACS:      gmx rdf, version 2021
-Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
-Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
-Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/pyridine
-Command line:
-  gmx rdf -sel 0 -ref 0 -dt 1 -f /home/spoel/wd/MDBenchmark/melting/pyridine/196/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/pyridine/196/melting-npt-y.tpr -o rdf_196.xvg -b 2200 -e 2400
-
-Reading file /home/spoel/wd/MDBenchmark/melting/pyridine/196/melting-npt-y.tpr, VERSION 2021 (single precision)
-Reading file /home/spoel/wd/MDBenchmark/melting/pyridine/196/melting-npt-y.tpr, VERSION 2021 (single precision)
-trr version: GMX_trn_file (single precision)
-Skipping frame      0 time  400.000   Skipping frame      1 time  401.000   Skipping frame      2 time  402.000   Skipping frame      3 time  403.000   Skipping frame      4 time  404.000   Skipping frame      5 time  405.000   Skipping frame      6 time  406.000   Skipping frame      7 time  407.000   Skipping frame      8 time  408.000   Skipping frame      9 time  409.000   Skipping frame     10 time  410.000   Skipping frame     11 time  411.000   Skipping frame     12 time  412.000   Skipping frame     13 time  413.000   Skipping frame     14 time  414.000   Skipping frame     15 time  415.000   Skipping frame     16 time  416.000   Skipping frame     17 time  417.000   Skipping frame     18 time  418.000   Skipping frame     19 time  419.000   Skipping frame     20 time  420.000   Skipping frame     30 time  430.000   Skipping frame     40 time  440.000   Skipping frame     50 time  450.000   Skipping frame     60 time  460.000   Skipping frame     70 time  470.000   Skipping frame     80 time  480.000   Skipping frame     90 time  490.000   Skipping frame    100 time  500.000   Skipping frame    110 time  510.000   Skipping frame    120 time  520.000   Skipping frame    130 time  530.000   Skipping frame    140 time  540.000   Skipping frame    150 time  550.000   Skipping frame    160 time  560.000   Skipping frame    170 time  570.000   Skipping frame    180 time  580.000   Skipping frame    190 time  590.000   Skipping frame    200 time  600.000   Skipping frame    300 time  700.000   Skipping frame    400 time  800.000   Skipping frame    500 time  900.000   Skipping frame    600 time 1000.000   Skipping frame    700 time 1100.000   Skipping frame    800 time 1200.000   Skipping frame    900 time 1300.000   Skipping frame   1000 time 1400.000   Skipping frame   1100 time 1500.000   Skipping frame   1200 time 1600.000   Skipping frame   1300 time 1700.000   Skipping frame   1400 time 1800.000   Skipping frame   1500 time 1900.000   Skipping frame   1600 time 2000.000   Skipping frame   1700 time 2100.000   Reading frame    1800 time 2200.000   Reading frame    1900 time 2300.000   Reading frame    2000 time 2400.000   Last frame       2000 time 2400.000   
-Analyzed 201 frames, last time 2400.000
-
-Back Off! I just backed up rdf_196.xvg to ./#rdf_196.xvg.1#
-
-GROMACS reminds you: "A ship in port is safe, but that is not what ships are for. Sail out to sea and do new things." (Grace Hopper, developer of COBOL)
-

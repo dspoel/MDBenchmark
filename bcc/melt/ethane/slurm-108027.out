@@ -1,162 +1,0 @@
-                       :-) GROMACS - gmx rotacf, 2021 (-:
-
-                            GROMACS is written by:
-     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
-         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
-       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
-     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
-    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
-       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
-      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
-    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
-      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
-       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
-        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
-        Szilard Pall               Sander Pronk              Roland Schulz       
-       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
-       Peter Tieleman              Jon Vincent              Teemu Virolainen     
-     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
-                           and the project leaders:
-        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
-
-Copyright (c) 1991-2000, University of Groningen, The Netherlands.
-Copyright (c) 2001-2019, The GROMACS development team at
-Uppsala University, Stockholm University and
-the Royal Institute of Technology, Sweden.
-check out http://www.gromacs.org for more information.
-
-GROMACS is free software; you can redistribute it and/or modify it
-under the terms of the GNU Lesser General Public License
-as published by the Free Software Foundation; either version 2.1
-of the License, or (at your option) any later version.
-
-GROMACS:      gmx rotacf, version 2021
-Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
-Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
-Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/ethane
-Command line:
-  gmx rotacf -d -n ../../../index/ethane_rotaxis.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.tpr -o rotacf_115.xvg -b 2000 -e 4000
-
-Group     0 (        rotaxis) has  5632 elements
-There is one group in the index
-Reading file /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.tpr, VERSION 2021 (single precision)
-trr version: GMX_trn_file (single precision)
-Reading frame       0 time 2000.000   Reading frame       1 time 2001.000   Reading frame       2 time 2002.000   Reading frame       3 time 2003.000   Reading frame       4 time 2004.000   Reading frame       5 time 2005.000   Reading frame       6 time 2006.000   Reading frame       7 time 2007.000   Reading frame       8 time 2008.000   Reading frame       9 time 2009.000   Reading frame      10 time 2010.000   Reading frame      11 time 2011.000   Reading frame      12 time 2012.000   Reading frame      13 time 2013.000   Reading frame      14 time 2014.000   Reading frame      15 time 2015.000   Reading frame      16 time 2016.000   Reading frame      17 time 2017.000   Reading frame      18 time 2018.000   Reading frame      19 time 2019.000   Reading frame      20 time 2020.000   Reading frame      30 time 2030.000   Reading frame      40 time 2040.000   Reading frame      50 time 2050.000   Reading frame      60 time 2060.000   Reading frame      70 time 2070.000   Reading frame      80 time 2080.000   Reading frame      90 time 2090.000   Reading frame     100 time 2100.000   Reading frame     110 time 2110.000   Reading frame     120 time 2120.000   Reading frame     130 time 2130.000   Reading frame     140 time 2140.000   Reading frame     150 time 2150.000   Reading frame     160 time 2160.000   Reading frame     170 time 2170.000   Reading frame     180 time 2180.000   Reading frame     190 time 2190.000   Reading frame     200 time 2200.000   Reading frame     300 time 2300.000   Reading frame     400 time 2400.000   Reading frame     500 time 2500.000   Reading frame     600 time 2600.000   Reading frame     700 time 2700.000   Reading frame     800 time 2800.000   Reading frame     900 time 2900.000   Reading frame    1000 time 3000.000   Reading frame    1100 time 3100.000   Reading frame    1200 time 3200.000   Reading frame    1300 time 3300.000   Reading frame    1400 time 3400.000   Reading frame    1500 time 3500.000   Reading frame    1600 time 3600.000   Reading frame    1700 time 3700.000   Reading frame    1800 time 3800.000   Reading frame    1900 time 3900.000   Reading frame    2000 time 4000.000   Last frame       2000 time 4000.000   
-
-Done with trajectory
-
-Back Off! I just backed up rotacf_115.xvg to ./#rotacf_115.xvg.9#
-
-GROMACS reminds you: "Base eight is just like base ten really, if you're missing two fingers." (Tom Lehrer)
-
-                       :-) GROMACS - gmx rotacf, 2021 (-:
-
-                            GROMACS is written by:
-     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
-         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
-       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
-     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
-    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
-       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
-      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
-    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
-      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
-       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
-        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
-        Szilard Pall               Sander Pronk              Roland Schulz       
-       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
-       Peter Tieleman              Jon Vincent              Teemu Virolainen     
-     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
-                           and the project leaders:
-        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
-
-Copyright (c) 1991-2000, University of Groningen, The Netherlands.
-Copyright (c) 2001-2019, The GROMACS development team at
-Uppsala University, Stockholm University and
-the Royal Institute of Technology, Sweden.
-check out http://www.gromacs.org for more information.
-
-GROMACS is free software; you can redistribute it and/or modify it
-under the terms of the GNU Lesser General Public License
-as published by the Free Software Foundation; either version 2.1
-of the License, or (at your option) any later version.
-
-GROMACS:      gmx rotacf, version 2021
-Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
-Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
-Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/ethane
-Command line:
-  gmx rotacf -n ../../../index/ethane_rotplane.ndx -f /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.tpr -o rotplane_115.xvg -b 2000 -e 4000
-
-Group     0 (       rotplane) has  4224 elements
-There is one group in the index
-Reading file /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.tpr, VERSION 2021 (single precision)
-trr version: GMX_trn_file (single precision)
-Reading frame       0 time 2000.000   Reading frame       1 time 2001.000   Reading frame       2 time 2002.000   Reading frame       3 time 2003.000   Reading frame       4 time 2004.000   Reading frame       5 time 2005.000   Reading frame       6 time 2006.000   Reading frame       7 time 2007.000   Reading frame       8 time 2008.000   Reading frame       9 time 2009.000   Reading frame      10 time 2010.000   Reading frame      11 time 2011.000   Reading frame      12 time 2012.000   Reading frame      13 time 2013.000   Reading frame      14 time 2014.000   Reading frame      15 time 2015.000   Reading frame      16 time 2016.000   Reading frame      17 time 2017.000   Reading frame      18 time 2018.000   Reading frame      19 time 2019.000   Reading frame      20 time 2020.000   Reading frame      30 time 2030.000   Reading frame      40 time 2040.000   Reading frame      50 time 2050.000   Reading frame      60 time 2060.000   Reading frame      70 time 2070.000   Reading frame      80 time 2080.000   Reading frame      90 time 2090.000   Reading frame     100 time 2100.000   Reading frame     110 time 2110.000   Reading frame     120 time 2120.000   Reading frame     130 time 2130.000   Reading frame     140 time 2140.000   Reading frame     150 time 2150.000   Reading frame     160 time 2160.000   Reading frame     170 time 2170.000   Reading frame     180 time 2180.000   Reading frame     190 time 2190.000   Reading frame     200 time 2200.000   Reading frame     300 time 2300.000   Reading frame     400 time 2400.000   Reading frame     500 time 2500.000   Reading frame     600 time 2600.000   Reading frame     700 time 2700.000   Reading frame     800 time 2800.000   Reading frame     900 time 2900.000   Reading frame    1000 time 3000.000   Reading frame    1100 time 3100.000   Reading frame    1200 time 3200.000   Reading frame    1300 time 3300.000   Reading frame    1400 time 3400.000   Reading frame    1500 time 3500.000   Reading frame    1600 time 3600.000   Reading frame    1700 time 3700.000   Reading frame    1800 time 3800.000   Reading frame    1900 time 3900.000   Reading frame    2000 time 4000.000   Last frame       2000 time 4000.000   
-
-Done with trajectory
-
-Back Off! I just backed up rotplane_115.xvg to ./#rotplane_115.xvg.9#
-
-GROMACS reminds you: "As Always Your Logic Is Impeccable" (Tuvok)
-
-                        :-) GROMACS - gmx msd, 2021 (-:
-
-                            GROMACS is written by:
-     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
-         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
-       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
-     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
-    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
-       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
-      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
-    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
-      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
-       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
-        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
-        Szilard Pall               Sander Pronk              Roland Schulz       
-       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
-       Peter Tieleman              Jon Vincent              Teemu Virolainen     
-     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
-                           and the project leaders:
-        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
-
-Copyright (c) 1991-2000, University of Groningen, The Netherlands.
-Copyright (c) 2001-2019, The GROMACS development team at
-Uppsala University, Stockholm University and
-the Royal Institute of Technology, Sweden.
-check out http://www.gromacs.org for more information.
-
-GROMACS is free software; you can redistribute it and/or modify it
-under the terms of the GNU Lesser General Public License
-as published by the Free Software Foundation; either version 2.1
-of the License, or (at your option) any later version.
-
-GROMACS:      gmx msd, version 2021
-Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
-Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
-Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/ethane
-Command line:
-  gmx msd -f /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.tpr -o msd_115.xvg -b 2000 -e 4000
-
-Reading file /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.tpr, VERSION 2021 (single precision)
-Reading file /home/spoel/wd/MDBenchmark/melting/ethane/115/melting-npt-y.tpr, VERSION 2021 (single precision)
-
-Select a group to calculate mean squared displacement for:
-Group     0 (         System) has 22528 elements
-Group     1 (          Other) has 22528 elements
-Group     2 (            MOL) has 22528 elements
-Select a group: trr version: GMX_trn_file (single precision)
-Reading frame       0 time 2000.000   Reading frame       1 time 2001.000   Reading frame       2 time 2002.000   Reading frame       3 time 2003.000   Reading frame       4 time 2004.000   Reading frame       5 time 2005.000   Reading frame       6 time 2006.000   Reading frame       7 time 2007.000   Reading frame       8 time 2008.000   Reading frame       9 time 2009.000   Reading frame      10 time 2010.000   Reading frame      11 time 2011.000   Reading frame      12 time 2012.000   Reading frame      13 time 2013.000   Reading frame      14 time 2014.000   Reading frame      15 time 2015.000   Reading frame      16 time 2016.000   Reading frame      17 time 2017.000   Reading frame      18 time 2018.000   Reading frame      19 time 2019.000   Reading frame      20 time 2020.000   Reading frame      30 time 2030.000   Reading frame      40 time 2040.000   Reading frame      50 time 2050.000   Reading frame      60 time 2060.000   Reading frame      70 time 2070.000   Reading frame      80 time 2080.000   Reading frame      90 time 2090.000   Reading frame     100 time 2100.000   Reading frame     110 time 2110.000   Reading frame     120 time 2120.000   Reading frame     130 time 2130.000   Reading frame     140 time 2140.000   Reading frame     150 time 2150.000   Reading frame     160 time 2160.000   Reading frame     170 time 2170.000   Reading frame     180 time 2180.000   Reading frame     190 time 2190.000   Reading frame     200 time 2200.000   Reading frame     300 time 2300.000   Reading frame     400 time 2400.000   Reading frame     500 time 2500.000   Reading frame     600 time 2600.000   Reading frame     700 time 2700.000   Reading frame     800 time 2800.000   Reading frame     900 time 2900.000   Reading frame    1000 time 3000.000   Reading frame    1100 time 3100.000   Reading frame    1200 time 3200.000   Reading frame    1300 time 3300.000   Reading frame    1400 time 3400.000   Reading frame    1500 time 3500.000   Reading frame    1600 time 3600.000   Reading frame    1700 time 3700.000   Reading frame    1800 time 3800.000   Reading frame    1900 time 3900.000   Reading frame    2000 time 4000.000   Last frame       2000 time 4000.000   
-
-Used 201 restart points spaced 10 ps over 2000 ps
-
-
-Back Off! I just backed up msd_115.xvg to ./#msd_115.xvg.9#
-
-GROMACS reminds you: "Money won't buy happiness, but it will pay the salaries of a large research staff to study the problem." (Bill Vaughan)
-
-Selected 0: 'System'
-Fitting from 200 to 1800 ps
-
-D[    System] -5.669e-06 (+/- 1.059e-05) 1e-5 cm^2/s

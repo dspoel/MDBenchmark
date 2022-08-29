@@ -1,49 +1,0 @@
-                        :-) GROMACS - gmx rdf, 2021 (-:
-
-                            GROMACS is written by:
-     Andrey Alekseenko              Emile Apol              Rossen Apostolov     
-         Paul Bauer           Herman J.C. Berendsen           Par Bjelkmar       
-       Christian Blau           Viacheslav Bolnykh             Kevin Boyd        
-     Aldert van Buuren           Rudi van Drunen             Anton Feenstra      
-    Gilles Gouaillardet             Alan Gray               Gerrit Groenhof      
-       Anca Hamuraru            Vincent Hindriksen          M. Eric Irrgang      
-      Aleksei Iupinov           Christoph Junghans             Joe Jordan        
-    Dimitrios Karkoulis            Peter Kasson                Jiri Kraus        
-      Carsten Kutzner              Per Larsson              Justin A. Lemkul     
-       Viveca Lindahl            Magnus Lundborg             Erik Marklund       
-        Pascal Merz             Pieter Meulenhoff            Teemu Murtola       
-        Szilard Pall               Sander Pronk              Roland Schulz       
-       Michael Shirts            Alexey Shvetsov             Alfons Sijbers      
-       Peter Tieleman              Jon Vincent              Teemu Virolainen     
-     Christian Wennberg            Maarten Wolf              Artem Zhmurov       
-                           and the project leaders:
-        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
-
-Copyright (c) 1991-2000, University of Groningen, The Netherlands.
-Copyright (c) 2001-2019, The GROMACS development team at
-Uppsala University, Stockholm University and
-the Royal Institute of Technology, Sweden.
-check out http://www.gromacs.org for more information.
-
-GROMACS is free software; you can redistribute it and/or modify it
-under the terms of the GNU Lesser General Public License
-as published by the Free Software Foundation; either version 2.1
-of the License, or (at your option) any later version.
-
-GROMACS:      gmx rdf, version 2021
-Executable:   /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do/bin/gmx
-Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
-Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/ethane
-Command line:
-  gmx rdf -sel 0 -ref 0 -dt 1 -f /home/spoel/wd/MDBenchmark/melting/ethane/110/melting-npt-y.trr -s /home/spoel/wd/MDBenchmark/melting/ethane/110/melting-npt-y.tpr -o rdf_110.xvg -b 5800 -e 6000
-
-Reading file /home/spoel/wd/MDBenchmark/melting/ethane/110/melting-npt-y.tpr, VERSION 2021 (single precision)
-Reading file /home/spoel/wd/MDBenchmark/melting/ethane/110/melting-npt-y.tpr, VERSION 2021 (single precision)
-trr version: GMX_trn_file (single precision)
-Skipping frame      0 time 2000.000   Skipping frame      1 time 2001.000   Skipping frame      2 time 2002.000   Skipping frame      3 time 2003.000   Skipping frame      4 time 2004.000   Skipping frame      5 time 2005.000   Skipping frame      6 time 2006.000   Skipping frame      7 time 2007.000   Skipping frame      8 time 2008.000   Skipping frame      9 time 2009.000   Skipping frame     10 time 2010.000   Skipping frame     11 time 2011.000   Skipping frame     12 time 2012.000   Skipping frame     13 time 2013.000   Skipping frame     14 time 2014.000   Skipping frame     15 time 2015.000   Skipping frame     16 time 2016.000   Skipping frame     17 time 2017.000   Skipping frame     18 time 2018.000   Skipping frame     19 time 2019.000   Skipping frame     20 time 2020.000   Skipping frame     30 time 2030.000   Skipping frame     40 time 2040.000   Skipping frame     50 time 2050.000   Skipping frame     60 time 2060.000   Skipping frame     70 time 2070.000   Skipping frame     80 time 2080.000   Skipping frame     90 time 2090.000   Skipping frame    100 time 2100.000   Skipping frame    110 time 2110.000   Skipping frame    120 time 2120.000   Skipping frame    130 time 2130.000   Skipping frame    140 time 2140.000   Skipping frame    150 time 2150.000   Skipping frame    160 time 2160.000   Skipping frame    170 time 2170.000   Skipping frame    180 time 2180.000   Skipping frame    190 time 2190.000   Skipping frame    200 time 2200.000   Skipping frame    300 time 2300.000   Skipping frame    400 time 2400.000   Skipping frame    500 time 2500.000   Skipping frame    600 time 2600.000   Skipping frame    700 time 2700.000   Skipping frame    800 time 2800.000   Skipping frame    900 time 2900.000   Skipping frame   1000 time 3000.000   Skipping frame   1100 time 3100.000   Skipping frame   1200 time 3200.000   Skipping frame   1300 time 3300.000   Skipping frame   1400 time 3400.000   Skipping frame   1500 time 3500.000   Skipping frame   1600 time 3600.000   Skipping frame   1700 time 3700.000   Skipping frame   1800 time 3800.000   Skipping frame   1900 time 3900.000   Skipping frame   2000 time 4000.000   Skipping frame   3000 time 5000.000   Reading frame    4000 time 6000.000   Last frame       4000 time 6000.000   
-Analyzed 201 frames, last time 6000.000
-
-Back Off! I just backed up rdf_110.xvg to ./#rdf_110.xvg.1#
-
-GROMACS reminds you: "Unfortunately, "simulation" has become increasingly misused to mean nothing more than "calculation"" (Bill Jorgensen)
-
