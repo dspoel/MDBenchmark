@@ -1,4 +1,4 @@
-# This file was created Thu Aug 25 17:37:02 2022
+# This file was created Sun Aug 28 21:31:44 2022
 # Created by:
 #                       :-) GROMACS - gmx energy, 2021 (-:
 # 
@@ -6,10 +6,10 @@
 # Data prefix:  /home/apps/apps/.spack/sandybridge/gcc-10.2.0/gromacs-2021-lx52hldze4odq56frfkrf4vdhifqb7do
 # Working dir:  /home/spoel/wd/MDBenchmark/bcc/melt/formaldehyde
 # Command line:
-#   gmx energy -nmol 2048 -f /home/lschmidt/MELTING/formaldehyde/formaldehyde206.0/melting-npt-y_L.edr -o epot_206.xvg
+#   gmx energy -nmol 2048 -f /home/spoel/wd/MDBenchmark/melting/formaldehyde/206/melting-npt-y_L.edr -o epot_206.xvg
 # gmx energy is part of G R O M A C S:
 #
-# God Rules Over Mankind, Animals, Cosmos and Such
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "GROMACS Energies"
 @    xaxis  label "Time (ps)"
@@ -1022,4 +1022,23 @@
   997.000000  -24.052944
   998.000000  -23.911577
   999.000000  -24.075537
- 1000.000000  -24.015268
+ 1000.000000  -24.015305
+ 1001.000000  -24.020569
+ 1002.000000  -23.791725
+ 1003.000000  -23.964577
+ 1004.000000  -23.891796
+ 1005.000000  -24.013060
+ 1006.000000  -24.005852
+ 1007.000000  -23.899357
+ 1008.000000  -23.941633
+ 1009.000000  -23.926172
+ 1010.000000  -23.803265
+ 1011.000000  -24.129192
+ 1012.000000  -24.025524
+ 1013.000000  -23.779560
+ 1014.000000  -23.865499
+ 1015.000000  -23.859356
+ 1016.000000  -23.873915
+ 1017.000000  -24.016302
+ 1018.000000  -23.986588
+ 1019.000000  -23.998257

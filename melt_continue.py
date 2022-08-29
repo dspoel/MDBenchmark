@@ -27,7 +27,7 @@ def copy_ifnot_exists(srcdir:str, src:str, dst:str) -> bool:
     if len(src) == 0 or not os.path.exists(srcdir+src):
         return False
     if not os.path.exists(dst):
-        shutil.copy(src, dst)
+        shutil.copy(srcdir+src, dst)
     return True
     
 def run_melt(mol:str, temp:float, prev:dict, nsteps:int):
