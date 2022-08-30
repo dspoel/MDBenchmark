@@ -1,4 +1,4 @@
-# This file was created Mon Aug 29 15:16:38 2022
+# This file was created Mon Aug 29 23:18:42 2022
 # Created by:
 #                    :-) GROMACS - gmx msd, 2021-MODIFIED (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx msd -f /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/186/melting-npt-y_100_NPTY.trr -s /pfs/proj/nobackup/fs/projnb10/alexandria/spoel/MDBenchmark/melting/methanol/186/melting-npt-y_100_NPTY.tpr -o msd_186.xvg -b 18000 -e 20000
 # gmx msd is part of G R O M A C S:
 #
-# GRowing Old MAkes el Chrono Sweat
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Mean Square Displacement"
 @    xaxis  label "Time (ps)"
