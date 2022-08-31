@@ -629,7 +629,12 @@ menh2|214|2000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/214|melting-np
 menh2|219|2000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/219|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1661418993.705877
 menh2|224|2000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/224|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr||1661419016.7808518
 menh2|234|6000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/234|melting-npt-y_2.log|melting-npt-y_2.cpt|melting-npt-y_2.tpr|melting-npt-y_2.trr|melting-npt-y_2.edr|melting-npt-y_2.gro|1661426022.9002128
+menh2|244|6000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/244|melting-npt-y_2.log|melting-npt-y_2.cpt|melting-npt-y_2.tpr|melting-npt-y_2.trr|melting-npt-y_2.edr|melting-npt-y_2.gro|1661849051.6518154
 menh2|249|4000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/249|melting-npt-y_2.log|melting-npt-y_2.cpt|melting-npt-y_2.tpr|melting-npt-y_2.trr|melting-npt-y_2.edr|melting-npt-y_2.gro|1661425413.0682108
+menh2|254|6000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/254|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661847881.554177
+menh2|279|6000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/279|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661847727.8889217
+menh2|329|6000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/329|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661847054.8444638
+menh2|379|6000|csb2|2352|/home/spoel/wd/MDBenchmark/melting/menh2/379|melting-npt-y.log|melting-npt-y.cpt|melting-npt-y.tpr|melting-npt-y.trr|melting-npt-y.edr|melting-npt-y.gro|1661844889.9355078
 methanol|126|3000|csb2|2048|/home/spoel/wd/MDBenchmark/melting/methanol/126|melting-npt-y_L.log|melting-npt-y_L.cpt|melting-npt-y_L.tpr|melting-npt-y_L.trr|melting-npt-y_L.edr|melting-npt-y_L.gro|1661705968.5444226
 methanol|131|3000|csb2|2048|/home/spoel/wd/MDBenchmark/melting/methanol/131|melting-npt-y_L.log|melting-npt-y_L.cpt|melting-npt-y_L.tpr|melting-npt-y_L.trr|melting-npt-y_L.edr|melting-npt-y_L.gro|1661710099.3915849
 methanol|136|3000|csb2|2048|/home/spoel/wd/MDBenchmark/melting/methanol/136|melting-npt-y_L.log|melting-npt-y_L.cpt|melting-npt-y_L.tpr|melting-npt-y_L.trr|melting-npt-y_L.edr|melting-npt-y_L.gro|1661710166.218627
