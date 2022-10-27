@@ -24,7 +24,11 @@ if __name__ == '__main__':
     for molname in simtable.keys():
         os.chdir(molname)
         for temp in simtable[molname]:
-            simdir = simtable[molname][temp]["simdir"]
-            trj    = simtable[molname][temp]["trrfile"]
+            simdir    = simtable[molname][temp]["simdir"]
+            trj       = simtable[molname][temp]["trrfile"]
             check_trj(molname, temp, simdir, trj)
+            length    = simtable[molname][temp]["length"]
+            minlength = 2000
+            if length < minlength:
+                print("Length for %s %s is %g, please extend to at least %g ps" % ( simdir, trj, length, minlength ))
         os.chdir("..")
