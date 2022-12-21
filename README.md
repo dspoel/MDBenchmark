@@ -4,5 +4,5 @@ For the simulations we use [GROMACS](https://www.gromacs.org) and some Python sc
 The scripts are adapted to some of the CPU clusters we have access to, so will need to be adapted
 by anyone trying to reproduce parts of this work.
 
-A paper about this work has been submitted for publication:
-+ Lisa Schmidt, David van der Spoel and Marie-Madeleine Walz *Probing phase transitions in organic crystals using atomistic MD simulations* 
+A paper about this work has been published:
++ Lisa Schmidt, David van der Spoel and Marie-Madeleine Walz *Probing phase transitions in organic crystals using atomistic MD simulations* [ACS Phys Chem Au](https://doi.org/10.1021/acsphyschemau.2c00045)
