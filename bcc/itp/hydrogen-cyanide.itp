@@ -1,0 +1,23 @@
+; Topology generated from /home/ghahremanpour/Liquids/MOLECULES/OEP/hydrogen-cyanide/hydrogen-cyanide-3-oep.log.gz
+; Charge method used bcc
+; MOL_GMX.top created by acpype (Rev: 0) on Wed Feb 14 18:39:34 2018
+
+[ moleculetype ]
+;name            nrexcl
+ MOL              3
+
+[ atoms ]
+;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
+     1   ha     1   MOL    H1    1     0.181500      1.00800 ; qtot 0.182
+     2   c1     1   MOL    C1    2     0.190300     12.01000 ; qtot 0.372
+     3   n1     1   MOL    N1    3    -0.371800     14.01000 ; qtot -0.000
+
+[ bonds ]
+;   ai     aj funct   r             k
+     1      2   1    1.0668e-01    3.1355e+05 ;     H1 - C1    
+     2      3   1    1.1535e-01    7.9881e+05 ;     C1 - N1    
+
+[ angles ]
+;   ai     aj     ak    funct   a        klin
+     1      2      3      9     0.520777 20000   
+
