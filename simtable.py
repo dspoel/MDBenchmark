@@ -70,7 +70,7 @@ def get_dict_entry(mol:str):
     newest_trr  = ""
     newest_gro  = ""
     newest_time = None
-    for trr in glob.glob("melting*trr"):
+    for trr in glob.glob("melting*trr")+glob.glob("melting*tng"):
         mytime = os.path.getmtime(trr)
         if None == newest_time or mytime > newest_time:
             newest_time = mytime
