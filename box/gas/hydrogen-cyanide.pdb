@@ -1,0 +1,9 @@
+TITLE     Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   37.040   37.040   34.720  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  H1   H1     1       1.160   1.160   9.030  1.00  0.00            
+ATOM      2  C1   C1     2       1.160   1.160  11.040  1.00  0.00            
+ATOM      3  N1   N1     3       1.160   1.160  12.230  1.00  0.00            
+TER
+ENDMDL
