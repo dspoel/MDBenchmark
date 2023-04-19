@@ -1,8 +1,9 @@
 #include "../../../martini_v300/martini_v3.0.0.itp"
 #include "../../../martini_v300/martini_v3.0.0_small_molecules_v2.itp"
+#include "../../martini_v300/martini_v3.0.0_solvents_v1.itp"
 
 [ system ]
-Imidazole Crystal
+Acetic Acid Crystal
 
 [ molecules ]
-IMID 1680
+ACAC 1536

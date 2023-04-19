@@ -1,0 +1,9 @@
+#include "../../martini_v300/martini_v3.0.0.itp"
+#include "../../martini_v300/martini_v3.0.0_small_molecules_v2.itp"
+#include "../../martini_v300/martini_v3.0.0_solvents_v1.itp"
+
+[ system ]
+Pyridine Crystal
+
+[ molecules ]
+PYRI 1440
