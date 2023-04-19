@@ -2,7 +2,7 @@
 #include "../../../martini_v300/martini_v3.0.0_small_molecules_v1.itp"
 
 [ system ]
-Benzene Crystal
+Furan Crystal
 
 [ molecules ]
-BENZ 1536
+FURA 1024
