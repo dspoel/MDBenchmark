@@ -4,6 +4,7 @@
 include                  = 
 ; e.g.: -DPOSRES -DFLEXIBLE (note these variable names are case sensitive)
 
+define = -DFLEXIBLE
 ; RUN CONTROL PARAMETERS
 integrator               = steep
 ; Start time and timestep in ps
@@ -79,7 +80,7 @@ rlist                    = 1.1
 
 ; OPTIONS FOR ELECTROSTATICS AND VDW
 ; Method for doing electrostatics
-coulombtype              = Cutoff
+coulombtype              = PME
 coulomb-modifier         = Potential-shift-Verlet
 rcoulomb-switch          = 0
 rcoulomb                 = 1.1
@@ -166,7 +167,7 @@ lincs_order              = 4
 ; Number of iterations in the final step of LINCS. 1 is fine for
 ; normal simulations, but use 2 to conserve energy in NVE runs.
 ; For energy minimization with constraints it should be 4 to 8.
-lincs_iter               = 1
+lincs_iter               = 8
 ; Lincs will write a warning to the stderr if in one step a bond
 ; rotates over more degrees than
 lincs-warnangle          = 30

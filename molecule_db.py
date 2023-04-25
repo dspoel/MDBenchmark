@@ -2,9 +2,9 @@
 
 from get_csv_rows import *
 
-def get_moldb(verbose:bool):
+def get_moldb(verbose:bool, filename:str = "molecule_db.csv"):
     moldb = {}
-    for row in get_csv_rows("molecule_db.csv", 13):
+    for row in get_csv_rows(filename, 13):
         extrat = []
         for r in range(6, 12):
             if len(row[r]) > 0:

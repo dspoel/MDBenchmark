@@ -1,5 +1,5 @@
-#include "../../../martini_v300/martini_v3.0.0.itp"
-#include "../../../martini_v300/martini_v3.0.0_small_molecules_v2.itp"
+#include "../../martini_v300/martini_v3.0.0.itp"
+#include "../../martini_v300/martini_v3.0.0_small_molecules_v2.itp"
 
 [ system ]
 Phenol Crystal
