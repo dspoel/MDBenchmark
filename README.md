@@ -8,4 +8,4 @@ A paper about this work has been published:
 + Lisa Schmidt, David van der Spoel and Marie-Madeleine Walz *Probing phase transitions in organic crystals using atomistic MD simulations* The paper is available under open access from [ACS Phys Chem Au](https://doi.org/10.1021/acsphyschemau.2c00045).
 
 A paper about peptide crystals has been published as well:
-+ A. Najla Hosseini and David van der Spoel *Simulations of Amyloid-forming Peptides in the Crystal State* Thw paper is available under open access from [The Protein Journal](https://link.springer.com/article/10.1007/s10930-023-10119-3)
++ A. Najla Hosseini and David van der Spoel *Simulations of Amyloid-forming Peptides in the Crystal State* The paper is available under open access from [The Protein Journal](https://link.springer.com/article/10.1007/s10930-023-10119-3)
