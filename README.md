@@ -9,3 +9,7 @@ A paper about this work has been published:
 
 A paper about peptide crystals has been published as well:
 + A. Najla Hosseini and David van der Spoel *Simulations of Amyloid-forming Peptides in the Crystal State* The paper is available under open access from [The Protein Journal](https://link.springer.com/article/10.1007/s10930-023-10119-3)
+
+The version corresponding to a new submitted paper can be found here:
+[![DOI](https://zenodo.org/badge/504899455.svg)](https://zenodo.org/badge/latestdoi/504899455)
++ A. Najla Hosseini and David van der Spoel *Martini on the Rocks: Can a Coarse-Grained Force Field Model Amyloid Peptide Crystals?*  - Submitted
