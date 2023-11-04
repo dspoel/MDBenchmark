@@ -124,7 +124,7 @@ tc-grps                  = MOL
 ; Time constant (ps) and reference temperature (K)
 tau_t                    = 0.1
 ; pressure coupling     
-pcoupl                   = Parrinello-Rahman
+pcoupl                   = Berendsen
 pcoupltype               = anisotropic
 nstpcouple               = 10
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
