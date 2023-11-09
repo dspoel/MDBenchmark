@@ -1,0 +1,86 @@
+
+#include "toppar/martini_v3.0.0.itp"
+
+#include "toppar/martini_v3.0.0_ions_v1.itp"
+
+#include "toppar/martini_v3.0.0_nucleobases_v1.itp"
+
+#include "toppar/martini_v3.0.0_phospholipids_v1.itp"
+
+#include "toppar/martini_v3.0.0_phospholipids_v1_matthieu.itp"
+
+#include "toppar/martini_v3.0.0_small_molecules_v1.itp"
+
+#include "toppar/martini_v3.0.0_solvents_v1.itp"
+
+#include "toppar/martini_v3.0.0_sugars_v1.itp"
+#include "molecule_0.itp"
+
+[ system ]
+Title of the system
+
+[ molecules ]
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
+molecule_0    2
+W             6
