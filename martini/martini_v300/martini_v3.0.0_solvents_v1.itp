@@ -339,11 +339,11 @@
 
 [ moleculetype ]
 ; molname  	nrexcl
-  PRO 	    	1
+  PRP 	    	1
 
 [ atoms ]
 ;id 	type 	resnr 	residu 	atom 	cgnr 	charge
- 1 	N6 	1 	PRO 	PRO	1 	0
+ 1 	N6 	1 	PRP 	PRP	1 	0
 
 ;;;;;; 1-BUTANOL
 
@@ -470,7 +470,7 @@
 ; id    type    resnr   residu  atom    cgnr    charge
   1 	SN3ar	1 	TXE 	R1 	1 	0 
   2 	SN3ar	1 	TXE 	R2 	2 	0  
-  3 	SN3ar	1 	TXE 	R2 	3 	0  
+  3 	SN3ar	1 	TXE 	R3 	3 	0  
 
 [bonds]
 ; i j 	funct 	length 	force.c.
