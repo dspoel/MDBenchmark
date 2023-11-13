@@ -1,11 +1,11 @@
-define                   =  -DPOSRES -DPOSRES_FC=4000
-integrator               = md
+define                   =  -DPOSRES -DPOSRES_FC=0
+integrator               = steep
 tinit                    = 0.0
 dt                       = 0.020
-nsteps                   = 50000
+nsteps                   = 3000
 
-nstlog                   = 1000
-nstenergy                = 1000
+nstlog                   = 100
+nstenergy                = 100
 nstxout-compressed       = 1000
 compressed-x-precision   = 100
 
@@ -21,22 +21,23 @@ rcoulomb                 = 1.1
 vdw_type                 = cutoff
 vdw-modifier             = Potential-shift-verlet
 rvdw                     = 1.1
+rlist                    = 1.1
 
 tcoupl                   = v-rescale
 tc-grps                  = system
-tau_t                    = 0.1 
-ref_t                    = 100
+tau_t                    = 1.0 
+ref_t                    = 298
 
 ; Pressure coupling:
 Pcoupl                   = no
-Pcoupltype               = isotropic
+Pcoupltype               = anisotropic
 tau_p                    = 5.0
 compressibility          = 4.5e-5
 ref_p                    = 1.0
 
 ; GENERATE VELOCITIES FOR STARTUP RUN:
-gen_vel                  = yes
-gen_temp                 = 100
-gen_seed                 = 8294942730
+gen_vel                  = no
+gen_temp                 = 298
+gen_seed                 = 8234679468
 refcoord_scaling         = all
 
