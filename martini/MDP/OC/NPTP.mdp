@@ -27,12 +27,12 @@ rvdw                     = 1.1
 tcoupl                   = v-rescale
 tc-grps                  = system
 tau_t                    = 0.1 
-ref_t                    = 100
+ref_t                    = 298
 
 ; Pressure coupling:
 Pcoupl                   = Parrinello-rahman
 Pcoupltype               = anisotropic
-tau_p                    = 12
+tau_p                    = 100 
 compressibility          = 1e-5 1e-5 1e-5 1e-5 1e-5 1e-5
 ref_p                    = 1.0 1.0 1.0 1.0 1.0 1.0
 
