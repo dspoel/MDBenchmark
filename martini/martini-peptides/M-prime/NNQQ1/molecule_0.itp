@@ -1,5 +1,5 @@
 ; This file was generated using the following command:
-; /home/x_najho/miniconda3/bin/martinize2 -f nnqqq.pdb -o topol22.top -x cg-nnqq.pdb -scfix -elastic
+; /home/x_najho/miniconda3/bin/martinize2 -f NNQQ1.pdb -o topol22.top -x cg-nnqq.pdb -scfix -elastic
 ; martinize with vermouth 0.9.1
 
 ; Pleas cite the following papers:

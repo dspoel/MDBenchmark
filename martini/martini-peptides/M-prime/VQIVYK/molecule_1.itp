@@ -1,5 +1,5 @@
 ; This file was generated using the following command:
-; /home/x_najho/miniconda3/bin/martinize2 -f n9.pdb -o topol22.top -x cg.pdb -scfix -elastic -maxwarn 30 -nter NH2-ter
+; /home/x_najho/miniconda3/bin/martinize2 -f VQIVYK.pdb -o topol.top -x cg.pdb -scfix -elastic -maxwarn 30 -nter NH2-ter
 ; martinize with vermouth 0.9.1
 
 ; Pleas cite the following papers:
