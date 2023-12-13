@@ -1,0 +1,87 @@
+[ moleculetype ]
+molecule_0 1
+
+[ atoms ]
+ 1 Q5  1 ASN BB   1   1 
+ 2 SP5 1 ASN SC1  2 0.0 
+ 3 P2  2 ASN BB   3 0.0 
+ 4 SP5 2 ASN SC1  4 0.0 
+ 5 P2  3 PHE BB   5 0.0 
+ 6 SC4 3 PHE SC1  6 0.0 
+ 7 TC5 3 PHE SC2  7 0.0 
+ 8 TC5 3 PHE SC3  8 0.0 
+ 9 SP1 4 GLY BB   9 0.0 
+10 SP2 5 ALA BB  10 0.0 
+11 TC3 5 ALA SC1 11 0.0 
+12 P2  6 ILE BB  12 0.0 
+13 SC2 6 ILE SC1 13 0.0 
+14 Q5  7 LEU BB  14  -1 
+15 SC2 7 LEU SC1 15 0.0 
+
+[ bonds ]
+; Backbone bonds
+ 1  3 1 0.350 4000
+ 3  5 1 0.350 4000
+ 5  9 1 0.350 4000
+ 9 10 1 0.350 4000
+10 12 1 0.350 4000
+12 14 1 0.350 4000
+
+; Rubber band
+ 1  9 1 0.85016 500.0
+ 3 10 1 0.79402 500.0
+
+; Side chain bonds
+ 1  2 1 0.352 5000
+ 3  4 1 0.352 5000
+ 5  6 1 0.325 7500
+14 15 1 0.363 7500
+
+#ifdef FLEXIBLE
+; Side chain bonds
+ 6  7 1 0.340 1000000
+ 6  8 1 0.340 1000000
+ 7  8 1 0.290 1000000
+10 11 1 0.270 1000000
+12 13 1 0.341 1000000
+#endif
+
+[ constraints ]
+#ifndef FLEXIBLE
+; Side chain bonds
+ 6  7 1 0.340
+ 6  8 1 0.340
+ 7  8 1 0.290
+10 11 1 0.270
+12 13 1 0.341
+#endif
+
+[ angles ]
+; BBB angles
+ 1  3  5 10 127 20
+ 3  5  9 10 127 20
+ 5  9 10 10 127 20
+ 9 10 12 10 127 20
+10 12 14 10 127 20
+
+; BBS angles regular martini
+ 1  3  4 2 100 25
+ 3  5  6 2 100 25
+ 9 10 11 2 100 25
+10 12 13 2 100 25
+12 14 15 2 100 25
+
+; First SBB regular martini
+ 2  1  3 2 100 25
+
+
+; Side chain angles
+ 5  6  7 2 120.000 50.0
+ 5  6  8 2 120.000 50.0
+
+
+[ exclusions ]
+ 5  6  7  8 
+ 6  7  8 
+ 7  8 
+
