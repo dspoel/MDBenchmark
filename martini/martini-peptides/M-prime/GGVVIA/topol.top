@@ -2,6 +2,7 @@
 
 #include "../../../toppar/martini_v3.0.0_ions_v1.itp"
 
+
 #include "../../../toppar/martini_v3.0.0_solvents_v1.itp"
 
 #include "molecule_0.itp"
@@ -11,34 +12,20 @@ Title of the system
 
 [ molecules ]
 molecule_0    4
-W 3
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
 molecule_0    4
-W 3 
+W            192
+     
