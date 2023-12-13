@@ -1,5 +1,5 @@
 ; This file was generated using the following command:
-; /home/x_najho/miniconda3/bin/martinize2 -maxwarn 30 -f NNQQ1.pdb -o topol22.top -x cg-nnqq.pdb -scfix -elastic -ss EEEE
+; /home/x_najho/miniconda3/bin/martinize2 -maxwarn 30 -f NNQQ1.pdb -o unitcell.top -x cg-nnqq.pdb -scfix -elastic -ss EEEE
 ; martinize with vermouth 0.9.1
 ; The following sequence of secondary structure 
 ; was used for the full system:

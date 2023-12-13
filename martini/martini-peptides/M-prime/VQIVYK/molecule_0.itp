@@ -1,6 +1,6 @@
 ; This file was generated using the following command:
-; /home/x_najho/miniconda3/bin/martinize2 -f VQIVYK.pdb -o topol.top -x cg.pdb -scfix -elastic -maxwarn 30 -nter NH2-ter
-; martinize with vermouth 0.9.1
+; /Users/spoel/opt/miniconda3/bin/martinize2 -f VQIVYK.pdb -o unitcell.top -x cg.pdb -scfix -elastic -maxwarn 30 -nter NH2-ter
+; martinize with vermouth 0.9.6
 
 ; Pleas cite the following papers:
 ; Souza, P C T; Alessandri, R; Barnoud, J; Thallmair, S; Faustino, I; Grünewald, F; Patmanidis, I; Abdizadeh, H; Bruininks, B M H; Wassenaar, T A; Kroon, P C; Melcr, J; Nieto, V; Corradi, V; Khan, H M; Domański, J; Javanainen, M; Martinez-Seara, H; Reuter, N; Best, R B; Vattulainen, I; Monticelli, L; Periole, X; Tieleman, D P; de Vries, A H; Marrink, S J;  Nature Methods 2021; 10.1038/s41592-021-01098-3

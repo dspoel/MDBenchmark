@@ -1,5 +1,5 @@
 ; This file was generated using the following command:
-; /home/x_najho/miniconda3/bin/martinize2 -f LYQLEN.pdb -o topol22.top -x cg.pdb -scfix -elastic -maxwarn 30 -cter COOH-ter
+; /home/x_najho/miniconda3/bin/martinize2 -f LYQLEN.pdb -o unitcell.top -x cg.pdb -scfix -elastic -maxwarn 30 -cter COOH-ter
 ; martinize with vermouth 0.9.1
 
 ; Pleas cite the following papers:
