@@ -1,0 +1,130 @@
+; This file was generated using the following command:
+; /home/nhosseini/miniconda3/bin/martinize2 -maxwarn 30 -f GNNQQNY.pdb -o topol2223.top -x cg.pdb -scfix -elastic -ss EEEEEEE
+; martinize with vermouth 0.9.6
+; The following sequence of secondary structure 
+; was used for the full system:
+; EEEEEEEEEEEEEE
+
+; Pleas cite the following papers:
+; Souza, P C T; Alessandri, R; Barnoud, J; Thallmair, S; Faustino, I; Grünewald, F; Patmanidis, I; Abdizadeh, H; Bruininks, B M H; Wassenaar, T A; Kroon, P C; Melcr, J; Nieto, V; Corradi, V; Khan, H M; Domański, J; Javanainen, M; Martinez-Seara, H; Reuter, N; Best, R B; Vattulainen, I; Monticelli, L; Periole, X; Tieleman, D P; de Vries, A H; Marrink, S J;  Nature Methods 2021; 10.1038/s41592-021-01098-3
+
+[ moleculetype ]
+molecule_0 1
+
+[ atoms ]
+ 1 Q5  1 GLY BB   1   1 
+ 2 P2  2 ASN BB   2 0.0 
+ 3 SP5 2 ASN SC1  3 0.0 
+ 4 P2  3 ASN BB   4 0.0 
+ 5 SP5 3 ASN SC1  5 0.0 
+ 6 P2  4 GLN BB   6 0.0 
+ 7 P5  4 GLN SC1  7 0.0 
+ 8 P2  5 GLN BB   8 0.0 
+ 9 P5  5 GLN SC1  9 0.0 
+10 P2  6 ASN BB  10 0.0 
+11 SP5 6 ASN SC1 11 0.0 
+12 Q5  7 TYR BB  12  -1 
+13 TC4 7 TYR SC1 13 0.0 
+14 TC5 7 TYR SC2 14 0.0 
+15 TC5 7 TYR SC3 15 0.0 
+16 TN6 7 TYR SC4 16 0.0 
+
+[ bonds ]
+; Backbone bonds
+ 1  2 1 0.350 4000
+ 2  4 1 0.350 4000
+ 4  6 1 0.350 4000
+ 6  8 1 0.350 4000
+ 8 10 1 0.350 4000
+10 12 1 0.350 4000
+
+; Long elastic bonds for extended regions
+ 1  6 1 0.970 2500
+ 2  8 1 0.970 2500
+ 4 10 1 0.970 2500
+ 6 12 1 0.970 2500
+
+; Short elastic bonds for extended regions
+ 1  4 1 0.640 2500
+ 2  6 1 0.640 2500
+ 4  8 1 0.640 2500
+ 6 10 1 0.640 2500
+ 8 12 1 0.640 2500
+
+; Side chain bonds
+ 2  3 1 0.352 5000
+ 4  5 1 0.352 5000
+ 6  7 1 0.400 5000
+ 8  9 1 0.400 5000
+10 11 1 0.352 5000
+12 13 1 0.325 5000
+
+#ifdef FLEXIBLE
+; Side chain bonds
+13 14 1 0.300 1000000
+13 15 1 0.300 1000000
+14 16 1 0.285 1000000
+15 16 1 0.285 1000000
+14 15 1 0.300 1000000
+#endif
+
+[ constraints ]
+#ifndef FLEXIBLE
+; Side chain bonds
+13 14 1 0.300
+13 15 1 0.300
+14 16 1 0.285
+15 16 1 0.285
+14 15 1 0.300
+#endif
+
+[ angles ]
+; BBB angles
+ 1  2  4 10 134 25
+ 2  4  6 10 134 25
+ 4  6  8 10 134 25
+ 6  8 10 10 134 25
+ 8 10 12 10 134 25
+
+; BBS angles regular martini
+ 1  2  3 2 100 25
+ 2  4  5 2 100 25
+ 4  6  7 2 100 25
+ 6  8  9 2 100 25
+ 8 10 11 2 100 25
+10 12 13 2 100 25
+
+; SC-BB-BB and BB-BB-SC scFix
+ 3  2  4 10 100 15 ; SC-BB-BB
+ 5  4  6 10 100 15 ; SC-BB-BB
+ 7  6  8 10 100 15 ; SC-BB-BB
+ 9  8 10 10 100 15 ; SC-BB-BB
+11 10 12 10 100 15 ; SC-BB-BB
+ 1  2  3 10 100 15 ; BB-BB-SC
+ 2  4  5 10 100 15 ; BB-BB-SC
+ 4  6  7 10 100 15 ; BB-BB-SC
+ 6  8  9 10 100 15 ; BB-BB-SC
+ 8 10 11 10 100 15 ; BB-BB-SC
+10 12 13 10 100 15 ; BB-BB-SC
+
+; Side chain angles
+12 13 14 2 120.000 60.0
+12 13 15 2 120.000 60.0
+
+[ dihedrals ]
+; SC-BB-BB-SC scFix
+ 3  2  4  5 1 22.6 75 1 ; SC-BB-BB-SC
+ 5  4  6  7 1 -18.2 75 1 ; SC-BB-BB-SC
+ 7  6  8  9 1 -0.1 75 1 ; SC-BB-BB-SC
+ 9  8 10 11 1 29.6 75 1 ; SC-BB-BB-SC
+11 10 12 13 1 48.2 75 1 ; SC-BB-BB-SC
+
+[ dihedrals ]
+16 14 15 13 2 180.0 50.0
+
+[ exclusions ]
+12 13 14 15 16 
+13 14 15 16 
+14 15 16 
+15 16 
+

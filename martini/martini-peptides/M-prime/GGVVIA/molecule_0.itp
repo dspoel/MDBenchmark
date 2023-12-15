@@ -1,0 +1,76 @@
+; This file was generated using the following command:
+; /home/x_najho/miniconda3/bin/martinize2 -f GGVVIA.pdb -o topol22.top -x cg.pdb -scfix -elastic
+; martinize with vermouth 0.9.1
+
+; Pleas cite the following papers:
+; Souza, P C T; Alessandri, R; Barnoud, J; Thallmair, S; Faustino, I; Grünewald, F; Patmanidis, I; Abdizadeh, H; Bruininks, B M H; Wassenaar, T A; Kroon, P C; Melcr, J; Nieto, V; Corradi, V; Khan, H M; Domański, J; Javanainen, M; Martinez-Seara, H; Reuter, N; Best, R B; Vattulainen, I; Monticelli, L; Periole, X; Tieleman, D P; de Vries, A H; Marrink, S J;  Nature Methods 2021; 10.1038/s41592-021-01098-3
+
+[ moleculetype ]
+molecule_0 1
+
+[ atoms ]
+ 1 Q5  1 GLY BB   1   1 
+ 2 SP1 2 GLY BB   2 0.0 
+ 3 SP2 3 VAL BB   3 0.0 
+ 4 SC3 3 VAL SC1  4 0.0 
+ 5 SP2 4 VAL BB   5 0.0 
+ 6 SC3 4 VAL SC1  6 0.0 
+ 7 P2  5 ILE BB   7 0.0 
+ 8 SC2 5 ILE SC1  8 0.0 
+ 9 Q5  6 ALA BB   9  -1 
+10 TC3 6 ALA SC1 10 0.0 
+
+[ bonds ]
+; Backbone bonds
+ 1  2 1 0.350 4000
+ 2  3 1 0.350 4000
+ 3  5 1 0.350 4000
+ 5  7 1 0.350 4000
+ 7  9 1 0.350 4000
+
+#ifdef FLEXIBLE
+; Side chain bonds
+ 3  4 1 0.292 1000000
+ 5  6 1 0.292 1000000
+ 7  8 1 0.341 1000000
+ 9 10 1 0.270 1000000
+#endif
+
+[ constraints ]
+#ifndef FLEXIBLE
+; Side chain bonds
+ 3  4 1 0.292
+ 5  6 1 0.292
+ 7  8 1 0.341
+ 9 10 1 0.270
+#endif
+
+[ angles ]
+; BBB angles
+ 1  2  3 10 127 20
+ 2  3  5 10 127 20
+ 3  5  7 10 127 20
+ 5  7  9 10 127 20
+
+; BBS angles regular martini
+ 2  3  4 2 100 25
+ 3  5  6 2 100 25
+ 5  7  8 2 100 25
+ 7  9 10 2 100 25
+
+; SC-BB-BB and BB-BB-SC scFix
+ 4  3  5 10 100 15 ; SC-BB-BB
+ 6  5  7 10 100 15 ; SC-BB-BB
+ 8  7  9 10 100 15 ; SC-BB-BB
+ 2  3  4 10 100 15 ; BB-BB-SC
+ 3  5  6 10 100 15 ; BB-BB-SC
+ 5  7  8 10 100 15 ; BB-BB-SC
+ 7  9 10 10 100 15 ; BB-BB-SC
+
+[ dihedrals ]
+; SC-BB-BB-SC scFix
+ 4  3  5  6 1 4.6 75 1 ; SC-BB-BB-SC
+ 6  5  7  8 1 2.1 75 1 ; SC-BB-BB-SC
+ 8  7  9 10 1 5.8 75 1 ; SC-BB-BB-SC
+ 1  2  3  4 1 47.9 75 1 ; BB-BB-BB-SC
+
