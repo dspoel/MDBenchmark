@@ -78,7 +78,7 @@
 
 [atoms]
 ;id     type    resnr   residu  atom    cgnr    charge
- 1      SD      1       ION      CA     1       2.0      40.078 ; TD may be a good option as well.
+ 1      SD      1       ION      CA     1       2.0     65.38 ;40.078 ; TD may be a good option as well.
 
 ;;;;;; Tetrafluoroborate  ion
 

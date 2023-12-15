@@ -17,6 +17,15 @@
 ;id     type    resnr   residu  atom    cgnr    charge
  1      W      1        W       W      1       0
 
+
+[ moleculetype ]
+; molname       nrexcl
+  TW             1
+
+[ atoms ]
+;id     type    resnr   residu  atom    cgnr    charge
+ 1      TW      1        W       W      1       0
+
 ;;;;;;; DIMETHYLSULFOXIDE
 
 [ moleculetype ]
