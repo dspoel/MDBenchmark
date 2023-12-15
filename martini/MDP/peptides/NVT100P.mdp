@@ -1,0 +1,42 @@
+define                   =  -DPOSRES -DPOSRES_FC=4000
+integrator               = md
+tinit                    = 0.0
+dt                       = 0.020
+nsteps                   = 50000000
+
+nstlog                   = 1000
+nstenergy                = 1000
+nstxout-compressed       = 1000
+compressed-x-precision   = 100
+
+cutoff-scheme            = Verlet
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+
+epsilon_r                = 15
+coulombtype              = reaction-field
+rcoulomb                 = 1.1
+vdw_type                 = cutoff
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1
+
+tcoupl                   = v-rescale
+tc-grps                  = system
+tau_t                    = 0.1 
+ref_t                    = 100
+
+; Pressure coupling:
+Pcoupl                   = no
+Pcoupltype               = isotropic
+tau_p                    = 5.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
+
+; GENERATE VELOCITIES FOR STARTUP RUN:
+gen_vel                  = yes
+gen_temp                 = 100
+gen_seed                 = 8294942730
+refcoord_scaling         = all
+
