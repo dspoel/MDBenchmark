@@ -42,11 +42,11 @@ echo -e "{original_c}\nref_t= {temperature}" > NPTP.mdp
 
 cp ../../../MDP/peptides/EM.mdp .
 cp ../../../MDP/peptides/EM100.mdp .
-cp ../../../MDP/peptides/NPTP100.mdp .
+cp ../../../MDP/peptides/NPT100P.mdp .
 
 gmx grompp  -c boxxx.pdb -f EM100.mdp -o EM100.tpr -r boxxx.pdb -p topol.top
 gmx mdrun -nt 16 -s EM100.tpr -deffnm EM100 -c EM100.gro
-gmx grompp  -c EM100.gro -f NPTP100.mdp -o NPT100.tpr -r EM100.gro -p topol.top
+gmx grompp  -c EM100.gro -f NPT100p.mdp -o NPT100.tpr -r EM100.gro -p topol.top
 gmx mdrun -nt 16 -s NPT100.tpr -deffnm NPT100 -c NPT100.gro
 
 gmx grompp  -c boxxx.pdb -f EM.mdp -o EM.tpr -r boxxx.pdb -p topol.top
@@ -56,20 +56,20 @@ gmx mdrun -nt 16 -s NPT.tpr -deffnm NPT -c NPT.gro
 
 mkdir BR
 cd BR
-cp ../../../MDP/peptides/NPTB.mdp .
+cp ../../../../MDP/peptides/NPTB.mdp .
 echo -e "{original_c}\nref_t= {temperature}" > NPTB.mdp
-cp ../../../MDP/peptides/EM.mdp .
-cp ../../../MDP/peptides/EM100.mdp .
-cp ../../../MDP/peptides/NPTB100.mdp .
+cp ../../../../MDP/peptides/EM.mdp .
+cp ../../../../MDP/peptides/EM100.mdp .
+cp ../../../../MDP/peptides/NPTB100.mdp .
 
 gmx grompp  -c ../boxxx.pdb -f EM100.mdp -o EM100.tpr -r ../boxxx.pdb -p ../topol.top
 gmx mdrun -nt 16 -s EM100.tpr -deffnm EM100 -c EM100.gro
 gmx grompp  -c EM100.gro -f NPTB100.mdp -o NPT100.tpr -r EM100.gro -p ../topol.top
 gmx mdrun -nt 16 -s NPT100.tpr -deffnm NPT100 -c NPT100.gro
 
-gmx grompp  -c boxxx.pdb -f EM.mdp -o EM.tpr -r boxxx.pdb -p topol.top
+gmx grompp  -c ../boxxx.pdb -f EM.mdp -o EM.tpr -r ../boxxx.pdb -p ../topol.top
 gmx mdrun -nt 16 -s EM.tpr -deffnm EM -c EM.gro
-gmx grompp  -c EM.gro -f NPTB.mdp -o NPT.tpr -r EM.gro -p topol.top
+gmx grompp  -c EM.gro -f NPTB.mdp -o NPT.tpr -r EM.gro -p ../topol.top
 gmx mdrun -nt 16 -s NPT.tpr -deffnm NPT -c NPT.gro
 
 """)
