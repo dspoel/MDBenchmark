@@ -32,7 +32,7 @@ ref_t                    = 100
 ; Pressure coupling:
 Pcoupl                   = Parrinello-rahman
 Pcoupltype               = anisotropic
-tau_p                    = 1000 ; In the manuscript we mistakenly wrote 12 ps
+tau_p                    = 1000 
 compressibility          = 1e-5 1e-5 1e-5 1e-5 1e-5 1e-5
 ref_p                    = 1.0 1.0 1.0 1.0 1.0 1.0
 
