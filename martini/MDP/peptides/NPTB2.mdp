@@ -1,11 +1,14 @@
-integrator               = steep
+integrator               = md
 tinit                    = 0.0
-dt                       = 0.020
-nsteps                   = 3000
+dt                       = 0.005
+nsteps                   = 200000
 
-nstlog                   = 100
-nstenergy                = 100
-nstxout-compressed       = 1000
+nstxout                  = 5000
+nstvout                  = 5000
+nstfout                  = 5000
+nstlog                   = 5000
+nstenergy                = 5000
+nstxout-compressed       = 5000
 compressed-x-precision   = 100
 
 cutoff-scheme            = Verlet
@@ -20,23 +23,19 @@ rcoulomb                 = 1.1
 vdw_type                 = cutoff
 vdw-modifier             = Potential-shift-verlet
 rvdw                     = 1.1
-rlist                    = 1.1
 
 tcoupl                   = v-rescale
 tc-grps                  = system
-tau_t                    = 1.0 
-ref_t                    = 298
+tau_t                    = 0.1 
 
 ; Pressure coupling:
-Pcoupl                   = no
+Pcoupl                   = berendsen
 Pcoupltype               = anisotropic
-tau_p                    = 5.0
-compressibility          = 4.5e-5
-ref_p                    = 1.0
+tau_p                    = 1000
+compressibility          = 1e-5 1e-5 1e-5 1e-5 1e-5 1e-5
+ref_p                    = 1.0 1.0 1.0 1.0 1.0 1.0
 
 ; GENERATE VELOCITIES FOR STARTUP RUN:
 gen_vel                  = no
-gen_temp                 = 298
-gen_seed                 = 8234679468
 refcoord_scaling         = all
 

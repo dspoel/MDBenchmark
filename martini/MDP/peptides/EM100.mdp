@@ -1,4 +1,3 @@
-define                   =  -DPOSRES -DPOSRES_FC=0
 integrator               = steep
 tinit                    = 0.0
 dt                       = 0.020
