@@ -25,19 +25,25 @@ for maindir in glob.glob("M*"):
             temperature = 298
 
 
-            
+
 
         with open("../../../MDP/peptides/NPTP.mdp", "r") as original:
              original_c = original.read()
 
         with open("../../../MDP/peptides/NPTB.mdp", "r") as original2:
-             original2_c = original2.read()     
-        
-            
+             original2_c = original2.read()
+
+        with open("../../../MDP/peptides/NPTP2.mdp", "r") as original3:
+             original3_c = original3.read()
+
+        with open("../../../MDP/peptides/NPTB2.mdp", "r") as original4:
+             original4_c = original4.read()
+
+
         with open("martini.sh", "w") as script:
             script.write(f"""#!/bin/bash
 #SBATCH -p CLUSTER-AMD
-#SBATCH -t 10:00:10
+#SBATCH -t 24:00:00
 #SBATCH -c 16
 
 cp ../../../MDP/peptides/NPTP.mdp .
@@ -48,6 +54,7 @@ cp ../../../MDP/peptides/EM100.mdp .
 cp ../../../MDP/peptides/NPT100P.mdp .
 cp ../../../MDP/peptides/NPT100P2.mdp .
 cp ../../../MDP/peptides/NPTP2.mdp .
+echo -e "{original3_c}\nref_t= {temperature}" > NPTP2.mdp
 
 gmx grompp  -c boxxx.pdb -f EM100.mdp -o EM100.tpr -r boxxx.pdb -p topol.top -maxwarn 1
 gmx mdrun -nt 16 -s EM100.tpr -deffnm EM100 -c EM100.gro
@@ -82,6 +89,7 @@ cp ../../../../MDP/peptides/EM100.mdp .
 cp ../../../../MDP/peptides/NPTB100.mdp .
 cp ../../../../MDP/peptides/NPTB1002.mdp .
 cp ../../../../MDP/peptides/NPTB2.mdp .
+echo -e "{original4_c}\nref_t= {temperature}" > NPTB2.mdp
 
 gmx grompp  -c ../boxxx.pdb -f EM100.mdp -o EM100.tpr -r ../boxxx.pdb -p ../topol.top -maxwarn 1
 gmx mdrun -nt 16 -s EM100.tpr -deffnm EM100 -c EM100.gro
