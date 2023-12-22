@@ -5,11 +5,9 @@
 
 
 
-cp /home/nhosseini/marpep/martini-peptides/M-primeprime/GGVVIA/NPT_GGVVIA_PR_Final.gro . 
-cp /home/nhosseini/marpep/martini-peptides/M-primeprime/GGVVIA/NPT100_GGVVIA_PR_Final.gro . 
 
-cp /home/nhosseini/marpep/martini-peptides/M-primeprime/GGVVIA/BR/NPT_GGVVIA_Berendsen_Final.gro .
-cp /home/nhosseini/marpep/martini-peptides/M-primeprime/GGVVIA/BR/NPT100_GGVVIA_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/M-primeprime/GGVVIA/BR/NPT_GGVVIA_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/M-primeprime/GGVVIA/BR/NPT100_GGVVIA_Berendsen_Final.gro .
 
 rm slurm*.out
 

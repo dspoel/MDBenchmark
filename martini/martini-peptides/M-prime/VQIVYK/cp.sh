@@ -5,11 +5,9 @@
 
 
 
-cp /home/nhosseini/marpep/martini-peptides/M-prime/VQIVYK/NPT_VQIVYK_PR_Final.gro . 
-cp /home/nhosseini/marpep/martini-peptides/M-prime/VQIVYK/NPT100_VQIVYK_PR_Final.gro . 
 
-cp /home/nhosseini/marpep/martini-peptides/M-prime/VQIVYK/BR/NPT_VQIVYK_Berendsen_Final.gro .
-cp /home/nhosseini/marpep/martini-peptides/M-prime/VQIVYK/BR/NPT100_VQIVYK_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/M-prime/VQIVYK/BR/NPT_VQIVYK_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/M-prime/VQIVYK/BR/NPT100_VQIVYK_Berendsen_Final.gro .
 
 rm slurm*.out
 

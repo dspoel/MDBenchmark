@@ -24,12 +24,11 @@ for maindir in glob.glob("M*"):
 #SBATCH -c 16
 
 
+cp /home/nhosseini/marpep/martini-peptides/{maindir}/{subdir}/NPT_{subdir}_PR_Final.gro .
+cp /home/nhosseini/marpep/martini-peptides/{maindir}/{subdir}/NPT100_{subdir}_PR_Final.gro .
 
-cp /home/nhosseini/marpep/martini-peptides/{maindir}/{subdir}/NPT_{subdir}_PR_Final.gro . 
-cp /home/nhosseini/marpep/martini-peptides/{maindir}/{subdir}/NPT100_{subdir}_PR_Final.gro . 
-
-cp /home/nhosseini/marpep/martini-peptides/{maindir}/{subdir}/BR/NPT_{subdir}_Berendsen_Final.gro .
-cp /home/nhosseini/marpep/martini-peptides/{maindir}/{subdir}/BR/NPT100_{subdir}_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/{maindir}/{subdir}/BR/NPT_{subdir}_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/{maindir}/{subdir}/BR/NPT100_{subdir}_Berendsen_Final.gro .
 
 rm slurm*.out
 

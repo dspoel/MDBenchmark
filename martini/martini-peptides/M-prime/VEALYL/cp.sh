@@ -5,11 +5,9 @@
 
 
 
-cp /home/nhosseini/marpep/martini-peptides/M-prime/VEALYL/NPT_VEALYL_PR_Final.gro . 
-cp /home/nhosseini/marpep/martini-peptides/M-prime/VEALYL/NPT100_VEALYL_PR_Final.gro . 
 
-cp /home/nhosseini/marpep/martini-peptides/M-prime/VEALYL/BR/NPT_VEALYL_Berendsen_Final.gro .
-cp /home/nhosseini/marpep/martini-peptides/M-prime/VEALYL/BR/NPT100_VEALYL_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/M-prime/VEALYL/BR/NPT_VEALYL_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/M-prime/VEALYL/BR/NPT100_VEALYL_Berendsen_Final.gro .
 
 rm slurm*.out
 

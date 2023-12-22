@@ -5,11 +5,9 @@
 
 
 
-cp /home/nhosseini/marpep/martini-peptides/M-primeprime/NNFGAIL/NPT_NNFGAIL_PR_Final.gro . 
-cp /home/nhosseini/marpep/martini-peptides/M-primeprime/NNFGAIL/NPT100_NNFGAIL_PR_Final.gro . 
 
-cp /home/nhosseini/marpep/martini-peptides/M-primeprime/NNFGAIL/BR/NPT_NNFGAIL_Berendsen_Final.gro .
-cp /home/nhosseini/marpep/martini-peptides/M-primeprime/NNFGAIL/BR/NPT100_NNFGAIL_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/M-primeprime/NNFGAIL/BR/NPT_NNFGAIL_Berendsen_Final.gro .
+cp /home/nhosseini/venus/martini/martini-peptides/M-primeprime/NNFGAIL/BR/NPT100_NNFGAIL_Berendsen_Final.gro .
 
 rm slurm*.out
 

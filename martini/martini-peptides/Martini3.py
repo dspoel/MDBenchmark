@@ -56,7 +56,7 @@ cp ../../../MDP/peptides/NPT100P2.mdp .
 cp ../../../MDP/peptides/NPTP2.mdp .
 echo -e "{original3_c}\nref_t= {temperature}" > NPTP2.mdp
 
-gmx grompp  -c boxxx.pdb -f EM100.mdp -o EM100.tpr -r boxxx.pdb -p topol.top -maxwarn 1
+gmx grompp  -c boxxx.pdb -f EM100.mdp -o EM100.tpr -r boxxx.pdb -p topol.top 
 gmx mdrun -nt 16 -s EM100.tpr -deffnm EM100 -c EM100.gro
 echo -e "a  bb\nq" | gmx make_ndx -f EM100.gro -o index.ndx
 echo -e "bb"|gmx genrestr -f EM100.gro -n index.ndx -o posre.itp -fc 1000 1000 1000
@@ -71,7 +71,7 @@ gmx mdrun -nt 16 -s NPT100.tpr -deffnm NPT100 -c NPT100.gro
 
 
 
-gmx grompp  -c boxxx.pdb -f EM.mdp -o EM.tpr -r boxxx.pdb -p topol.top -maxwarn 1
+gmx grompp  -c boxxx.pdb -f EM.mdp -o EM.tpr -r boxxx.pdb -p topol.top 
 gmx mdrun -nt 16 -s EM.tpr -deffnm EM -c EM.gro
 
 gmx grompp  -c EM.gro -f NPTP2.mdp -o NPT_new.tpr -r EM.gro -p topol_new.top -maxwarn 1
@@ -91,7 +91,7 @@ cp ../../../../MDP/peptides/NPTB1002.mdp .
 cp ../../../../MDP/peptides/NPTB2.mdp .
 echo -e "{original4_c}\nref_t= {temperature}" > NPTB2.mdp
 
-gmx grompp  -c ../boxxx.pdb -f EM100.mdp -o EM100.tpr -r ../boxxx.pdb -p ../topol.top -maxwarn 1
+gmx grompp  -c ../boxxx.pdb -f EM100.mdp -o EM100.tpr -r ../boxxx.pdb -p ../topol.top
 gmx mdrun -nt 16 -s EM100.tpr -deffnm EM100 -c EM100.gro
 
 
@@ -101,7 +101,7 @@ gmx mdrun -nt 16 -s NPT100_new.tpr -deffnm NPT100_new -c NPT100_new.gro
 gmx grompp  -c NPT100_new.gro -f NPTB100.mdp -o NPT100.tpr -r NPT100_new.gro -p ../topol.top -maxwarn 1
 gmx mdrun -nt 16 -s NPT100.tpr -deffnm NPT100 -c NPT100.gro
 
-gmx grompp  -c ../boxxx.pdb -f EM.mdp -o EM.tpr -r ../boxxx.pdb -p ../topol.top -maxwarn 1
+gmx grompp  -c ../boxxx.pdb -f EM.mdp -o EM.tpr -r ../boxxx.pdb -p ../topol.top 
 gmx mdrun -nt 16 -s EM.tpr -deffnm EM -c EM.gro
 
 gmx grompp  -c EM.gro -f NPTB2.mdp -o NPT_new.tpr -r EM.gro -p ../topol_new.top -maxwarn 1
